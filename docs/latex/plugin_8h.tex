@@ -1,0 +1,190 @@
+\doxysection{plugin/include/plugin.h File Reference}
+\hypertarget{plugin_8h}{}\label{plugin_8h}\index{plugin/include/plugin.h@{plugin/include/plugin.h}}
+
+
+Common types and declarations shared between the core declarations and module declarations.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{plugin_8h_ab69fc9c1f45170f4f73f817b4bc1c6bc}{namespace\+\_\+when\+\_\+cpp\+\_\+head}}(name)
+\item 
+\#define \mbox{\hyperlink{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace}{namespace\+\_\+when\+\_\+cpp\+\_\+tail}}
+\item 
+\#define \mbox{\hyperlink{plugin_8h_a1b4ae8d20bd9400567ceb38300aab083}{namespace\+\_\+when\+\_\+cpp}}(name, ...)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{plugin_8h_a0a3591bc40d083c663732a66598284fe}{Context\+Body}} \mbox{\hyperlink{plugin_8h_a0a3591bc40d083c663732a66598284fe}{Context\+Body}}
+\begin{DoxyCompactList}\small\item\em Context data specific to a plugin. Is typically passed between the manager and the instance. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{plugin_8h_a57a433fb947523a524b5b61941b70ff5}{State\+Err}}
+\begin{DoxyCompactList}\small\item\em Possible errors that can occur during the plugin lifecycle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \{ \newline
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}}
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a1eda451e6af890743177dd1c50d193b1}{DLL\+\_\+\+MALFORMAT}} = 0x1000
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a9314dcb57cdb5e341beb809eb0dfeddc}{DLL\+\_\+\+NOCALLBACK}}
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a610d5e4fb7b3a7bd8674713cd8b92d04}{DLL\+\_\+\+NODROP}}
+, \newline
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a5dc415aa05c6b554c15961429b0fd5e3}{DLL\+\_\+\+NOINIT}}
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad43a10efcfb4462aead6359fb4dc12a3}{DLL\+\_\+\+NOINSTALL}}
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac}{DLL\+\_\+\+NOMODULE}}
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0}{DLL\+\_\+\+NOOBJECT}}
+, \newline
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c}{DLL\+\_\+\+NORELEASE}}
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be}{DLL\+\_\+\+NOSCOPE}}
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e}{MAN\+\_\+\+NOMAN}} = 0x2000
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5}{MAN\+\_\+\+MALPARSE}}
+, \newline
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aba0727e5ae54804a3f4d03951ad27acb}{MAN\+\_\+\+NOPLUGIN}}
+ \}
+\begin{DoxyCompactList}\small\item\em Possible errors that can occur during the plugin lifecycle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plugin_8h_ace5a07976c16c5e8a3a4512886093135}{namespace\+\_\+when\+\_\+cpp}} (\mbox{\hyperlink{namespaceplugin_1_1artifact}{plugin\+::artifact}}, typedef struct Artifact\+Body Artifact\+Body;) namespace\+\_\+when\+\_\+cpp(\mbox{\hyperlink{namespaceplugin}{plugin}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Common types and declarations shared between the core declarations and module declarations. 
+
+
+
+\label{doc-define-members}
+\Hypertarget{plugin_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{plugin_8h_a1b4ae8d20bd9400567ceb38300aab083}\index{plugin.h@{plugin.h}!namespace\_when\_cpp@{namespace\_when\_cpp}}
+\index{namespace\_when\_cpp@{namespace\_when\_cpp}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{namespace\_when\_cpp}{namespace\_when\_cpp}}
+{\footnotesize\ttfamily \label{plugin_8h_a1b4ae8d20bd9400567ceb38300aab083} 
+\#define namespace\+\_\+when\+\_\+cpp(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{plugin_8h_ab69fc9c1f45170f4f73f817b4bc1c6bc}{namespace\_when\_cpp\_head}}(name)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \_\_VA\_ARGS\_\_\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ namespace\_when\_cpp\_tail}
+
+\end{DoxyCode}
+\Hypertarget{plugin_8h_ab69fc9c1f45170f4f73f817b4bc1c6bc}\index{plugin.h@{plugin.h}!namespace\_when\_cpp\_head@{namespace\_when\_cpp\_head}}
+\index{namespace\_when\_cpp\_head@{namespace\_when\_cpp\_head}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{namespace\_when\_cpp\_head}{namespace\_when\_cpp\_head}}
+{\footnotesize\ttfamily \label{plugin_8h_ab69fc9c1f45170f4f73f817b4bc1c6bc} 
+\#define namespace\+\_\+when\+\_\+cpp\+\_\+head(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace}\index{plugin.h@{plugin.h}!namespace\_when\_cpp\_tail@{namespace\_when\_cpp\_tail}}
+\index{namespace\_when\_cpp\_tail@{namespace\_when\_cpp\_tail}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{namespace\_when\_cpp\_tail}{namespace\_when\_cpp\_tail}}
+{\footnotesize\ttfamily \label{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace} 
+\#define namespace\+\_\+when\+\_\+cpp\+\_\+tail}
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{plugin_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{plugin_8h_a0a3591bc40d083c663732a66598284fe}\index{plugin.h@{plugin.h}!ContextBody@{ContextBody}}
+\index{ContextBody@{ContextBody}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{ContextBody}{ContextBody}}
+{\footnotesize\ttfamily \label{plugin_8h_a0a3591bc40d083c663732a66598284fe} 
+typedef struct \mbox{\hyperlink{plugin_8h_a0a3591bc40d083c663732a66598284fe}{Context\+Body}} \mbox{\hyperlink{plugin_8h_a0a3591bc40d083c663732a66598284fe}{Context\+Body}}}
+
+
+
+Context data specific to a plugin. Is typically passed between the manager and the instance. 
+
+\Hypertarget{plugin_8h_a57a433fb947523a524b5b61941b70ff5}\index{plugin.h@{plugin.h}!StateErr@{StateErr}}
+\index{StateErr@{StateErr}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{StateErr}{StateErr}}
+{\footnotesize\ttfamily \label{plugin_8h_a57a433fb947523a524b5b61941b70ff5} 
+typedef enum \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}}
+
+
+
+Possible errors that can occur during the plugin lifecycle. 
+
+
+
+\label{doc-enum-members}
+\Hypertarget{plugin_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}\index{plugin.h@{plugin.h}!StateErr@{StateErr}}
+\index{StateErr@{StateErr}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{StateErr}{StateErr}}
+{\footnotesize\ttfamily \label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03} 
+enum \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}}
+
+
+
+Possible errors that can occur during the plugin lifecycle. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!NONE@{NONE}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ac157bdf0b85a40d2619cbc8bc1ae5fe2}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ac157bdf0b85a40d2619cbc8bc1ae5fe2} 
+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DLL\_MALFORMAT@{DLL\_MALFORMAT}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!DLL\_MALFORMAT@{DLL\_MALFORMAT}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a1eda451e6af890743177dd1c50d193b1}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a1eda451e6af890743177dd1c50d193b1} 
+DLL\+\_\+\+MALFORMAT&Object file is not in a format recognized by the host system. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DLL\_NOCALLBACK@{DLL\_NOCALLBACK}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!DLL\_NOCALLBACK@{DLL\_NOCALLBACK}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a9314dcb57cdb5e341beb809eb0dfeddc}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a9314dcb57cdb5e341beb809eb0dfeddc} 
+DLL\+\_\+\+NOCALLBACK&Missing a callback/function from the object file. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DLL\_NODROP@{DLL\_NODROP}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!DLL\_NODROP@{DLL\_NODROP}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a610d5e4fb7b3a7bd8674713cd8b92d04}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a610d5e4fb7b3a7bd8674713cd8b92d04} 
+DLL\+\_\+\+NODROP&Missing entrypoint for destroying the plugin. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DLL\_NOINIT@{DLL\_NOINIT}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!DLL\_NOINIT@{DLL\_NOINIT}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a5dc415aa05c6b554c15961429b0fd5e3}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a5dc415aa05c6b554c15961429b0fd5e3} 
+DLL\+\_\+\+NOINIT&Missing entrypoint for initializing the plugin. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DLL\_NOINSTALL@{DLL\_NOINSTALL}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!DLL\_NOINSTALL@{DLL\_NOINSTALL}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad43a10efcfb4462aead6359fb4dc12a3}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad43a10efcfb4462aead6359fb4dc12a3} 
+DLL\+\_\+\+NOINSTALL&Plugin/artifact was not installed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DLL\_NOMODULE@{DLL\_NOMODULE}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!DLL\_NOMODULE@{DLL\_NOMODULE}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac} 
+DLL\+\_\+\+NOMODULE&No module could be found on path or it is unavailable. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DLL\_NOOBJECT@{DLL\_NOOBJECT}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!DLL\_NOOBJECT@{DLL\_NOOBJECT}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0} 
+DLL\+\_\+\+NOOBJECT&Missing an object/asset from the object file. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DLL\_NORELEASE@{DLL\_NORELEASE}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!DLL\_NORELEASE@{DLL\_NORELEASE}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c} 
+DLL\+\_\+\+NORELEASE&Plugin/artifact was not released. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DLL\_NOSCOPE@{DLL\_NOSCOPE}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!DLL\_NOSCOPE@{DLL\_NOSCOPE}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be} 
+DLL\+\_\+\+NOSCOPE&Missing scope attribute from the object file. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAN\_NOMAN@{MAN\_NOMAN}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!MAN\_NOMAN@{MAN\_NOMAN}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e} 
+MAN\+\_\+\+NOMAN&Missing manifest file. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAN\_MALPARSE@{MAN\_MALPARSE}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!MAN\_MALPARSE@{MAN\_MALPARSE}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5} 
+MAN\+\_\+\+MALPARSE&Issue occured when parsing a manifest. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAN\_NOPLUGIN@{MAN\_NOPLUGIN}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!MAN\_NOPLUGIN@{MAN\_NOPLUGIN}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aba0727e5ae54804a3f4d03951ad27acb}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aba0727e5ae54804a3f4d03951ad27acb} 
+MAN\+\_\+\+NOPLUGIN&The \textquotesingle{}plugin\textquotesingle{} header was missing. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{plugin_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{plugin_8h_ace5a07976c16c5e8a3a4512886093135}\index{plugin.h@{plugin.h}!namespace\_when\_cpp@{namespace\_when\_cpp}}
+\index{namespace\_when\_cpp@{namespace\_when\_cpp}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{namespace\_when\_cpp()}{namespace\_when\_cpp()}}
+{\footnotesize\ttfamily \label{plugin_8h_ace5a07976c16c5e8a3a4512886093135} 
+namespace\+\_\+when\+\_\+cpp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceplugin_1_1artifact}{plugin\+::artifact}}}]{}{, }\item[{typedef struct Artifact\+Body Artifact\+Body;}]{}{}\end{DoxyParamCaption})}
+

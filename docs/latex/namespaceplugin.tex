@@ -1,0 +1,198 @@
+\doxysection{plugin Namespace Reference}
+\hypertarget{namespaceplugin}{}\label{namespaceplugin}\index{plugin@{plugin}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceplugin_1_1command}{command}}
+\item 
+namespace \mbox{\hyperlink{namespaceplugin_1_1artifact}{artifact}}
+\item 
+namespace \mbox{\hyperlink{namespaceplugin_1_1dllutil}{dllutil}}
+\item 
+namespace \mbox{\hyperlink{namespaceplugin_1_1plugin}{plugin}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structplugin_1_1_context_body}{Context\+Body}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structplugin_1_1_context_body}{Context\+Body}} $>$ \mbox{\hyperlink{namespaceplugin_afe660a664bbf6ad2a53690447133153a}{Context}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespaceplugin_afe660a664bbf6ad2a53690447133153a}{Context} specific to a plugin. Is typically passed between the manager and the instance. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}}
+\begin{DoxyCompactList}\small\item\em The description of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}}
+\begin{DoxyCompactList}\small\item\em The name of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{Object\+Path}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path} to the object binary. \end{DoxyCompactList}\item 
+typedef int \mbox{\hyperlink{namespaceplugin_abcc34f9bb16e75f568693665b2db2f2d}{Object\+Mode}}
+\begin{DoxyCompactList}\small\item\em Mode of how to load the binary. \end{DoxyCompactList}\item 
+typedef void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespaceplugin_a3c5b5fddbc5fe59736a88c0a79277ea4}{Object\+Ref}}
+\begin{DoxyCompactList}\small\item\em A reference to the object loaded dynamically. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path} to an arbitrary file or directory. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespaceplugin_a4d3acd9218f44539e5eb8d09d27d43a0}{Version}}
+\begin{DoxyCompactList}\small\item\em The version name of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R$>$ }\\using \mbox{\hyperlink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State}} = std\+::expected$<$R, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}$>$
+\begin{DoxyCompactList}\small\item\em Alias for\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceplugin_ac09439bec11bd331a674be393c6da4bb}{State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State} group the state belongs to. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{namespaceplugin_a8ce6d93c47c29c1b69ed8b08f9ed32d1}{State\+Message}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\begin{DoxyCompactList}\small\item\em Human-\/readable explanation of the error state. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceplugin_aab84fafb6655084881fb8bcd566a601b}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{namespaceplugin_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespaceplugin_afe660a664bbf6ad2a53690447133153a}\index{plugin@{plugin}!Context@{Context}}
+\index{Context@{Context}!plugin@{plugin}}
+\doxysubsubsection{\texorpdfstring{Context}{Context}}
+{\footnotesize\ttfamily \label{namespaceplugin_afe660a664bbf6ad2a53690447133153a} 
+typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structplugin_1_1_context_body}{Context\+Body}}$>$ \mbox{\hyperlink{namespaceplugin_afe660a664bbf6ad2a53690447133153a}{plugin\+::\+Context}}}
+
+
+
+\doxylink{namespaceplugin_afe660a664bbf6ad2a53690447133153a}{Context} specific to a plugin. Is typically passed between the manager and the instance. 
+
+\Hypertarget{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}\index{plugin@{plugin}!Desc@{Desc}}
+\index{Desc@{Desc}!plugin@{plugin}}
+\doxysubsubsection{\texorpdfstring{Desc}{Desc}}
+{\footnotesize\ttfamily \label{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8} 
+typedef std\+::string \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{plugin\+::\+Desc}}}
+
+
+
+The description of a plugin asset, module or artifact. 
+
+\Hypertarget{namespaceplugin_a10f05094097185258f69c599fcb3fbea}\index{plugin@{plugin}!Name@{Name}}
+\index{Name@{Name}!plugin@{plugin}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily \label{namespaceplugin_a10f05094097185258f69c599fcb3fbea} 
+typedef std\+::string \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{plugin\+::\+Name}}}
+
+
+
+The name of a plugin asset, module or artifact. 
+
+\Hypertarget{namespaceplugin_abcc34f9bb16e75f568693665b2db2f2d}\index{plugin@{plugin}!ObjectMode@{ObjectMode}}
+\index{ObjectMode@{ObjectMode}!plugin@{plugin}}
+\doxysubsubsection{\texorpdfstring{ObjectMode}{ObjectMode}}
+{\footnotesize\ttfamily \label{namespaceplugin_abcc34f9bb16e75f568693665b2db2f2d} 
+typedef int \mbox{\hyperlink{namespaceplugin_abcc34f9bb16e75f568693665b2db2f2d}{plugin\+::\+Object\+Mode}}}
+
+
+
+Mode of how to load the binary. 
+
+\Hypertarget{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}\index{plugin@{plugin}!ObjectPath@{ObjectPath}}
+\index{ObjectPath@{ObjectPath}!plugin@{plugin}}
+\doxysubsubsection{\texorpdfstring{ObjectPath}{ObjectPath}}
+{\footnotesize\ttfamily \label{namespaceplugin_a882f36f4d6b556415344666c6129d5a5} 
+typedef std\+::string \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{plugin\+::\+Object\+Path}}}
+
+
+
+\doxylink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path} to the object binary. 
+
+\Hypertarget{namespaceplugin_a3c5b5fddbc5fe59736a88c0a79277ea4}\index{plugin@{plugin}!ObjectRef@{ObjectRef}}
+\index{ObjectRef@{ObjectRef}!plugin@{plugin}}
+\doxysubsubsection{\texorpdfstring{ObjectRef}{ObjectRef}}
+{\footnotesize\ttfamily \label{namespaceplugin_a3c5b5fddbc5fe59736a88c0a79277ea4} 
+typedef void\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespaceplugin_a3c5b5fddbc5fe59736a88c0a79277ea4}{plugin\+::\+Object\+Ref}}}
+
+
+
+A reference to the object loaded dynamically. 
+
+\Hypertarget{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}\index{plugin@{plugin}!Path@{Path}}
+\index{Path@{Path}!plugin@{plugin}}
+\doxysubsubsection{\texorpdfstring{Path}{Path}}
+{\footnotesize\ttfamily \label{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79} 
+typedef std\+::string \mbox{\hyperlink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{plugin\+::\+Path}}}
+
+
+
+\doxylink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path} to an arbitrary file or directory. 
+
+\Hypertarget{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}\index{plugin@{plugin}!State@{State}}
+\index{State@{State}!plugin@{plugin}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \label{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221} 
+template$<$typename R$>$ \\
+using \mbox{\hyperlink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{plugin\+::\+State}} = std\+::expected$<$R, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}$>$}
+
+
+
+Alias for\+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::expected<R,\ StateErr>}
+
+\end{DoxyCode}
+
+
+Used in callback communication between plugins and the manager. \Hypertarget{namespaceplugin_a4d3acd9218f44539e5eb8d09d27d43a0}\index{plugin@{plugin}!Version@{Version}}
+\index{Version@{Version}!plugin@{plugin}}
+\doxysubsubsection{\texorpdfstring{Version}{Version}}
+{\footnotesize\ttfamily \label{namespaceplugin_a4d3acd9218f44539e5eb8d09d27d43a0} 
+typedef std\+::string \mbox{\hyperlink{namespaceplugin_a4d3acd9218f44539e5eb8d09d27d43a0}{plugin\+::\+Version}}}
+
+
+
+The version name of a plugin asset, module or artifact. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceplugin_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceplugin_aab84fafb6655084881fb8bcd566a601b}\index{plugin@{plugin}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!plugin@{plugin}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{namespaceplugin_aab84fafb6655084881fb8bcd566a601b} 
+std\+::ostream \& plugin\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceplugin_ac09439bec11bd331a674be393c6da4bb}\index{plugin@{plugin}!StateGroup@{StateGroup}}
+\index{StateGroup@{StateGroup}!plugin@{plugin}}
+\doxysubsubsection{\texorpdfstring{StateGroup()}{StateGroup()}}
+{\footnotesize\ttfamily \label{namespaceplugin_ac09439bec11bd331a674be393c6da4bb} 
+const std\+::string plugin\+::\+State\+Group (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State} group the state belongs to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State} group name. 
+\end{DoxyReturn}
+\Hypertarget{namespaceplugin_a8ce6d93c47c29c1b69ed8b08f9ed32d1}\index{plugin@{plugin}!StateMessage@{StateMessage}}
+\index{StateMessage@{StateMessage}!plugin@{plugin}}
+\doxysubsubsection{\texorpdfstring{StateMessage()}{StateMessage()}}
+{\footnotesize\ttfamily \label{namespaceplugin_a8ce6d93c47c29c1b69ed8b08f9ed32d1} 
+const std\+::string plugin\+::\+State\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Human-\/readable explanation of the error state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Human-\/readable message. 
+\end{DoxyReturn}

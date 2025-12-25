@@ -1,0 +1,41 @@
+\doxysection{plugin\+\_\+module.\+h}
+\hypertarget{plugin__module_8h_source}{}\label{plugin__module_8h_source}\index{plugin/include/plugin\_module.h@{plugin/include/plugin\_module.h}}
+\mbox{\hyperlink{plugin__module_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{plugin_8h}{plugin.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ plugin\_module\_head\ \(\backslash\)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ using\ namespace\ plugin;\ \(\backslash\)}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ using\ namespace\ plugin::command;}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ plugin\_module\_tail}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ plugin\_module\_export\ extern\ "{}C"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ plugin\_module\_head}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ plugin\_module\_tail}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ plugin\_module\_export}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ attribute\ plugin\_module\_export}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ callback\_def\ StateErr}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ callback\_ident(name,\ ...)\ name\#\#\_callback\#\#\_\_VA\_OPT\_\_(\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ callback\_sig\ (const\ ContextBody\ *context)}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ callback\_decl(name)\ plugin\_module\_export\ callback\_def\ callback\_ident(name)\ callback\_sig}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ callback\_raw(name,\ ident,\ scope)\ \(\backslash\)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\ \ \ \ callback\_decl(name);\ \(\backslash\)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\ \ \ \ attribute\ const\ CommandScope\ callback\_ident(ident,\ Scope)\ =\ scope;\ \(\backslash\)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\ \ \ \ attribute\ const\ CommandImpl\ \ callback\_ident(ident,\ Impl)\ \ =\ callback\_ident(name);\ \(\backslash\)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\ \ \ \ callback\_decl(name)}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ callback(name,\ scope)\ callback\_raw(name,\ name,\ scope)}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ oninstall(name)\ callback\_raw(name,\ OnInstall,\ SCOPE\_GLOBAL)}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ onrelease(name)\ callback\_raw(name,\ OnRelease,\ SCOPE\_GLOBAL)}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ plugin\_module(...)\ \(\backslash\)}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{plugin\_module\_head\ \(\backslash\)}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\_\_VA\_ARGS\_\_\ \(\backslash\)}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{plugin\_module\_tail}}
+
+\end{DoxyCode}

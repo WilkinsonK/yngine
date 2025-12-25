@@ -1,0 +1,328 @@
+\doxysection{plugin\+::artifact Namespace Reference}
+\hypertarget{namespaceplugin_1_1artifact}{}\label{namespaceplugin_1_1artifact}\index{plugin::artifact@{plugin::artifact}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body}{Artifact\+Body}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body}{Artifact\+Body}} $>$ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}
+\begin{DoxyCompactList}\small\item\em A box of artifact attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceplugin_1_1artifact_aad7b27c6bfbb911c0da2d53d6b0b6652}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&)
+\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_a3aade02db2a0747052d5a8ed15a0bab4}{New}} (void)
+\begin{DoxyCompactList}\small\item\em Create a new, empty plugin artifact. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_ac851bc2c76d147497970689fe5e37fcb}{New}} (const \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{Object\+Path}})
+\begin{DoxyCompactList}\small\item\em Create a new plugin artifact from an object path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_a9f2a6d06af16933ffad7dc9bdf663921}{From\+File}} (const char \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Create a new plugin artifact from a manifest file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_afa597f511c4c62690486698dd3b5b9c0}{From\+Other}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Create a copy of one artifact from another. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_ae9855a1577e5ce7f33c088aeabfa1ce9}{With\+Description}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&, const \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}})
+\begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a brief description of the plugin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_ae543a3d4bddd7582be42da71d2e9874d}{With\+Description\+Long}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&, const \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}})
+\begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a detailed description of the plugin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_a98f8747ec93ca17b4102e77649667b2a}{With\+Manifest}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&, const \mbox{\hyperlink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path}})
+\begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a path to the file containing its manifest. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_ad1faa527738288b076a8e453d8a51b28}{With\+Name}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&, const \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}})
+\begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_a271603ed1967b8396f63affac4359579}{With\+Path}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&, const \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{Object\+Path}})
+\begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified object path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_a18f5956b625e97e427a76b4eed32276b}{With\+State}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&, const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}})
+\begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_acc0b7c4505b0025307b503a110f1ea68}{With\+Version}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&, const \mbox{\hyperlink{namespaceplugin_a4d3acd9218f44539e5eb8d09d27d43a0}{Version}})
+\begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified version. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_aff1d081752f8f32a47aed01b2a1f6fbc}{From\+Toml\+With\+Description}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&a, toml\+::table \&tbl)
+\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_a6bfc14e7993c70945b58d8c9e470bf57}{From\+Toml\+With\+Description\+Long}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&a, toml\+::table \&tbl)
+\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_a52373a87d767754f980850b4a53045ce}{From\+Toml\+With\+Name}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&a, toml\+::table \&tbl)
+\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_a84bbb6e3211ed476511f513fe001bc92}{From\+Toml\+With\+Path}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&a, toml\+::table \&tbl)
+\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_a675fd1d2f81fbea209fd9f5a34c7562d}{From\+Toml\+With\+Version}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&a, toml\+::table \&tbl)
+\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_abc0b8290e0cd8495261bb9688657c0d6}{From\+Toml\+Plugin\+Header}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&a, toml\+::table \&tbl)
+\item 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \mbox{\hyperlink{namespaceplugin_1_1artifact_a41e18bb7ab318dcc0dd176e51474b3e0}{From\+Toml}} (const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&a)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{namespaceplugin_1_1artifact_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}\index{plugin::artifact@{plugin::artifact}!Artifact@{Artifact}}
+\index{Artifact@{Artifact}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{Artifact}{Artifact}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481} 
+typedef std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body}{Artifact\+Body}}$>$ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{plugin\+::artifact\+::\+Artifact}}}
+
+
+
+A box of artifact attributes. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceplugin_1_1artifact_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceplugin_1_1artifact_a9f2a6d06af16933ffad7dc9bdf663921}\index{plugin::artifact@{plugin::artifact}!FromFile@{FromFile}}
+\index{FromFile@{FromFile}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{FromFile()}{FromFile()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_a9f2a6d06af16933ffad7dc9bdf663921} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+From\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Create a new plugin artifact from a manifest file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the manifest file path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new artifact object. 
+\end{DoxyReturn}
+\Hypertarget{namespaceplugin_1_1artifact_afa597f511c4c62690486698dd3b5b9c0}\index{plugin::artifact@{plugin::artifact}!FromOther@{FromOther}}
+\index{FromOther@{FromOther}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{FromOther()}{FromOther()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_afa597f511c4c62690486698dd3b5b9c0} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+From\+Other (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{source}{}\end{DoxyParamCaption})}
+
+
+
+Create a copy of one artifact from another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source artifact. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new object. 
+\end{DoxyReturn}
+\Hypertarget{namespaceplugin_1_1artifact_a41e18bb7ab318dcc0dd176e51474b3e0}\index{plugin::artifact@{plugin::artifact}!FromToml@{FromToml}}
+\index{FromToml@{FromToml}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{FromToml()}{FromToml()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_a41e18bb7ab318dcc0dd176e51474b3e0} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+From\+Toml (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{a}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceplugin_1_1artifact_abc0b8290e0cd8495261bb9688657c0d6}\index{plugin::artifact@{plugin::artifact}!FromTomlPluginHeader@{FromTomlPluginHeader}}
+\index{FromTomlPluginHeader@{FromTomlPluginHeader}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{FromTomlPluginHeader()}{FromTomlPluginHeader()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_abc0b8290e0cd8495261bb9688657c0d6} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+From\+Toml\+Plugin\+Header (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{a}{, }\item[{toml\+::table \&}]{tbl}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceplugin_1_1artifact_aff1d081752f8f32a47aed01b2a1f6fbc}\index{plugin::artifact@{plugin::artifact}!FromTomlWithDescription@{FromTomlWithDescription}}
+\index{FromTomlWithDescription@{FromTomlWithDescription}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{FromTomlWithDescription()}{FromTomlWithDescription()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_aff1d081752f8f32a47aed01b2a1f6fbc} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+From\+Toml\+With\+Description (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{a}{, }\item[{toml\+::table \&}]{tbl}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceplugin_1_1artifact_a6bfc14e7993c70945b58d8c9e470bf57}\index{plugin::artifact@{plugin::artifact}!FromTomlWithDescriptionLong@{FromTomlWithDescriptionLong}}
+\index{FromTomlWithDescriptionLong@{FromTomlWithDescriptionLong}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{FromTomlWithDescriptionLong()}{FromTomlWithDescriptionLong()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_a6bfc14e7993c70945b58d8c9e470bf57} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+From\+Toml\+With\+Description\+Long (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{a}{, }\item[{toml\+::table \&}]{tbl}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceplugin_1_1artifact_a52373a87d767754f980850b4a53045ce}\index{plugin::artifact@{plugin::artifact}!FromTomlWithName@{FromTomlWithName}}
+\index{FromTomlWithName@{FromTomlWithName}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{FromTomlWithName()}{FromTomlWithName()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_a52373a87d767754f980850b4a53045ce} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+From\+Toml\+With\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{a}{, }\item[{toml\+::table \&}]{tbl}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceplugin_1_1artifact_a84bbb6e3211ed476511f513fe001bc92}\index{plugin::artifact@{plugin::artifact}!FromTomlWithPath@{FromTomlWithPath}}
+\index{FromTomlWithPath@{FromTomlWithPath}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{FromTomlWithPath()}{FromTomlWithPath()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_a84bbb6e3211ed476511f513fe001bc92} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+From\+Toml\+With\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{a}{, }\item[{toml\+::table \&}]{tbl}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceplugin_1_1artifact_a675fd1d2f81fbea209fd9f5a34c7562d}\index{plugin::artifact@{plugin::artifact}!FromTomlWithVersion@{FromTomlWithVersion}}
+\index{FromTomlWithVersion@{FromTomlWithVersion}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{FromTomlWithVersion()}{FromTomlWithVersion()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_a675fd1d2f81fbea209fd9f5a34c7562d} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+From\+Toml\+With\+Version (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{a}{, }\item[{toml\+::table \&}]{tbl}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceplugin_1_1artifact_ac851bc2c76d147497970689fe5e37fcb}\index{plugin::artifact@{plugin::artifact}!New@{New}}
+\index{New@{New}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{New()}{New()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_ac851bc2c76d147497970689fe5e37fcb} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+New (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{Object\+Path}}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Create a new plugin artifact from an object path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & path to object path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new object. 
+\end{DoxyReturn}
+\Hypertarget{namespaceplugin_1_1artifact_a3aade02db2a0747052d5a8ed15a0bab4}\index{plugin::artifact@{plugin::artifact}!New@{New}}
+\index{New@{New}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{New()}{New()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_a3aade02db2a0747052d5a8ed15a0bab4} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+New (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Create a new, empty plugin artifact. 
+
+\begin{DoxyReturn}{Returns}
+A new artifact. 
+\end{DoxyReturn}
+\Hypertarget{namespaceplugin_1_1artifact_aad7b27c6bfbb911c0da2d53d6b0b6652}\index{plugin::artifact@{plugin::artifact}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_aad7b27c6bfbb911c0da2d53d6b0b6652} 
+std\+::ostream \& plugin\+::artifact\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{a}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceplugin_1_1artifact_ae9855a1577e5ce7f33c088aeabfa1ce9}\index{plugin::artifact@{plugin::artifact}!WithDescription@{WithDescription}}
+\index{WithDescription@{WithDescription}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{WithDescription()}{WithDescription()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_ae9855a1577e5ce7f33c088aeabfa1ce9} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+With\+Description (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{source}{, }\item[{const \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}}}]{desc}{}\end{DoxyParamCaption})}
+
+
+
+Create a copy of the source artifact with a brief description of the plugin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \doxylink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact} to copy from. \\
+\hline
+{\em desc} & Description value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new object. 
+\end{DoxyReturn}
+\Hypertarget{namespaceplugin_1_1artifact_ae543a3d4bddd7582be42da71d2e9874d}\index{plugin::artifact@{plugin::artifact}!WithDescriptionLong@{WithDescriptionLong}}
+\index{WithDescriptionLong@{WithDescriptionLong}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{WithDescriptionLong()}{WithDescriptionLong()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_ae543a3d4bddd7582be42da71d2e9874d} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+With\+Description\+Long (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{source}{, }\item[{const \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}}}]{desc}{}\end{DoxyParamCaption})}
+
+
+
+Create a copy of the source artifact with a detailed description of the plugin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \doxylink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact} to copy from. \\
+\hline
+{\em desc} & Description value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new object. 
+\end{DoxyReturn}
+\Hypertarget{namespaceplugin_1_1artifact_a98f8747ec93ca17b4102e77649667b2a}\index{plugin::artifact@{plugin::artifact}!WithManifest@{WithManifest}}
+\index{WithManifest@{WithManifest}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{WithManifest()}{WithManifest()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_a98f8747ec93ca17b4102e77649667b2a} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+With\+Manifest (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{source}{, }\item[{const \mbox{\hyperlink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path}}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Create a copy of the source artifact with a path to the file containing its manifest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \doxylink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact} to copy from. \\
+\hline
+{\em path} & to the artifact manifest. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new object. 
+\end{DoxyReturn}
+\Hypertarget{namespaceplugin_1_1artifact_ad1faa527738288b076a8e453d8a51b28}\index{plugin::artifact@{plugin::artifact}!WithName@{WithName}}
+\index{WithName@{WithName}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{WithName()}{WithName()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_ad1faa527738288b076a8e453d8a51b28} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+With\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{source}{, }\item[{const \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Create a copy of the source artifact with a specified name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \doxylink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact} to copy from. \\
+\hline
+{\em name} & \doxylink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name} to set on the artifact. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new object. 
+\end{DoxyReturn}
+\Hypertarget{namespaceplugin_1_1artifact_a271603ed1967b8396f63affac4359579}\index{plugin::artifact@{plugin::artifact}!WithPath@{WithPath}}
+\index{WithPath@{WithPath}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{WithPath()}{WithPath()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_a271603ed1967b8396f63affac4359579} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+With\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{source}{, }\item[{const \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{Object\+Path}}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Create a copy of the source artifact with a specified object path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \doxylink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact} to copy from. \\
+\hline
+{\em path} & \doxylink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name} of the file path where the artifact should be loaded from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new object. 
+\end{DoxyReturn}
+\Hypertarget{namespaceplugin_1_1artifact_a18f5956b625e97e427a76b4eed32276b}\index{plugin::artifact@{plugin::artifact}!WithState@{WithState}}
+\index{WithState@{WithState}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{WithState()}{WithState()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_a18f5956b625e97e427a76b4eed32276b} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+With\+State (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{source}{, }\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Create a copy of the source artifact with a specified state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \doxylink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact} to copy from. \\
+\hline
+{\em state} & The state of the new artifact. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new object. 
+\end{DoxyReturn}
+\Hypertarget{namespaceplugin_1_1artifact_acc0b7c4505b0025307b503a110f1ea68}\index{plugin::artifact@{plugin::artifact}!WithVersion@{WithVersion}}
+\index{WithVersion@{WithVersion}!plugin::artifact@{plugin::artifact}}
+\doxysubsubsection{\texorpdfstring{WithVersion()}{WithVersion()}}
+{\footnotesize\ttfamily \label{namespaceplugin_1_1artifact_acc0b7c4505b0025307b503a110f1ea68} 
+\mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} plugin\+::artifact\+::\+With\+Version (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}} \&}]{source}{, }\item[{const \mbox{\hyperlink{namespaceplugin_a4d3acd9218f44539e5eb8d09d27d43a0}{Version}}}]{version}{}\end{DoxyParamCaption})}
+
+
+
+Create a copy of the source artifact with a specified version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \doxylink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact} to copy from. \\
+\hline
+{\em version} & The version of the new artifact. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new object. 
+\end{DoxyReturn}
