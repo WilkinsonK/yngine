@@ -1,0 +1,6 @@
+[plugin]
+name = "Hello, World"
+description = "Print 'Hello, World!' to stdout"
+description_long = "Does nothing except print 'Hello, World!' on install."
+path = "libhello_world.dylib"
+version = "1.0.0"

@@ -1,6 +1,8 @@
 .cache/
+.claude/
 .vscode/
 .xmake/
 build/
-target/
+targets/
 compile_commands.json
+*.dylib

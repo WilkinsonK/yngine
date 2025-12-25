@@ -1,121 +1,209 @@
-#pragma once
-
 #include <expected>
-#include <functional>
 #include <iostream>
 #include <memory>
-#include <vector>
+#include <unordered_map>
 
-#define PLUGIN_DEF_CONTEXT(Name, Version) \
-    static const Context_ Name##_context = { \
-        .plugin_name      = #Name, \
-        .plugin_version   = #Version, \
-        .operation        = "INSTALL" \
-    }
-#define PLUGIN_DEF_DROP(Name) \
-    void DropPlugin_##Name(Plugin* p) { \
-        delete p; \
-    }
-#define PLUGIN_DEF_INTER(Name) \
-    PLUGIN_DEF_MAKE(Name) \
-    PLUGIN_DEF_DROP(Name)
-#define PLUGIN_DEF_MAKE(Name) \
-    Plugin* MakePlugin_##Name(void) { \
-        return new Name(Name##_context); \
-    }
-#define PLUGIN_PREAMBLE(Name, Version) \
-    extern "C" { \
-        PLUGIN_DEF_CONTEXT(Name, Version); \
-        PLUGIN_DEF_INTER(Name) \
-    }
-
-#define PluginResult(R) std::expected<R, std::string>
-#define Shared(T) std::shared_ptr<T>
-#define Unique(T) std::unique_ptr<T>
+#include "plugin.h"
 
 namespace plugin {
-    typedef const char *PluginName;
-    #define PluginResult(R) std::expected<R, std::string>
-    #define Shared(T) std::shared_ptr<T>
-    #define Unique(T) std::unique_ptr<T>
+    /// @brief Context specific to a plugin. Is typically
+    /// passed between the manager and the instance.
+    typedef std::shared_ptr<ContextBody> Context;
+    /// @brief The description of a plugin asset, module or
+    /// artifact.
+    typedef std::string Desc;
+    /// @brief The name of a plugin asset, module or
+    /// artifact.
+    typedef std::string Name;
+    /// @brief Path to the object binary.
+    typedef std::string ObjectPath;
+    /// @brief Mode of how to load the binary.
+    typedef int ObjectMode;
+    /// @brief A reference to the object loaded dynamically.
+    typedef void *ObjectRef;
+    /// @brief Path to an arbitrary file or directory.
+    typedef std::string Path;
+    /// @brief The version name of a plugin asset, module or
+    /// artifact.
+    typedef std::string Version;
+}
 
-    typedef const char *PluginVersion;
-    typedef struct Context_ {
-        PluginName    plugin_name;
-        PluginVersion plugin_version;
-        const char    *operation;
-    } Context_;
-    typedef Shared(Context_) Context;
+namespace plugin::command {
+    struct Command {
+        CommandImpl  impl;
+        CommandScope scope;
+        StateErr     state;
+    };
 
+    /// @brief A map of commands registered by the plugin
+    /// and the managed system.
+    typedef std::unordered_map<Name, Command> Registry;
+}
+
+namespace plugin::artifact {
+    struct ArtifactBody {
+        command::Registry commands;
+        Desc        description;
+        Desc        description_long;
+        Path        manifest;
+        Name        name;
+        ObjectMode  obj_mode;
+        ObjectPath  obj_path;
+        ObjectRef   obj_ref;
+        StateErr    state;
+        Version     version;
+    };
+
+    /// @brief A box of artifact attributes.
+    typedef std::unique_ptr<ArtifactBody> Artifact;
+}
+
+namespace plugin {
+    struct ContextBody {
+        artifact::Artifact artifact;
+    };
+
+    /// @brief State group the state belongs to.
+    /// @param state
+    /// @return State group name.
+    const std::string StateGroup(const StateErr&);
+    /// @brief Human-readable explanation of the error
+    ///        state.
+    /// @param state
+    /// @return Human-readable message.
+    const std::string StateMessage(const StateErr&);
+
+    std::ostream& operator<<(std::ostream&, const StateErr&);
+
+    /// @brief Alias for:
+    /// 
+    /// ```cpp
+    /// std::expected<R, StateErr>
+    /// ```
+    /// 
+    /// Used in callback communication between plugins and
+    /// the manager.
+    template <typename R>
+    using State = std::expected<R, StateErr>;
+}
+
+namespace plugin::artifact {
+    std::ostream& operator<<(std::ostream&, const Artifact&);
+
+    /// @brief  Create a new, empty plugin artifact.
+    /// @return A new artifact.
+    Artifact New(void);
+    /// @brief Create a new plugin artifact from an object
+    ///        path.
+    /// @param  path path to object path.
+    /// @return A new object.
+    Artifact New(const ObjectPath);
+    /// @brief Create a new plugin artifact from a
+    ///        manifest file.
+    /// @param  path the manifest file path.
+    /// @return A new artifact object.
+    Artifact FromFile(const char *);
+    /// @brief Create a copy of one artifact from another.
+    /// @param  source Source artifact.
+    /// @return A new object.
+    Artifact FromOther(const Artifact&);
+    /// @brief Create a copy of the source artifact with a
+    ///        brief description of the plugin.
+    /// @param  source Artifact to copy from.
+    /// @param  desc Description value.
+    /// @return A new object.
+    Artifact WithDescription(const Artifact&, const Desc);
+    /// @brief Create a copy of the source artifact with a
+    ///        detailed description of the plugin.
+    /// @param  source Artifact to copy from.
+    /// @param  desc Description value.
+    /// @return A new object.
+    Artifact WithDescriptionLong(const Artifact&, const Desc);
+    /// @brief Create a copy of the source artifact with a
+    ///        path to the file containing its manifest.
+    /// @param  source Artifact to copy from.
+    /// @param  path to the artifact manifest.
+    /// @return A new object.
+    Artifact WithManifest(const Artifact&, const Path);
+    /// @brief Create a copy of the source artifact with a
+    ///        specified name.
+    /// @param  source Artifact to copy from.
+    /// @param  name Name to set on the artifact.
+    /// @return A new object.
+    Artifact WithName(const Artifact&, const Name);
+    /// @brief Create a copy of the source artifact with a
+    ///        specified object path.
+    /// @param  source Artifact to copy from.
+    /// @param  path Name of the file path where the
+    ///         artifact should be loaded from.
+    /// @return A new object.
+    Artifact WithPath(const Artifact&, const ObjectPath);
+    /// @brief Create a copy of the source artifact with a
+    ///        specified state.
+    /// @param  source Artifact to copy from.
+    /// @param  state The state of the new artifact.
+    /// @return A new object.
+    Artifact WithState(const Artifact&, const StateErr);
+    /// @brief  Create a copy of the source artifact with a
+    ///         specified version.
+    /// @param  source Artifact to copy from.
+    /// @param  version The version of the new artifact.
+    /// @return A new object.
+    Artifact WithVersion(const Artifact&, const Version);
+}
+
+namespace plugin::command {
+    Command LoadFromArtifact(const artifact::Artifact&, const Name);
+}
+
+namespace plugin::dllutil {
+    using Artifact = artifact::Artifact;
+    Artifact Install(const Artifact&);
+    Artifact Release(const Artifact&);
+}
+
+namespace plugin::plugin {
+    /// @brief Can add/register commands to the global
+    /// system.
+    class HasCommands {
+        /// @brief  Allows a plugin to register a command
+        ///         with the system.
+        /// @param  context Context passed from the manager.
+        /// @return The success state of this hook when
+        ///         called as the `context`.
+        virtual State<Context> AddCommand(const Context) = 0;
+        /// @brief  Calls a command from the context.
+        /// @param  context Context passed from the manager.
+        /// @param  name Name of the command being called.
+        /// @return The success state of the command called.
+        virtual State<Context> CallCommand(const Context, Name) = 0;
+    };
+
+    /// @brief Can install as a plugin.
+    class CanInstall {
+        /// @brief  Callback hook for when the plugin is
+        ///         installed and loaded.
+        /// @param  context Context passed from the manager.
+        /// @return The success state of this hook when
+        ///         called as the `context`.
+        virtual State<Context> OnInstall(const Context) = 0;
+    };
+
+    /// @brief Can release plugin assets.
+    class CanRelease {
+        /// @brief  Callback hook for when the plugin is
+        ///         released.
+        /// @param  context Context passed from the manager.
+        /// @return The success state of this hook when
+        ///         called as the `context`.
+        virtual State<Context> OnRelease(const Context) = 0;
+    };
+
+    /// @brief Entry point for an external system, code or
+    /// behavior to interact with the host system.
     class Plugin {
         public:
         virtual ~Plugin(void) = default;
-        Plugin(const Context_) {};
-        virtual PluginResult(PluginName) GetName(void) = 0;
-        virtual PluginResult(PluginVersion) GetVersion(void) = 0;
-        virtual PluginResult(int) OnLoad(Context) = 0;
-        virtual void OnRelease(Context) = 0;
-    };
-
-    class PluginBase : public Plugin {
-        public:
-        PluginBase(const Context_);
-        PluginResult(PluginName) GetName(void);
-        PluginResult(PluginVersion) GetVersion(void);
-        PluginResult(int) OnLoad(Context);
-        void OnRelease(Context);
-        protected:
-        const Context_ context;
-    };
-
-    typedef Plugin*(*MakePlugin)(void);
-    typedef void(*DropPlugin)(Plugin*);
-    typedef const char *PluginPath;
-    typedef const char *PluginStatus;
-    typedef const void *PluginObject;
-    typedef bool PluginFound;
-    typedef bool PluginLoaded;
-    typedef struct PluginArtifact_ {
-        Plugin         *plugin;
-        PluginName     name;
-        PluginFound    so_found;
-        PluginLoaded   so_loaded;
-        PluginObject   so_data;
-        PluginPath     so_name;
-        PluginStatus   status;
-        MakePlugin     make_plugin;
-        DropPlugin     drop_plugin;
-        friend std::ostream& operator<<(std::ostream&, const PluginArtifact_);
-    } PluginArtifact_;
-    typedef Unique(PluginArtifact_) PluginArtifact;
-    typedef std::vector<PluginArtifact> PluginArtifacts;
-
-    class PluginManager;
-
-    class PluginArtifactLoader {
-        public:
-        PluginArtifactLoader(void);
-        private:
-        PluginResult(int) Load(PluginArtifact&);
-        friend PluginManager;
-        friend std::ostream& operator<<(std::ostream&, const PluginArtifactLoader&);
-    };
-
-    // typedef std::function<PluginResult(State::state)> PluginLoader;
-    // typedef std::function<PluginResult(State::state)> PluginDestroyer;
-
-    class PluginManager {
-        public:
-        PluginManager(void);
-        PluginResult(int) RegisterArtifact(PluginName, PluginPath);
-        const PluginArtifacts& GetArtifacts(void) const;
-        PluginResult(int) LoadArtifacts(void);
-        void ReleaseArtifacts(void);
-        private:
-        std::vector<PluginArtifact>  artifacts;
-        Unique(PluginArtifactLoader) artifact_loader;
-        void ReleaseArtifact(std::size_t);
-        void ReleaseArtifact(PluginArtifact&);
-        friend std::ostream& operator<<(std::ostream&, const PluginManager&);
+        Plugin(const Context);
     };
 }
