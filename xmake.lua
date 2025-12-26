@@ -57,7 +57,7 @@ add_requires("libarchive", "log4cplus", "toml++")
 
 define_module("core")
 define_module("plugin", { pkgs = { "libarchive", "log4cplus", "toml++" }})
-define_plugin("hello_world", { lang = "c", dir = "plugins" })
+define_plugin("hello_world", { lang = "cpp", dir = "plugins" })
 
 target("main")
     set_basename("engine")

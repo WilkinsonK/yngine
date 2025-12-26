@@ -6,13 +6,14 @@
 #pragma once
 
 #include <expected>
+#include <functional>
 #include <iostream>
 #include <memory>
 #include <unordered_map>
 
 #include "plugin.h"
 
-namespace plugin {
+namespace __plugin_root {
     /// @brief The description of a plugin asset, module or
     /// artifact.
     typedef std::string Desc;
@@ -32,7 +33,7 @@ namespace plugin {
     typedef std::string Version;
 }
 
-namespace plugin::command {
+namespace __plugin_root::command {
     struct Command {
         CommandImpl  impl;
         CommandScope scope;
@@ -44,7 +45,7 @@ namespace plugin::command {
     typedef std::unordered_map<Name, Command> Registry;
 }
 
-namespace plugin::artifact {
+namespace __plugin_root::artifact {
     struct ArtifactBody {
         command::Registry commands;
         Desc        description;
@@ -62,10 +63,20 @@ namespace plugin::artifact {
     typedef std::unique_ptr<ArtifactBody> Artifact;
 }
 
-namespace plugin {
+namespace __plugin_root {
     struct Context {
         artifact::Artifact artifact;
     };
+
+    /// @brief  Install the plugin module from the given
+    /// artifact.
+    /// @param  source artifact to install from/into.
+    /// @return The artifact after installation.
+    Context Install(const Context&);
+    /// @brief Release and destroy plugin module assets.
+    /// @param  source artifact owning the module.
+    /// @return The artifact after releasing assets.
+    Context Release(const Context&);
 
     /// @brief State group the state belongs to.
     /// @param state
@@ -89,13 +100,12 @@ namespace plugin {
     /// the manager.
     template <typename R>
     using State = std::expected<R, StateErr>;
+    template <typename R, typename ...A>
+    using StateFn = std::function<State<R>(A...)>;
 }
 
-namespace plugin::artifact {
+namespace __plugin_root::artifact {
     std::ostream& operator<<(std::ostream&, const Artifact&);
-
-    Artifact Install(const Artifact&);
-    Artifact Release(const Artifact&);
 
     /// @brief  Create a new, empty plugin artifact.
     /// @return A new artifact.
@@ -159,11 +169,11 @@ namespace plugin::artifact {
     Artifact WithVersion(const Artifact&, const Version);
 }
 
-namespace plugin::command {
+namespace __plugin_root::command {
     Command LoadFromArtifact(const artifact::Artifact&, const Name);
 }
 
-namespace plugin::plugin {
+namespace __plugin_root::plugin {
     /// @brief Can add/register commands to the global
     /// system.
     class HasCommands {

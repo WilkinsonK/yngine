@@ -7,8 +7,34 @@
 #include <dlfcn.h>
 
 #include "plugin.hpp"
+#include "plugin_internal.hpp"
 
-namespace plugin {
+using namespace __plugin_root::dllutil;
+
+namespace __plugin_root {
+    std::ostream& operator<<(std::ostream& os, const StateErr& state) {
+        return os << "<"
+            << (std::size_t)state << ":"
+            << StateGroup(state) << ":\""
+            << StateMessage(state)
+            << "\">";
+    }
+
+    Context Install(const Context& ctx) {
+        return InstallModule(ctx)
+            .and_then(InstallCommand("OnInstall"))
+            .and_then(InstallCommand("OnRelease"))
+            .and_then(CallCommand("OnInstall"))
+            .or_else(HandleErr(ctx))
+            .value();
+    }
+
+    Context Release(const Context& ctx) {
+        return CallCommand(ctx, "OnRelease")
+            .or_else(HandleErr(ctx))
+            .value();
+    }
+
     const std::string StateGroup(const StateErr& state) {
         std::stringstream ss;
 
@@ -77,16 +103,26 @@ namespace plugin {
 
         return ss.str();
     }
-
-    std::ostream& operator<<(std::ostream& os, const StateErr& state) {
-        return os << "<"
-            << (std::size_t)state << ":"
-            << StateGroup(state) << ":\""
-            << StateMessage(state)
-            << "\">";
-    }
 }
 
-namespace plugin::plugin {
+__ns_cplusplus_head(__plugin_root)
+    const char *GetName(const Context *context) {
+        return context->artifact->name.c_str();
+    }
+
+    const char *GetDescription(const Context *context) {
+        return context->artifact->description.c_str();
+    }
+
+    const char *GetDescriptionLong(const Context *context) {
+        return context->artifact->description_long.c_str();
+    }
+
+    StateErr RegisterCommand(const Context *context, const char *name, const char *impl_name) {
+        return dllutil::InstallCommand(*context, name, impl_name).error_or(NONE);
+    }
+__ns_cplusplus_tail
+
+namespace __plugin_root::plugin {
     Plugin::Plugin(const Context _) {}
 }

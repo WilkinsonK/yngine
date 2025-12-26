@@ -5,15 +5,19 @@
 #ifndef PLUGIN_PLUGIN_H
 #define PLUGIN_PLUGIN_H
 
+#define __plugin_root plugin
+
 #ifdef __cplusplus
-#define namespace_when_cpp_head(name) namespace name {
-#define namespace_when_cpp_tail }
+#define __ns_cplusplus_head(name) namespace name {
+#define __ns_cplusplus_tail }
+#define __ns_cplusplus_prop(ns, name) ns::name
 #else
-#define namespace_when_cpp_head(name)
-#define namespace_when_cpp_tail
+#define __ns_cplusplus_head(name)
+#define __ns_cplusplus_tail
+#define __ns_cplusplus_prop(ns, name) name
 #endif
 
-namespace_when_cpp_head(plugin)
+__ns_cplusplus_head(__plugin_root)
     /// @brief Context data specific to a plugin. Is
     /// typically passed between the manager and the
     /// instance.
@@ -55,14 +59,14 @@ namespace_when_cpp_head(plugin)
         /// @brief The 'plugin' header was missing.
         MAN_NOPLUGIN,
     } StateErr;
-namespace_when_cpp_tail
+__ns_cplusplus_tail
 
-namespace_when_cpp_head(plugin::artifact)
+__ns_cplusplus_head(__plugin_root::artifact)
     /// @brief Wraps all assets related to a single plugin.
     typedef struct ArtifactBody ArtifactBody;
-namespace_when_cpp_tail
+__ns_cplusplus_tail
 
-namespace_when_cpp_head(plugin::command)
+__ns_cplusplus_head(__plugin_root::command)
     /// @brief The callable and attributes dictating its
     /// behavior.
     typedef struct Command Command;
@@ -79,6 +83,13 @@ namespace_when_cpp_head(plugin::command)
         /// @brief Visible to the plugin manager.
         SCOPE_SHARED,
     } CommandScope;
-namespace_when_cpp_tail
+__ns_cplusplus_tail
+
+__ns_cplusplus_head(__plugin_root)
+const char *GetName(const Context *);
+const char *GetDescription(const Context *);
+const char *GetDescriptionLong(const Context *);
+StateErr RegisterCommand(const Context *, const char *, const char *);
+__ns_cplusplus_tail
 
 #endif // #ifndef PLUGIN_PLUGIN_H

@@ -1,18 +1,21 @@
 #include "plugin.hpp"
 
 int main(void) {
-    auto art = plugin::artifact::FromFile("./plugins/hello_world/plugin.toml");
+    auto art = plugin::artifact::FromFile("/Users/kwilkinson/dev/experimental/engine/plugins/hello_world/plugin.toml");
 
-    std::cout << art << std::endl;
+    plugin::Context ctx = {
+        std::move(art)
+    };
+    std::cout << ctx.artifact << std::endl;
 
-    art = plugin::artifact::Install(art);
-    if (art->state != plugin::StateErr::NONE) {
+    ctx = plugin::Install(ctx);
+    if (ctx.artifact->state != plugin::StateErr::NONE) {
         std::cerr << "error: " << art->state << std::endl;
         return 1;
     }
 
-    art = plugin::artifact::Release(art);
-    if (art->state != plugin::StateErr::NONE) {
+    ctx = plugin::Release(ctx);
+    if (ctx.artifact->state != plugin::StateErr::NONE) {
         std::cerr << "error: " << art->state << std::endl;
         return 1;
     }

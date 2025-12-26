@@ -3,11 +3,8 @@
 #include <toml++/toml.hpp>
 
 #include "plugin.hpp"
-#include "plugin_internal.hpp"
 
-using namespace plugin::dllutil;
-
-namespace plugin::artifact {
+namespace __plugin_root::artifact {
 
     Artifact New(void) {
         auto body = std::make_unique<ArtifactBody>();
@@ -19,21 +16,6 @@ namespace plugin::artifact {
         auto a = New();
         a->obj_path = path;
         return a;
-    }
-
-    Artifact Install(const Artifact& source) {
-        return InstallModule(source)
-            .and_then(InstallCommand("OnInstall"))
-            .and_then(InstallCommand("OnRelease"))
-            .and_then(CallCommand("OnInstall"))
-            .or_else(HandleErr(source))
-            .value();
-    }
-
-    Artifact Release(const Artifact& source) {
-        return CallCommand(source, "OnRelease")
-            .or_else(HandleErr(source))
-            .value();
     }
 
     Artifact WithDescription(const Artifact& source, const Desc desc) {

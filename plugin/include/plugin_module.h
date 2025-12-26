@@ -8,8 +8,8 @@
 /// @brief The header/preamble required for declarations
 /// that must be available to the plugin ecosystem.
 #define plugin_module_head \
-    using namespace plugin; \
-    using namespace plugin::command;
+    using namespace __plugin_root; \
+    using namespace __plugin_root::command;
 /// @brief The footer/closer required for declarations that
 /// must be available to the plugin ecosystem.
 #define plugin_module_tail

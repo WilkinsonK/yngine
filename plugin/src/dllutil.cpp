@@ -6,61 +6,67 @@
 #include "plugin.hpp"
 #include "plugin_internal.hpp"
 
-namespace plugin::dllutil {
+namespace __plugin_root::dllutil {
     using Artifact = artifact::Artifact;
 
-    State<Artifact> CallCommand(const Artifact& source, Name name) {
-        if (source->commands[name].state == NONE) {
-            source->state = source->commands[name].impl(nullptr);
-            return artifact::FromOther(source);
+    State<Context> CallCommand(const Context& ctx, Name name) {
+        if (ctx.artifact->commands[name].state == NONE) {
+            ctx.artifact->state = ctx.artifact->commands[name].impl(&ctx);
+        Context newctx = { artifact::FromOther(ctx.artifact) };
+        return newctx;
         }
-        return std::unexpected(source->commands[name].state);
+        return std::unexpected(ctx.artifact->commands[name].state);
     }
 
-    std::function<State<Artifact>(const Artifact&)> CallCommand(Name name) {
-        return [name](const Artifact& source){
-            return CallCommand(source, name);
+    StateFn<Context, const Context&> CallCommand(Name name) {
+        return [name](const Context& ctx){
+            return CallCommand(ctx, name);
         };
     }
 
-    State<Artifact> HandleErr(const Artifact& source, StateErr err) {
-        source->state = err;
-        return artifact::FromOther(source);
+    State<Context> HandleErr(const Context& ctx, StateErr err) {
+        ctx.artifact->state = err;
+        Context newctx = { artifact::FromOther(ctx.artifact) };
+        return newctx;
     }
 
-    std::function<State<Artifact>(StateErr)> HandleErr(const Artifact& source) {
-        return [&source](StateErr err){
-            return HandleErr(source, err);
+    StateFn<Context, StateErr> HandleErr(const Context& ctx) {
+        return [&ctx](StateErr err){
+            return HandleErr(ctx, err);
         };
     }
 
-    State<Artifact> InstallCommand(const Artifact& source, Name name) {
-        auto a = artifact::FromOther(source);
-        a->commands[name] = command::LoadFromArtifact(a, name);
-        if (a->commands[name].state != NONE) {
-            a->state = a->commands[name].state;
-            return std::unexpected(a->state);
+    State<Context> InstallCommand(const Context& ctx, Name name, Name impl_name) {
+        ctx.artifact->commands[name] = command::LoadFromArtifact(ctx.artifact, impl_name);
+        if (ctx.artifact->commands[name].state != NONE) {
+            ctx.artifact->state = ctx.artifact->commands[name].state;
+            return std::unexpected(ctx.artifact->state);
         }
-        return a;
 
+        Context newctx = { artifact::FromOther(ctx.artifact) };
+        return newctx;
     }
 
-    std::function<State<Artifact>(const Artifact&)> InstallCommand(Name name) {
-        return [name](const Artifact& source){
-            return InstallCommand(source, name);
+    State<Context> InstallCommand(const Context& ctx, Name name) {
+        return InstallCommand(ctx, name, name);
+    }
+
+    StateFn<Context, const Context&> InstallCommand(Name name) {
+        return [name](const Context& ctx){
+            return InstallCommand(ctx, name);
         };
     }
 
-    State<Artifact> InstallModule(const Artifact& source) {
-        auto a = artifact::FromOther(source);
-        return LoadModuleFromArtifact(a)
-            .transform_error([&a](StateErr err){
-                a->state = err;
+    State<Context> InstallModule(const Context& ctx) {
+        return LoadModuleFromArtifact(ctx.artifact)
+            .transform_error([&ctx](StateErr err){
+                ctx.artifact->state = err;
                 return err;
             })
-            .transform([&a](void *module){
-                a->obj_ref = module;
-                return std::move(a);
+            .transform([&ctx](void *module){
+                ctx.artifact->obj_ref = module;
+                Context newctx = { artifact::FromOther(ctx.artifact) };
+                return newctx;
             });
     }
 
@@ -71,7 +77,7 @@ namespace plugin::dllutil {
         return handle;
     }
 
-    std::function<State<void*>(const Artifact&)> LoadHandleFromArtifact(Name name) {
+    StateFn<void*, const Artifact&> LoadHandleFromArtifact(Name name) {
         return [name](const Artifact& source){
             return LoadHandleFromArtifact(source, name);
         };

@@ -1,7 +1,7 @@
 #include "plugin.hpp"
 #include "plugin_internal.hpp"
 
-namespace plugin::command {
+namespace __plugin_root::command {
     using Artifact = artifact::Artifact;
 
     State<CommandImpl*> LoadCommandImplFromArtifact(const Artifact& source, const Name name) {
