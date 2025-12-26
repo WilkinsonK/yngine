@@ -44,7 +44,7 @@ function define_module(name, opts)
     local kind = opts.kind or "shared"
 
     target(name)
-        add_files(path.join(name, "*.cpp"))
+        add_files(path.join(name, "src/*.cpp"))
         add_includedirs(includes, {public = true})
         add_includedirs(internal)
         add_deps(deps)
