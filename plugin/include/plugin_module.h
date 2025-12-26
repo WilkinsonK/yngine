@@ -41,7 +41,7 @@
 #define callback_ident(name, ...) name##_callback##__VA_OPT__(__VA_ARGS__)
 /// @brief Declares the callback signagure used by all
 /// callback declarations.
-#define callback_sig (const ContextBody *context)
+#define callback_sig (const Context *context)
 /// @brief Declares the signature of a callback.
 /// @param name Base identity of the callback.
 #define callback_decl(name) plugin_module_export callback_def callback_ident(name) callback_sig

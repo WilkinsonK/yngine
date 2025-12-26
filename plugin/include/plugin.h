@@ -13,21 +13,11 @@
 #define namespace_when_cpp_tail
 #endif
 
-#define namespace_when_cpp(name, ...) \
-    namespace_when_cpp_head(name) \
-    __VA_ARGS__ \
-    namespace_when_cpp_tail
-
-namespace_when_cpp(plugin::artifact,
-    /// @brief Wraps all assets related to a single plugin.
-    typedef struct ArtifactBody ArtifactBody;
-)
-
-namespace_when_cpp(plugin,
+namespace_when_cpp_head(plugin)
     /// @brief Context data specific to a plugin. Is
     /// typically passed between the manager and the
     /// instance.
-    typedef struct ContextBody ContextBody;
+    typedef struct Context Context;
 
     /// @brief Possible errors that can occur during the
     /// plugin lifecycle.
@@ -65,15 +55,20 @@ namespace_when_cpp(plugin,
         /// @brief The 'plugin' header was missing.
         MAN_NOPLUGIN,
     } StateErr;
-)
+namespace_when_cpp_tail
 
-namespace_when_cpp(plugin::command,
+namespace_when_cpp_head(plugin::artifact)
+    /// @brief Wraps all assets related to a single plugin.
+    typedef struct ArtifactBody ArtifactBody;
+namespace_when_cpp_tail
+
+namespace_when_cpp_head(plugin::command)
     /// @brief The callable and attributes dictating its
     /// behavior.
     typedef struct Command Command;
     /// @brief Callable hook that is arbitrary to the
     /// manager and defined by the plugin.
-    typedef StateErr(*CommandImpl)(const ContextBody*);
+    typedef StateErr(*CommandImpl)(const Context*);
     /// @brief The scope of the command and how/where it
     /// can be called from.
     typedef enum CommandScope {
@@ -84,6 +79,6 @@ namespace_when_cpp(plugin::command,
         /// @brief Visible to the plugin manager.
         SCOPE_SHARED,
     } CommandScope;
-)
+namespace_when_cpp_tail
 
 #endif // #ifndef PLUGIN_PLUGIN_H

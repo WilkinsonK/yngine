@@ -1,3 +1,10 @@
+/// @file plugin.hpp
+/// @brief Main plugin API declarations. Defines type
+/// aliases, traits and functions that are publicly
+/// available to the CXX interface.
+
+#pragma once
+
 #include <expected>
 #include <iostream>
 #include <memory>
@@ -6,9 +13,6 @@
 #include "plugin.h"
 
 namespace plugin {
-    /// @brief Context specific to a plugin. Is typically
-    /// passed between the manager and the instance.
-    typedef std::shared_ptr<ContextBody> Context;
     /// @brief The description of a plugin asset, module or
     /// artifact.
     typedef std::string Desc;
@@ -59,7 +63,7 @@ namespace plugin::artifact {
 }
 
 namespace plugin {
-    struct ContextBody {
+    struct Context {
         artifact::Artifact artifact;
     };
 
@@ -89,6 +93,9 @@ namespace plugin {
 
 namespace plugin::artifact {
     std::ostream& operator<<(std::ostream&, const Artifact&);
+
+    Artifact Install(const Artifact&);
+    Artifact Release(const Artifact&);
 
     /// @brief  Create a new, empty plugin artifact.
     /// @return A new artifact.
@@ -154,12 +161,6 @@ namespace plugin::artifact {
 
 namespace plugin::command {
     Command LoadFromArtifact(const artifact::Artifact&, const Name);
-}
-
-namespace plugin::dllutil {
-    using Artifact = artifact::Artifact;
-    Artifact Install(const Artifact&);
-    Artifact Release(const Artifact&);
 }
 
 namespace plugin::plugin {

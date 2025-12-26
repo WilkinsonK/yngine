@@ -3,13 +3,15 @@
 int main(void) {
     auto art = plugin::artifact::FromFile("./plugins/hello_world/plugin.toml");
 
-    art = plugin::dllutil::Install(art);
+    std::cout << art << std::endl;
+
+    art = plugin::artifact::Install(art);
     if (art->state != plugin::StateErr::NONE) {
         std::cerr << "error: " << art->state << std::endl;
         return 1;
     }
 
-    art = plugin::dllutil::Release(art);
+    art = plugin::artifact::Release(art);
     if (art->state != plugin::StateErr::NONE) {
         std::cerr << "error: " << art->state << std::endl;
         return 1;
