@@ -32,5 +32,6 @@ var plugin_8h =
     [ "__ns_cplusplus_head", "plugin_8h.html#a06f7cea74459a9aae82d48d8035b64b3", null ],
     [ "GetDescription", "plugin_8h.html#a66c0e49603caa33bb863d703911e78de", null ],
     [ "GetDescriptionLong", "plugin_8h.html#aa8aec95a44e91fefd7abe6d638d85d4e", null ],
+    [ "GetName", "plugin_8h.html#a8afb65e4e3737673e0f4abcd5c40c462", null ],
     [ "RegisterCommand", "plugin_8h.html#a1213640a384fba7c3f1ba89b76759a59", null ]
 ];

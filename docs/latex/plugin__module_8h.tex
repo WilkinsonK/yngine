@@ -19,19 +19,19 @@ Defines utility macros for declaring some source as part of a plugin module.
 \begin{DoxyCompactList}\small\item\em Alias for {\ttfamily \doxylink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c}{plugin\+\_\+module\+\_\+export}} for convenience. Depending on the language of the module (c/c++), includes implicit extern calls to prevent name mangling when the attribute needs to be accessed. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{plugin__module_8h_aef2d89dc922733a82a901d47ad848133}{callback\+\_\+def}}~\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}
 \begin{DoxyCompactList}\small\item\em Declares the initial definition of a callback. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_a3eaa78681355580774e6ed0ffb7f824b}{callback\+\_\+ident}}(name, ...)
+\#define \mbox{\hyperlink{plugin__module_8h_a3eaa78681355580774e6ed0ffb7f824b}{callback\+\_\+ident}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}, ...)
 \begin{DoxyCompactList}\small\item\em Declares the identity of a callback. \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{plugin__module_8h_abe1bedeb2671da93d45408d699a9ad50}{callback\+\_\+sig}}~(const Context \texorpdfstring{$\ast$}{*}context)
 \begin{DoxyCompactList}\small\item\em Declares the callback signagure used by all callback declarations. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_af02dfc3a14fcfd77b8edcc5ee264af10}{callback\+\_\+decl}}(name)
+\#define \mbox{\hyperlink{plugin__module_8h_af02dfc3a14fcfd77b8edcc5ee264af10}{callback\+\_\+decl}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}})
 \begin{DoxyCompactList}\small\item\em Declares the signature of a callback. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_ad51bd7681c34609b5f79357118cd1e3b}{callback\+\_\+raw}}(name,  ident,  scope)
+\#define \mbox{\hyperlink{plugin__module_8h_ad51bd7681c34609b5f79357118cd1e3b}{callback\+\_\+raw}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}},  ident,  scope)
 \begin{DoxyCompactList}\small\item\em Declares a raw callback. A raw callback is a series of artifacts which, when composed, define a {\ttfamily Command} within the plugin ecosystem. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_ac5d649614548d809289f5d58f179c2c0}{callback}}(name,  scope)
+\#define \mbox{\hyperlink{plugin__module_8h_ac5d649614548d809289f5d58f179c2c0}{callback}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}},  scope)
 \begin{DoxyCompactList}\small\item\em Declares a user-\/defined scoped callback. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_a7e201bd5013827180a56da3c3ca983e8}{oninstall}}(name)
+\#define \mbox{\hyperlink{plugin__module_8h_a7e201bd5013827180a56da3c3ca983e8}{oninstall}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}})
 \begin{DoxyCompactList}\small\item\em Declares the install callback. This callback will be loaded and used to install the plugin. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_abf8cc66d2ac563b3d419c2254b0a5d58}{onrelease}}(name)
+\#define \mbox{\hyperlink{plugin__module_8h_abf8cc66d2ac563b3d419c2254b0a5d58}{onrelease}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}})
 \begin{DoxyCompactList}\small\item\em Declares the release callback. This callback will be loaded and used to destroy the plugin and release its assets (if necessary). \end{DoxyCompactList}\item 
 \#define \mbox{\hyperlink{plugin__module_8h_a2fdde508ad95a9ef6355abe33f5d0602}{plugin\+\_\+module}}(...)
 \begin{DoxyCompactList}\small\item\em Encloses the wrapped declarations as exportable items that are then made available to the plugin ecosystem as a result. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -59,11 +59,11 @@ Alias for {\ttfamily \doxylink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e
 \index{callback@{callback}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{callback}{callback}}
 {\footnotesize\ttfamily \label{plugin__module_8h_ac5d649614548d809289f5d58f179c2c0} 
-\#define callback(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{scope}{}\end{DoxyParamCaption})}
+\#define callback(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{, }\item[{}]{scope}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_ad51bd7681c34609b5f79357118cd1e3b}{callback\_raw}}(name,\ name,\ scope)}
+\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_ad51bd7681c34609b5f79357118cd1e3b}{callback\_raw}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}},\ \mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}},\ scope)}
 
 \end{DoxyCode}
 
@@ -81,11 +81,11 @@ Declares a user-\/defined scoped callback.
 \index{callback\_decl@{callback\_decl}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{callback\_decl}{callback\_decl}}
 {\footnotesize\ttfamily \label{plugin__module_8h_af02dfc3a14fcfd77b8edcc5ee264af10} 
-\#define callback\+\_\+decl(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
+\#define callback\+\_\+decl(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c}{plugin\_module\_export}}\ \mbox{\hyperlink{plugin__module_8h_aef2d89dc922733a82a901d47ad848133}{callback\_def}}\ \mbox{\hyperlink{plugin__module_8h_a3eaa78681355580774e6ed0ffb7f824b}{callback\_ident}}(name)\ \mbox{\hyperlink{plugin__module_8h_abe1bedeb2671da93d45408d699a9ad50}{callback\_sig}}}
+\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c}{plugin\_module\_export}}\ \mbox{\hyperlink{plugin__module_8h_aef2d89dc922733a82a901d47ad848133}{callback\_def}}\ \mbox{\hyperlink{plugin__module_8h_a3eaa78681355580774e6ed0ffb7f824b}{callback\_ident}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}})\ \mbox{\hyperlink{plugin__module_8h_abe1bedeb2671da93d45408d699a9ad50}{callback\_sig}}}
 
 \end{DoxyCode}
 
@@ -111,11 +111,11 @@ Declares the initial definition of a callback.
 \index{callback\_ident@{callback\_ident}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{callback\_ident}{callback\_ident}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a3eaa78681355580774e6ed0ffb7f824b} 
-\#define callback\+\_\+ident(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+\#define callback\+\_\+ident(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{name\#\#\_callback\#\#\_\_VA\_OPT\_\_(\_\_VA\_ARGS\_\_)}
+\DoxyCodeLine{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}\#\#\_callback\#\#\_\_VA\_OPT\_\_(\_\_VA\_ARGS\_\_)}
 
 \end{DoxyCode}
 
@@ -131,14 +131,14 @@ Declares the identity of a callback.
 \index{callback\_raw@{callback\_raw}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{callback\_raw}{callback\_raw}}
 {\footnotesize\ttfamily \label{plugin__module_8h_ad51bd7681c34609b5f79357118cd1e3b} 
-\#define callback\+\_\+raw(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{ident}{, }\item[{}]{scope}{}\end{DoxyParamCaption})}
+\#define callback\+\_\+raw(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{, }\item[{}]{ident}{, }\item[{}]{scope}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{plugin__module_8h_af02dfc3a14fcfd77b8edcc5ee264af10}{callback\_decl}}(name);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{plugin__module_8h_af02dfc3a14fcfd77b8edcc5ee264af10}{callback\_decl}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}});\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{plugin__module_8h_aef93f1f36b5922e43607816a326a3d9f}{attribute}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0}{CommandScope}}\ \mbox{\hyperlink{plugin__module_8h_a3eaa78681355580774e6ed0ffb7f824b}{callback\_ident}}(ident,\ Scope)\ =\ scope;\ \(\backslash\)}
-\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{plugin__module_8h_aef93f1f36b5922e43607816a326a3d9f}{attribute}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_ab6f5f76c65ecbadbb3398d097f4b52d4}{CommandImpl}}\ \ \mbox{\hyperlink{plugin__module_8h_a3eaa78681355580774e6ed0ffb7f824b}{callback\_ident}}(ident,\ Impl)\ \ =\ \mbox{\hyperlink{plugin__module_8h_a3eaa78681355580774e6ed0ffb7f824b}{callback\_ident}}(name);\ \(\backslash\)}
-\DoxyCodeLine{\ \ \ \ callback\_decl(name)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{plugin__module_8h_aef93f1f36b5922e43607816a326a3d9f}{attribute}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_ab6f5f76c65ecbadbb3398d097f4b52d4}{CommandImpl}}\ \ \mbox{\hyperlink{plugin__module_8h_a3eaa78681355580774e6ed0ffb7f824b}{callback\_ident}}(ident,\ Impl)\ \ =\ \mbox{\hyperlink{plugin__module_8h_a3eaa78681355580774e6ed0ffb7f824b}{callback\_ident}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}});\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ callback\_decl(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}})}
 
 \end{DoxyCode}
 
@@ -168,11 +168,11 @@ Declares the callback signagure used by all callback declarations.
 \index{oninstall@{oninstall}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{oninstall}{oninstall}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a7e201bd5013827180a56da3c3ca983e8} 
-\#define oninstall(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
+\#define oninstall(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_ad51bd7681c34609b5f79357118cd1e3b}{callback\_raw}}(name,\ OnInstall,\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8}{SCOPE\_GLOBAL}})}
+\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_ad51bd7681c34609b5f79357118cd1e3b}{callback\_raw}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}},\ OnInstall,\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8}{SCOPE\_GLOBAL}})}
 
 \end{DoxyCode}
 
@@ -188,11 +188,11 @@ Declares the install callback. This callback will be loaded and used to install 
 \index{onrelease@{onrelease}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{onrelease}{onrelease}}
 {\footnotesize\ttfamily \label{plugin__module_8h_abf8cc66d2ac563b3d419c2254b0a5d58} 
-\#define onrelease(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
+\#define onrelease(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_ad51bd7681c34609b5f79357118cd1e3b}{callback\_raw}}(name,\ OnRelease,\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8}{SCOPE\_GLOBAL}})}
+\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_ad51bd7681c34609b5f79357118cd1e3b}{callback\_raw}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}},\ OnRelease,\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8}{SCOPE\_GLOBAL}})}
 
 \end{DoxyCode}
 

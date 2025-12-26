@@ -86,9 +86,35 @@ __ns_cplusplus_head(__plugin_root::command)
 __ns_cplusplus_tail
 
 __ns_cplusplus_head(__plugin_root)
+/// @brief Calls a command from the registry available
+/// within this context.
+/// @param  ctx as the current plugin context.
+/// @param  name as the identifier used in the registry.
+/// @return The state of whether the call was successful.
+StateErr CallCommand(const Context *, const char *);
+/// @brief Gets the name of the artifact currently contained
+/// in the context.
+/// @param  ctx as the current context.
+/// @return The name of the artifact.
 const char *GetName(const Context *);
+/// @brief Gets the description of the artifact currently
+/// contatained in the context.
+/// @param  ctx as the current context.
+/// @return The description of the artifact.
 const char *GetDescription(const Context *);
+/// @brief Gets the long description of the artifact
+/// currently contatained in the context.
+/// @param  ctx as the current context.
+/// @return The long description of the artifact.
 const char *GetDescriptionLong(const Context *);
+/// @brief Adds a command to the artifact registry; making
+/// it callable from the plugin ecosystem.
+/// @param  ctx as the current plugin context.
+/// @param  name as the identifier used in the registry.
+/// @param  impl_name as the identifier used to locate the
+/// implementation.
+/// @return The state of whether registration was
+/// successful.
 StateErr RegisterCommand(const Context *, const char *, const char *);
 __ns_cplusplus_tail
 

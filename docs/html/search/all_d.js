@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['registercommand_0',['RegisterCommand',['../plugin_8h.html#a1213640a384fba7c3f1ba89b76759a59',1,'RegisterCommand(const Context *, const char *, const char *):&#160;plugin.cpp'],['../plugin_8cpp.html#a008ecf52964815461c958aa3cdd3b1f8',1,'RegisterCommand(const Context *context, const char *name, const char *impl_name):&#160;plugin.cpp']]],
+  ['registercommand_0',['RegisterCommand',['../plugin_8h.html#a1213640a384fba7c3f1ba89b76759a59',1,'RegisterCommand(const Context *, const char *, const char *):&#160;plugin.cpp'],['../plugin_8cpp.html#a0a99c5fa97e87fb3e9b74513645f02bc',1,'RegisterCommand(const Context *ctx, const char *name, const char *impl_name):&#160;plugin.cpp']]],
   ['registry_1',['Registry',['../namespace____plugin__root_1_1command.html#ab0d3ca173fee6bbd104c61f4f17484b7',1,'__plugin_root::command']]],
   ['release_2',['Release',['../namespace____plugin__root.html#aee3919c9fa229b9e584aeae951867f44',1,'__plugin_root']]]
 ];

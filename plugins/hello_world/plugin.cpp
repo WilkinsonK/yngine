@@ -8,16 +8,27 @@ plugin_module(
         return NONE;
     }
 
+    callback(PrintFarewell, SCOPE_SHARED) {
+        printf("Farewell, World!\n");
+        return NONE;
+    }
+
     oninstall(Init) {
-        int reg;
+        StateErr reg;
         reg = RegisterCommand(context, "hello_world.PrintHello", "PrintHello");
-        if (reg != 0)
-            return (StateErr)reg;
-        return (StateErr)reg;
+        if (reg != 0) return reg;
+
+        reg = RegisterCommand(context, "hello_world.PrintFarewell", "PrintFarewell");
+        if (reg != 0) return reg;
+
+        reg = CallCommand(context, "hello_world.PrintHello");
+        if (reg != 0) return reg;
+        return reg;
     }
 
     onrelease(Drop) {
-        printf("Goodbye, World!\n");
+        StateErr reg = CallCommand(context, "hello_world.PrintFarewell");
+        if (reg != 0) return reg;
         return NONE;
     }
 )

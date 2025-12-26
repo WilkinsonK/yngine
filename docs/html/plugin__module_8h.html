@@ -110,19 +110,19 @@ Macros</h2></td></tr>
 <tr class="memdesc:aef93f1f36b5922e43607816a326a3d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for <span class="tt"><a class="el" href="#a6ef131c12001190c8438bdb0c6583e0c" title="Exports the object/callable/etc. without mangling the names, making it available at load time.">plugin_module_export</a></span> for convenience. Depending on the language of the module (c/c++), includes implicit extern calls to prevent name mangling when the attribute needs to be accessed.  <br /></td></tr>
 <tr class="memitem:aef2d89dc922733a82a901d47ad848133" id="r_aef2d89dc922733a82a901d47ad848133"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef2d89dc922733a82a901d47ad848133">callback_def</a>&#160;&#160;&#160;<a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a></td></tr>
 <tr class="memdesc:aef2d89dc922733a82a901d47ad848133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares the initial definition of a callback.  <br /></td></tr>
-<tr class="memitem:a3eaa78681355580774e6ed0ffb7f824b" id="r_a3eaa78681355580774e6ed0ffb7f824b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eaa78681355580774e6ed0ffb7f824b">callback_ident</a>(name, ...)</td></tr>
+<tr class="memitem:a3eaa78681355580774e6ed0ffb7f824b" id="r_a3eaa78681355580774e6ed0ffb7f824b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eaa78681355580774e6ed0ffb7f824b">callback_ident</a>(<a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>, ...)</td></tr>
 <tr class="memdesc:a3eaa78681355580774e6ed0ffb7f824b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares the identity of a callback.  <br /></td></tr>
 <tr class="memitem:abe1bedeb2671da93d45408d699a9ad50" id="r_abe1bedeb2671da93d45408d699a9ad50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe1bedeb2671da93d45408d699a9ad50">callback_sig</a>&#160;&#160;&#160;(const Context *context)</td></tr>
 <tr class="memdesc:abe1bedeb2671da93d45408d699a9ad50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares the callback signagure used by all callback declarations.  <br /></td></tr>
-<tr class="memitem:af02dfc3a14fcfd77b8edcc5ee264af10" id="r_af02dfc3a14fcfd77b8edcc5ee264af10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af02dfc3a14fcfd77b8edcc5ee264af10">callback_decl</a>(name)</td></tr>
+<tr class="memitem:af02dfc3a14fcfd77b8edcc5ee264af10" id="r_af02dfc3a14fcfd77b8edcc5ee264af10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af02dfc3a14fcfd77b8edcc5ee264af10">callback_decl</a>(<a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>)</td></tr>
 <tr class="memdesc:af02dfc3a14fcfd77b8edcc5ee264af10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares the signature of a callback.  <br /></td></tr>
-<tr class="memitem:ad51bd7681c34609b5f79357118cd1e3b" id="r_ad51bd7681c34609b5f79357118cd1e3b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad51bd7681c34609b5f79357118cd1e3b">callback_raw</a>(name,  ident,  scope)</td></tr>
+<tr class="memitem:ad51bd7681c34609b5f79357118cd1e3b" id="r_ad51bd7681c34609b5f79357118cd1e3b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad51bd7681c34609b5f79357118cd1e3b">callback_raw</a>(<a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>,  ident,  scope)</td></tr>
 <tr class="memdesc:ad51bd7681c34609b5f79357118cd1e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a raw callback. A raw callback is a series of artifacts which, when composed, define a <span class="tt">Command</span> within the plugin ecosystem.  <br /></td></tr>
-<tr class="memitem:ac5d649614548d809289f5d58f179c2c0" id="r_ac5d649614548d809289f5d58f179c2c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5d649614548d809289f5d58f179c2c0">callback</a>(name,  scope)</td></tr>
+<tr class="memitem:ac5d649614548d809289f5d58f179c2c0" id="r_ac5d649614548d809289f5d58f179c2c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5d649614548d809289f5d58f179c2c0">callback</a>(<a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>,  scope)</td></tr>
 <tr class="memdesc:ac5d649614548d809289f5d58f179c2c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a user-defined scoped callback.  <br /></td></tr>
-<tr class="memitem:a7e201bd5013827180a56da3c3ca983e8" id="r_a7e201bd5013827180a56da3c3ca983e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e201bd5013827180a56da3c3ca983e8">oninstall</a>(name)</td></tr>
+<tr class="memitem:a7e201bd5013827180a56da3c3ca983e8" id="r_a7e201bd5013827180a56da3c3ca983e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e201bd5013827180a56da3c3ca983e8">oninstall</a>(<a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>)</td></tr>
 <tr class="memdesc:a7e201bd5013827180a56da3c3ca983e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares the install callback. This callback will be loaded and used to install the plugin.  <br /></td></tr>
-<tr class="memitem:abf8cc66d2ac563b3d419c2254b0a5d58" id="r_abf8cc66d2ac563b3d419c2254b0a5d58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf8cc66d2ac563b3d419c2254b0a5d58">onrelease</a>(name)</td></tr>
+<tr class="memitem:abf8cc66d2ac563b3d419c2254b0a5d58" id="r_abf8cc66d2ac563b3d419c2254b0a5d58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf8cc66d2ac563b3d419c2254b0a5d58">onrelease</a>(<a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>)</td></tr>
 <tr class="memdesc:abf8cc66d2ac563b3d419c2254b0a5d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares the release callback. This callback will be loaded and used to destroy the plugin and release its assets (if necessary).  <br /></td></tr>
 <tr class="memitem:a2fdde508ad95a9ef6355abe33f5d0602" id="r_a2fdde508ad95a9ef6355abe33f5d0602"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fdde508ad95a9ef6355abe33f5d0602">plugin_module</a>(...)</td></tr>
 <tr class="memdesc:a2fdde508ad95a9ef6355abe33f5d0602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encloses the wrapped declarations as exportable items that are then made available to the plugin ecosystem as a result.  <br /></td></tr>
@@ -155,7 +155,7 @@ Macros</h2></td></tr>
         <tr>
           <td class="memname">#define callback</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -164,7 +164,8 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ad51bd7681c34609b5f79357118cd1e3b">callback_raw</a>(name, name, scope)</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ad51bd7681c34609b5f79357118cd1e3b">callback_raw</a>(<a class="code hl_variable" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>, <a class="code hl_variable" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>, scope)</div>
+<div class="ttc" id="aplugin_8cpp_html_a8f8f80d37794cde9472343e4487ba3eb"><div class="ttname"><a href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition</b> plugin.cpp:107</div></div>
 <div class="ttc" id="aplugin__module_8h_html_ad51bd7681c34609b5f79357118cd1e3b"><div class="ttname"><a href="#ad51bd7681c34609b5f79357118cd1e3b">callback_raw</a></div><div class="ttdeci">#define callback_raw(name, ident, scope)</div><div class="ttdoc">Declares a raw callback. A raw callback is a series of artifacts which, when composed,...</div><div class="ttdef"><b>Definition</b> plugin_module.h:57</div></div>
 </div><!-- fragment -->
 <p>Declares a user-defined scoped callback. </p>
@@ -187,12 +188,12 @@ Macros</h2></td></tr>
         <tr>
           <td class="memname">#define callback_decl</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a6ef131c12001190c8438bdb0c6583e0c">plugin_module_export</a> <a class="code hl_define" href="#aef2d89dc922733a82a901d47ad848133">callback_def</a> <a class="code hl_define" href="#a3eaa78681355580774e6ed0ffb7f824b">callback_ident</a>(name) <a class="code hl_define" href="#abe1bedeb2671da93d45408d699a9ad50">callback_sig</a></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a6ef131c12001190c8438bdb0c6583e0c">plugin_module_export</a> <a class="code hl_define" href="#aef2d89dc922733a82a901d47ad848133">callback_def</a> <a class="code hl_define" href="#a3eaa78681355580774e6ed0ffb7f824b">callback_ident</a>(<a class="code hl_variable" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>) <a class="code hl_define" href="#abe1bedeb2671da93d45408d699a9ad50">callback_sig</a></div>
 <div class="ttc" id="aplugin__module_8h_html_a3eaa78681355580774e6ed0ffb7f824b"><div class="ttname"><a href="#a3eaa78681355580774e6ed0ffb7f824b">callback_ident</a></div><div class="ttdeci">#define callback_ident(name,...)</div><div class="ttdoc">Declares the identity of a callback.</div><div class="ttdef"><b>Definition</b> plugin_module.h:41</div></div>
 <div class="ttc" id="aplugin__module_8h_html_a6ef131c12001190c8438bdb0c6583e0c"><div class="ttname"><a href="#a6ef131c12001190c8438bdb0c6583e0c">plugin_module_export</a></div><div class="ttdeci">#define plugin_module_export</div><div class="ttdoc">Exports the object/callable/etc. without mangling the names, making it available at load time.</div><div class="ttdef"><b>Definition</b> plugin_module.h:28</div></div>
 <div class="ttc" id="aplugin__module_8h_html_abe1bedeb2671da93d45408d699a9ad50"><div class="ttname"><a href="#abe1bedeb2671da93d45408d699a9ad50">callback_sig</a></div><div class="ttdeci">#define callback_sig</div><div class="ttdoc">Declares the callback signagure used by all callback declarations.</div><div class="ttdef"><b>Definition</b> plugin_module.h:44</div></div>
@@ -233,7 +234,7 @@ Macros</h2></td></tr>
         <tr>
           <td class="memname">#define callback_ident</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -242,7 +243,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">name##_callback##__VA_OPT__(__VA_ARGS__)</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_variable" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>##_callback##__VA_OPT__(__VA_ARGS__)</div>
 </div><!-- fragment -->
 <p>Declares the identity of a callback. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -263,7 +264,7 @@ Macros</h2></td></tr>
         <tr>
           <td class="memname">#define callback_raw</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a></em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -277,10 +278,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="#af02dfc3a14fcfd77b8edcc5ee264af10">callback_decl</a>(name); \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="#af02dfc3a14fcfd77b8edcc5ee264af10">callback_decl</a>(<a class="code hl_variable" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>); \</div>
 <div class="line">    <a class="code hl_define" href="#aef93f1f36b5922e43607816a326a3d9f">attribute</a> <span class="keyword">const</span> <a class="code hl_enumeration" href="plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0">CommandScope</a> <a class="code hl_define" href="#a3eaa78681355580774e6ed0ffb7f824b">callback_ident</a>(ident, Scope) = scope; \</div>
-<div class="line">    <a class="code hl_define" href="#aef93f1f36b5922e43607816a326a3d9f">attribute</a> <span class="keyword">const</span> <a class="code hl_typedef" href="plugin_8h.html#ab6f5f76c65ecbadbb3398d097f4b52d4">CommandImpl</a>  <a class="code hl_define" href="#a3eaa78681355580774e6ed0ffb7f824b">callback_ident</a>(ident, Impl)  = <a class="code hl_define" href="#a3eaa78681355580774e6ed0ffb7f824b">callback_ident</a>(name); \</div>
-<div class="line">    callback_decl(name)</div>
+<div class="line">    <a class="code hl_define" href="#aef93f1f36b5922e43607816a326a3d9f">attribute</a> <span class="keyword">const</span> <a class="code hl_typedef" href="plugin_8h.html#ab6f5f76c65ecbadbb3398d097f4b52d4">CommandImpl</a>  <a class="code hl_define" href="#a3eaa78681355580774e6ed0ffb7f824b">callback_ident</a>(ident, Impl)  = <a class="code hl_define" href="#a3eaa78681355580774e6ed0ffb7f824b">callback_ident</a>(<a class="code hl_variable" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>); \</div>
+<div class="line">    callback_decl(<a class="code hl_variable" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>)</div>
 <div class="ttc" id="aplugin_8h_html_a11a6da27f6d3b8c5ba55f9809b61cdd0"><div class="ttname"><a href="plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0">CommandScope</a></div><div class="ttdeci">CommandScope</div><div class="ttdoc">The scope of the command and how/where it can be called from.</div><div class="ttdef"><b>Definition</b> plugin.h:78</div></div>
 <div class="ttc" id="aplugin_8h_html_ab6f5f76c65ecbadbb3398d097f4b52d4"><div class="ttname"><a href="plugin_8h.html#ab6f5f76c65ecbadbb3398d097f4b52d4">CommandImpl</a></div><div class="ttdeci">StateErr(* CommandImpl)(const Context *)</div><div class="ttdoc">Callable hook that is arbitrary to the manager and defined by the plugin.</div><div class="ttdef"><b>Definition</b> plugin.h:75</div></div>
 <div class="ttc" id="aplugin__module_8h_html_aef93f1f36b5922e43607816a326a3d9f"><div class="ttname"><a href="#aef93f1f36b5922e43607816a326a3d9f">attribute</a></div><div class="ttdeci">#define attribute</div><div class="ttdoc">Alias for plugin_module_export for convenience. Depending on the language of the module (c/c++),...</div><div class="ttdef"><b>Definition</b> plugin_module.h:35</div></div>
@@ -323,12 +324,12 @@ Macros</h2></td></tr>
         <tr>
           <td class="memname">#define oninstall</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ad51bd7681c34609b5f79357118cd1e3b">callback_raw</a>(name, OnInstall, <a class="code hl_enumvalue" href="plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8">SCOPE_GLOBAL</a>)</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ad51bd7681c34609b5f79357118cd1e3b">callback_raw</a>(<a class="code hl_variable" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>, OnInstall, <a class="code hl_enumvalue" href="plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8">SCOPE_GLOBAL</a>)</div>
 <div class="ttc" id="aplugin_8h_html_a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8"><div class="ttname"><a href="plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8">SCOPE_GLOBAL</a></div><div class="ttdeci">@ SCOPE_GLOBAL</div><div class="ttdoc">Visible to entire plugin system.</div><div class="ttdef"><b>Definition</b> plugin.h:82</div></div>
 </div><!-- fragment -->
 <p>Declares the install callback. This callback will be loaded and used to install the plugin. </p>
@@ -350,12 +351,12 @@ Macros</h2></td></tr>
         <tr>
           <td class="memname">#define onrelease</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ad51bd7681c34609b5f79357118cd1e3b">callback_raw</a>(name, OnRelease, <a class="code hl_enumvalue" href="plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8">SCOPE_GLOBAL</a>)</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ad51bd7681c34609b5f79357118cd1e3b">callback_raw</a>(<a class="code hl_variable" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>, OnRelease, <a class="code hl_enumvalue" href="plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8">SCOPE_GLOBAL</a>)</div>
 </div><!-- fragment -->
 <p>Declares the release callback. This callback will be loaded and used to destroy the plugin and release its assets (if necessary). </p>
 <dl class="params"><dt>Parameters</dt><dd>

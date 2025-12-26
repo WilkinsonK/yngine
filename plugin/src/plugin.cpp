@@ -9,8 +9,6 @@
 #include "plugin.hpp"
 #include "plugin_internal.hpp"
 
-using namespace __plugin_root::dllutil;
-
 namespace __plugin_root {
     std::ostream& operator<<(std::ostream& os, const StateErr& state) {
         return os << "<"
@@ -21,17 +19,17 @@ namespace __plugin_root {
     }
 
     Context Install(const Context& ctx) {
-        return InstallModule(ctx)
-            .and_then(InstallCommand("OnInstall"))
-            .and_then(InstallCommand("OnRelease"))
-            .and_then(CallCommand("OnInstall"))
-            .or_else(HandleErr(ctx))
+        return dllutil::InstallModule(ctx)
+            .and_then(dllutil::InstallCommand("OnInstall"))
+            .and_then(dllutil::InstallCommand("OnRelease"))
+            .and_then(dllutil::CallCommand("OnInstall"))
+            .or_else(dllutil::HandleErr(ctx))
             .value();
     }
 
     Context Release(const Context& ctx) {
-        return CallCommand(ctx, "OnRelease")
-            .or_else(HandleErr(ctx))
+        return dllutil::CallCommand(ctx, "OnRelease")
+            .or_else(dllutil::HandleErr(ctx))
             .value();
     }
 
@@ -106,20 +104,24 @@ namespace __plugin_root {
 }
 
 __ns_cplusplus_head(__plugin_root)
-    const char *GetName(const Context *context) {
-        return context->artifact->name.c_str();
+    StateErr CallCommand(const Context *ctx, const char *name) {
+        return dllutil::CallCommand(*ctx, name).error_or(NONE);
     }
 
-    const char *GetDescription(const Context *context) {
-        return context->artifact->description.c_str();
+    const char *GetName(const Context *ctx) {
+        return ctx->artifact->name.c_str();
     }
 
-    const char *GetDescriptionLong(const Context *context) {
-        return context->artifact->description_long.c_str();
+    const char *GetDescription(const Context *ctx) {
+        return ctx->artifact->description.c_str();
     }
 
-    StateErr RegisterCommand(const Context *context, const char *name, const char *impl_name) {
-        return dllutil::InstallCommand(*context, name, impl_name).error_or(NONE);
+    const char *GetDescriptionLong(const Context *ctx) {
+        return ctx->artifact->description_long.c_str();
+    }
+
+    StateErr RegisterCommand(const Context *ctx, const char *name, const char *impl_name) {
+        return dllutil::InstallCommand(*ctx, name, impl_name).error_or(NONE);
     }
 __ns_cplusplus_tail
 
