@@ -15,45 +15,40 @@
 \DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ namespace\_when\_cpp\_tail}}
 \DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ namespace\_when\_cpp(name,\ ...)\ \(\backslash\)}}
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\ \ \ \ namespace\_when\_cpp\_head(name)\ \(\backslash\)}}
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ \_\_VA\_ARGS\_\_\ \(\backslash\)}}
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \ \ namespace\_when\_cpp\_tail}}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \mbox{\hyperlink{plugin_8h_a1b4ae8d20bd9400567ceb38300aab083}{namespace\_when\_cpp}}(\mbox{\hyperlink{namespaceplugin_1_1artifact}{plugin::artifact}},}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\ ArtifactBody\ ArtifactBody;}
-\DoxyCodeLine{00024\ )}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \mbox{\hyperlink{plugin_8h_a1b4ae8d20bd9400567ceb38300aab083}{namespace\_when\_cpp}}(\mbox{\hyperlink{namespaceplugin}{plugin}},}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{plugin_8h_a0a3591bc40d083c663732a66598284fe}{ContextBody}}\ \mbox{\hyperlink{plugin_8h_a0a3591bc40d083c663732a66598284fe}{ContextBody}};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\ \{}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}},}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a1eda451e6af890743177dd1c50d193b1}{DLL\_MALFORMAT}}\ =\ 0x1000,}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a9314dcb57cdb5e341beb809eb0dfeddc}{DLL\_NOCALLBACK}},}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a610d5e4fb7b3a7bd8674713cd8b92d04}{DLL\_NODROP}},}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a5dc415aa05c6b554c15961429b0fd5e3}{DLL\_NOINIT}},}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad43a10efcfb4462aead6359fb4dc12a3}{DLL\_NOINSTALL}},}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac}{DLL\_NOMODULE}},}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0}{DLL\_NOOBJECT}},}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c}{DLL\_NORELEASE}},}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be}{DLL\_NOSCOPE}},}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e}{MAN\_NOMAN}}\ =\ 0x2000,}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5}{MAN\_MALPARSE}},}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aba0727e5ae54804a3f4d03951ad27acb}{MAN\_NOPLUGIN}},}
-\DoxyCodeLine{00067\ \ \ \ \ \}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}};}
-\DoxyCodeLine{00068\ )}
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00070\ \mbox{\hyperlink{plugin_8h_a1b4ae8d20bd9400567ceb38300aab083}{namespace\_when\_cpp}}(\mbox{\hyperlink{namespaceplugin_1_1command}{plugin::command}},}
-\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\ Command\ Command;}
-\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}(*CommandImpl)(\textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_a0a3591bc40d083c663732a66598284fe}{ContextBody}}*);}
-\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ CommandScope\ \{}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ SCOPE\_LOCAL,}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ SCOPE\_GLOBAL,}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ SCOPE\_SHARED,}
-\DoxyCodeLine{00086\ \ \ \ \ \}\ CommandScope;}
-\DoxyCodeLine{00087\ )}
-\DoxyCodeLine{00088\ }
-\DoxyCodeLine{00089\ \#endif\ \textcolor{comment}{//\ \#ifndef\ PLUGIN\_PLUGIN\_H}}
+\DoxyCodeLine{00016\ \mbox{\hyperlink{plugin_8h_ab69fc9c1f45170f4f73f817b4bc1c6bc}{namespace\_when\_cpp\_head}}(\mbox{\hyperlink{namespaceplugin}{plugin}})}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }Context\ Context;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a1eda451e6af890743177dd1c50d193b1}{DLL\_MALFORMAT}}\ =\ 0x1000,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a9314dcb57cdb5e341beb809eb0dfeddc}{DLL\_NOCALLBACK}},}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a610d5e4fb7b3a7bd8674713cd8b92d04}{DLL\_NODROP}},}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a5dc415aa05c6b554c15961429b0fd5e3}{DLL\_NOINIT}},}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad43a10efcfb4462aead6359fb4dc12a3}{DLL\_NOINSTALL}},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac}{DLL\_NOMODULE}},}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0}{DLL\_NOOBJECT}},}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c}{DLL\_NORELEASE}},}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be}{DLL\_NOSCOPE}},}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e}{MAN\_NOMAN}}\ =\ 0x2000,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5}{MAN\_MALPARSE}},}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aba0727e5ae54804a3f4d03951ad27acb}{MAN\_NOPLUGIN}},}
+\DoxyCodeLine{00057\ \ \ \ \ \}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}};}
+\DoxyCodeLine{00058\ \mbox{\hyperlink{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace}{namespace\_when\_cpp\_tail}}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \mbox{\hyperlink{plugin_8h_ab69fc9c1f45170f4f73f817b4bc1c6bc}{namespace\_when\_cpp\_head}}(\mbox{\hyperlink{namespaceplugin_1_1artifact}{plugin::artifact}})}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }ArtifactBody\ ArtifactBody;}
+\DoxyCodeLine{00063\ \mbox{\hyperlink{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace}{namespace\_when\_cpp\_tail}}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \mbox{\hyperlink{plugin_8h_ab69fc9c1f45170f4f73f817b4bc1c6bc}{namespace\_when\_cpp\_head}}(\mbox{\hyperlink{namespaceplugin_1_1command}{plugin::command}})}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }Command\ Command;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}(*\mbox{\hyperlink{plugin_8h_ab6f5f76c65ecbadbb3398d097f4b52d4}{CommandImpl}})(\textcolor{keyword}{const}\ Context*);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0}{CommandScope}}\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0af828bc82c537119c89b55d2db41ec75b}{SCOPE\_LOCAL}},}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8}{SCOPE\_GLOBAL}},}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0ab25e409b4a6d6966a90985a502ff5168}{SCOPE\_SHARED}},}
+\DoxyCodeLine{00081\ \ \ \ \ \}\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0}{CommandScope}};}
+\DoxyCodeLine{00082\ \mbox{\hyperlink{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace}{namespace\_when\_cpp\_tail}}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \#ifndef\ PLUGIN\_PLUGIN\_H}}
 
 \end{DoxyCode}

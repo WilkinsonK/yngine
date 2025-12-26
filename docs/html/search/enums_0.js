@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stateerr_0',['StateErr',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03',1,'plugin.h']]]
+  ['commandscope_0',['CommandScope',['../plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0',1,'plugin.h']]]
 ];

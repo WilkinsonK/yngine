@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['context_0',['Context',['../namespaceplugin.html#afe660a664bbf6ad2a53690447133153a',1,'plugin']]],
-  ['contextbody_1',['ContextBody',['../plugin_8h.html#a0a3591bc40d083c663732a66598284fe',1,'plugin.h']]]
+  ['commandimpl_0',['CommandImpl',['../plugin_8h.html#ab6f5f76c65ecbadbb3398d097f4b52d4',1,'plugin.h']]],
+  ['commandscope_1',['CommandScope',['../plugin_8h.html#ad5b3dc633238335c88adcff081431622',1,'plugin.h']]]
 ];

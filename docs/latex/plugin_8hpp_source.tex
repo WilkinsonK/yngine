@@ -2,110 +2,110 @@
 \hypertarget{plugin_8hpp_source}{}\label{plugin_8hpp_source}\index{plugin/include/plugin.hpp@{plugin/include/plugin.hpp}}
 \mbox{\hyperlink{plugin_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <expected>}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00001\ }
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{plugin_8h}{plugin.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin}{plugin}}\ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{typedef}\ std::shared\_ptr<ContextBody>\ \mbox{\hyperlink{namespaceplugin_afe660a664bbf6ad2a53690447133153a}{Context}};}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{typedef}\ std::string\ \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}};}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{typedef}\ std::string\ \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}};}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{typedef}\ std::string\ \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{ObjectPath}};}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceplugin_abcc34f9bb16e75f568693665b2db2f2d}{ObjectMode}};}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{namespaceplugin_a3c5b5fddbc5fe59736a88c0a79277ea4}{ObjectRef}};}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{typedef}\ std::string\ \mbox{\hyperlink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path}};}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{typedef}\ std::string\ \mbox{\hyperlink{namespaceplugin_a4d3acd9218f44539e5eb8d09d27d43a0}{Version}};}
-\DoxyCodeLine{00029\ \}}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin_1_1command}{plugin::command}}\ \{}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structplugin_1_1command_1_1_command}{Command}}\ \{}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ CommandImpl\ \ \mbox{\hyperlink{structplugin_1_1command_1_1_command_a73ebec0f922cd278168234415f5c91eb}{impl}};}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ CommandScope\ \mbox{\hyperlink{structplugin_1_1command_1_1_command_a4ce8e33d11fcccf4d4414922e1c2844c}{scope}};}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\ \ \ \ \ \mbox{\hyperlink{structplugin_1_1command_1_1_command_aaa3f5292a2ba617ebfeee8100d005f02}{state}};}
-\DoxyCodeLine{00036\ \ \ \ \ \};}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{typedef}\ std::unordered\_map<Name,\ Command>\ \mbox{\hyperlink{namespaceplugin_1_1command_a7b5ef5cb3033f42f7486a609f85ade80}{Registry}};}
-\DoxyCodeLine{00041\ \}}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin_1_1artifact}{plugin::artifact}}\ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body}{ArtifactBody}}\ \{}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1command_a7b5ef5cb3033f42f7486a609f85ade80}{command::Registry}}\ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_a76dd43c48f3642c9cf651782156dbd5d}{commands}};}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_af7cfcf2fc6062da0a905d5bc9d3ac2c6}{description}};}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_a5edf61556f6c9e82c3e592eabbb48596}{description\_long}};}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_a4376db69bc5249e21b8f2e84c5ded872}{manifest}};}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_a6e8a46287421649b5bf4a84528ff19a7}{name}};}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_abcc34f9bb16e75f568693665b2db2f2d}{ObjectMode}}\ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_a84641fc2fd67aa54b9bfb001e866415a}{obj\_mode}};}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{ObjectPath}}\ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_aad9709a4ba54280360dbc62995cd2c3e}{obj\_path}};}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_a3c5b5fddbc5fe59736a88c0a79277ea4}{ObjectRef}}\ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_a4dcd0f694eba71f23bf2d694f1d5920d}{obj\_ref}};}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\ \ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_aa283903986ce3eb2176d518c9d9369c3}{state}};}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_a4d3acd9218f44539e5eb8d09d27d43a0}{Version}}\ \ \ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_ad9d00d28b91af23820593a46a67b3ba2}{version}};}
-\DoxyCodeLine{00055\ \ \ \ \ \};}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{typedef}\ std::unique\_ptr<ArtifactBody>\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}};}
-\DoxyCodeLine{00059\ \}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <expected>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{plugin_8h}{plugin.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin}{plugin}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{typedef}\ std::string\ \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{typedef}\ std::string\ \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{typedef}\ std::string\ \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{ObjectPath}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceplugin_abcc34f9bb16e75f568693665b2db2f2d}{ObjectMode}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{namespaceplugin_a3c5b5fddbc5fe59736a88c0a79277ea4}{ObjectRef}};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{typedef}\ std::string\ \mbox{\hyperlink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{typedef}\ std::string\ \mbox{\hyperlink{namespaceplugin_a4d3acd9218f44539e5eb8d09d27d43a0}{Version}};}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin_1_1command}{plugin::command}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structplugin_1_1command_1_1_command}{Command}}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_ab6f5f76c65ecbadbb3398d097f4b52d4}{CommandImpl}}\ \ \mbox{\hyperlink{structplugin_1_1command_1_1_command_a73ebec0f922cd278168234415f5c91eb}{impl}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0}{CommandScope}}\ \mbox{\hyperlink{structplugin_1_1command_1_1_command_a4ce8e33d11fcccf4d4414922e1c2844c}{scope}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\ \ \ \ \ \mbox{\hyperlink{structplugin_1_1command_1_1_command_aaa3f5292a2ba617ebfeee8100d005f02}{state}};}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{typedef}\ std::unordered\_map<Name,\ Command>\ \mbox{\hyperlink{namespaceplugin_1_1command_a7b5ef5cb3033f42f7486a609f85ade80}{Registry}};}
+\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin_1_1artifact}{plugin::artifact}}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body}{ArtifactBody}}\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1command_a7b5ef5cb3033f42f7486a609f85ade80}{command::Registry}}\ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_a76dd43c48f3642c9cf651782156dbd5d}{commands}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_af7cfcf2fc6062da0a905d5bc9d3ac2c6}{description}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_a5edf61556f6c9e82c3e592eabbb48596}{description\_long}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_a4376db69bc5249e21b8f2e84c5ded872}{manifest}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_a6e8a46287421649b5bf4a84528ff19a7}{name}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_abcc34f9bb16e75f568693665b2db2f2d}{ObjectMode}}\ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_a84641fc2fd67aa54b9bfb001e866415a}{obj\_mode}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{ObjectPath}}\ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_aad9709a4ba54280360dbc62995cd2c3e}{obj\_path}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_a3c5b5fddbc5fe59736a88c0a79277ea4}{ObjectRef}}\ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_a4dcd0f694eba71f23bf2d694f1d5920d}{obj\_ref}};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\ \ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_aa283903986ce3eb2176d518c9d9369c3}{state}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_a4d3acd9218f44539e5eb8d09d27d43a0}{Version}}\ \ \ \ \ \mbox{\hyperlink{structplugin_1_1artifact_1_1_artifact_body_ad9d00d28b91af23820593a46a67b3ba2}{version}};}
+\DoxyCodeLine{00059\ \ \ \ \ \};}
 \DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin}{plugin}}\ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structplugin_1_1_context_body}{ContextBody}}\ \{}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{artifact::Artifact}}\ \mbox{\hyperlink{structplugin_1_1_context_body_abf515e707a5ee861399e0b15a9876015}{artifact}};}
-\DoxyCodeLine{00064\ \ \ \ \ \};}
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceplugin_ac09439bec11bd331a674be393c6da4bb}{StateGroup}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\&);}
-\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceplugin_a8ce6d93c47c29c1b69ed8b08f9ed32d1}{StateMessage}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\&);}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00076\ \ \ \ \ std::ostream\&\ \mbox{\hyperlink{namespaceplugin_aab84fafb6655084881fb8bcd566a601b}{operator<<}}(std::ostream\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\&);}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ R>}
-\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State}}\ =\ std::expected<R,\ StateErr>;}
-\DoxyCodeLine{00088\ \}}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00090\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin_1_1artifact}{plugin::artifact}}\ \{}
-\DoxyCodeLine{00091\ \ \ \ \ std::ostream\&\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aad7b27c6bfbb911c0da2d53d6b0b6652}{operator<<}}(std::ostream\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&);}
-\DoxyCodeLine{00092\ }
-\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a3aade02db2a0747052d5a8ed15a0bab4}{New}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a3aade02db2a0747052d5a8ed15a0bab4}{New}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{ObjectPath}});}
-\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a9f2a6d06af16933ffad7dc9bdf663921}{FromFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *);}
-\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_afa597f511c4c62690486698dd3b5b9c0}{FromOther}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&);}
-\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_ae9855a1577e5ce7f33c088aeabfa1ce9}{WithDescription}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}});}
-\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_ae543a3d4bddd7582be42da71d2e9874d}{WithDescriptionLong}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}});}
-\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a98f8747ec93ca17b4102e77649667b2a}{WithManifest}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path}});}
-\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_ad1faa527738288b076a8e453d8a51b28}{WithName}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}});}
-\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a271603ed1967b8396f63affac4359579}{WithPath}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{ObjectPath}});}
-\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a18f5956b625e97e427a76b4eed32276b}{WithState}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}});}
-\DoxyCodeLine{00152\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_acc0b7c4505b0025307b503a110f1ea68}{WithVersion}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a4d3acd9218f44539e5eb8d09d27d43a0}{Version}});}
-\DoxyCodeLine{00153\ \}}
-\DoxyCodeLine{00154\ }
-\DoxyCodeLine{00155\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin_1_1command}{plugin::command}}\ \{}
-\DoxyCodeLine{00156\ \ \ \ \ \mbox{\hyperlink{structplugin_1_1command_1_1_command}{Command}}\ \mbox{\hyperlink{namespaceplugin_1_1command_abd34af54033c7fbcae732e106e1742a3}{LoadFromArtifact}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{artifact::Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}});}
-\DoxyCodeLine{00157\ \}}
-\DoxyCodeLine{00158\ }
-\DoxyCodeLine{00159\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin_1_1dllutil}{plugin::dllutil}}\ \{}
-\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceplugin_1_1dllutil_a9edfe86bc4dccc9eb8d60c4a91e00312}{Artifact}}\ =\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{artifact::Artifact}};}
-\DoxyCodeLine{00161\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1dllutil_a9edfe86bc4dccc9eb8d60c4a91e00312}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1dllutil_aedc9fdfd8abb3bbd18270c849eed3f4e}{Install}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1dllutil_a9edfe86bc4dccc9eb8d60c4a91e00312}{Artifact}}\&);}
-\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1dllutil_a9edfe86bc4dccc9eb8d60c4a91e00312}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1dllutil_af0e2d8b2b6161fbd36f75e0bfd533efc}{Release}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1dllutil_a9edfe86bc4dccc9eb8d60c4a91e00312}{Artifact}}\&);}
-\DoxyCodeLine{00163\ \}}
-\DoxyCodeLine{00164\ }
-\DoxyCodeLine{00165\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin_1_1plugin}{plugin::plugin}}\ \{}
-\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplugin_1_1plugin_1_1_has_commands}{HasCommands}}\ \{}
-\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State<Context>}}\ AddCommand(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_afe660a664bbf6ad2a53690447133153a}{Context}})\ =\ 0;}
-\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State<Context>}}\ CallCommand(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_afe660a664bbf6ad2a53690447133153a}{Context}},\ \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}})\ =\ 0;}
-\DoxyCodeLine{00180\ \ \ \ \ \};}
-\DoxyCodeLine{00181\ }
-\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplugin_1_1plugin_1_1_can_install}{CanInstall}}\ \{}
-\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State<Context>}}\ OnInstall(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_afe660a664bbf6ad2a53690447133153a}{Context}})\ =\ 0;}
-\DoxyCodeLine{00190\ \ \ \ \ \};}
-\DoxyCodeLine{00191\ }
-\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplugin_1_1plugin_1_1_can_release}{CanRelease}}\ \{}
-\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State<Context>}}\ OnRelease(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_afe660a664bbf6ad2a53690447133153a}{Context}})\ =\ 0;}
-\DoxyCodeLine{00200\ \ \ \ \ \};}
-\DoxyCodeLine{00201\ }
-\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplugin_1_1plugin_1_1_plugin_a1fbacb395713198d08ef690160444f43}{Plugin}}\ \{}
-\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classplugin_1_1plugin_1_1_plugin_aab7e880d305e704cfb998e072a93c943}{\string~Plugin}}(\textcolor{keywordtype}{void})\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplugin_1_1plugin_1_1_plugin_a1fbacb395713198d08ef690160444f43}{Plugin}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_afe660a664bbf6ad2a53690447133153a}{Context}});}
-\DoxyCodeLine{00208\ \ \ \ \ \};}
-\DoxyCodeLine{00209\ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{typedef}\ std::unique\_ptr<ArtifactBody>\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}};}
+\DoxyCodeLine{00063\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin}{plugin}}\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structplugin_1_1_context}{Context}}\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{artifact::Artifact}}\ \mbox{\hyperlink{structplugin_1_1_context_a43df6fed2a2a980b820d3ae8978c1650}{artifact}};}
+\DoxyCodeLine{00068\ \ \ \ \ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceplugin_ac09439bec11bd331a674be393c6da4bb}{StateGroup}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\&);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{namespaceplugin_a8ce6d93c47c29c1b69ed8b08f9ed32d1}{StateMessage}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\&);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ std::ostream\&\ \mbox{\hyperlink{namespaceplugin_aab84fafb6655084881fb8bcd566a601b}{operator<<}}(std::ostream\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\&);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ R>}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State}}\ =\ std::expected<R,\ StateErr>;}
+\DoxyCodeLine{00092\ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin_1_1artifact}{plugin::artifact}}\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ std::ostream\&\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aad7b27c6bfbb911c0da2d53d6b0b6652}{operator<<}}(std::ostream\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_ac9e936924618e2d3ee31176852291948}{Install}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&);}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a9b4d4d806551dd1f19e622898161c7ad}{Release}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a3aade02db2a0747052d5a8ed15a0bab4}{New}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a3aade02db2a0747052d5a8ed15a0bab4}{New}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{ObjectPath}});}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a9f2a6d06af16933ffad7dc9bdf663921}{FromFile}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_afa597f511c4c62690486698dd3b5b9c0}{FromOther}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&);}
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_ae9855a1577e5ce7f33c088aeabfa1ce9}{WithDescription}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}});}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_ae543a3d4bddd7582be42da71d2e9874d}{WithDescriptionLong}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a34cef007247eea54aa5bb2d1e74a16e8}{Desc}});}
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a98f8747ec93ca17b4102e77649667b2a}{WithManifest}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_aaf35e30e16eb4b0f313db8f127e13a79}{Path}});}
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_ad1faa527738288b076a8e453d8a51b28}{WithName}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}});}
+\DoxyCodeLine{00147\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a271603ed1967b8396f63affac4359579}{WithPath}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a882f36f4d6b556415344666c6129d5a5}{ObjectPath}});}
+\DoxyCodeLine{00153\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_a18f5956b625e97e427a76b4eed32276b}{WithState}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}});}
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_acc0b7c4505b0025307b503a110f1ea68}{WithVersion}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a4d3acd9218f44539e5eb8d09d27d43a0}{Version}});}
+\DoxyCodeLine{00160\ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin_1_1command}{plugin::command}}\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{structplugin_1_1command_1_1_command}{Command}}\ \mbox{\hyperlink{namespaceplugin_1_1command_abd34af54033c7fbcae732e106e1742a3}{LoadFromArtifact}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_1_1artifact_aedc39451f73739c6772c7f11edb7a481}{artifact::Artifact}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}});}
+\DoxyCodeLine{00164\ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceplugin_1_1plugin}{plugin::plugin}}\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplugin_1_1plugin_1_1_has_commands}{HasCommands}}\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State<Context>}}\ AddCommand(\textcolor{keyword}{const}\ \mbox{\hyperlink{structplugin_1_1_context}{Context}})\ =\ 0;}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State<Context>}}\ CallCommand(\textcolor{keyword}{const}\ \mbox{\hyperlink{structplugin_1_1_context}{Context}},\ \mbox{\hyperlink{namespaceplugin_a10f05094097185258f69c599fcb3fbea}{Name}})\ =\ 0;}
+\DoxyCodeLine{00181\ \ \ \ \ \};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplugin_1_1plugin_1_1_can_install}{CanInstall}}\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State<Context>}}\ OnInstall(\textcolor{keyword}{const}\ \mbox{\hyperlink{structplugin_1_1_context}{Context}})\ =\ 0;}
+\DoxyCodeLine{00191\ \ \ \ \ \};}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplugin_1_1plugin_1_1_can_release}{CanRelease}}\ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State<Context>}}\ OnRelease(\textcolor{keyword}{const}\ \mbox{\hyperlink{structplugin_1_1_context}{Context}})\ =\ 0;}
+\DoxyCodeLine{00201\ \ \ \ \ \};}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplugin_1_1plugin_1_1_plugin_a1fbacb395713198d08ef690160444f43}{Plugin}}\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classplugin_1_1plugin_1_1_plugin_aab7e880d305e704cfb998e072a93c943}{\string~Plugin}}(\textcolor{keywordtype}{void})\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classplugin_1_1plugin_1_1_plugin_a1fbacb395713198d08ef690160444f43}{Plugin}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structplugin_1_1_context}{Context}});}
+\DoxyCodeLine{00209\ \ \ \ \ \};}
+\DoxyCodeLine{00210\ \}}
 
 \end{DoxyCode}

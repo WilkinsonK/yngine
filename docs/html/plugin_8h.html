@@ -101,14 +101,15 @@ $(function(){initNavTree('plugin_8h.html','',''); });
 Macros</h2></td></tr>
 <tr class="memitem:ab69fc9c1f45170f4f73f817b4bc1c6bc" id="r_ab69fc9c1f45170f4f73f817b4bc1c6bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab69fc9c1f45170f4f73f817b4bc1c6bc">namespace_when_cpp_head</a>(name)</td></tr>
 <tr class="memitem:a3770b0bf52ecd87685ce1428cf870ace" id="r_a3770b0bf52ecd87685ce1428cf870ace"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3770b0bf52ecd87685ce1428cf870ace">namespace_when_cpp_tail</a></td></tr>
-<tr class="memitem:a1b4ae8d20bd9400567ceb38300aab083" id="r_a1b4ae8d20bd9400567ceb38300aab083"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b4ae8d20bd9400567ceb38300aab083">namespace_when_cpp</a>(name, ...)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a0a3591bc40d083c663732a66598284fe" id="r_a0a3591bc40d083c663732a66598284fe"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="#a0a3591bc40d083c663732a66598284fe">ContextBody</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a3591bc40d083c663732a66598284fe">ContextBody</a></td></tr>
-<tr class="memdesc:a0a3591bc40d083c663732a66598284fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Context data specific to a plugin. Is typically passed between the manager and the instance.  <br /></td></tr>
 <tr class="memitem:a57a433fb947523a524b5b61941b70ff5" id="r_a57a433fb947523a524b5b61941b70ff5"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57a433fb947523a524b5b61941b70ff5">StateErr</a></td></tr>
 <tr class="memdesc:a57a433fb947523a524b5b61941b70ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible errors that can occur during the plugin lifecycle.  <br /></td></tr>
+<tr class="memitem:ab6f5f76c65ecbadbb3398d097f4b52d4" id="r_ab6f5f76c65ecbadbb3398d097f4b52d4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6f5f76c65ecbadbb3398d097f4b52d4">CommandImpl</a>) (const Context *)</td></tr>
+<tr class="memdesc:ab6f5f76c65ecbadbb3398d097f4b52d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable hook that is arbitrary to the manager and defined by the plugin.  <br /></td></tr>
+<tr class="memitem:ad5b3dc633238335c88adcff081431622" id="r_ad5b3dc633238335c88adcff081431622"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="#a11a6da27f6d3b8c5ba55f9809b61cdd0">CommandScope</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5b3dc633238335c88adcff081431622">CommandScope</a></td></tr>
+<tr class="memdesc:ad5b3dc633238335c88adcff081431622"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scope of the command and how/where it can be called from.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -132,39 +133,24 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="memdesc:a1d65491ca14b98a2d74d54a94a494b03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible errors that can occur during the plugin lifecycle.  <a href="#a1d65491ca14b98a2d74d54a94a494b03">More...</a><br /></td></tr>
+<tr class="memitem:a11a6da27f6d3b8c5ba55f9809b61cdd0" id="r_a11a6da27f6d3b8c5ba55f9809b61cdd0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11a6da27f6d3b8c5ba55f9809b61cdd0">CommandScope</a> { <a class="el" href="#a11a6da27f6d3b8c5ba55f9809b61cdd0af828bc82c537119c89b55d2db41ec75b">SCOPE_LOCAL</a>
+, <a class="el" href="#a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8">SCOPE_GLOBAL</a>
+, <a class="el" href="#a11a6da27f6d3b8c5ba55f9809b61cdd0ab25e409b4a6d6966a90985a502ff5168">SCOPE_SHARED</a>
+ }</td></tr>
+<tr class="memdesc:a11a6da27f6d3b8c5ba55f9809b61cdd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scope of the command and how/where it can be called from.  <a href="#a11a6da27f6d3b8c5ba55f9809b61cdd0">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ace5a07976c16c5e8a3a4512886093135" id="r_ace5a07976c16c5e8a3a4512886093135"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace5a07976c16c5e8a3a4512886093135">namespace_when_cpp</a> (<a class="el" href="namespaceplugin_1_1artifact.html">plugin::artifact</a>, typedef struct ArtifactBody ArtifactBody;) namespace_when_cpp(<a class="el" href="namespaceplugin.html">plugin</a></td></tr>
+<tr class="memitem:a2fc216529c68983b5f1bfcc89b234c11" id="r_a2fc216529c68983b5f1bfcc89b234c11"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fc216529c68983b5f1bfcc89b234c11">namespace_when_cpp_head</a> (<a class="el" href="namespaceplugin.html">plugin</a>) typedef struct Context Context</td></tr>
+<tr class="memdesc:a2fc216529c68983b5f1bfcc89b234c11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Context data specific to a plugin. Is typically passed between the manager and the instance.  <br /></td></tr>
+<tr class="memitem:ade2ecf942e306270477b232dbd044506" id="r_ade2ecf942e306270477b232dbd044506"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a3770b0bf52ecd87685ce1428cf870ace">namespace_when_cpp_tail</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade2ecf942e306270477b232dbd044506">namespace_when_cpp_head</a> (<a class="el" href="namespaceplugin_1_1artifact.html">plugin::artifact</a>) typedef struct ArtifactBody ArtifactBody</td></tr>
+<tr class="memdesc:ade2ecf942e306270477b232dbd044506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps all assets related to a single plugin.  <br /></td></tr>
+<tr class="memitem:a923facd3c20e88cea2017b1214846e4c" id="r_a923facd3c20e88cea2017b1214846e4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a3770b0bf52ecd87685ce1428cf870ace">namespace_when_cpp_tail</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a923facd3c20e88cea2017b1214846e4c">namespace_when_cpp_head</a> (<a class="el" href="namespaceplugin_1_1command.html">plugin::command</a>) typedef struct Command Command</td></tr>
+<tr class="memdesc:a923facd3c20e88cea2017b1214846e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The callable and attributes dictating its behavior.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common types and declarations shared between the core declarations and module declarations. </p>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
-<a id="a1b4ae8d20bd9400567ceb38300aab083" name="a1b4ae8d20bd9400567ceb38300aab083"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b4ae8d20bd9400567ceb38300aab083">&#9670;&#160;</a></span>namespace_when_cpp</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define namespace_when_cpp</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="#ab69fc9c1f45170f4f73f817b4bc1c6bc">namespace_when_cpp_head</a>(name) \</div>
-<div class="line">    __VA_ARGS__ \</div>
-<div class="line">    namespace_when_cpp_tail</div>
-<div class="ttc" id="aplugin_8h_html_ab69fc9c1f45170f4f73f817b4bc1c6bc"><div class="ttname"><a href="#ab69fc9c1f45170f4f73f817b4bc1c6bc">namespace_when_cpp_head</a></div><div class="ttdeci">#define namespace_when_cpp_head(name)</div><div class="ttdef"><b>Definition</b> plugin.h:12</div></div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="ab69fc9c1f45170f4f73f817b4bc1c6bc" name="ab69fc9c1f45170f4f73f817b4bc1c6bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab69fc9c1f45170f4f73f817b4bc1c6bc">&#9670;&#160;</a></span>namespace_when_cpp_head</h2>
 
@@ -197,19 +183,35 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
-<a id="a0a3591bc40d083c663732a66598284fe" name="a0a3591bc40d083c663732a66598284fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a3591bc40d083c663732a66598284fe">&#9670;&#160;</a></span>ContextBody</h2>
+<a id="ab6f5f76c65ecbadbb3398d097f4b52d4" name="ab6f5f76c65ecbadbb3398d097f4b52d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f5f76c65ecbadbb3398d097f4b52d4">&#9670;&#160;</a></span>CommandImpl</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="#a0a3591bc40d083c663732a66598284fe">ContextBody</a> <a class="el" href="#a0a3591bc40d083c663732a66598284fe">ContextBody</a></td>
+          <td class="memname">typedef <a class="el" href="#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>(* CommandImpl) (const Context *)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Context data specific to a plugin. Is typically passed between the manager and the instance. </p>
+<p>Callable hook that is arbitrary to the manager and defined by the plugin. </p>
+
+</div>
+</div>
+<a id="ad5b3dc633238335c88adcff081431622" name="ad5b3dc633238335c88adcff081431622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5b3dc633238335c88adcff081431622">&#9670;&#160;</a></span>CommandScope</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#a11a6da27f6d3b8c5ba55f9809b61cdd0">CommandScope</a> <a class="el" href="#a11a6da27f6d3b8c5ba55f9809b61cdd0">CommandScope</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The scope of the command and how/where it can be called from. </p>
 
 </div>
 </div>
@@ -230,6 +232,30 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="a11a6da27f6d3b8c5ba55f9809b61cdd0" name="a11a6da27f6d3b8c5ba55f9809b61cdd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a6da27f6d3b8c5ba55f9809b61cdd0">&#9670;&#160;</a></span>CommandScope</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a11a6da27f6d3b8c5ba55f9809b61cdd0">CommandScope</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The scope of the command and how/where it can be called from. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a11a6da27f6d3b8c5ba55f9809b61cdd0af828bc82c537119c89b55d2db41ec75b" name="a11a6da27f6d3b8c5ba55f9809b61cdd0af828bc82c537119c89b55d2db41ec75b"></a>SCOPE_LOCAL&#160;</td><td class="fielddoc"><p>Only visible to this plugin. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8" name="a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8"></a>SCOPE_GLOBAL&#160;</td><td class="fielddoc"><p>Visible to entire plugin system. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a11a6da27f6d3b8c5ba55f9809b61cdd0ab25e409b4a6d6966a90985a502ff5168" name="a11a6da27f6d3b8c5ba55f9809b61cdd0ab25e409b4a6d6966a90985a502ff5168"></a>SCOPE_SHARED&#160;</td><td class="fielddoc"><p>Visible to the plugin manager. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a1d65491ca14b98a2d74d54a94a494b03" name="a1d65491ca14b98a2d74d54a94a494b03"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d65491ca14b98a2d74d54a94a494b03">&#9670;&#160;</a></span>StateErr</h2>
 
@@ -274,24 +300,60 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ace5a07976c16c5e8a3a4512886093135" name="ace5a07976c16c5e8a3a4512886093135"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace5a07976c16c5e8a3a4512886093135">&#9670;&#160;</a></span>namespace_when_cpp()</h2>
+<a id="a2fc216529c68983b5f1bfcc89b234c11" name="a2fc216529c68983b5f1bfcc89b234c11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc216529c68983b5f1bfcc89b234c11">&#9670;&#160;</a></span>namespace_when_cpp_head() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">namespace_when_cpp </td>
+          <td class="memname">namespace_when_cpp_head </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceplugin_1_1artifact.html">plugin::artifact</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="namespaceplugin.html">plugin</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">typedef struct ArtifactBody ArtifactBody;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Context data specific to a plugin. Is typically passed between the manager and the instance. </p>
+
+</div>
+</div>
+<a id="ade2ecf942e306270477b232dbd044506" name="ade2ecf942e306270477b232dbd044506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade2ecf942e306270477b232dbd044506">&#9670;&#160;</a></span>namespace_when_cpp_head() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a3770b0bf52ecd87685ce1428cf870ace">namespace_when_cpp_tail</a> namespace_when_cpp_head </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceplugin_1_1artifact.html">plugin::artifact</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wraps all assets related to a single plugin. </p>
+
+</div>
+</div>
+<a id="a923facd3c20e88cea2017b1214846e4c" name="a923facd3c20e88cea2017b1214846e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a923facd3c20e88cea2017b1214846e4c">&#9670;&#160;</a></span>namespace_when_cpp_head() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a3770b0bf52ecd87685ce1428cf870ace">namespace_when_cpp_tail</a> namespace_when_cpp_head </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceplugin_1_1command.html">plugin::command</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The callable and attributes dictating its behavior. </p>
 
 </div>
 </div>

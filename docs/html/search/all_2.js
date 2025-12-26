@@ -11,5 +11,6 @@ var searchData=
   ['dll_5fnomodule_8',['DLL_NOMODULE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac',1,'plugin.h']]],
   ['dll_5fnoobject_9',['DLL_NOOBJECT',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0',1,'plugin.h']]],
   ['dll_5fnorelease_10',['DLL_NORELEASE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c',1,'plugin.h']]],
-  ['dll_5fnoscope_11',['DLL_NOSCOPE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be',1,'plugin.h']]]
+  ['dll_5fnoscope_11',['DLL_NOSCOPE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be',1,'plugin.h']]],
+  ['dllutil_2ecpp_12',['dllutil.cpp',['../dllutil_8cpp.html',1,'']]]
 ];

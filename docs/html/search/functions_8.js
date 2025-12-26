@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['release_0',['Release',['../namespaceplugin_1_1dllutil.html#af0e2d8b2b6161fbd36f75e0bfd533efc',1,'plugin::dllutil']]]
+  ['release_0',['Release',['../namespaceplugin_1_1artifact.html#a9b4d4d806551dd1f19e622898161c7ad',1,'plugin::artifact']]]
 ];
