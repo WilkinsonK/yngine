@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['release_0',['Release',['../namespaceplugin_1_1artifact.html#a9b4d4d806551dd1f19e622898161c7ad',1,'plugin::artifact']]]
+  ['operator_3c_3c_0',['operator&lt;&lt;',['../namespace____plugin__root.html#a3c87979575ad101348ccaebdc3f7d377',1,'__plugin_root::operator&lt;&lt;()'],['../namespace____plugin__root_1_1artifact.html#ada4278eed051e4a687f1871f19b5111b',1,'__plugin_root::artifact::operator&lt;&lt;()']]]
 ];

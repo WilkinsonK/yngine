@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['withdescription_0',['WithDescription',['../namespaceplugin_1_1artifact.html#ae9855a1577e5ce7f33c088aeabfa1ce9',1,'plugin::artifact']]],
-  ['withdescriptionlong_1',['WithDescriptionLong',['../namespaceplugin_1_1artifact.html#ae543a3d4bddd7582be42da71d2e9874d',1,'plugin::artifact']]],
-  ['withmanifest_2',['WithManifest',['../namespaceplugin_1_1artifact.html#a98f8747ec93ca17b4102e77649667b2a',1,'plugin::artifact']]],
-  ['withname_3',['WithName',['../namespaceplugin_1_1artifact.html#ad1faa527738288b076a8e453d8a51b28',1,'plugin::artifact']]],
-  ['withpath_4',['WithPath',['../namespaceplugin_1_1artifact.html#a271603ed1967b8396f63affac4359579',1,'plugin::artifact']]],
-  ['withstate_5',['WithState',['../namespaceplugin_1_1artifact.html#a18f5956b625e97e427a76b4eed32276b',1,'plugin::artifact']]],
-  ['withversion_6',['WithVersion',['../namespaceplugin_1_1artifact.html#acc0b7c4505b0025307b503a110f1ea68',1,'plugin::artifact']]]
+  ['registercommand_0',['RegisterCommand',['../plugin_8h.html#a1213640a384fba7c3f1ba89b76759a59',1,'RegisterCommand(const Context *, const char *, const char *):&#160;plugin.cpp'],['../plugin_8cpp.html#a008ecf52964815461c958aa3cdd3b1f8',1,'RegisterCommand(const Context *context, const char *name, const char *impl_name):&#160;plugin.cpp']]],
+  ['release_1',['Release',['../namespace____plugin__root.html#aee3919c9fa229b9e584aeae951867f44',1,'__plugin_root']]]
 ];

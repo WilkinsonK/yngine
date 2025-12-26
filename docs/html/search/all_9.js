@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['obj_5fmode_0',['obj_mode',['../structplugin_1_1artifact_1_1_artifact_body.html#a84641fc2fd67aa54b9bfb001e866415a',1,'plugin::artifact::ArtifactBody']]],
-  ['obj_5fpath_1',['obj_path',['../structplugin_1_1artifact_1_1_artifact_body.html#aad9709a4ba54280360dbc62995cd2c3e',1,'plugin::artifact::ArtifactBody']]],
-  ['obj_5fref_2',['obj_ref',['../structplugin_1_1artifact_1_1_artifact_body.html#a4dcd0f694eba71f23bf2d694f1d5920d',1,'plugin::artifact::ArtifactBody']]],
-  ['objectmode_3',['ObjectMode',['../namespaceplugin.html#abcc34f9bb16e75f568693665b2db2f2d',1,'plugin']]],
-  ['objectpath_4',['ObjectPath',['../namespaceplugin.html#a882f36f4d6b556415344666c6129d5a5',1,'plugin']]],
-  ['objectref_5',['ObjectRef',['../namespaceplugin.html#a3c5b5fddbc5fe59736a88c0a79277ea4',1,'plugin']]],
-  ['oninstall_6',['oninstall',['../plugin__module_8h.html#a7e201bd5013827180a56da3c3ca983e8',1,'plugin_module.h']]],
-  ['onrelease_7',['onrelease',['../plugin__module_8h.html#abf8cc66d2ac563b3d419c2254b0a5d58',1,'plugin_module.h']]],
-  ['operator_3c_3c_8',['operator&lt;&lt;',['../namespaceplugin.html#aab84fafb6655084881fb8bcd566a601b',1,'plugin::operator&lt;&lt;()'],['../namespaceplugin_1_1artifact.html#aad7b27c6bfbb911c0da2d53d6b0b6652',1,'plugin::artifact::operator&lt;&lt;()']]]
+  ['man_5fmalparse_0',['MAN_MALPARSE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5',1,'plugin.h']]],
+  ['man_5fnoman_1',['MAN_NOMAN',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e',1,'plugin.h']]],
+  ['man_5fnoplugin_2',['MAN_NOPLUGIN',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aba0727e5ae54804a3f4d03951ad27acb',1,'plugin.h']]],
+  ['manifest_3',['manifest',['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#a8f91618ddcf514f5a109c1deca03d91c',1,'__plugin_root::artifact::ArtifactBody']]]
 ];

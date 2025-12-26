@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../structplugin_1_1artifact_1_1_artifact_body.html#a6e8a46287421649b5bf4a84528ff19a7',1,'plugin::artifact::ArtifactBody']]]
+  ['name_0',['name',['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#a70b08c126a47b4a5220c603f52d1e4d7',1,'__plugin_root::artifact::ArtifactBody']]]
 ];

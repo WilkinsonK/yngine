@@ -1,0 +1,235 @@
+\doxysection{\+\_\+\+\_\+plugin\+\_\+root Namespace Reference}
+\hypertarget{namespace____plugin__root}{}\label{namespace____plugin__root}\index{\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace____plugin__root_1_1command}{command}}
+\item 
+namespace \mbox{\hyperlink{namespace____plugin__root_1_1artifact}{artifact}}
+\item 
+namespace \mbox{\hyperlink{namespace____plugin__root_1_1plugin}{plugin}}
+\item 
+namespace \mbox{\hyperlink{namespace____plugin__root_1_1dllutil}{dllutil}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_af477c76386a327c88de9bfdc569e359b}{Desc}}
+\begin{DoxyCompactList}\small\item\em The description of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}
+\begin{DoxyCompactList}\small\item\em The name of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_ac26bcb5dbd702f5d6938a596c98a417a}{Object\+Path}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to the object binary. \end{DoxyCompactList}\item 
+typedef int \mbox{\hyperlink{namespace____plugin__root_ace7d11467cf9033aaaaf889c9fe90904}{Object\+Mode}}
+\begin{DoxyCompactList}\small\item\em Mode of how to load the binary. \end{DoxyCompactList}\item 
+typedef void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace____plugin__root_a09d45b8a78573e3eb8d0ddd01343a12a}{Object\+Ref}}
+\begin{DoxyCompactList}\small\item\em A reference to the object loaded dynamically. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to an arbitrary file or directory. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a84d5a198ebf7ebdff6e8dc6c22fcb542}{Version}}
+\begin{DoxyCompactList}\small\item\em The version name of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R$>$ }\\using \mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}} = std\+::expected$<$R, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}$>$
+\begin{DoxyCompactList}\small\item\em Alias for\+: \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R, typename ... A$>$ }\\using \mbox{\hyperlink{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}{State\+Fn}} = std\+::function$<$\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$R$>$(A...)$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_aaa55187fb313655b64c12fdd14ab7e04}{Install}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
+\begin{DoxyCompactList}\small\item\em Install the plugin module from the given artifact. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_aee3919c9fa229b9e584aeae951867f44}{Release}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
+\begin{DoxyCompactList}\small\item\em Release and destroy plugin module assets. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{namespace____plugin__root_a6fc3f9d65a2d10ac3668e834dd83ca71}{State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State} group the state belongs to. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{namespace____plugin__root_ac39cad57c780ffb859ecdb286bdd9177}{State\+Message}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\begin{DoxyCompactList}\small\item\em Human-\/readable explanation of the error state. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_a3c87979575ad101348ccaebdc3f7d377}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{namespace____plugin__root_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespace____plugin__root_af477c76386a327c88de9bfdc569e359b}\index{\_\_plugin\_root@{\_\_plugin\_root}!Desc@{Desc}}
+\index{Desc@{Desc}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{Desc}{Desc}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_af477c76386a327c88de9bfdc569e359b} 
+typedef std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+Desc}
+
+
+
+The description of a plugin asset, module or artifact. 
+
+\Hypertarget{namespace____plugin__root_a93482d22098267681084c32c0aced568}\index{\_\_plugin\_root@{\_\_plugin\_root}!Name@{Name}}
+\index{Name@{Name}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a93482d22098267681084c32c0aced568} 
+typedef std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+Name}
+
+
+
+The name of a plugin asset, module or artifact. 
+
+\Hypertarget{namespace____plugin__root_ace7d11467cf9033aaaaf889c9fe90904}\index{\_\_plugin\_root@{\_\_plugin\_root}!ObjectMode@{ObjectMode}}
+\index{ObjectMode@{ObjectMode}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{ObjectMode}{ObjectMode}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_ace7d11467cf9033aaaaf889c9fe90904} 
+typedef int \+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Mode}
+
+
+
+Mode of how to load the binary. 
+
+\Hypertarget{namespace____plugin__root_ac26bcb5dbd702f5d6938a596c98a417a}\index{\_\_plugin\_root@{\_\_plugin\_root}!ObjectPath@{ObjectPath}}
+\index{ObjectPath@{ObjectPath}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{ObjectPath}{ObjectPath}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_ac26bcb5dbd702f5d6938a596c98a417a} 
+typedef std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Path}
+
+
+
+\doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to the object binary. 
+
+\Hypertarget{namespace____plugin__root_a09d45b8a78573e3eb8d0ddd01343a12a}\index{\_\_plugin\_root@{\_\_plugin\_root}!ObjectRef@{ObjectRef}}
+\index{ObjectRef@{ObjectRef}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{ObjectRef}{ObjectRef}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a09d45b8a78573e3eb8d0ddd01343a12a} 
+typedef void\texorpdfstring{$\ast$}{*} \+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Ref}
+
+
+
+A reference to the object loaded dynamically. 
+
+\Hypertarget{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}\index{\_\_plugin\_root@{\_\_plugin\_root}!Path@{Path}}
+\index{Path@{Path}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{Path}{Path}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857} 
+typedef std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+Path}
+
+
+
+\doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to an arbitrary file or directory. 
+
+\Hypertarget{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}\index{\_\_plugin\_root@{\_\_plugin\_root}!State@{State}}
+\index{State@{State}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a} 
+template$<$typename R$>$ \\
+using \+\_\+\+\_\+plugin\+\_\+root\+::\+State = std\+::expected$<$R, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}$>$}
+
+
+
+Alias for\+: 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::expected<R,\ StateErr>}
+
+\end{DoxyCode}
+
+
+Used in callback communication between plugins and the manager. \Hypertarget{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateFn@{StateFn}}
+\index{StateFn@{StateFn}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateFn}{StateFn}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_ab285784acffbf36380c0428e903feb46} 
+template$<$typename R, typename ... A$>$ \\
+using \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Fn = std\+::function$<$\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$R$>$(A...)$>$}
+
+\Hypertarget{namespace____plugin__root_a84d5a198ebf7ebdff6e8dc6c22fcb542}\index{\_\_plugin\_root@{\_\_plugin\_root}!Version@{Version}}
+\index{Version@{Version}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{Version}{Version}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a84d5a198ebf7ebdff6e8dc6c22fcb542} 
+typedef std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+Version}
+
+
+
+The version name of a plugin asset, module or artifact. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{namespace____plugin__root_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace____plugin__root_aaa55187fb313655b64c12fdd14ab7e04}\index{\_\_plugin\_root@{\_\_plugin\_root}!Install@{Install}}
+\index{Install@{Install}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{Install()}{Install()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_aaa55187fb313655b64c12fdd14ab7e04} 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \+\_\+\+\_\+plugin\+\_\+root\+::\+Install (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Install the plugin module from the given artifact. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & artifact to install from/into. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The artifact after installation. 
+\end{DoxyReturn}
+\Hypertarget{namespace____plugin__root_a3c87979575ad101348ccaebdc3f7d377}\index{\_\_plugin\_root@{\_\_plugin\_root}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a3c87979575ad101348ccaebdc3f7d377} 
+std\+::ostream \& \+\_\+\+\_\+plugin\+\_\+root\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_aee3919c9fa229b9e584aeae951867f44}\index{\_\_plugin\_root@{\_\_plugin\_root}!Release@{Release}}
+\index{Release@{Release}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_aee3919c9fa229b9e584aeae951867f44} 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \+\_\+\+\_\+plugin\+\_\+root\+::\+Release (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Release and destroy plugin module assets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & artifact owning the module. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The artifact after releasing assets. 
+\end{DoxyReturn}
+\Hypertarget{namespace____plugin__root_a6fc3f9d65a2d10ac3668e834dd83ca71}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateGroup@{StateGroup}}
+\index{StateGroup@{StateGroup}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateGroup()}{StateGroup()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a6fc3f9d65a2d10ac3668e834dd83ca71} 
+const std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State} group the state belongs to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State} group name. 
+\end{DoxyReturn}
+\Hypertarget{namespace____plugin__root_ac39cad57c780ffb859ecdb286bdd9177}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateMessage@{StateMessage}}
+\index{StateMessage@{StateMessage}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateMessage()}{StateMessage()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_ac39cad57c780ffb859ecdb286bdd9177} 
+const std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Human-\/readable explanation of the error state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Human-\/readable message. 
+\end{DoxyReturn}

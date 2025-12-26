@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['man_5fmalparse_0',['MAN_MALPARSE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5',1,'plugin.h']]],
-  ['man_5fnoman_1',['MAN_NOMAN',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e',1,'plugin.h']]],
-  ['man_5fnoplugin_2',['MAN_NOPLUGIN',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aba0727e5ae54804a3f4d03951ad27acb',1,'plugin.h']]],
-  ['manifest_3',['manifest',['../structplugin_1_1artifact_1_1_artifact_body.html#a4376db69bc5249e21b8f2e84c5ded872',1,'plugin::artifact::ArtifactBody']]]
+  ['impl_0',['impl',['../struct____plugin__root_1_1command_1_1_command.html#adf57f2fab2f5722eaddeef084b19aced',1,'__plugin_root::command::Command']]],
+  ['install_1',['Install',['../namespace____plugin__root.html#aaa55187fb313655b64c12fdd14ab7e04',1,'__plugin_root']]],
+  ['installcommand_2',['InstallCommand',['../namespace____plugin__root_1_1dllutil.html#a3c512b0f461ff53c26e823fa04c417c6',1,'__plugin_root::dllutil::InstallCommand(const Context &amp;, Name)'],['../namespace____plugin__root_1_1dllutil.html#a2179da178a45c6afe5495e299da36015',1,'__plugin_root::dllutil::InstallCommand(const Context &amp;, Name, Name)'],['../namespace____plugin__root_1_1dllutil.html#a37e5401e1ead99cf7fb31632e9a28e43',1,'__plugin_root::dllutil::InstallCommand(Name)']]],
+  ['installmodule_3',['InstallModule',['../namespace____plugin__root_1_1dllutil.html#a88cd3add560f943ec12c2b3e0783e1de',1,'__plugin_root::dllutil']]]
 ];

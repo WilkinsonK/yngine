@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['path_0',['Path',['../namespaceplugin.html#aaf35e30e16eb4b0f313db8f127e13a79',1,'plugin']]]
+  ['path_0',['Path',['../namespace____plugin__root.html#aa005e96428daf47f07c7321131ec1857',1,'__plugin_root']]]
 ];

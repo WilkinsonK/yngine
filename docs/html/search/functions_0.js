@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['callcommand_0',['CallCommand',['../namespaceplugin_1_1dllutil.html#a95064dc9d8159fd3385425cbc7d9504b',1,'plugin::dllutil::CallCommand(const Artifact &amp;, Name)'],['../namespaceplugin_1_1dllutil.html#a320f5f064d476a902eb7ff4e779375b1',1,'plugin::dllutil::CallCommand(Name)']]]
+  ['_5f_5fns_5fcplusplus_5fhead_0',['__ns_cplusplus_head',['../plugin_8h.html#a60033c44712181f735af3f64e2c300af',1,'__ns_cplusplus_head(__plugin_root) typedef struct Context Context:&#160;plugin.h'],['../plugin_8h.html#ab5b9c0753f15e4649196cba948733ed9',1,'__ns_cplusplus_head(__plugin_root::artifact) typedef struct ArtifactBody ArtifactBody:&#160;plugin.h'],['../plugin_8h.html#a06f7cea74459a9aae82d48d8035b64b3',1,'__ns_cplusplus_head(__plugin_root::command) typedef struct Command Command:&#160;plugin.h'],['../plugin_8cpp.html#adb5adb3009bb3498f2bb2bfc46d23d12',1,'__ns_cplusplus_head(__plugin_root) const char *GetName(const Context *context):&#160;plugin.cpp']]]
 ];

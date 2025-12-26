@@ -1,12 +1,16 @@
 var searchData=
 [
-  ['fromfile_0',['FromFile',['../namespaceplugin_1_1artifact.html#a9f2a6d06af16933ffad7dc9bdf663921',1,'plugin::artifact']]],
-  ['fromother_1',['FromOther',['../namespaceplugin_1_1artifact.html#afa597f511c4c62690486698dd3b5b9c0',1,'plugin::artifact']]],
-  ['fromtoml_2',['FromToml',['../namespaceplugin_1_1artifact.html#a41e18bb7ab318dcc0dd176e51474b3e0',1,'plugin::artifact']]],
-  ['fromtomlpluginheader_3',['FromTomlPluginHeader',['../namespaceplugin_1_1artifact.html#abc0b8290e0cd8495261bb9688657c0d6',1,'plugin::artifact']]],
-  ['fromtomlwithdescription_4',['FromTomlWithDescription',['../namespaceplugin_1_1artifact.html#aff1d081752f8f32a47aed01b2a1f6fbc',1,'plugin::artifact']]],
-  ['fromtomlwithdescriptionlong_5',['FromTomlWithDescriptionLong',['../namespaceplugin_1_1artifact.html#a6bfc14e7993c70945b58d8c9e470bf57',1,'plugin::artifact']]],
-  ['fromtomlwithname_6',['FromTomlWithName',['../namespaceplugin_1_1artifact.html#a52373a87d767754f980850b4a53045ce',1,'plugin::artifact']]],
-  ['fromtomlwithpath_7',['FromTomlWithPath',['../namespaceplugin_1_1artifact.html#a84bbb6e3211ed476511f513fe001bc92',1,'plugin::artifact']]],
-  ['fromtomlwithversion_8',['FromTomlWithVersion',['../namespaceplugin_1_1artifact.html#a675fd1d2f81fbea209fd9f5a34c7562d',1,'plugin::artifact']]]
+  ['desc_0',['Desc',['../namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b',1,'__plugin_root']]],
+  ['description_1',['description',['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#a9ad3373df1e8e64f4aad3a8831df95a3',1,'__plugin_root::artifact::ArtifactBody']]],
+  ['description_5flong_2',['description_long',['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#a235a98c009197f9823df5cff98dc6b98',1,'__plugin_root::artifact::ArtifactBody']]],
+  ['dll_5fmalformat_3',['DLL_MALFORMAT',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a1eda451e6af890743177dd1c50d193b1',1,'plugin.h']]],
+  ['dll_5fnocallback_4',['DLL_NOCALLBACK',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a9314dcb57cdb5e341beb809eb0dfeddc',1,'plugin.h']]],
+  ['dll_5fnodrop_5',['DLL_NODROP',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a610d5e4fb7b3a7bd8674713cd8b92d04',1,'plugin.h']]],
+  ['dll_5fnoinit_6',['DLL_NOINIT',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a5dc415aa05c6b554c15961429b0fd5e3',1,'plugin.h']]],
+  ['dll_5fnoinstall_7',['DLL_NOINSTALL',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ad43a10efcfb4462aead6359fb4dc12a3',1,'plugin.h']]],
+  ['dll_5fnomodule_8',['DLL_NOMODULE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac',1,'plugin.h']]],
+  ['dll_5fnoobject_9',['DLL_NOOBJECT',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0',1,'plugin.h']]],
+  ['dll_5fnorelease_10',['DLL_NORELEASE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c',1,'plugin.h']]],
+  ['dll_5fnoscope_11',['DLL_NOSCOPE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be',1,'plugin.h']]],
+  ['dllutil_2ecpp_12',['dllutil.cpp',['../dllutil_8cpp.html',1,'']]]
 ];

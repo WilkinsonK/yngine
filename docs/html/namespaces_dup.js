@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "plugin", "namespaceplugin.html", "namespaceplugin" ]
+    [ "__plugin_root", "namespace____plugin__root.html", "namespace____plugin__root" ]
 ];

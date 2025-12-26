@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['artifact_0',['Artifact',['../namespaceplugin_1_1artifact.html#aedc39451f73739c6772c7f11edb7a481',1,'plugin::artifact::Artifact'],['../namespaceplugin_1_1dllutil.html#a9edfe86bc4dccc9eb8d60c4a91e00312',1,'plugin::dllutil::Artifact'],['../namespaceplugin_1_1command.html#adc3952854faa397b3013ce6f31d0a2de',1,'plugin::command::Artifact']]],
-  ['artifact_1',['artifact',['../structplugin_1_1_context.html#a43df6fed2a2a980b820d3ae8978c1650',1,'plugin::Context']]],
-  ['artifact_2ecpp_2',['artifact.cpp',['../artifact_8cpp.html',1,'']]],
-  ['artifactbody_3',['ArtifactBody',['../structplugin_1_1artifact_1_1_artifact_body.html',1,'plugin::artifact']]],
-  ['attribute_4',['attribute',['../plugin__module_8h.html#aef93f1f36b5922e43607816a326a3d9f',1,'plugin_module.h']]]
+  ['_5f_5fns_5fcplusplus_5fhead_0',['__ns_cplusplus_head',['../plugin_8h.html#a5a938a183e335a3268a89bd288570960',1,'__ns_cplusplus_head:&#160;plugin.h'],['../plugin_8h.html#a60033c44712181f735af3f64e2c300af',1,'__ns_cplusplus_head(__plugin_root) typedef struct Context Context:&#160;plugin.h'],['../plugin_8h.html#ab5b9c0753f15e4649196cba948733ed9',1,'__ns_cplusplus_head(__plugin_root::artifact) typedef struct ArtifactBody ArtifactBody:&#160;plugin.h'],['../plugin_8h.html#a06f7cea74459a9aae82d48d8035b64b3',1,'__ns_cplusplus_head(__plugin_root::command) typedef struct Command Command:&#160;plugin.h'],['../plugin_8cpp.html#adb5adb3009bb3498f2bb2bfc46d23d12',1,'__ns_cplusplus_head(__plugin_root) const char *GetName(const Context *context):&#160;plugin.cpp']]],
+  ['_5f_5fns_5fcplusplus_5fprop_1',['__ns_cplusplus_prop',['../plugin_8h.html#a20be4df58074471edff95560c865f046',1,'plugin.h']]],
+  ['_5f_5fns_5fcplusplus_5ftail_2',['__ns_cplusplus_tail',['../plugin_8h.html#ae4504e280eff861b9a5e3339505761ea',1,'plugin.h']]],
+  ['_5f_5fplugin_5froot_3',['__plugin_root',['../namespace____plugin__root.html',1,'__plugin_root'],['../plugin_8h.html#aaec31b2595a7ff80fd910acf5a5fd561',1,'__plugin_root:&#160;plugin.h']]],
+  ['_5f_5fplugin_5froot_3a_3aartifact_4',['artifact',['../namespace____plugin__root_1_1artifact.html',1,'__plugin_root']]],
+  ['_5f_5fplugin_5froot_3a_3acommand_5',['command',['../namespace____plugin__root_1_1command.html',1,'__plugin_root']]],
+  ['_5f_5fplugin_5froot_3a_3adllutil_6',['dllutil',['../namespace____plugin__root_1_1dllutil.html',1,'__plugin_root']]],
+  ['_5f_5fplugin_5froot_3a_3aplugin_7',['plugin',['../namespace____plugin__root_1_1plugin.html',1,'__plugin_root']]]
 ];

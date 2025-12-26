@@ -1,7 +1,7 @@
 var command_8cpp =
 [
-    [ "plugin::command::Artifact", "namespaceplugin_1_1command.html#adc3952854faa397b3013ce6f31d0a2de", null ],
-    [ "plugin::command::LoadCommandImplFromArtifact", "namespaceplugin_1_1command.html#a0efab15f34c739e546959408c3dd17bb", null ],
-    [ "plugin::command::LoadCommandScopeFromArtifact", "namespaceplugin_1_1command.html#ab4c2f314267c25685794f59739cc0c0b", null ],
-    [ "plugin::command::LoadFromArtifact", "namespaceplugin_1_1command.html#abd34af54033c7fbcae732e106e1742a3", null ]
+    [ "__plugin_root::command::Artifact", "namespace____plugin__root_1_1command.html#af5c73ecf5b14c9372bc746365ec2ebae", null ],
+    [ "__plugin_root::command::LoadCommandImplFromArtifact", "namespace____plugin__root_1_1command.html#a6d6fe1e5ed382cb3166ec28067d93c14", null ],
+    [ "__plugin_root::command::LoadCommandScopeFromArtifact", "namespace____plugin__root_1_1command.html#a6247e6055e4164d55f61c79578b79c08", null ],
+    [ "__plugin_root::command::LoadFromArtifact", "namespace____plugin__root_1_1command.html#a9f82221135181a576f4ecbdbd0a2fa3b", null ]
 ];

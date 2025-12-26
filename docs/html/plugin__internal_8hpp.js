@@ -1,14 +1,15 @@
 var plugin__internal_8hpp =
 [
-    [ "plugin::dllutil::Artifact", "namespaceplugin_1_1dllutil.html#a9edfe86bc4dccc9eb8d60c4a91e00312", null ],
-    [ "plugin::dllutil::CallCommand", "namespaceplugin_1_1dllutil.html#a95064dc9d8159fd3385425cbc7d9504b", null ],
-    [ "plugin::dllutil::CallCommand", "namespaceplugin_1_1dllutil.html#a320f5f064d476a902eb7ff4e779375b1", null ],
-    [ "plugin::dllutil::HandleErr", "namespaceplugin_1_1dllutil.html#ac0b6cf8c6f97353b730645ee19403031", null ],
-    [ "plugin::dllutil::HandleErr", "namespaceplugin_1_1dllutil.html#a1dd98f4abb6589ae90ff9f6423029107", null ],
-    [ "plugin::dllutil::InstallCommand", "namespaceplugin_1_1dllutil.html#a34b8438b1fd51a0ed4d031ecb5f18b10", null ],
-    [ "plugin::dllutil::InstallCommand", "namespaceplugin_1_1dllutil.html#a1631f84ab51043f5ec6404fc20307e8d", null ],
-    [ "plugin::dllutil::InstallModule", "namespaceplugin_1_1dllutil.html#adbec11840ea57e09107f7f023b9b99e6", null ],
-    [ "plugin::dllutil::LoadHandleFromArtifact", "namespaceplugin_1_1dllutil.html#a561d8d296dadad1771c07bfbe7dc6a3b", null ],
-    [ "plugin::dllutil::LoadHandleFromArtifact", "namespaceplugin_1_1dllutil.html#ada0d1025f1adf7f74dfb1fcbd185e24f", null ],
-    [ "plugin::dllutil::LoadModuleFromArtifact", "namespaceplugin_1_1dllutil.html#adb3ab9795a4dcc06ba9ad7edecf9c673", null ]
+    [ "__plugin_root::dllutil::Artifact", "namespace____plugin__root_1_1dllutil.html#aef209d7e33ca554d0d530f0e58c805db", null ],
+    [ "__plugin_root::dllutil::CallCommand", "namespace____plugin__root_1_1dllutil.html#a5482982bdafad1b6c63486dc99467f59", null ],
+    [ "__plugin_root::dllutil::CallCommand", "namespace____plugin__root_1_1dllutil.html#a05da221bead76ad6f827191bec4b44e4", null ],
+    [ "__plugin_root::dllutil::HandleErr", "namespace____plugin__root_1_1dllutil.html#a810da2f0cb6e0fa66a8f3922c942fce1", null ],
+    [ "__plugin_root::dllutil::HandleErr", "namespace____plugin__root_1_1dllutil.html#a78525d3a2c69450a2f86d0d1e314bcb8", null ],
+    [ "__plugin_root::dllutil::InstallCommand", "namespace____plugin__root_1_1dllutil.html#a3c512b0f461ff53c26e823fa04c417c6", null ],
+    [ "__plugin_root::dllutil::InstallCommand", "namespace____plugin__root_1_1dllutil.html#a2179da178a45c6afe5495e299da36015", null ],
+    [ "__plugin_root::dllutil::InstallCommand", "namespace____plugin__root_1_1dllutil.html#a37e5401e1ead99cf7fb31632e9a28e43", null ],
+    [ "__plugin_root::dllutil::InstallModule", "namespace____plugin__root_1_1dllutil.html#a88cd3add560f943ec12c2b3e0783e1de", null ],
+    [ "__plugin_root::dllutil::LoadHandleFromArtifact", "namespace____plugin__root_1_1dllutil.html#a0381a0947e7157e928e6f7d605dbaff8", null ],
+    [ "__plugin_root::dllutil::LoadHandleFromArtifact", "namespace____plugin__root_1_1dllutil.html#a3085b0fdc7f72c579fa4e1efe48bf8f9", null ],
+    [ "__plugin_root::dllutil::LoadModuleFromArtifact", "namespace____plugin__root_1_1dllutil.html#ae711851d171fb1ccae01fed5e5570919", null ]
 ];

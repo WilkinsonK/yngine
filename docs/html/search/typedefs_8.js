@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['version_0',['Version',['../namespaceplugin.html#a4d3acd9218f44539e5eb8d09d27d43a0',1,'plugin']]]
+  ['version_0',['Version',['../namespace____plugin__root.html#a84d5a198ebf7ebdff6e8dc6c22fcb542',1,'__plugin_root']]]
 ];

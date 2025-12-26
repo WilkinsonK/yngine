@@ -1,7 +1,9 @@
 var plugin_8h =
 [
-    [ "namespace_when_cpp_head", "plugin_8h.html#ab69fc9c1f45170f4f73f817b4bc1c6bc", null ],
-    [ "namespace_when_cpp_tail", "plugin_8h.html#a3770b0bf52ecd87685ce1428cf870ace", null ],
+    [ "__ns_cplusplus_head", "plugin_8h.html#a5a938a183e335a3268a89bd288570960", null ],
+    [ "__ns_cplusplus_prop", "plugin_8h.html#a20be4df58074471edff95560c865f046", null ],
+    [ "__ns_cplusplus_tail", "plugin_8h.html#ae4504e280eff861b9a5e3339505761ea", null ],
+    [ "__plugin_root", "plugin_8h.html#aaec31b2595a7ff80fd910acf5a5fd561", null ],
     [ "CommandImpl", "plugin_8h.html#ab6f5f76c65ecbadbb3398d097f4b52d4", null ],
     [ "CommandScope", "plugin_8h.html#ad5b3dc633238335c88adcff081431622", null ],
     [ "StateErr", "plugin_8h.html#a57a433fb947523a524b5b61941b70ff5", null ],
@@ -25,7 +27,10 @@ var plugin_8h =
       [ "MAN_MALPARSE", "plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5", null ],
       [ "MAN_NOPLUGIN", "plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aba0727e5ae54804a3f4d03951ad27acb", null ]
     ] ],
-    [ "namespace_when_cpp_head", "plugin_8h.html#a2fc216529c68983b5f1bfcc89b234c11", null ],
-    [ "namespace_when_cpp_head", "plugin_8h.html#ade2ecf942e306270477b232dbd044506", null ],
-    [ "namespace_when_cpp_head", "plugin_8h.html#a923facd3c20e88cea2017b1214846e4c", null ]
+    [ "__ns_cplusplus_head", "plugin_8h.html#a60033c44712181f735af3f64e2c300af", null ],
+    [ "__ns_cplusplus_head", "plugin_8h.html#ab5b9c0753f15e4649196cba948733ed9", null ],
+    [ "__ns_cplusplus_head", "plugin_8h.html#a06f7cea74459a9aae82d48d8035b64b3", null ],
+    [ "GetDescription", "plugin_8h.html#a66c0e49603caa33bb863d703911e78de", null ],
+    [ "GetDescriptionLong", "plugin_8h.html#aa8aec95a44e91fefd7abe6d638d85d4e", null ],
+    [ "RegisterCommand", "plugin_8h.html#a1213640a384fba7c3f1ba89b76759a59", null ]
 ];

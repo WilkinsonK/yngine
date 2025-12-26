@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['impl_0',['impl',['../structplugin_1_1command_1_1_command.html#a73ebec0f922cd278168234415f5c91eb',1,'plugin::command::Command']]],
-  ['install_1',['Install',['../namespaceplugin_1_1artifact.html#ac9e936924618e2d3ee31176852291948',1,'plugin::artifact']]],
-  ['installcommand_2',['InstallCommand',['../namespaceplugin_1_1dllutil.html#a34b8438b1fd51a0ed4d031ecb5f18b10',1,'plugin::dllutil::InstallCommand(const Artifact &amp;, Name)'],['../namespaceplugin_1_1dllutil.html#a1631f84ab51043f5ec6404fc20307e8d',1,'plugin::dllutil::InstallCommand(Name)']]],
-  ['installmodule_3',['InstallModule',['../namespaceplugin_1_1dllutil.html#adbec11840ea57e09107f7f023b9b99e6',1,'plugin::dllutil']]]
+  ['getdescription_0',['GetDescription',['../plugin_8h.html#a66c0e49603caa33bb863d703911e78de',1,'GetDescription(const Context *):&#160;plugin.cpp'],['../plugin_8cpp.html#a184e2d9eab3794c4eb5d436559ff20c1',1,'GetDescription(const Context *context):&#160;plugin.cpp']]],
+  ['getdescriptionlong_1',['GetDescriptionLong',['../plugin_8h.html#aa8aec95a44e91fefd7abe6d638d85d4e',1,'GetDescriptionLong(const Context *):&#160;plugin.cpp'],['../plugin_8cpp.html#ae2e7e65ceca5a01829ec9261464ab964',1,'GetDescriptionLong(const Context *context):&#160;plugin.cpp']]]
 ];

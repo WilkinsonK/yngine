@@ -1,0 +1,35 @@
+var namespace____plugin__root =
+[
+    [ "command", "namespace____plugin__root_1_1command.html", "namespace____plugin__root_1_1command" ],
+    [ "artifact", "namespace____plugin__root_1_1artifact.html", "namespace____plugin__root_1_1artifact" ],
+    [ "plugin", "namespace____plugin__root_1_1plugin.html", "namespace____plugin__root_1_1plugin" ],
+    [ "dllutil", "namespace____plugin__root_1_1dllutil.html", [
+      [ "Artifact", "namespace____plugin__root_1_1dllutil.html#aef209d7e33ca554d0d530f0e58c805db", null ],
+      [ "CallCommand", "namespace____plugin__root_1_1dllutil.html#a5482982bdafad1b6c63486dc99467f59", null ],
+      [ "CallCommand", "namespace____plugin__root_1_1dllutil.html#a05da221bead76ad6f827191bec4b44e4", null ],
+      [ "HandleErr", "namespace____plugin__root_1_1dllutil.html#a810da2f0cb6e0fa66a8f3922c942fce1", null ],
+      [ "HandleErr", "namespace____plugin__root_1_1dllutil.html#a78525d3a2c69450a2f86d0d1e314bcb8", null ],
+      [ "InstallCommand", "namespace____plugin__root_1_1dllutil.html#a3c512b0f461ff53c26e823fa04c417c6", null ],
+      [ "InstallCommand", "namespace____plugin__root_1_1dllutil.html#a2179da178a45c6afe5495e299da36015", null ],
+      [ "InstallCommand", "namespace____plugin__root_1_1dllutil.html#a37e5401e1ead99cf7fb31632e9a28e43", null ],
+      [ "InstallModule", "namespace____plugin__root_1_1dllutil.html#a88cd3add560f943ec12c2b3e0783e1de", null ],
+      [ "LoadHandleFromArtifact", "namespace____plugin__root_1_1dllutil.html#a0381a0947e7157e928e6f7d605dbaff8", null ],
+      [ "LoadHandleFromArtifact", "namespace____plugin__root_1_1dllutil.html#a3085b0fdc7f72c579fa4e1efe48bf8f9", null ],
+      [ "LoadModuleFromArtifact", "namespace____plugin__root_1_1dllutil.html#ae711851d171fb1ccae01fed5e5570919", null ]
+    ] ],
+    [ "Context", "struct____plugin__root_1_1_context.html", "struct____plugin__root_1_1_context" ],
+    [ "Desc", "namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b", null ],
+    [ "Name", "namespace____plugin__root.html#a93482d22098267681084c32c0aced568", null ],
+    [ "ObjectMode", "namespace____plugin__root.html#ace7d11467cf9033aaaaf889c9fe90904", null ],
+    [ "ObjectPath", "namespace____plugin__root.html#ac26bcb5dbd702f5d6938a596c98a417a", null ],
+    [ "ObjectRef", "namespace____plugin__root.html#a09d45b8a78573e3eb8d0ddd01343a12a", null ],
+    [ "Path", "namespace____plugin__root.html#aa005e96428daf47f07c7321131ec1857", null ],
+    [ "State", "namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a", null ],
+    [ "StateFn", "namespace____plugin__root.html#ab285784acffbf36380c0428e903feb46", null ],
+    [ "Version", "namespace____plugin__root.html#a84d5a198ebf7ebdff6e8dc6c22fcb542", null ],
+    [ "Install", "namespace____plugin__root.html#aaa55187fb313655b64c12fdd14ab7e04", null ],
+    [ "operator<<", "namespace____plugin__root.html#a3c87979575ad101348ccaebdc3f7d377", null ],
+    [ "Release", "namespace____plugin__root.html#aee3919c9fa229b9e584aeae951867f44", null ],
+    [ "StateGroup", "namespace____plugin__root.html#a6fc3f9d65a2d10ac3668e834dd83ca71", null ],
+    [ "StateMessage", "namespace____plugin__root.html#ac39cad57c780ffb859ecdb286bdd9177", null ]
+];

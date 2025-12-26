@@ -7,19 +7,61 @@
 {\ttfamily \#include $<$sstream$>$}\newline
 {\ttfamily \#include $<$dlfcn.\+h$>$}\newline
 {\ttfamily \#include "{}plugin.\+hpp"{}}\newline
+{\ttfamily \#include "{}plugin\+\_\+internal.\+hpp"{}}\newline
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-namespace \mbox{\hyperlink{namespaceplugin}{plugin}}
+namespace \mbox{\hyperlink{namespace____plugin__root}{\+\_\+\+\_\+plugin\+\_\+root}}
 \item 
-namespace \mbox{\hyperlink{namespaceplugin_1_1plugin}{plugin\+::plugin}}
+namespace \mbox{\hyperlink{namespace____plugin__root_1_1plugin}{\+\_\+\+\_\+plugin\+\_\+root\+::plugin}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-const std\+::string \mbox{\hyperlink{namespaceplugin_ac09439bec11bd331a674be393c6da4bb}{plugin\+::\+State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
-\begin{DoxyCompactList}\small\item\em \doxylink{namespaceplugin_aaaf83efb7d4c1984f9f09bfe125fa221}{State} group the state belongs to. \end{DoxyCompactList}\item 
-const std\+::string \mbox{\hyperlink{namespaceplugin_a8ce6d93c47c29c1b69ed8b08f9ed32d1}{plugin\+::\+State\+Message}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_a3c87979575ad101348ccaebdc3f7d377}{\+\_\+\+\_\+plugin\+\_\+root\+::operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_aaa55187fb313655b64c12fdd14ab7e04}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Install}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
+\begin{DoxyCompactList}\small\item\em Install the plugin module from the given artifact. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_aee3919c9fa229b9e584aeae951867f44}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Release}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
+\begin{DoxyCompactList}\small\item\em Release and destroy plugin module assets. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{namespace____plugin__root_a6fc3f9d65a2d10ac3668e834dd83ca71}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State} group the state belongs to. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{namespace____plugin__root_ac39cad57c780ffb859ecdb286bdd9177}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Message}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
 \begin{DoxyCompactList}\small\item\em Human-\/readable explanation of the error state. \end{DoxyCompactList}\item 
-std\+::ostream \& \mbox{\hyperlink{namespaceplugin_aab84fafb6655084881fb8bcd566a601b}{plugin\+::operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\mbox{\hyperlink{plugin_8cpp_adb5adb3009bb3498f2bb2bfc46d23d12}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head}} (\mbox{\hyperlink{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561}{\+\_\+\+\_\+plugin\+\_\+root}}) const char \texorpdfstring{$\ast$}{*}Get\+Name(const Context \texorpdfstring{$\ast$}{*}context)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin_8cpp_a184e2d9eab3794c4eb5d436559ff20c1}{Get\+Description}} (const Context \texorpdfstring{$\ast$}{*}context)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin_8cpp_ae2e7e65ceca5a01829ec9261464ab964}{Get\+Description\+Long}} (const Context \texorpdfstring{$\ast$}{*}context)
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{plugin_8cpp_a008ecf52964815461c958aa3cdd3b1f8}{Register\+Command}} (const Context \texorpdfstring{$\ast$}{*}context, const char \texorpdfstring{$\ast$}{*}name, const char \texorpdfstring{$\ast$}{*}impl\+\_\+name)
 \end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{plugin_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{plugin_8cpp_adb5adb3009bb3498f2bb2bfc46d23d12}\index{plugin.cpp@{plugin.cpp}!\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}}
+\index{\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}!plugin.cpp@{plugin.cpp}}
+\doxysubsubsection{\texorpdfstring{\_\_ns\_cplusplus\_head()}{\_\_ns\_cplusplus\_head()}}
+{\footnotesize\ttfamily \label{plugin_8cpp_adb5adb3009bb3498f2bb2bfc46d23d12} 
+\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561}{\+\_\+\+\_\+plugin\+\_\+root}}}]{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{plugin_8cpp_a184e2d9eab3794c4eb5d436559ff20c1}\index{plugin.cpp@{plugin.cpp}!GetDescription@{GetDescription}}
+\index{GetDescription@{GetDescription}!plugin.cpp@{plugin.cpp}}
+\doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
+{\footnotesize\ttfamily \label{plugin_8cpp_a184e2d9eab3794c4eb5d436559ff20c1} 
+const char \texorpdfstring{$\ast$}{*} Get\+Description (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})}
+
+\Hypertarget{plugin_8cpp_ae2e7e65ceca5a01829ec9261464ab964}\index{plugin.cpp@{plugin.cpp}!GetDescriptionLong@{GetDescriptionLong}}
+\index{GetDescriptionLong@{GetDescriptionLong}!plugin.cpp@{plugin.cpp}}
+\doxysubsubsection{\texorpdfstring{GetDescriptionLong()}{GetDescriptionLong()}}
+{\footnotesize\ttfamily \label{plugin_8cpp_ae2e7e65ceca5a01829ec9261464ab964} 
+const char \texorpdfstring{$\ast$}{*} Get\+Description\+Long (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})}
+
+\Hypertarget{plugin_8cpp_a008ecf52964815461c958aa3cdd3b1f8}\index{plugin.cpp@{plugin.cpp}!RegisterCommand@{RegisterCommand}}
+\index{RegisterCommand@{RegisterCommand}!plugin.cpp@{plugin.cpp}}
+\doxysubsubsection{\texorpdfstring{RegisterCommand()}{RegisterCommand()}}
+{\footnotesize\ttfamily \label{plugin_8cpp_a008ecf52964815461c958aa3cdd3b1f8} 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} Register\+Command (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{impl\+\_\+name}{}\end{DoxyParamCaption})}
+

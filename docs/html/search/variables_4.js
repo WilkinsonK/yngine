@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['manifest_0',['manifest',['../structplugin_1_1artifact_1_1_artifact_body.html#a4376db69bc5249e21b8f2e84c5ded872',1,'plugin::artifact::ArtifactBody']]]
+  ['manifest_0',['manifest',['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#a8f91618ddcf514f5a109c1deca03d91c',1,'__plugin_root::artifact::ArtifactBody']]]
 ];

@@ -8,9 +8,13 @@ Common types and declarations shared between the core declarations and module de
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{plugin_8h_ab69fc9c1f45170f4f73f817b4bc1c6bc}{namespace\+\_\+when\+\_\+cpp\+\_\+head}}(name)
+\#define \mbox{\hyperlink{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561}{\+\_\+\+\_\+plugin\+\_\+root}}~plugin
 \item 
-\#define \mbox{\hyperlink{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace}{namespace\+\_\+when\+\_\+cpp\+\_\+tail}}
+\#define \mbox{\hyperlink{plugin_8h_a5a938a183e335a3268a89bd288570960}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head}}(name)
+\item 
+\#define \mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}}
+\item 
+\#define \mbox{\hyperlink{plugin_8h_a20be4df58074471edff95560c865f046}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+prop}}(ns,  name)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -51,12 +55,18 @@ enum \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0}{Command\+Scop
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{plugin_8h_a2fc216529c68983b5f1bfcc89b234c11}{namespace\+\_\+when\+\_\+cpp\+\_\+head}} (\mbox{\hyperlink{namespaceplugin}{plugin}}) typedef struct Context Context
+\mbox{\hyperlink{plugin_8h_a60033c44712181f735af3f64e2c300af}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head}} (\mbox{\hyperlink{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561}{\+\_\+\+\_\+plugin\+\_\+root}}) typedef struct Context Context
 \begin{DoxyCompactList}\small\item\em Context data specific to a plugin. Is typically passed between the manager and the instance. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace}{namespace\+\_\+when\+\_\+cpp\+\_\+tail}} \mbox{\hyperlink{plugin_8h_ade2ecf942e306270477b232dbd044506}{namespace\+\_\+when\+\_\+cpp\+\_\+head}} (\mbox{\hyperlink{namespaceplugin_1_1artifact}{plugin\+::artifact}}) typedef struct Artifact\+Body Artifact\+Body
+\mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} \mbox{\hyperlink{plugin_8h_ab5b9c0753f15e4649196cba948733ed9}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head}} (\+\_\+\+\_\+plugin\+\_\+root\+::artifact) typedef struct Artifact\+Body Artifact\+Body
 \begin{DoxyCompactList}\small\item\em Wraps all assets related to a single plugin. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace}{namespace\+\_\+when\+\_\+cpp\+\_\+tail}} \mbox{\hyperlink{plugin_8h_a923facd3c20e88cea2017b1214846e4c}{namespace\+\_\+when\+\_\+cpp\+\_\+head}} (\mbox{\hyperlink{namespaceplugin_1_1command}{plugin\+::command}}) typedef struct Command Command
-\begin{DoxyCompactList}\small\item\em The callable and attributes dictating its behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} \mbox{\hyperlink{plugin_8h_a06f7cea74459a9aae82d48d8035b64b3}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head}} (\+\_\+\+\_\+plugin\+\_\+root\+::command) typedef struct Command Command
+\begin{DoxyCompactList}\small\item\em The callable and attributes dictating its behavior. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin_8h_a66c0e49603caa33bb863d703911e78de}{Get\+Description}} (const Context \texorpdfstring{$\ast$}{*})
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin_8h_aa8aec95a44e91fefd7abe6d638d85d4e}{Get\+Description\+Long}} (const Context \texorpdfstring{$\ast$}{*})
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{plugin_8h_a1213640a384fba7c3f1ba89b76759a59}{Register\+Command}} (const Context \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -67,17 +77,34 @@ Common types and declarations shared between the core declarations and module de
 \label{doc-define-members}
 \Hypertarget{plugin_8h_doc-define-members}
 \doxysubsection{Macro Definition Documentation}
-\Hypertarget{plugin_8h_ab69fc9c1f45170f4f73f817b4bc1c6bc}\index{plugin.h@{plugin.h}!namespace\_when\_cpp\_head@{namespace\_when\_cpp\_head}}
-\index{namespace\_when\_cpp\_head@{namespace\_when\_cpp\_head}!plugin.h@{plugin.h}}
-\doxysubsubsection{\texorpdfstring{namespace\_when\_cpp\_head}{namespace\_when\_cpp\_head}}
-{\footnotesize\ttfamily \label{plugin_8h_ab69fc9c1f45170f4f73f817b4bc1c6bc} 
-\#define namespace\+\_\+when\+\_\+cpp\+\_\+head(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
+\Hypertarget{plugin_8h_a5a938a183e335a3268a89bd288570960}\index{plugin.h@{plugin.h}!\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}}
+\index{\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ns\_cplusplus\_head}{\_\_ns\_cplusplus\_head}}
+{\footnotesize\ttfamily \label{plugin_8h_a5a938a183e335a3268a89bd288570960} 
+\#define \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
 
-\Hypertarget{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace}\index{plugin.h@{plugin.h}!namespace\_when\_cpp\_tail@{namespace\_when\_cpp\_tail}}
-\index{namespace\_when\_cpp\_tail@{namespace\_when\_cpp\_tail}!plugin.h@{plugin.h}}
-\doxysubsubsection{\texorpdfstring{namespace\_when\_cpp\_tail}{namespace\_when\_cpp\_tail}}
-{\footnotesize\ttfamily \label{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace} 
-\#define namespace\+\_\+when\+\_\+cpp\+\_\+tail}
+\Hypertarget{plugin_8h_a20be4df58074471edff95560c865f046}\index{plugin.h@{plugin.h}!\_\_ns\_cplusplus\_prop@{\_\_ns\_cplusplus\_prop}}
+\index{\_\_ns\_cplusplus\_prop@{\_\_ns\_cplusplus\_prop}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ns\_cplusplus\_prop}{\_\_ns\_cplusplus\_prop}}
+{\footnotesize\ttfamily \label{plugin_8h_a20be4df58074471edff95560c865f046} 
+\#define \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+prop(\begin{DoxyParamCaption}\item[{}]{ns}{, }\item[{}]{name}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{name}
+
+\end{DoxyCode}
+\Hypertarget{plugin_8h_ae4504e280eff861b9a5e3339505761ea}\index{plugin.h@{plugin.h}!\_\_ns\_cplusplus\_tail@{\_\_ns\_cplusplus\_tail}}
+\index{\_\_ns\_cplusplus\_tail@{\_\_ns\_cplusplus\_tail}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ns\_cplusplus\_tail}{\_\_ns\_cplusplus\_tail}}
+{\footnotesize\ttfamily \label{plugin_8h_ae4504e280eff861b9a5e3339505761ea} 
+\#define \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}
+
+\Hypertarget{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561}\index{plugin.h@{plugin.h}!\_\_plugin\_root@{\_\_plugin\_root}}
+\index{\_\_plugin\_root@{\_\_plugin\_root}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{\_\_plugin\_root}{\_\_plugin\_root}}
+{\footnotesize\ttfamily \label{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561} 
+\#define \+\_\+\+\_\+plugin\+\_\+root~plugin}
 
 
 
@@ -212,33 +239,51 @@ MAN\+\_\+\+NOPLUGIN&The \textquotesingle{}plugin\textquotesingle{} header was mi
 \label{doc-func-members}
 \Hypertarget{plugin_8h_doc-func-members}
 \doxysubsection{Function Documentation}
-\Hypertarget{plugin_8h_a2fc216529c68983b5f1bfcc89b234c11}\index{plugin.h@{plugin.h}!namespace\_when\_cpp\_head@{namespace\_when\_cpp\_head}}
-\index{namespace\_when\_cpp\_head@{namespace\_when\_cpp\_head}!plugin.h@{plugin.h}}
-\doxysubsubsection{\texorpdfstring{namespace\_when\_cpp\_head()}{namespace\_when\_cpp\_head()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily \label{plugin_8h_a2fc216529c68983b5f1bfcc89b234c11} 
-namespace\+\_\+when\+\_\+cpp\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceplugin}{plugin}}}]{}{}\end{DoxyParamCaption})}
+\Hypertarget{plugin_8h_a60033c44712181f735af3f64e2c300af}\index{plugin.h@{plugin.h}!\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}}
+\index{\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ns\_cplusplus\_head()}{\_\_ns\_cplusplus\_head()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{plugin_8h_a60033c44712181f735af3f64e2c300af} 
+\mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561}{\+\_\+\+\_\+plugin\+\_\+root}}}]{}{}\end{DoxyParamCaption})}
 
 
 
 Context data specific to a plugin. Is typically passed between the manager and the instance. 
 
-\Hypertarget{plugin_8h_ade2ecf942e306270477b232dbd044506}\index{plugin.h@{plugin.h}!namespace\_when\_cpp\_head@{namespace\_when\_cpp\_head}}
-\index{namespace\_when\_cpp\_head@{namespace\_when\_cpp\_head}!plugin.h@{plugin.h}}
-\doxysubsubsection{\texorpdfstring{namespace\_when\_cpp\_head()}{namespace\_when\_cpp\_head()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily \label{plugin_8h_ade2ecf942e306270477b232dbd044506} 
-\mbox{\hyperlink{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace}{namespace\+\_\+when\+\_\+cpp\+\_\+tail}} namespace\+\_\+when\+\_\+cpp\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceplugin_1_1artifact}{plugin\+::artifact}}}]{}{}\end{DoxyParamCaption})}
+\Hypertarget{plugin_8h_ab5b9c0753f15e4649196cba948733ed9}\index{plugin.h@{plugin.h}!\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}}
+\index{\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ns\_cplusplus\_head()}{\_\_ns\_cplusplus\_head()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{plugin_8h_ab5b9c0753f15e4649196cba948733ed9} 
+\mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head (\begin{DoxyParamCaption}\item[{\+\_\+\+\_\+plugin\+\_\+root\+::artifact}]{}{}\end{DoxyParamCaption})}
 
 
 
 Wraps all assets related to a single plugin. 
 
-\Hypertarget{plugin_8h_a923facd3c20e88cea2017b1214846e4c}\index{plugin.h@{plugin.h}!namespace\_when\_cpp\_head@{namespace\_when\_cpp\_head}}
-\index{namespace\_when\_cpp\_head@{namespace\_when\_cpp\_head}!plugin.h@{plugin.h}}
-\doxysubsubsection{\texorpdfstring{namespace\_when\_cpp\_head()}{namespace\_when\_cpp\_head()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily \label{plugin_8h_a923facd3c20e88cea2017b1214846e4c} 
-\mbox{\hyperlink{plugin_8h_a3770b0bf52ecd87685ce1428cf870ace}{namespace\+\_\+when\+\_\+cpp\+\_\+tail}} namespace\+\_\+when\+\_\+cpp\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceplugin_1_1command}{plugin\+::command}}}]{}{}\end{DoxyParamCaption})}
+\Hypertarget{plugin_8h_a06f7cea74459a9aae82d48d8035b64b3}\index{plugin.h@{plugin.h}!\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}}
+\index{\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ns\_cplusplus\_head()}{\_\_ns\_cplusplus\_head()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{plugin_8h_a06f7cea74459a9aae82d48d8035b64b3} 
+\mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head (\begin{DoxyParamCaption}\item[{\+\_\+\+\_\+plugin\+\_\+root\+::command}]{}{}\end{DoxyParamCaption})}
 
 
 
 The callable and attributes dictating its behavior. 
+
+\Hypertarget{plugin_8h_a66c0e49603caa33bb863d703911e78de}\index{plugin.h@{plugin.h}!GetDescription@{GetDescription}}
+\index{GetDescription@{GetDescription}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
+{\footnotesize\ttfamily \label{plugin_8h_a66c0e49603caa33bb863d703911e78de} 
+const char \texorpdfstring{$\ast$}{*} Get\+Description (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})}
+
+\Hypertarget{plugin_8h_aa8aec95a44e91fefd7abe6d638d85d4e}\index{plugin.h@{plugin.h}!GetDescriptionLong@{GetDescriptionLong}}
+\index{GetDescriptionLong@{GetDescriptionLong}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{GetDescriptionLong()}{GetDescriptionLong()}}
+{\footnotesize\ttfamily \label{plugin_8h_aa8aec95a44e91fefd7abe6d638d85d4e} 
+const char \texorpdfstring{$\ast$}{*} Get\+Description\+Long (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})}
+
+\Hypertarget{plugin_8h_a1213640a384fba7c3f1ba89b76759a59}\index{plugin.h@{plugin.h}!RegisterCommand@{RegisterCommand}}
+\index{RegisterCommand@{RegisterCommand}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{RegisterCommand()}{RegisterCommand()}}
+{\footnotesize\ttfamily \label{plugin_8h_a1213640a384fba7c3f1ba89b76759a59} 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} Register\+Command (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{impl\+\_\+name}{}\end{DoxyParamCaption})}
 

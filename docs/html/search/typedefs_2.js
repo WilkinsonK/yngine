@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['desc_0',['Desc',['../namespaceplugin.html#a34cef007247eea54aa5bb2d1e74a16e8',1,'plugin']]]
+  ['desc_0',['Desc',['../namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b',1,'__plugin_root']]]
 ];
