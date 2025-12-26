@@ -4,7 +4,6 @@ set_languages("c++23", "c23")
 set_config("builddir", "targets")
 add_rules("mode.debug", "mode.release")
 add_rules("plugin.compile_commands.autoupdate", {outputdir = "targets"})
-add_rules("doxygen")
 
 -- After a plugin target has been compiled.
 function plugin_post_build(target)
