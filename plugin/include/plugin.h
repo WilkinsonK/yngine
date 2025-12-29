@@ -52,8 +52,10 @@ __ns_cplusplus_head(__plugin_root)
         /// @brief Missing scope attribute from the object
         /// file.
         DLL_NOSCOPE,
+        /// @brief Missing manifest header.
+        MAN_NOHEADER = 0x2000,
         /// @brief Missing manifest file.
-        MAN_NOMAN = 0x2000,
+        MAN_NOMAN,
         /// @brief Issue occured when parsing a manifest.
         MAN_MALPARSE,
         /// @brief The 'plugin' header was missing.

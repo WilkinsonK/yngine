@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include <toml++/toml.hpp>
+
 #include "plugin.hpp"
 
 namespace __plugin_root::dllutil {

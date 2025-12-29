@@ -3,6 +3,7 @@
 .vscode/
 .xmake/
 build/
+diag/
 targets/
 compile_commands.json
 *.dylib

@@ -4,8 +4,6 @@
 #include <optional>
 #include <sstream>
 
-#include <dlfcn.h>
-
 #include "plugin.hpp"
 #include "plugin_internal.hpp"
 
@@ -87,6 +85,9 @@ namespace __plugin_root {
                 break;
             case DLL_NOSCOPE:
                 ss << "missing scope of module object";
+                break;
+            case MAN_NOHEADER:
+                ss << "missing manifest header";
                 break;
             case MAN_NOMAN:
                 ss << "missing manifest";

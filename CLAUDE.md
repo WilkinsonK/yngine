@@ -9,9 +9,9 @@ and capabilities. Educational.
 ## Project Design ##
 This project uses C++23, at the time of prototyping and
 design, this was the most recent standard available. We will
-eventually be using defining a project that acts as an
+eventually be defining a project that acts as an
 engine. At that point it needs to be well thought out with
-plenty of time and considtions made.
+plenty of time and considerations made.
 
 ### Explored Options & Concepts ###
 These ideas have already been explored and/or are currently
@@ -30,7 +30,7 @@ in progress.
 | 7 | **Complete** | Wrapping dependencies in project-level interfaces. | Works, but should probably be used only on low-level interfaces, only implementing validation and error handling. |
 | 8 | **Exploring** | Event handled errors. | Works fine. Should be used sparingly. |
 | 9 | **Exploring** | Utilizing `<expected>` for modal based systems. | `C++23` standard header. Need to build mental model of how to use properly. |
-| a | **Exploring** | Utilizing `<memory>` for memory management. | `C++23` standard header. Need to build mental model of how to use propertly. |
+| a | **Exploring** | Utilizing `<memory>` for memory management. | `C++23` standard header. Need to build mental model of how to use properly. |
 
 ## Metadata & Directives ##
 This section defines the expected behaviors. Read carefully,
@@ -48,10 +48,10 @@ Use these rules, with reference to the table in the
 | 3 | When I say, "summarize", take the main data points from our conversation and compile them as a summary in *Thread Logs* using the template *Thread Log Name* as the naming convention. |
 | 4 | When I say, "summarize changes", read last commit and update *Change Log*. |
 | 5 | Unless I say, "build", do not make changes to the project. Do not suggest changes. |
-| 6 | Unless overriden by another rule, conversations will be discovery, exploration and analysis only. |
+| 6 | Unless overridden by another rule, conversations will be discovery, exploration and analysis only. |
 | 7 | Use a sober-minded disposition with responses. Enthusiasm not required. |
 | 8 | During analysis, if something appears incomplete and not otherwise asked, do not report partial or incomplete implementations as "problems". If it is first-party (myself) code, it is likely known; likely not a root-cause during RCA. |
-| 9 | Provide links and referrences from where knowledge was found. |
+| 9 | Provide links and references from where knowledge was found. |
 
 #### Metadata ####
 Data used to manage this document and our conversations.

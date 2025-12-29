@@ -5,7 +5,7 @@ namespace __plugin_root::command {
     using Artifact = artifact::Artifact;
 
     State<CommandImpl*> LoadCommandImplFromArtifact(const Artifact& source, const Name name) {
-        return dllutil::LoadHandleFromArtifact(source, name + "_callbackImpl")
+        return dllutil::LoadHandleFromArtifact(source, name + "_commandImpl")
             .transform_error([](StateErr err) {
                 if (err == DLL_NOMODULE) return err;
                 return DLL_NOCALLBACK;
@@ -16,7 +16,7 @@ namespace __plugin_root::command {
     }
 
     State<CommandScope*> LoadCommandScopeFromArtifact(const Artifact& source, const Name name) {
-        return dllutil::LoadHandleFromArtifact(source, name + "_callbackScope")
+        return dllutil::LoadHandleFromArtifact(source, name + "_commandScope")
             .transform_error([](StateErr err) {
                 if (err == DLL_NOMODULE) return err;
                 return DLL_NOSCOPE;
@@ -26,23 +26,22 @@ namespace __plugin_root::command {
             });
     }
 
-    Command LoadFromArtifact(const Artifact& source, Name name) {
-        Command cmd = {0};
-
-        auto scope = LoadCommandScopeFromArtifact(source, name);
+    Command LoadFromArtifact(const Artifact& source, const Name name, const Name impl_name) {
+        auto scope = LoadCommandScopeFromArtifact(source, impl_name);
         if (!scope.has_value()) {
-            cmd.state = scope.error();
-            return cmd;
+            return { .impl_name = impl_name, .state = scope.error() };
         }
 
-        auto impl = LoadCommandImplFromArtifact(source, name);
+        auto impl = LoadCommandImplFromArtifact(source, impl_name);
         if (!impl.has_value()) {
-            cmd.state = impl.error();
-            return cmd;
+            return { .impl_name = impl_name, .state = scope.error() };
         }
 
-        cmd.impl = *impl.value();
-        cmd.scope = *scope.value();
+        Command cmd = {
+            .impl_name = impl_name,
+            .impl = *impl.value(),
+            .scope = *scope.value()
+        };
         return cmd;
     }
 }

@@ -12,9 +12,9 @@ namespace __plugin_root::artifact {
         return std::move(body);
     }
 
-    Artifact New(const ObjectPath path) {
+    Artifact New(const ObjectEntry path) {
         auto a = New();
-        a->obj_path = path;
+        a->obj_entry = path;
         return a;
     }
 
@@ -54,9 +54,9 @@ namespace __plugin_root::artifact {
         return a;
     }
 
-    Artifact WithPath(const Artifact& source, const ObjectPath path) {
+    Artifact WithPath(const Artifact& source, const ObjectEntry path) {
         auto a = FromOther(source);
-        a->obj_path = path;
+        a->obj_entry = path;
         return a;
     }
 
@@ -89,7 +89,7 @@ namespace __plugin_root::artifact {
 
     Artifact FromTomlWithPath(const Artifact& a, toml::table& tbl) {
         auto mpath = std::filesystem::path(a->manifest);
-        auto opath = tbl["path"].value_or<Path>("missing");
+        auto opath = tbl["entry"].value_or<Path>("missing");
         if (opath != "missing" && std::filesystem::path(opath).is_relative())
             opath = mpath.parent_path() / opath;
         if (opath != "missing" && !std::filesystem::exists(opath))
@@ -148,8 +148,8 @@ namespace __plugin_root::artifact {
         a->description_long = source->description_long;
         a->manifest         = source->manifest;
         a->name             = source->name;
+        a->obj_entry        = source->obj_entry;
         a->obj_mode         = source->obj_mode;
-        a->obj_path         = source->obj_path;
         a->obj_ref          = source->obj_ref;
         a->state            = source->state;
         a->version          = source->version;
@@ -162,7 +162,7 @@ namespace __plugin_root::artifact {
             os << "description=\"" << a->description << "\", ";
             os << "description_long=\"" << a->description_long << "\", ";
             os << "manifest=\"" << a->manifest << "\", ";
-            os << "dlpath=\"" << a->obj_path << "\", ";
+            os << "dlpath=\"" << a->obj_entry << "\", ";
             os << "dlref=" << a->obj_ref << ", ";
             os << "state=" << a->state << ", ";
             os << "version=\"" << a->version << "\"";

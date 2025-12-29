@@ -12,9 +12,10 @@ namespace __plugin_root::dllutil {
     State<Context> CallCommand(const Context& ctx, Name name) {
         if (ctx.artifact->commands[name].state == NONE) {
             ctx.artifact->state = ctx.artifact->commands[name].impl(&ctx);
-        Context newctx = { artifact::FromOther(ctx.artifact) };
-        return newctx;
+            Context newctx = { artifact::FromOther(ctx.artifact) };
+            return newctx;
         }
+        std::cerr << "error: failed to call command '" << name << "': " << ctx.artifact->commands[name].state << std::endl;
         return std::unexpected(ctx.artifact->commands[name].state);
     }
 
@@ -26,6 +27,7 @@ namespace __plugin_root::dllutil {
 
     State<Context> HandleErr(const Context& ctx, StateErr err) {
         ctx.artifact->state = err;
+
         Context newctx = { artifact::FromOther(ctx.artifact) };
         return newctx;
     }
@@ -37,7 +39,7 @@ namespace __plugin_root::dllutil {
     }
 
     State<Context> InstallCommand(const Context& ctx, Name name, Name impl_name) {
-        ctx.artifact->commands[name] = command::LoadFromArtifact(ctx.artifact, impl_name);
+        ctx.artifact->commands[name] = command::LoadFromArtifact(ctx.artifact, name, impl_name);
         if (ctx.artifact->commands[name].state != NONE) {
             ctx.artifact->state = ctx.artifact->commands[name].state;
             return std::unexpected(ctx.artifact->state);
@@ -84,8 +86,8 @@ namespace __plugin_root::dllutil {
     }
 
     State<void*> LoadModuleFromArtifact(const Artifact& source) {
-        if (!std::filesystem::exists(source->obj_path)) return std::unexpected(DLL_NOMODULE);
-        void *module = dlopen(source->obj_path.c_str(), source->obj_mode);
+        if (!std::filesystem::exists(source->obj_entry)) return std::unexpected(DLL_NOMODULE);
+        void *module = dlopen(source->obj_entry.c_str(), source->obj_mode);
         if (module == nullptr) return std::unexpected(DLL_MALFORMAT);
         return module;
     }

@@ -1,0 +1,6 @@
+[plugin]
+name = "Hello_C"
+description = "Print 'Hello, World!' to stdout"
+description_long = "Does nothing except print 'Hello, World!' on install. This plugin tests that the API works from C."
+entry = "libhello_c.dylib"
+version = "1.0.0"

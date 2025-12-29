@@ -20,9 +20,9 @@ namespace __plugin_root {
     /// @brief The name of a plugin asset, module or
     /// artifact.
     typedef std::string Name;
-    /// @brief Path to the object binary.
-    typedef std::string ObjectPath;
-    /// @brief Mode of how to load the binary.
+    /// @brief Path to the object entry point.
+    typedef std::string ObjectEntry;
+    /// @brief Mode of how to load the entry point.
     typedef int ObjectMode;
     /// @brief A reference to the object loaded dynamically.
     typedef void *ObjectRef;
@@ -35,6 +35,7 @@ namespace __plugin_root {
 
 namespace __plugin_root::command {
     struct Command {
+        Name         impl_name;
         CommandImpl  impl;
         CommandScope scope;
         StateErr     state;
@@ -46,19 +47,6 @@ namespace __plugin_root::command {
 }
 
 namespace __plugin_root::artifact {
-    struct ArtifactBody {
-        command::Registry commands;
-        Desc        description;
-        Desc        description_long;
-        Path        manifest;
-        Name        name;
-        ObjectMode  obj_mode;
-        ObjectPath  obj_path;
-        ObjectRef   obj_ref;
-        StateErr    state;
-        Version     version;
-    };
-
     /// @brief A box of artifact attributes.
     typedef std::unique_ptr<ArtifactBody> Artifact;
 }
@@ -105,6 +93,19 @@ namespace __plugin_root {
 }
 
 namespace __plugin_root::artifact {
+    struct ArtifactBody {
+        command::Registry commands;
+        Desc        description;
+        Desc        description_long;
+        Path        manifest;
+        Name        name;
+        ObjectEntry obj_entry;
+        ObjectMode  obj_mode;
+        ObjectRef   obj_ref;
+        StateErr    state;
+        Version     version;
+    };
+
     std::ostream& operator<<(std::ostream&, const Artifact&);
 
     /// @brief  Create a new, empty plugin artifact.
@@ -114,7 +115,7 @@ namespace __plugin_root::artifact {
     ///        path.
     /// @param  path path to object path.
     /// @return A new object.
-    Artifact New(const ObjectPath);
+    Artifact New(const ObjectEntry);
     /// @brief Create a new plugin artifact from a
     ///        manifest file.
     /// @param  path the manifest file path.
@@ -137,6 +138,13 @@ namespace __plugin_root::artifact {
     /// @return A new object.
     Artifact WithDescriptionLong(const Artifact&, const Desc);
     /// @brief Create a copy of the source artifact with a
+    ///        specified object path.
+    /// @param  source Artifact to copy from.
+    /// @param  path Name of the file path where the
+    ///         artifact should be loaded from.
+    /// @return A new object.
+    Artifact WithEntry(const Artifact&, const ObjectEntry);
+    /// @brief Create a copy of the source artifact with a
     ///        path to the file containing its manifest.
     /// @param  source Artifact to copy from.
     /// @param  path to the artifact manifest.
@@ -148,13 +156,6 @@ namespace __plugin_root::artifact {
     /// @param  name Name to set on the artifact.
     /// @return A new object.
     Artifact WithName(const Artifact&, const Name);
-    /// @brief Create a copy of the source artifact with a
-    ///        specified object path.
-    /// @param  source Artifact to copy from.
-    /// @param  path Name of the file path where the
-    ///         artifact should be loaded from.
-    /// @return A new object.
-    Artifact WithPath(const Artifact&, const ObjectPath);
     /// @brief Create a copy of the source artifact with a
     ///        specified state.
     /// @param  source Artifact to copy from.
@@ -170,7 +171,7 @@ namespace __plugin_root::artifact {
 }
 
 namespace __plugin_root::command {
-    Command LoadFromArtifact(const artifact::Artifact&, const Name);
+    Command LoadFromArtifact(const artifact::Artifact&, const Name, const Name);
 }
 
 namespace __plugin_root::plugin {
