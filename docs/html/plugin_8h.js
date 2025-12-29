@@ -23,6 +23,7 @@ var plugin_8h =
       [ "DLL_NOOBJECT", "plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0", null ],
       [ "DLL_NORELEASE", "plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c", null ],
       [ "DLL_NOSCOPE", "plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be", null ],
+      [ "MAN_NOHEADER", "plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aacb8a965f9ffbc983a406f8b306941e8", null ],
       [ "MAN_NOMAN", "plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e", null ],
       [ "MAN_MALPARSE", "plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5", null ],
       [ "MAN_NOPLUGIN", "plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aba0727e5ae54804a3f4d03951ad27acb", null ]

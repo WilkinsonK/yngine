@@ -23,10 +23,10 @@ typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_af477c76386a327
 \begin{DoxyCompactList}\small\item\em The description of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
 typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}
 \begin{DoxyCompactList}\small\item\em The name of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
-typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_ac26bcb5dbd702f5d6938a596c98a417a}{Object\+Path}}
-\begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to the object binary. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a5ce749b305b02e6ca53a05d733524345}{Object\+Entry}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to the object entry point. \end{DoxyCompactList}\item 
 typedef int \mbox{\hyperlink{namespace____plugin__root_ace7d11467cf9033aaaaf889c9fe90904}{Object\+Mode}}
-\begin{DoxyCompactList}\small\item\em Mode of how to load the binary. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Mode of how to load the entry point. \end{DoxyCompactList}\item 
 typedef void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace____plugin__root_a09d45b8a78573e3eb8d0ddd01343a12a}{Object\+Ref}}
 \begin{DoxyCompactList}\small\item\em A reference to the object loaded dynamically. \end{DoxyCompactList}\item 
 typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path}}
@@ -75,6 +75,16 @@ typedef std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+Name}
 
 The name of a plugin asset, module or artifact. 
 
+\Hypertarget{namespace____plugin__root_a5ce749b305b02e6ca53a05d733524345}\index{\_\_plugin\_root@{\_\_plugin\_root}!ObjectEntry@{ObjectEntry}}
+\index{ObjectEntry@{ObjectEntry}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{ObjectEntry}{ObjectEntry}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a5ce749b305b02e6ca53a05d733524345} 
+typedef std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Entry}
+
+
+
+\doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to the object entry point. 
+
 \Hypertarget{namespace____plugin__root_ace7d11467cf9033aaaaf889c9fe90904}\index{\_\_plugin\_root@{\_\_plugin\_root}!ObjectMode@{ObjectMode}}
 \index{ObjectMode@{ObjectMode}!\_\_plugin\_root@{\_\_plugin\_root}}
 \doxysubsubsection{\texorpdfstring{ObjectMode}{ObjectMode}}
@@ -83,17 +93,7 @@ typedef int \+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Mode}
 
 
 
-Mode of how to load the binary. 
-
-\Hypertarget{namespace____plugin__root_ac26bcb5dbd702f5d6938a596c98a417a}\index{\_\_plugin\_root@{\_\_plugin\_root}!ObjectPath@{ObjectPath}}
-\index{ObjectPath@{ObjectPath}!\_\_plugin\_root@{\_\_plugin\_root}}
-\doxysubsubsection{\texorpdfstring{ObjectPath}{ObjectPath}}
-{\footnotesize\ttfamily \label{namespace____plugin__root_ac26bcb5dbd702f5d6938a596c98a417a} 
-typedef std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Path}
-
-
-
-\doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to the object binary. 
+Mode of how to load the entry point. 
 
 \Hypertarget{namespace____plugin__root_a09d45b8a78573e3eb8d0ddd01343a12a}\index{\_\_plugin\_root@{\_\_plugin\_root}!ObjectRef@{ObjectRef}}
 \index{ObjectRef@{ObjectRef}!\_\_plugin\_root@{\_\_plugin\_root}}

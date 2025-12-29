@@ -109,10 +109,10 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:af477c76386a327c88de9bfdc569e359b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The description of a plugin asset, module or artifact.  <br /></td></tr>
 <tr class="memitem:a93482d22098267681084c32c0aced568" id="r_a93482d22098267681084c32c0aced568"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93482d22098267681084c32c0aced568">Name</a></td></tr>
 <tr class="memdesc:a93482d22098267681084c32c0aced568"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of a plugin asset, module or artifact.  <br /></td></tr>
-<tr class="memitem:ac26bcb5dbd702f5d6938a596c98a417a" id="r_ac26bcb5dbd702f5d6938a596c98a417a"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac26bcb5dbd702f5d6938a596c98a417a">ObjectPath</a></td></tr>
-<tr class="memdesc:ac26bcb5dbd702f5d6938a596c98a417a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#aa005e96428daf47f07c7321131ec1857" title="Path to an arbitrary file or directory.">Path</a> to the object binary.  <br /></td></tr>
+<tr class="memitem:a5ce749b305b02e6ca53a05d733524345" id="r_a5ce749b305b02e6ca53a05d733524345"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a></td></tr>
+<tr class="memdesc:a5ce749b305b02e6ca53a05d733524345"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#aa005e96428daf47f07c7321131ec1857" title="Path to an arbitrary file or directory.">Path</a> to the object entry point.  <br /></td></tr>
 <tr class="memitem:ace7d11467cf9033aaaaf889c9fe90904" id="r_ace7d11467cf9033aaaaf889c9fe90904"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace7d11467cf9033aaaaf889c9fe90904">ObjectMode</a></td></tr>
-<tr class="memdesc:ace7d11467cf9033aaaaf889c9fe90904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode of how to load the binary.  <br /></td></tr>
+<tr class="memdesc:ace7d11467cf9033aaaaf889c9fe90904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode of how to load the entry point.  <br /></td></tr>
 <tr class="memitem:a09d45b8a78573e3eb8d0ddd01343a12a" id="r_a09d45b8a78573e3eb8d0ddd01343a12a"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09d45b8a78573e3eb8d0ddd01343a12a">ObjectRef</a></td></tr>
 <tr class="memdesc:a09d45b8a78573e3eb8d0ddd01343a12a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reference to the object loaded dynamically.  <br /></td></tr>
 <tr class="memitem:aa005e96428daf47f07c7321131ec1857" id="r_aa005e96428daf47f07c7321131ec1857"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa005e96428daf47f07c7321131ec1857">Path</a></td></tr>
@@ -170,6 +170,22 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5ce749b305b02e6ca53a05d733524345" name="a5ce749b305b02e6ca53a05d733524345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce749b305b02e6ca53a05d733524345">&#9670;&#160;</a></span>ObjectEntry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::string __plugin_root::ObjectEntry</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#aa005e96428daf47f07c7321131ec1857" title="Path to an arbitrary file or directory.">Path</a> to the object entry point. </p>
+
+</div>
+</div>
 <a id="ace7d11467cf9033aaaaf889c9fe90904" name="ace7d11467cf9033aaaaf889c9fe90904"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace7d11467cf9033aaaaf889c9fe90904">&#9670;&#160;</a></span>ObjectMode</h2>
 
@@ -182,23 +198,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Mode of how to load the binary. </p>
-
-</div>
-</div>
-<a id="ac26bcb5dbd702f5d6938a596c98a417a" name="ac26bcb5dbd702f5d6938a596c98a417a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac26bcb5dbd702f5d6938a596c98a417a">&#9670;&#160;</a></span>ObjectPath</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::string __plugin_root::ObjectPath</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="#aa005e96428daf47f07c7321131ec1857" title="Path to an arbitrary file or directory.">Path</a> to the object binary. </p>
+<p>Mode of how to load the entry point. </p>
 
 </div>
 </div>

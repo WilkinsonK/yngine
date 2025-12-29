@@ -1,0 +1,32 @@
+\doxysection{plugin\+\_\+c\+\_\+api.\+h}
+\hypertarget{plugin__c__api_8h_source}{}\label{plugin__c__api_8h_source}\index{plugin/include/plugin\_c\_api.h@{plugin/include/plugin\_c\_api.h}}
+\mbox{\hyperlink{plugin__c__api_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PLUGIN\_C\_API\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PLUGIN\_C\_API\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{plugin_8h}{plugin.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ extern\ "{}C"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{typedef}\ plugin::StateErr\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ plugin::Context\ Context;}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{plugin__c__api_8h_ad3530e084fb8e0c559fe27b1efc472a0}{Desc}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}{Name}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\ \mbox{\hyperlink{plugin__module_8h_a662737215e1ac0ff92737f43e4f6fb17}{plugin\_call\_command}}(\textcolor{keyword}{const}\ Context\ *,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}{Name}});}
+\DoxyCodeLine{00018\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{plugin__module_8h_a9c12a95ce37111bde6ac9b04312fc495}{plugin\_get\_description}}(\textcolor{keyword}{const}\ Context\ *);}
+\DoxyCodeLine{00019\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{plugin__module_8h_a4952675b62f1fd7333a45095a183535a}{plugin\_get\_description\_long}}(\textcolor{keyword}{const}\ Context\ *);}
+\DoxyCodeLine{00020\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{plugin__module_8h_a3653463f8565c777a58d6d7670a05ec9}{plugin\_get\_name}}(\textcolor{keyword}{const}\ Context\ *);}
+\DoxyCodeLine{00021\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{StateErr}}\ \mbox{\hyperlink{plugin__module_8h_af33dae6245181d4123adc741dcc506fc}{plugin\_register\_command}}(\textcolor{keyword}{const}\ Context*,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}{Name}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}{Name}});}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ extern\ "{}C"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLUGIN\_C\_API\_H}}
+
+\end{DoxyCode}

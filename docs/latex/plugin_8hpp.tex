@@ -16,9 +16,9 @@ Main plugin API declarations. Defines type aliases, traits and functions that ar
 \item 
 struct \mbox{\hyperlink{struct____plugin__root_1_1command_1_1_command}{\+\_\+\+\_\+plugin\+\_\+root\+::command\+::\+Command}}
 \item 
-struct \mbox{\hyperlink{struct____plugin__root_1_1artifact_1_1_artifact_body}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Artifact\+Body}}
-\item 
 struct \mbox{\hyperlink{struct____plugin__root_1_1_context}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Context}}
+\item 
+struct \mbox{\hyperlink{struct____plugin__root_1_1artifact_1_1_artifact_body}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Artifact\+Body}}
 \item 
 class \mbox{\hyperlink{class____plugin__root_1_1plugin_1_1_has_commands}{\+\_\+\+\_\+plugin\+\_\+root\+::plugin\+::\+Has\+Commands}}
 \begin{DoxyCompactList}\small\item\em Can add/register commands to the global system. \end{DoxyCompactList}\item 
@@ -46,10 +46,10 @@ typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_af477c76386a327
 \begin{DoxyCompactList}\small\item\em The description of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
 typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Name}}
 \begin{DoxyCompactList}\small\item\em The name of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
-typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_ac26bcb5dbd702f5d6938a596c98a417a}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Path}}
-\begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to the object binary. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a5ce749b305b02e6ca53a05d733524345}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Entry}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to the object entry point. \end{DoxyCompactList}\item 
 typedef int \mbox{\hyperlink{namespace____plugin__root_ace7d11467cf9033aaaaf889c9fe90904}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Mode}}
-\begin{DoxyCompactList}\small\item\em Mode of how to load the binary. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Mode of how to load the entry point. \end{DoxyCompactList}\item 
 typedef void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace____plugin__root_a09d45b8a78573e3eb8d0ddd01343a12a}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Ref}}
 \begin{DoxyCompactList}\small\item\em A reference to the object loaded dynamically. \end{DoxyCompactList}\item 
 typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Path}}
@@ -81,7 +81,7 @@ std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_1_1artifact_ada4278
 \item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a2e5d1a4c2436d314f358cad04be4e1be}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+New}} (void)
 \begin{DoxyCompactList}\small\item\em Create a new, empty plugin artifact. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aa063dbdc74457be4fcf279638b337e85}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+New}} (const \mbox{\hyperlink{namespace____plugin__root_ac26bcb5dbd702f5d6938a596c98a417a}{Object\+Path}})
+\mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a7819b04af6ccb787df95aeb2f8cb9693}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+New}} (const \mbox{\hyperlink{namespace____plugin__root_a5ce749b305b02e6ca53a05d733524345}{Object\+Entry}})
 \begin{DoxyCompactList}\small\item\em Create a new plugin artifact from an object path. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a91bea2653e9f4b7574e03168ce7bdcab}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+From\+File}} (const char \texorpdfstring{$\ast$}{*})
 \begin{DoxyCompactList}\small\item\em Create a new plugin artifact from a manifest file. \end{DoxyCompactList}\item 
@@ -91,17 +91,17 @@ std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_1_1artifact_ada4278
 \begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a brief description of the plugin. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a48bda01db8fab68c573c3287056217f3}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+Description\+Long}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_af477c76386a327c88de9bfdc569e359b}{Desc}})
 \begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a detailed description of the plugin. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_af4fd4b431dfd701f030d40e7ec269262}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+Entry}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_a5ce749b305b02e6ca53a05d733524345}{Object\+Entry}})
+\begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified object path. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_ace5242dd64ca02d3965076d0f2dfb93f}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+Manifest}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path}})
 \begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a path to the file containing its manifest. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_ab800e1eba137ac33b011df7c620f0d16}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+Name}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}})
 \begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified name. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a35a8707a58dc6acb6c32e773b74c75eb}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+Path}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_ac26bcb5dbd702f5d6938a596c98a417a}{Object\+Path}})
-\begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified object path. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a6b3092723179c170f24ab67ee0966c3f}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+State}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}})
 \begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified state. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a2f8b9ef827c9fbe6fb0e323ccfd34bf5}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+Version}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_a84d5a198ebf7ebdff6e8dc6c22fcb542}{Version}})
 \begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified version. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{struct____plugin__root_1_1command_1_1_command}{Command}} \mbox{\hyperlink{namespace____plugin__root_1_1command_a9f82221135181a576f4ecbdbd0a2fa3b}{\+\_\+\+\_\+plugin\+\_\+root\+::command\+::\+Load\+From\+Artifact}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}})
+\mbox{\hyperlink{struct____plugin__root_1_1command_1_1_command}{Command}} \mbox{\hyperlink{namespace____plugin__root_1_1command_ac4e7129e6c44ba46372ff44e578ce1ac}{\+\_\+\+\_\+plugin\+\_\+root\+::command\+::\+Load\+From\+Artifact}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}, const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}})
 \end{DoxyCompactItemize}
 
 

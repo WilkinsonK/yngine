@@ -11,14 +11,15 @@ var namespace____plugin__root_1_1artifact =
     [ "FromTomlWithName", "namespace____plugin__root_1_1artifact.html#ac38b917d1238e96b55b2a6991f90a76c", null ],
     [ "FromTomlWithPath", "namespace____plugin__root_1_1artifact.html#aaf1ab0438ad3873bbc6cf4bcec687ffe", null ],
     [ "FromTomlWithVersion", "namespace____plugin__root_1_1artifact.html#a6c41d745698471007a6378c214d55352", null ],
-    [ "New", "namespace____plugin__root_1_1artifact.html#aa063dbdc74457be4fcf279638b337e85", null ],
+    [ "New", "namespace____plugin__root_1_1artifact.html#a7819b04af6ccb787df95aeb2f8cb9693", null ],
     [ "New", "namespace____plugin__root_1_1artifact.html#a2e5d1a4c2436d314f358cad04be4e1be", null ],
     [ "operator<<", "namespace____plugin__root_1_1artifact.html#ada4278eed051e4a687f1871f19b5111b", null ],
     [ "WithDescription", "namespace____plugin__root_1_1artifact.html#a26f036c1eec46c5955b28a5806338d9f", null ],
     [ "WithDescriptionLong", "namespace____plugin__root_1_1artifact.html#a48bda01db8fab68c573c3287056217f3", null ],
+    [ "WithEntry", "namespace____plugin__root_1_1artifact.html#af4fd4b431dfd701f030d40e7ec269262", null ],
     [ "WithManifest", "namespace____plugin__root_1_1artifact.html#ace5242dd64ca02d3965076d0f2dfb93f", null ],
     [ "WithName", "namespace____plugin__root_1_1artifact.html#ab800e1eba137ac33b011df7c620f0d16", null ],
-    [ "WithPath", "namespace____plugin__root_1_1artifact.html#a35a8707a58dc6acb6c32e773b74c75eb", null ],
+    [ "WithPath", "namespace____plugin__root_1_1artifact.html#ac9e7e90c4496ab296d313a72b452a710", null ],
     [ "WithState", "namespace____plugin__root_1_1artifact.html#a6b3092723179c170f24ab67ee0966c3f", null ],
     [ "WithVersion", "namespace____plugin__root_1_1artifact.html#a2f8b9ef827c9fbe6fb0e323ccfd34bf5", null ]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['desc_0',['Desc',['../namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b',1,'__plugin_root']]],
+  ['desc_0',['Desc',['../namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b',1,'__plugin_root::Desc'],['../plugin__c__api_8h.html#ad3530e084fb8e0c559fe27b1efc472a0',1,'Desc:&#160;plugin_c_api.h']]],
   ['description_1',['description',['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#a9ad3373df1e8e64f4aad3a8831df95a3',1,'__plugin_root::artifact::ArtifactBody']]],
   ['description_5flong_2',['description_long',['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#a235a98c009197f9823df5cff98dc6b98',1,'__plugin_root::artifact::ArtifactBody']]],
   ['dll_5fmalformat_3',['DLL_MALFORMAT',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a1eda451e6af890743177dd1c50d193b1',1,'plugin.h']]],

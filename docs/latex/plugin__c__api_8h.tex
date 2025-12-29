@@ -1,0 +1,75 @@
+\doxysection{plugin/include/plugin\+\_\+c\+\_\+api.h File Reference}
+\hypertarget{plugin__c__api_8h}{}\label{plugin__c__api_8h}\index{plugin/include/plugin\_c\_api.h@{plugin/include/plugin\_c\_api.h}}
+{\ttfamily \#include "{}plugin.\+h"{}}\newline
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin__c__api_8h_ad3530e084fb8e0c559fe27b1efc472a0}{Desc}}
+\item 
+typedef char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}{Name}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{plugin__c__api_8h_aafb5f0336134e7a994b412fc9cd34e31}{plugin\+\_\+call\+\_\+command}} (const Context \texorpdfstring{$\ast$}{*}, const \mbox{\hyperlink{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}{Name}})
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin__c__api_8h_abc17b7d2cf07d71dab600e9fe6dc8560}{plugin\+\_\+get\+\_\+description}} (const Context \texorpdfstring{$\ast$}{*})
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin__c__api_8h_a84ed7cade96b11c339eab33f8528f28c}{plugin\+\_\+get\+\_\+description\+\_\+long}} (const Context \texorpdfstring{$\ast$}{*})
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin__c__api_8h_ab74f053af1be5bdcf559f44941f80436}{plugin\+\_\+get\+\_\+name}} (const Context \texorpdfstring{$\ast$}{*})
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{plugin__c__api_8h_a4fe4e3e59c270d5a2ee0146583bab5fd}{plugin\+\_\+register\+\_\+command}} (const Context \texorpdfstring{$\ast$}{*}, const \mbox{\hyperlink{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}{Name}}, const \mbox{\hyperlink{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}{Name}})
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{plugin__c__api_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{plugin__c__api_8h_ad3530e084fb8e0c559fe27b1efc472a0}\index{plugin\_c\_api.h@{plugin\_c\_api.h}!Desc@{Desc}}
+\index{Desc@{Desc}!plugin\_c\_api.h@{plugin\_c\_api.h}}
+\doxysubsubsection{\texorpdfstring{Desc}{Desc}}
+{\footnotesize\ttfamily \label{plugin__c__api_8h_ad3530e084fb8e0c559fe27b1efc472a0} 
+typedef char\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin__c__api_8h_ad3530e084fb8e0c559fe27b1efc472a0}{Desc}}}
+
+\Hypertarget{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}\index{plugin\_c\_api.h@{plugin\_c\_api.h}!Name@{Name}}
+\index{Name@{Name}!plugin\_c\_api.h@{plugin\_c\_api.h}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily \label{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9} 
+typedef char\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}{Name}}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{plugin__c__api_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{plugin__c__api_8h_aafb5f0336134e7a994b412fc9cd34e31}\index{plugin\_c\_api.h@{plugin\_c\_api.h}!plugin\_call\_command@{plugin\_call\_command}}
+\index{plugin\_call\_command@{plugin\_call\_command}!plugin\_c\_api.h@{plugin\_c\_api.h}}
+\doxysubsubsection{\texorpdfstring{plugin\_call\_command()}{plugin\_call\_command()}}
+{\footnotesize\ttfamily \label{plugin__c__api_8h_aafb5f0336134e7a994b412fc9cd34e31} 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} plugin\+\_\+call\+\_\+command (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{const \mbox{\hyperlink{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}{Name}}}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{plugin__c__api_8h_abc17b7d2cf07d71dab600e9fe6dc8560}\index{plugin\_c\_api.h@{plugin\_c\_api.h}!plugin\_get\_description@{plugin\_get\_description}}
+\index{plugin\_get\_description@{plugin\_get\_description}!plugin\_c\_api.h@{plugin\_c\_api.h}}
+\doxysubsubsection{\texorpdfstring{plugin\_get\_description()}{plugin\_get\_description()}}
+{\footnotesize\ttfamily \label{plugin__c__api_8h_abc17b7d2cf07d71dab600e9fe6dc8560} 
+const char \texorpdfstring{$\ast$}{*} plugin\+\_\+get\+\_\+description (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{plugin__c__api_8h_a84ed7cade96b11c339eab33f8528f28c}\index{plugin\_c\_api.h@{plugin\_c\_api.h}!plugin\_get\_description\_long@{plugin\_get\_description\_long}}
+\index{plugin\_get\_description\_long@{plugin\_get\_description\_long}!plugin\_c\_api.h@{plugin\_c\_api.h}}
+\doxysubsubsection{\texorpdfstring{plugin\_get\_description\_long()}{plugin\_get\_description\_long()}}
+{\footnotesize\ttfamily \label{plugin__c__api_8h_a84ed7cade96b11c339eab33f8528f28c} 
+const char \texorpdfstring{$\ast$}{*} plugin\+\_\+get\+\_\+description\+\_\+long (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{plugin__c__api_8h_ab74f053af1be5bdcf559f44941f80436}\index{plugin\_c\_api.h@{plugin\_c\_api.h}!plugin\_get\_name@{plugin\_get\_name}}
+\index{plugin\_get\_name@{plugin\_get\_name}!plugin\_c\_api.h@{plugin\_c\_api.h}}
+\doxysubsubsection{\texorpdfstring{plugin\_get\_name()}{plugin\_get\_name()}}
+{\footnotesize\ttfamily \label{plugin__c__api_8h_ab74f053af1be5bdcf559f44941f80436} 
+const char \texorpdfstring{$\ast$}{*} plugin\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{plugin__c__api_8h_a4fe4e3e59c270d5a2ee0146583bab5fd}\index{plugin\_c\_api.h@{plugin\_c\_api.h}!plugin\_register\_command@{plugin\_register\_command}}
+\index{plugin\_register\_command@{plugin\_register\_command}!plugin\_c\_api.h@{plugin\_c\_api.h}}
+\doxysubsubsection{\texorpdfstring{plugin\_register\_command()}{plugin\_register\_command()}}
+{\footnotesize\ttfamily \label{plugin__c__api_8h_a4fe4e3e59c270d5a2ee0146583bab5fd} 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} plugin\+\_\+register\+\_\+command (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{const \mbox{\hyperlink{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}{Name}}}]{name}{, }\item[{const \mbox{\hyperlink{plugin__c__api_8h_ace12fb824e557a97606e33f86edd69d9}{Name}}}]{impl\+\_\+name}{}\end{DoxyParamCaption})}
+

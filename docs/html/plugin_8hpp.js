@@ -1,8 +1,8 @@
 var plugin_8hpp =
 [
     [ "__plugin_root::command::Command", "struct____plugin__root_1_1command_1_1_command.html", "struct____plugin__root_1_1command_1_1_command" ],
-    [ "__plugin_root::artifact::ArtifactBody", "struct____plugin__root_1_1artifact_1_1_artifact_body.html", "struct____plugin__root_1_1artifact_1_1_artifact_body" ],
     [ "__plugin_root::Context", "struct____plugin__root_1_1_context.html", "struct____plugin__root_1_1_context" ],
+    [ "__plugin_root::artifact::ArtifactBody", "struct____plugin__root_1_1artifact_1_1_artifact_body.html", "struct____plugin__root_1_1artifact_1_1_artifact_body" ],
     [ "__plugin_root::plugin::HasCommands", "class____plugin__root_1_1plugin_1_1_has_commands.html", null ],
     [ "__plugin_root::plugin::CanInstall", "class____plugin__root_1_1plugin_1_1_can_install.html", null ],
     [ "__plugin_root::plugin::CanRelease", "class____plugin__root_1_1plugin_1_1_can_release.html", null ],
@@ -10,8 +10,8 @@ var plugin_8hpp =
     [ "__plugin_root::artifact::Artifact", "namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c", null ],
     [ "__plugin_root::Desc", "namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b", null ],
     [ "__plugin_root::Name", "namespace____plugin__root.html#a93482d22098267681084c32c0aced568", null ],
+    [ "__plugin_root::ObjectEntry", "namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345", null ],
     [ "__plugin_root::ObjectMode", "namespace____plugin__root.html#ace7d11467cf9033aaaaf889c9fe90904", null ],
-    [ "__plugin_root::ObjectPath", "namespace____plugin__root.html#ac26bcb5dbd702f5d6938a596c98a417a", null ],
     [ "__plugin_root::ObjectRef", "namespace____plugin__root.html#a09d45b8a78573e3eb8d0ddd01343a12a", null ],
     [ "__plugin_root::Path", "namespace____plugin__root.html#aa005e96428daf47f07c7321131ec1857", null ],
     [ "__plugin_root::command::Registry", "namespace____plugin__root_1_1command.html#ab0d3ca173fee6bbd104c61f4f17484b7", null ],
@@ -21,8 +21,8 @@ var plugin_8hpp =
     [ "__plugin_root::artifact::FromFile", "namespace____plugin__root_1_1artifact.html#a91bea2653e9f4b7574e03168ce7bdcab", null ],
     [ "__plugin_root::artifact::FromOther", "namespace____plugin__root_1_1artifact.html#acc6c6fb4c3a5eeb231667d1fafee388f", null ],
     [ "__plugin_root::Install", "namespace____plugin__root.html#aaa55187fb313655b64c12fdd14ab7e04", null ],
-    [ "__plugin_root::command::LoadFromArtifact", "namespace____plugin__root_1_1command.html#a9f82221135181a576f4ecbdbd0a2fa3b", null ],
-    [ "__plugin_root::artifact::New", "namespace____plugin__root_1_1artifact.html#aa063dbdc74457be4fcf279638b337e85", null ],
+    [ "__plugin_root::command::LoadFromArtifact", "namespace____plugin__root_1_1command.html#ac4e7129e6c44ba46372ff44e578ce1ac", null ],
+    [ "__plugin_root::artifact::New", "namespace____plugin__root_1_1artifact.html#a7819b04af6ccb787df95aeb2f8cb9693", null ],
     [ "__plugin_root::artifact::New", "namespace____plugin__root_1_1artifact.html#a2e5d1a4c2436d314f358cad04be4e1be", null ],
     [ "__plugin_root::artifact::operator<<", "namespace____plugin__root_1_1artifact.html#ada4278eed051e4a687f1871f19b5111b", null ],
     [ "__plugin_root::operator<<", "namespace____plugin__root.html#a3c87979575ad101348ccaebdc3f7d377", null ],
@@ -31,9 +31,9 @@ var plugin_8hpp =
     [ "__plugin_root::StateMessage", "namespace____plugin__root.html#ac39cad57c780ffb859ecdb286bdd9177", null ],
     [ "__plugin_root::artifact::WithDescription", "namespace____plugin__root_1_1artifact.html#a26f036c1eec46c5955b28a5806338d9f", null ],
     [ "__plugin_root::artifact::WithDescriptionLong", "namespace____plugin__root_1_1artifact.html#a48bda01db8fab68c573c3287056217f3", null ],
+    [ "__plugin_root::artifact::WithEntry", "namespace____plugin__root_1_1artifact.html#af4fd4b431dfd701f030d40e7ec269262", null ],
     [ "__plugin_root::artifact::WithManifest", "namespace____plugin__root_1_1artifact.html#ace5242dd64ca02d3965076d0f2dfb93f", null ],
     [ "__plugin_root::artifact::WithName", "namespace____plugin__root_1_1artifact.html#ab800e1eba137ac33b011df7c620f0d16", null ],
-    [ "__plugin_root::artifact::WithPath", "namespace____plugin__root_1_1artifact.html#a35a8707a58dc6acb6c32e773b74c75eb", null ],
     [ "__plugin_root::artifact::WithState", "namespace____plugin__root_1_1artifact.html#a6b3092723179c170f24ab67ee0966c3f", null ],
     [ "__plugin_root::artifact::WithVersion", "namespace____plugin__root_1_1artifact.html#a2f8b9ef827c9fbe6fb0e323ccfd34bf5", null ]
 ];

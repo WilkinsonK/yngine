@@ -41,10 +41,11 @@ enum \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} 
 , \newline
 \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c}{DLL\+\_\+\+NORELEASE}}
 , \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be}{DLL\+\_\+\+NOSCOPE}}
-, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e}{MAN\+\_\+\+NOMAN}} = 0x2000
-, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5}{MAN\+\_\+\+MALPARSE}}
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aacb8a965f9ffbc983a406f8b306941e8}{MAN\+\_\+\+NOHEADER}} = 0x2000
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e}{MAN\+\_\+\+NOMAN}}
 , \newline
-\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aba0727e5ae54804a3f4d03951ad27acb}{MAN\+\_\+\+NOPLUGIN}}
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5}{MAN\+\_\+\+MALPARSE}}
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aba0727e5ae54804a3f4d03951ad27acb}{MAN\+\_\+\+NOPLUGIN}}
  \}
 \begin{DoxyCompactList}\small\item\em Possible errors that can occur during the plugin lifecycle. \end{DoxyCompactList}\item 
 enum \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0}{Command\+Scope}} \{ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0af828bc82c537119c89b55d2db41ec75b}{SCOPE\+\_\+\+LOCAL}}
@@ -59,7 +60,7 @@ enum \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0}{Command\+Scop
 \begin{DoxyCompactList}\small\item\em Context data specific to a plugin. Is typically passed between the manager and the instance. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} \mbox{\hyperlink{plugin_8h_ab5b9c0753f15e4649196cba948733ed9}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head}} (\+\_\+\+\_\+plugin\+\_\+root\+::artifact) typedef struct Artifact\+Body Artifact\+Body
 \begin{DoxyCompactList}\small\item\em Wraps all assets related to a single plugin. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} \mbox{\hyperlink{plugin_8h_a06f7cea74459a9aae82d48d8035b64b3}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head}} (\+\_\+\+\_\+plugin\+\_\+root\+::command) typedef struct Command Command
+\mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} \mbox{\hyperlink{plugin_8h_a06f7cea74459a9aae82d48d8035b64b3}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head}} (\mbox{\hyperlink{plugin__module_8h_a8b273c9178ab7ca06572de9a3331d10e}{\+\_\+\+\_\+plugin\+\_\+root\+::command}}) typedef struct Command Command
 \begin{DoxyCompactList}\small\item\em The callable and attributes dictating its behavior. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} const char \texorpdfstring{$\ast$}{*}const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin_8h_a8afb65e4e3737673e0f4abcd5c40c462}{Get\+Name}} (const Context \texorpdfstring{$\ast$}{*})
 \begin{DoxyCompactList}\small\item\em Gets the name of the artifact currently contained in the context. \end{DoxyCompactList}\item 
@@ -223,6 +224,10 @@ DLL\+\_\+\+NORELEASE&Plugin/artifact was not released. \\
 DLL\+\_\+\+NOSCOPE&Missing scope attribute from the object file. \\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAN\_NOHEADER@{MAN\_NOHEADER}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!MAN\_NOHEADER@{MAN\_NOHEADER}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aacb8a965f9ffbc983a406f8b306941e8}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aacb8a965f9ffbc983a406f8b306941e8} 
+MAN\+\_\+\+NOHEADER&Missing manifest header. \\
+\hline
+
 \raisebox{\heightof{T}}[0pt][0pt]{\index{MAN\_NOMAN@{MAN\_NOMAN}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!MAN\_NOMAN@{MAN\_NOMAN}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e} 
 MAN\+\_\+\+NOMAN&Missing manifest file. \\
 \hline
@@ -277,7 +282,7 @@ Wraps all assets related to a single plugin.
 \index{\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}!plugin.h@{plugin.h}}
 \doxysubsubsection{\texorpdfstring{\_\_ns\_cplusplus\_head()}{\_\_ns\_cplusplus\_head()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily \label{plugin_8h_a06f7cea74459a9aae82d48d8035b64b3} 
-\mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head (\begin{DoxyParamCaption}\item[{\+\_\+\+\_\+plugin\+\_\+root\+::command}]{}{}\end{DoxyParamCaption})}
+\mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plugin__module_8h_a8b273c9178ab7ca06572de9a3331d10e}{\+\_\+\+\_\+plugin\+\_\+root\+::command}}}]{}{}\end{DoxyParamCaption})}
 
 
 
