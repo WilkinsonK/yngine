@@ -13,25 +13,17 @@ end
 -- Declares a plugin target.
 function define_plugin(name, opts)
     opts = opts or {}
-    local lang  = opts.lang or "cpp"
-    local dir   = opts.dir or "plugins"
-    local deps  = opts.deps or {}
-
-    local files = {}
-    if not opts.files and lang == "c" then
-        files = {path.join(dir, name, "plugin.c")}
-    elseif not opts.files then
-        files = {path.join(dir, name, "plugin.cpp")}
-    else
-        files = opts.files
-    end
+    local dir = opts.dir or "plugins"
 
     target(name)
-        add_files(files)
-        set_kind("shared")
-        add_deps(deps)
+        set_kind("phony")
         add_deps("plugin")
-        after_build(plugin_post_build)
+        on_build(function (target)
+            os.exec("make -C %s", path.join(dir, name))
+        end)
+        on_clean(function (target)
+            os.exec("make -C %s %s", path.join(dir, name), "clean")
+        end)
 end
 
 -- Declares a module of this project
@@ -50,18 +42,24 @@ function define_module(name, opts)
         add_deps(deps)
         add_packages(pkgs)
         set_kind(kind)
-
 end
 
-add_requires("libarchive", "log4cplus", "toml++")
+add_requires("cli11", "libarchive", "log4cplus", "toml++")
 
-define_module("core")
 define_module("plugin", { pkgs = { "libarchive", "log4cplus", "toml++" }})
-define_plugin("hello_cxx", { lang = "cpp", dir = "plugins" })
-define_plugin("hello_c", { lang = "c", dir = "plugins" })
+
+target("yplugin")
+    set_basename("yplugin")
+    set_kind("binary")
+    add_packages("cli11")
+    add_deps("plugin")
+    add_files("plugin/yplugin.cpp")
 
 target("main")
     set_basename("engine")
     set_kind("binary")
     add_files("main.cpp")
-    add_deps("core", "plugin")
+    add_deps("plugin")
+
+define_plugin("hello_cxx")
+define_plugin("hello_c")
