@@ -23,6 +23,10 @@ __ns_cplusplus_head(__plugin_root)
     /// instance.
     typedef struct Context Context;
 
+    /// @brief Degree of separation between different state
+    /// groups.
+    const int StateErrGroupOrder = 0x1000;
+
     /// @brief Possible errors that can occur during the
     /// plugin lifecycle.
     typedef enum StateErr {
@@ -60,6 +64,8 @@ __ns_cplusplus_head(__plugin_root)
         MAN_MALPARSE,
         /// @brief The 'plugin' header was missing.
         MAN_NOPLUGIN,
+        /// @brief The 'module' header was missing.
+        MAN_NOMODULE
     } StateErr;
 __ns_cplusplus_tail
 

@@ -13,15 +13,14 @@ plugin_module(
         return NONE;
     }
 
-    oninstall(Init) {
-        plugin_register_command("hello_world.PrintHello", "PrintHello");
-        plugin_register_command("hello_world.PrintFarewell", "PrintFarewell");
+    oninitialize(Init) {
         plugin_call_command("hello_world.PrintHello");
         return NONE;
     }
 
-    onrelease(Drop) {
-        plugin_call_command("hello_world.PrintFarewell");
+    oninstall(Install) {
+        plugin_register_command("hello_world.PrintHello", "PrintHello");
+        plugin_register_command("hello_world.PrintFarewell", "PrintFarewell");
         return NONE;
     }
 )

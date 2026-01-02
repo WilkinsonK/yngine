@@ -2,13 +2,14 @@
 
 int run_plugin_test(const char *path) {
     std::cout << "Trying '" << path << "'" << std::endl;
-    auto art = plugin::artifact::FromFile(path);
 
-    plugin::Context ctx = {
-        std::move(art)
-    };
+    auto ctx = plugin::Install(path);
+    if (ctx.artifact->state != plugin::StateErr::NONE) {
+        std::cerr << "error: " << ctx.artifact->state << std::endl;
+        return 1;
+    }
 
-    ctx = plugin::Install(ctx);
+    ctx = plugin::Initialize(ctx);
     if (ctx.artifact->state != plugin::StateErr::NONE) {
         std::cerr << "error: " << ctx.artifact->state << std::endl;
         return 1;

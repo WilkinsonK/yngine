@@ -81,15 +81,16 @@
 /// @param scope The scope of availability this command is
 /// available to the system.
 #define command(name, scope) command_raw(name, name, scope)
+#define oninitialize(name) command_raw(name, OnInitialize, SCOPE_LOCAL)
 /// @brief Declares the install callback. This callback will
 /// be loaded and used to install the plugin.
 /// @param name Base identity of the installer callback.
-#define oninstall(name) command_raw(name, OnInstall, SCOPE_GLOBAL)
+#define oninstall(name) command_raw(name, OnInstall, SCOPE_LOCAL)
 /// @brief Declares the release callback. This callback will
 /// be loaded and used to destroy the plugin and release its
 /// assets (if necessary).
 /// @param name Base identity of the releaser callback.
-#define onrelease(name) command_raw(name, OnRelease, SCOPE_GLOBAL)
+#define onrelease(name) command_raw(name, OnRelease, SCOPE_LOCAL)
 
 /// @brief Encloses the wrapped declarations as exportable
 /// items that are then made available to the plugin

@@ -1,6 +1,30 @@
+# Provides basic metadata about the project.
 [plugin]
 name = "Hello_C"
 description = "Print 'Hello, World!' to stdout"
 description_long = "Does nothing except print 'Hello, World!' on install. This plugin tests that the API works from C."
-entry = "libhello_c.dylib"
 version = "1.0.0"
+
+# Provides the metadata about how the project can be
+# installed.
+[module]
+# Needed to be able to expand to other module types.
+# 
+# Example types:
+# - dynamic    loads from a dynamically linked library.
+# - py3        loads from a python3 script.
+# - node       loads from a Node.js script.
+type = "dynamic"
+# Determines how the module can or should be built for
+# packaging.
+# 
+# Modes that should be available:
+# - none      (default) module does not require build.
+# - custom    use a custom build script.
+# - make      use a plain Makefile for building the module.
+# - xmake     use xmake to build the module.
+# - cmake     use cmake to build the module.
+mode = "make"
+# Entry point for the module. Defines a point from which the
+# system can hook into the plugin and run it.
+entry = "libhello_c.dylib"
