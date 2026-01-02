@@ -91,7 +91,9 @@ $(function(){initNavTree('artifact_8cpp.html','',''); });
   <div class="headertitle"><div class="title">artifact.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;dlfcn.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;dlfcn.h&gt;</code><br />
 <code>#include &lt;toml++/toml.hpp&gt;</code><br />
 <code>#include &quot;<a class="el" href="plugin_8hpp_source.html">plugin.hpp</a>&quot;</code><br />
 </div><table class="memberdecls">
@@ -100,8 +102,43 @@ Namespaces</h2></td></tr>
 <tr class="memitem:_5F_5Fplugin_5Froot" id="r__5F_5Fplugin_5Froot"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root.html">__plugin_root</a></td></tr>
 <tr class="memitem:_5F_5Fplugin_5Froot_3A_3Aartifact" id="r__5F_5Fplugin_5Froot_3A_3Aartifact"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html">__plugin_root::artifact</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aeb33a105119f29926569c98383f83858" id="r_aeb33a105119f29926569c98383f83858"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb33a105119f29926569c98383f83858">__tbl_extract_str</a>(T,  NAME,  DEFAULT)</td></tr>
+<tr class="memitem:a3e5f48117d5e7336c88f9ec7ec229a25" id="r_a3e5f48117d5e7336c88f9ec7ec229a25"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e5f48117d5e7336c88f9ec7ec229a25">__fld_desc</a>&#160;&#160;&#160;&quot;description&quot;</td></tr>
+<tr class="memitem:aa77423684d86444fac32746893bdc9d4" id="r_aa77423684d86444fac32746893bdc9d4"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa77423684d86444fac32746893bdc9d4">__fld_descl</a>&#160;&#160;&#160;&quot;description_long&quot;</td></tr>
+<tr class="memitem:a0041d25eec643e9263974f2d4ebc4e78" id="r_a0041d25eec643e9263974f2d4ebc4e78"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0041d25eec643e9263974f2d4ebc4e78">__fld_entry</a>&#160;&#160;&#160;&quot;entry&quot;</td></tr>
+<tr class="memitem:a1254b0cd469ba6220e00a287329a7ec3" id="r_a1254b0cd469ba6220e00a287329a7ec3"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1254b0cd469ba6220e00a287329a7ec3">__fld_mode</a>&#160;&#160;&#160;&quot;mode&quot;</td></tr>
+<tr class="memitem:ac4679394937f4cc3e3f8a1244af8b941" id="r_ac4679394937f4cc3e3f8a1244af8b941"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4679394937f4cc3e3f8a1244af8b941">__fld_name</a>&#160;&#160;&#160;&quot;name&quot;</td></tr>
+<tr class="memitem:aa52fc62d14c70daa182ea26a1acd0bb4" id="r_aa52fc62d14c70daa182ea26a1acd0bb4"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa52fc62d14c70daa182ea26a1acd0bb4">__fld_type</a>&#160;&#160;&#160;&quot;type&quot;</td></tr>
+<tr class="memitem:a6c7f7cb1ff2f359d03857741a226200b" id="r_a6c7f7cb1ff2f359d03857741a226200b"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c7f7cb1ff2f359d03857741a226200b">__fld_vers</a>&#160;&#160;&#160;&quot;version&quot;</td></tr>
+<tr class="memitem:a51a184b634c698737d0cd4e3890f7b57" id="r_a51a184b634c698737d0cd4e3890f7b57"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51a184b634c698737d0cd4e3890f7b57">__hdr_plugin</a>&#160;&#160;&#160;&quot;plugin&quot;</td></tr>
+<tr class="memitem:a95b3c04f1c67f04e2d42c5a715cccc58" id="r_a95b3c04f1c67f04e2d42c5a715cccc58"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95b3c04f1c67f04e2d42c5a715cccc58">__hdr_module</a>&#160;&#160;&#160;&quot;module&quot;</td></tr>
+<tr class="memitem:a429fdbe10d6828cfc59d9cb071496c82" id="r_a429fdbe10d6828cfc59d9cb071496c82"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a429fdbe10d6828cfc59d9cb071496c82">__val_anon</a>&#160;&#160;&#160;&quot;anonymous&quot;</td></tr>
+<tr class="memitem:a7dd49fd7e8ab9a261be4632907fccd3e" id="r_a7dd49fd7e8ab9a261be4632907fccd3e"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dd49fd7e8ab9a261be4632907fccd3e">__val_dyn</a>&#160;&#160;&#160;&quot;dynamic&quot;</td></tr>
+<tr class="memitem:a67e1e9e39368c748251a364e350c0868" id="r_a67e1e9e39368c748251a364e350c0868"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67e1e9e39368c748251a364e350c0868">__val_miss</a>&#160;&#160;&#160;&quot;missing&quot;</td></tr>
+<tr class="memitem:a8d6430274b0b7297e119c84244389ec0" id="r_a8d6430274b0b7297e119c84244389ec0"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d6430274b0b7297e119c84244389ec0">__val_none</a>&#160;&#160;&#160;&quot;none&quot;</td></tr>
+<tr class="memitem:a270301c1d96ebcc2390aad64a9e581dd" id="r_a270301c1d96ebcc2390aad64a9e581dd"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="namespacedefine.html">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a270301c1d96ebcc2390aad64a9e581dd">__is_missing</a>(str)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a747b314fc33e7cc079de3f20a639ec95" id="r_a747b314fc33e7cc079de3f20a639ec95"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>(const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, toml::table &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a747b314fc33e7cc079de3f20a639ec95">__plugin_root::artifact::HeaderExtractor</a></td></tr>
+<tr class="memitem:a64769fa64241f9b213dc1c37a9296f37" id="r_a64769fa64241f9b213dc1c37a9296f37"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="namespace____plugin__root_1_1artifact.html#a747b314fc33e7cc079de3f20a639ec95">HeaderExtractor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a64769fa64241f9b213dc1c37a9296f37">__plugin_root::artifact::HeaderExtractors</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a42f3ed187bc36c488d26442ac599ede4" id="r_a42f3ed187bc36c488d26442ac599ede4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a42f3ed187bc36c488d26442ac599ede4">__plugin_root::artifact::GetName</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a42f3ed187bc36c488d26442ac599ede4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the artifact.  <br /></td></tr>
+<tr class="memitem:a0673ca060bb40d516a64d837293ab242" id="r_a0673ca060bb40d516a64d837293ab242"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b">Desc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a0673ca060bb40d516a64d837293ab242">__plugin_root::artifact::GetDescription</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a0673ca060bb40d516a64d837293ab242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the description of the artifact.  <br /></td></tr>
+<tr class="memitem:a1f9fdc10b94f7cfba60c069a3e98cc0e" id="r_a1f9fdc10b94f7cfba60c069a3e98cc0e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b">Desc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a1f9fdc10b94f7cfba60c069a3e98cc0e">__plugin_root::artifact::GetDescriptionLong</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a1f9fdc10b94f7cfba60c069a3e98cc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the long description of the artifact.  <br /></td></tr>
+<tr class="memitem:ad66f02f43972cd13dbeb5495d7e54546" id="r_ad66f02f43972cd13dbeb5495d7e54546"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#ad66f02f43972cd13dbeb5495d7e54546">__plugin_root::artifact::GetEntry</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:ad66f02f43972cd13dbeb5495d7e54546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the module entry point of the artifact.  <br /></td></tr>
+<tr class="memitem:ad407ff37eeda0d5ae06d9f6c76523f1e" id="r_ad407ff37eeda0d5ae06d9f6c76523f1e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace____plugin__root.html#aaef0dcd42320592a525270c914424ebb">ObjectMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#ad407ff37eeda0d5ae06d9f6c76523f1e">__plugin_root::artifact::GetMode</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:ad407ff37eeda0d5ae06d9f6c76523f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the module builder mode.  <br /></td></tr>
+<tr class="memitem:a35459e9556121df17498297c32eb289e" id="r_a35459e9556121df17498297c32eb289e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace____plugin__root.html#a13d22b286eb7ccd25930bc3446682973">ObjectType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a35459e9556121df17498297c32eb289e">__plugin_root::artifact::GetType</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a35459e9556121df17498297c32eb289e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the module builder type.  <br /></td></tr>
 <tr class="memitem:a2e5d1a4c2436d314f358cad04be4e1be" id="r_a2e5d1a4c2436d314f358cad04be4e1be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a2e5d1a4c2436d314f358cad04be4e1be">__plugin_root::artifact::New</a> (void)</td></tr>
 <tr class="memdesc:a2e5d1a4c2436d314f358cad04be4e1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new, empty plugin artifact.  <br /></td></tr>
 <tr class="memitem:a7819b04af6ccb787df95aeb2f8cb9693" id="r_a7819b04af6ccb787df95aeb2f8cb9693"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a7819b04af6ccb787df95aeb2f8cb9693">__plugin_root::artifact::New</a> (const <a class="el" href="namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a>)</td></tr>
@@ -110,28 +147,277 @@ Functions</h2></td></tr>
 <tr class="memdesc:a26f036c1eec46c5955b28a5806338d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a brief description of the plugin.  <br /></td></tr>
 <tr class="memitem:a48bda01db8fab68c573c3287056217f3" id="r_a48bda01db8fab68c573c3287056217f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a48bda01db8fab68c573c3287056217f3">__plugin_root::artifact::WithDescriptionLong</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b">Desc</a>)</td></tr>
 <tr class="memdesc:a48bda01db8fab68c573c3287056217f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a detailed description of the plugin.  <br /></td></tr>
+<tr class="memitem:af4fd4b431dfd701f030d40e7ec269262" id="r_af4fd4b431dfd701f030d40e7ec269262"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#af4fd4b431dfd701f030d40e7ec269262">__plugin_root::artifact::WithEntry</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a>)</td></tr>
+<tr class="memdesc:af4fd4b431dfd701f030d40e7ec269262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a specified object path.  <br /></td></tr>
 <tr class="memitem:ace5242dd64ca02d3965076d0f2dfb93f" id="r_ace5242dd64ca02d3965076d0f2dfb93f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#ace5242dd64ca02d3965076d0f2dfb93f">__plugin_root::artifact::WithManifest</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#aa005e96428daf47f07c7321131ec1857">Path</a>)</td></tr>
 <tr class="memdesc:ace5242dd64ca02d3965076d0f2dfb93f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a path to the file containing its manifest.  <br /></td></tr>
+<tr class="memitem:a692e0452e5c945b1ff20881cc334c172" id="r_a692e0452e5c945b1ff20881cc334c172"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a692e0452e5c945b1ff20881cc334c172">__plugin_root::artifact::WithMode</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#aaef0dcd42320592a525270c914424ebb">ObjectMode</a>)</td></tr>
+<tr class="memdesc:a692e0452e5c945b1ff20881cc334c172"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a mode of how the artifact is supposed to be built for packaging.  <br /></td></tr>
 <tr class="memitem:ab800e1eba137ac33b011df7c620f0d16" id="r_ab800e1eba137ac33b011df7c620f0d16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#ab800e1eba137ac33b011df7c620f0d16">__plugin_root::artifact::WithName</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>)</td></tr>
 <tr class="memdesc:ab800e1eba137ac33b011df7c620f0d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a specified name.  <br /></td></tr>
-<tr class="memitem:ac9e7e90c4496ab296d313a72b452a710" id="r_ac9e7e90c4496ab296d313a72b452a710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#ac9e7e90c4496ab296d313a72b452a710">__plugin_root::artifact::WithPath</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;source, const <a class="el" href="namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a> path)</td></tr>
 <tr class="memitem:a6b3092723179c170f24ab67ee0966c3f" id="r_a6b3092723179c170f24ab67ee0966c3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a6b3092723179c170f24ab67ee0966c3f">__plugin_root::artifact::WithState</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>)</td></tr>
 <tr class="memdesc:a6b3092723179c170f24ab67ee0966c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a specified state.  <br /></td></tr>
+<tr class="memitem:aad72370eaa4a00b7c064cad8a3879e96" id="r_aad72370eaa4a00b7c064cad8a3879e96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#aad72370eaa4a00b7c064cad8a3879e96">__plugin_root::artifact::WithState</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>, const <a class="el" href="namespace____plugin__root.html#a538aaf2e7b9278e0e7cda69be9549a08">StateErrMessage</a>)</td></tr>
+<tr class="memdesc:aad72370eaa4a00b7c064cad8a3879e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a specified state.  <br /></td></tr>
+<tr class="memitem:a7afaf5b94cf52f477d0ec17df37176a5" id="r_a7afaf5b94cf52f477d0ec17df37176a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a7afaf5b94cf52f477d0ec17df37176a5">__plugin_root::artifact::WithType</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#a13d22b286eb7ccd25930bc3446682973">ObjectType</a>)</td></tr>
+<tr class="memdesc:a7afaf5b94cf52f477d0ec17df37176a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a specified module type.  <br /></td></tr>
 <tr class="memitem:a2f8b9ef827c9fbe6fb0e323ccfd34bf5" id="r_a2f8b9ef827c9fbe6fb0e323ccfd34bf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a2f8b9ef827c9fbe6fb0e323ccfd34bf5">__plugin_root::artifact::WithVersion</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#a84d5a198ebf7ebdff6e8dc6c22fcb542">Version</a>)</td></tr>
 <tr class="memdesc:a2f8b9ef827c9fbe6fb0e323ccfd34bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a specified version.  <br /></td></tr>
 <tr class="memitem:a1ef49e9d98975e5bc4e407328d3f175d" id="r_a1ef49e9d98975e5bc4e407328d3f175d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a1ef49e9d98975e5bc4e407328d3f175d">__plugin_root::artifact::FromTomlWithDescription</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
 <tr class="memitem:a679aebea16d8b1acc4c2fbfb82e8331b" id="r_a679aebea16d8b1acc4c2fbfb82e8331b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a679aebea16d8b1acc4c2fbfb82e8331b">__plugin_root::artifact::FromTomlWithDescriptionLong</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
+<tr class="memitem:aacfbac23c7b7b88e0aec70fee0e2b788" id="r_aacfbac23c7b7b88e0aec70fee0e2b788"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#aacfbac23c7b7b88e0aec70fee0e2b788">__plugin_root::artifact::FromTomlWithEntry</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
+<tr class="memitem:a9e3e6a32f2bca69c469a2caa9b25691b" id="r_a9e3e6a32f2bca69c469a2caa9b25691b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a9e3e6a32f2bca69c469a2caa9b25691b">__plugin_root::artifact::FromTomlWithMode</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
 <tr class="memitem:ac38b917d1238e96b55b2a6991f90a76c" id="r_ac38b917d1238e96b55b2a6991f90a76c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#ac38b917d1238e96b55b2a6991f90a76c">__plugin_root::artifact::FromTomlWithName</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
-<tr class="memitem:aaf1ab0438ad3873bbc6cf4bcec687ffe" id="r_aaf1ab0438ad3873bbc6cf4bcec687ffe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#aaf1ab0438ad3873bbc6cf4bcec687ffe">__plugin_root::artifact::FromTomlWithPath</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
+<tr class="memitem:a2b4db3d3feea618073a92305b7824405" id="r_a2b4db3d3feea618073a92305b7824405"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a2b4db3d3feea618073a92305b7824405">__plugin_root::artifact::FromTomlWithType</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
 <tr class="memitem:a6c41d745698471007a6378c214d55352" id="r_a6c41d745698471007a6378c214d55352"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a6c41d745698471007a6378c214d55352">__plugin_root::artifact::FromTomlWithVersion</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
-<tr class="memitem:ac52937e509bd8136bf98966d11dfd89a" id="r_ac52937e509bd8136bf98966d11dfd89a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#ac52937e509bd8136bf98966d11dfd89a">__plugin_root::artifact::FromTomlPluginHeader</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
+<tr class="memitem:aac1f8aef14328ffc5ef3c85d7143b618" id="r_aac1f8aef14328ffc5ef3c85d7143b618"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#aac1f8aef14328ffc5ef3c85d7143b618">__plugin_root::artifact::FromTomlHeader</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl, <a class="el" href="namespace____plugin__root_1_1artifact.html#a64769fa64241f9b213dc1c37a9296f37">HeaderExtractors</a> exts)</td></tr>
+<tr class="memitem:a2195e5f0bef709db63d6662266e262a1" id="r_a2195e5f0bef709db63d6662266e262a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a2195e5f0bef709db63d6662266e262a1">__plugin_root::artifact::FromTomlHeader</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl, const std::string &amp;header, <a class="el" href="namespace____plugin__root_1_1artifact.html#a64769fa64241f9b213dc1c37a9296f37">HeaderExtractors</a> exts)</td></tr>
+<tr class="memitem:a3573d0c538fba21a17b7ee0ed040559d" id="r_a3573d0c538fba21a17b7ee0ed040559d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a3573d0c538fba21a17b7ee0ed040559d">__plugin_root::artifact::FromTomlHeaders</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
 <tr class="memitem:ac125922952a84805fea87fad30a0f9ae" id="r_ac125922952a84805fea87fad30a0f9ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#ac125922952a84805fea87fad30a0f9ae">__plugin_root::artifact::FromToml</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a)</td></tr>
 <tr class="memitem:a91bea2653e9f4b7574e03168ce7bdcab" id="r_a91bea2653e9f4b7574e03168ce7bdcab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a91bea2653e9f4b7574e03168ce7bdcab">__plugin_root::artifact::FromFile</a> (const char *)</td></tr>
 <tr class="memdesc:a91bea2653e9f4b7574e03168ce7bdcab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new plugin artifact from a manifest file.  <br /></td></tr>
 <tr class="memitem:acc6c6fb4c3a5eeb231667d1fafee388f" id="r_acc6c6fb4c3a5eeb231667d1fafee388f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#acc6c6fb4c3a5eeb231667d1fafee388f">__plugin_root::artifact::FromOther</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
 <tr class="memdesc:acc6c6fb4c3a5eeb231667d1fafee388f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of one artifact from another.  <br /></td></tr>
+<tr class="memitem:ade2d6318fcb740f49055b09a8eecad5f" id="r_ade2d6318fcb740f49055b09a8eecad5f"><td class="memItemLeft" align="right" valign="top">toml::table&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#ade2d6318fcb740f49055b09a8eecad5f">__plugin_root::artifact::IntoToml</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;source)</td></tr>
+<tr class="memitem:a804e59b9a48010d6eee91169e93fb6d4" id="r_a804e59b9a48010d6eee91169e93fb6d4"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a804e59b9a48010d6eee91169e93fb6d4">__plugin_root::artifact::Repr</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a804e59b9a48010d6eee91169e93fb6d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string representation of an <span class="tt">Artifact</span>.  <br /></td></tr>
+<tr class="memitem:ac2f8af9fda1196484de617bef345962b" id="r_ac2f8af9fda1196484de617bef345962b"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#ac2f8af9fda1196484de617bef345962b">__plugin_root::artifact::ReprJson</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:ac2f8af9fda1196484de617bef345962b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string representation of an <span class="tt">Artifact</span>.  <br /></td></tr>
+<tr class="memitem:a3956850271ae7571629f9504327720b1" id="r_a3956850271ae7571629f9504327720b1"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a3956850271ae7571629f9504327720b1">__plugin_root::artifact::ReprToml</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a3956850271ae7571629f9504327720b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string representation of an <span class="tt">Artifact</span>.  <br /></td></tr>
+<tr class="memitem:a5e2ea5d9f287e3b7252102e42c2c33e1" id="r_a5e2ea5d9f287e3b7252102e42c2c33e1"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#a5e2ea5d9f287e3b7252102e42c2c33e1">__plugin_root::artifact::ReprYaml</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a5e2ea5d9f287e3b7252102e42c2c33e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string representation of an <span class="tt">Artifact</span>.  <br /></td></tr>
 <tr class="memitem:ada4278eed051e4a687f1871f19b5111b" id="r_ada4278eed051e4a687f1871f19b5111b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html#ada4278eed051e4a687f1871f19b5111b">__plugin_root::artifact::operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
 </table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a3e5f48117d5e7336c88f9ec7ec229a25" name="a3e5f48117d5e7336c88f9ec7ec229a25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e5f48117d5e7336c88f9ec7ec229a25">&#9670;&#160;</a></span>__fld_desc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __fld_desc&#160;&#160;&#160;&quot;description&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa77423684d86444fac32746893bdc9d4" name="aa77423684d86444fac32746893bdc9d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa77423684d86444fac32746893bdc9d4">&#9670;&#160;</a></span>__fld_descl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __fld_descl&#160;&#160;&#160;&quot;description_long&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0041d25eec643e9263974f2d4ebc4e78" name="a0041d25eec643e9263974f2d4ebc4e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0041d25eec643e9263974f2d4ebc4e78">&#9670;&#160;</a></span>__fld_entry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __fld_entry&#160;&#160;&#160;&quot;entry&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1254b0cd469ba6220e00a287329a7ec3" name="a1254b0cd469ba6220e00a287329a7ec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1254b0cd469ba6220e00a287329a7ec3">&#9670;&#160;</a></span>__fld_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __fld_mode&#160;&#160;&#160;&quot;mode&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4679394937f4cc3e3f8a1244af8b941" name="ac4679394937f4cc3e3f8a1244af8b941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4679394937f4cc3e3f8a1244af8b941">&#9670;&#160;</a></span>__fld_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __fld_name&#160;&#160;&#160;&quot;name&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa52fc62d14c70daa182ea26a1acd0bb4" name="aa52fc62d14c70daa182ea26a1acd0bb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa52fc62d14c70daa182ea26a1acd0bb4">&#9670;&#160;</a></span>__fld_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __fld_type&#160;&#160;&#160;&quot;type&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c7f7cb1ff2f359d03857741a226200b" name="a6c7f7cb1ff2f359d03857741a226200b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c7f7cb1ff2f359d03857741a226200b">&#9670;&#160;</a></span>__fld_vers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __fld_vers&#160;&#160;&#160;&quot;version&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95b3c04f1c67f04e2d42c5a715cccc58" name="a95b3c04f1c67f04e2d42c5a715cccc58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b3c04f1c67f04e2d42c5a715cccc58">&#9670;&#160;</a></span>__hdr_module</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __hdr_module&#160;&#160;&#160;&quot;module&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51a184b634c698737d0cd4e3890f7b57" name="a51a184b634c698737d0cd4e3890f7b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a184b634c698737d0cd4e3890f7b57">&#9670;&#160;</a></span>__hdr_plugin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __hdr_plugin&#160;&#160;&#160;&quot;plugin&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a270301c1d96ebcc2390aad64a9e581dd" name="a270301c1d96ebcc2390aad64a9e581dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a270301c1d96ebcc2390aad64a9e581dd">&#9670;&#160;</a></span>__is_missing</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __is_missing</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">str == <a class="code hl_define" href="#a67e1e9e39368c748251a364e350c0868">__val_miss</a></div>
+<div class="ttc" id="aartifact_8cpp_html_a67e1e9e39368c748251a364e350c0868"><div class="ttname"><a href="#a67e1e9e39368c748251a364e350c0868">__val_miss</a></div><div class="ttdeci">#define __val_miss</div><div class="ttdef"><b>Definition</b> artifact.cpp:142</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeb33a105119f29926569c98383f83858" name="aeb33a105119f29926569c98383f83858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb33a105119f29926569c98383f83858">&#9670;&#160;</a></span>__tbl_extract_str</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __tbl_extract_str</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>T</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>NAME</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>DEFAULT</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">T[NAME].value_or&lt;std::string&gt;(DEFAULT)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a429fdbe10d6828cfc59d9cb071496c82" name="a429fdbe10d6828cfc59d9cb071496c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a429fdbe10d6828cfc59d9cb071496c82">&#9670;&#160;</a></span>__val_anon</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __val_anon&#160;&#160;&#160;&quot;anonymous&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dd49fd7e8ab9a261be4632907fccd3e" name="a7dd49fd7e8ab9a261be4632907fccd3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd49fd7e8ab9a261be4632907fccd3e">&#9670;&#160;</a></span>__val_dyn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __val_dyn&#160;&#160;&#160;&quot;dynamic&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67e1e9e39368c748251a364e350c0868" name="a67e1e9e39368c748251a364e350c0868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e1e9e39368c748251a364e350c0868">&#9670;&#160;</a></span>__val_miss</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __val_miss&#160;&#160;&#160;&quot;missing&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d6430274b0b7297e119c84244389ec0" name="a8d6430274b0b7297e119c84244389ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d6430274b0b7297e119c84244389ec0">&#9670;&#160;</a></span>__val_none</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="namespacedefine.html">define</a> __val_none&#160;&#160;&#160;&quot;none&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

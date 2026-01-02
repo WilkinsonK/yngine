@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['objectentry_0',['ObjectEntry',['../namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345',1,'__plugin_root']]],
-  ['objectmode_1',['ObjectMode',['../namespace____plugin__root.html#ace7d11467cf9033aaaaf889c9fe90904',1,'__plugin_root']]],
-  ['objectref_2',['ObjectRef',['../namespace____plugin__root.html#a09d45b8a78573e3eb8d0ddd01343a12a',1,'__plugin_root']]]
+  ['headerextractor_0',['HeaderExtractor',['../namespace____plugin__root_1_1artifact.html#a747b314fc33e7cc079de3f20a639ec95',1,'__plugin_root::artifact']]],
+  ['headerextractors_1',['HeaderExtractors',['../namespace____plugin__root_1_1artifact.html#a64769fa64241f9b213dc1c37a9296f37',1,'__plugin_root::artifact']]]
 ];

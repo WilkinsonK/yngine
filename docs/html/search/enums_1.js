@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stateerr_0',['StateErr',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03',1,'plugin.h']]]
+  ['inspectformat_0',['InspectFormat',['../namespaceoptions.html#a956aef1a2836774c806629db1c3df467',1,'options']]]
 ];

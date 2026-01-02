@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['commandimpl_0',['CommandImpl',['../plugin_8h.html#ab6f5f76c65ecbadbb3398d097f4b52d4',1,'plugin.h']]],
-  ['commandscope_1',['CommandScope',['../plugin_8h.html#ad5b3dc633238335c88adcff081431622',1,'plugin.h']]]
+  ['buildmodehandler_0',['BuildModeHandler',['../namespace____plugin__root_1_1package.html#a23b0b5b41a890d49cede4506c5e180dc',1,'__plugin_root::package']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['new_0',['New',['../namespace____plugin__root_1_1artifact.html#a2e5d1a4c2436d314f358cad04be4e1be',1,'__plugin_root::artifact::New(void)'],['../namespace____plugin__root_1_1artifact.html#a7819b04af6ccb787df95aeb2f8cb9693',1,'__plugin_root::artifact::New(const ObjectEntry)']]]
+  ['handleerr_0',['HandleErr',['../namespace____plugin__root_1_1dllutil.html#a78525d3a2c69450a2f86d0d1e314bcb8',1,'__plugin_root::dllutil::HandleErr(const Context &amp;, StateErr)'],['../namespace____plugin__root_1_1dllutil.html#a810da2f0cb6e0fa66a8f3922c942fce1',1,'__plugin_root::dllutil::HandleErr(const Context &amp;)']]]
 ];

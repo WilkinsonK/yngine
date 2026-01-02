@@ -100,10 +100,32 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:aebcd2773512b9bb0e48a4e896ff8ef0c" id="r_aebcd2773512b9bb0e48a4e896ff8ef0c"><td class="memItemLeft" align="right" valign="top">typedef std::unique_ptr&lt; <a class="el" href="struct____plugin__root_1_1artifact_1_1_artifact_body.html">ArtifactBody</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a></td></tr>
 <tr class="memdesc:aebcd2773512b9bb0e48a4e896ff8ef0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A box of artifact attributes.  <br /></td></tr>
+<tr class="memitem:a747b314fc33e7cc079de3f20a639ec95" id="r_a747b314fc33e7cc079de3f20a639ec95"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>(const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, toml::table &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a747b314fc33e7cc079de3f20a639ec95">HeaderExtractor</a></td></tr>
+<tr class="memitem:a64769fa64241f9b213dc1c37a9296f37" id="r_a64769fa64241f9b213dc1c37a9296f37"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="#a747b314fc33e7cc079de3f20a639ec95">HeaderExtractor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64769fa64241f9b213dc1c37a9296f37">HeaderExtractors</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a804e59b9a48010d6eee91169e93fb6d4" id="r_a804e59b9a48010d6eee91169e93fb6d4"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a804e59b9a48010d6eee91169e93fb6d4">Repr</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a804e59b9a48010d6eee91169e93fb6d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string representation of an <span class="tt">Artifact</span>.  <br /></td></tr>
+<tr class="memitem:ac2f8af9fda1196484de617bef345962b" id="r_ac2f8af9fda1196484de617bef345962b"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2f8af9fda1196484de617bef345962b">ReprJson</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:ac2f8af9fda1196484de617bef345962b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string representation of an <span class="tt">Artifact</span>.  <br /></td></tr>
+<tr class="memitem:a3956850271ae7571629f9504327720b1" id="r_a3956850271ae7571629f9504327720b1"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3956850271ae7571629f9504327720b1">ReprToml</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a3956850271ae7571629f9504327720b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string representation of an <span class="tt">Artifact</span>.  <br /></td></tr>
+<tr class="memitem:a5e2ea5d9f287e3b7252102e42c2c33e1" id="r_a5e2ea5d9f287e3b7252102e42c2c33e1"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e2ea5d9f287e3b7252102e42c2c33e1">ReprYaml</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a5e2ea5d9f287e3b7252102e42c2c33e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string representation of an <span class="tt">Artifact</span>.  <br /></td></tr>
 <tr class="memitem:ada4278eed051e4a687f1871f19b5111b" id="r_ada4278eed051e4a687f1871f19b5111b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada4278eed051e4a687f1871f19b5111b">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memitem:a42f3ed187bc36c488d26442ac599ede4" id="r_a42f3ed187bc36c488d26442ac599ede4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42f3ed187bc36c488d26442ac599ede4">GetName</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a42f3ed187bc36c488d26442ac599ede4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of the artifact.  <br /></td></tr>
+<tr class="memitem:a0673ca060bb40d516a64d837293ab242" id="r_a0673ca060bb40d516a64d837293ab242"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b">Desc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0673ca060bb40d516a64d837293ab242">GetDescription</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a0673ca060bb40d516a64d837293ab242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the description of the artifact.  <br /></td></tr>
+<tr class="memitem:a1f9fdc10b94f7cfba60c069a3e98cc0e" id="r_a1f9fdc10b94f7cfba60c069a3e98cc0e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b">Desc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f9fdc10b94f7cfba60c069a3e98cc0e">GetDescriptionLong</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a1f9fdc10b94f7cfba60c069a3e98cc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the long description of the artifact.  <br /></td></tr>
+<tr class="memitem:ad66f02f43972cd13dbeb5495d7e54546" id="r_ad66f02f43972cd13dbeb5495d7e54546"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad66f02f43972cd13dbeb5495d7e54546">GetEntry</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:ad66f02f43972cd13dbeb5495d7e54546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the module entry point of the artifact.  <br /></td></tr>
+<tr class="memitem:ad407ff37eeda0d5ae06d9f6c76523f1e" id="r_ad407ff37eeda0d5ae06d9f6c76523f1e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace____plugin__root.html#aaef0dcd42320592a525270c914424ebb">ObjectMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad407ff37eeda0d5ae06d9f6c76523f1e">GetMode</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:ad407ff37eeda0d5ae06d9f6c76523f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the module builder mode.  <br /></td></tr>
+<tr class="memitem:a35459e9556121df17498297c32eb289e" id="r_a35459e9556121df17498297c32eb289e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace____plugin__root.html#a13d22b286eb7ccd25930bc3446682973">ObjectType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35459e9556121df17498297c32eb289e">GetType</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
+<tr class="memdesc:a35459e9556121df17498297c32eb289e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the module builder type.  <br /></td></tr>
 <tr class="memitem:a2e5d1a4c2436d314f358cad04be4e1be" id="r_a2e5d1a4c2436d314f358cad04be4e1be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e5d1a4c2436d314f358cad04be4e1be">New</a> (void)</td></tr>
 <tr class="memdesc:a2e5d1a4c2436d314f358cad04be4e1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new, empty plugin artifact.  <br /></td></tr>
 <tr class="memitem:a7819b04af6ccb787df95aeb2f8cb9693" id="r_a7819b04af6ccb787df95aeb2f8cb9693"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7819b04af6ccb787df95aeb2f8cb9693">New</a> (const <a class="el" href="namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a>)</td></tr>
@@ -120,20 +142,30 @@ Functions</h2></td></tr>
 <tr class="memdesc:af4fd4b431dfd701f030d40e7ec269262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a specified object path.  <br /></td></tr>
 <tr class="memitem:ace5242dd64ca02d3965076d0f2dfb93f" id="r_ace5242dd64ca02d3965076d0f2dfb93f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace5242dd64ca02d3965076d0f2dfb93f">WithManifest</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#aa005e96428daf47f07c7321131ec1857">Path</a>)</td></tr>
 <tr class="memdesc:ace5242dd64ca02d3965076d0f2dfb93f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a path to the file containing its manifest.  <br /></td></tr>
+<tr class="memitem:a692e0452e5c945b1ff20881cc334c172" id="r_a692e0452e5c945b1ff20881cc334c172"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a692e0452e5c945b1ff20881cc334c172">WithMode</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#aaef0dcd42320592a525270c914424ebb">ObjectMode</a>)</td></tr>
+<tr class="memdesc:a692e0452e5c945b1ff20881cc334c172"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a mode of how the artifact is supposed to be built for packaging.  <br /></td></tr>
 <tr class="memitem:ab800e1eba137ac33b011df7c620f0d16" id="r_ab800e1eba137ac33b011df7c620f0d16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab800e1eba137ac33b011df7c620f0d16">WithName</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>)</td></tr>
 <tr class="memdesc:ab800e1eba137ac33b011df7c620f0d16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a specified name.  <br /></td></tr>
 <tr class="memitem:a6b3092723179c170f24ab67ee0966c3f" id="r_a6b3092723179c170f24ab67ee0966c3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b3092723179c170f24ab67ee0966c3f">WithState</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>)</td></tr>
 <tr class="memdesc:a6b3092723179c170f24ab67ee0966c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a specified state.  <br /></td></tr>
+<tr class="memitem:aad72370eaa4a00b7c064cad8a3879e96" id="r_aad72370eaa4a00b7c064cad8a3879e96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad72370eaa4a00b7c064cad8a3879e96">WithState</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>, const <a class="el" href="namespace____plugin__root.html#a538aaf2e7b9278e0e7cda69be9549a08">StateErrMessage</a>)</td></tr>
+<tr class="memdesc:aad72370eaa4a00b7c064cad8a3879e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a specified state.  <br /></td></tr>
+<tr class="memitem:a7afaf5b94cf52f477d0ec17df37176a5" id="r_a7afaf5b94cf52f477d0ec17df37176a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7afaf5b94cf52f477d0ec17df37176a5">WithType</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#a13d22b286eb7ccd25930bc3446682973">ObjectType</a>)</td></tr>
+<tr class="memdesc:a7afaf5b94cf52f477d0ec17df37176a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a specified module type.  <br /></td></tr>
 <tr class="memitem:a2f8b9ef827c9fbe6fb0e323ccfd34bf5" id="r_a2f8b9ef827c9fbe6fb0e323ccfd34bf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f8b9ef827c9fbe6fb0e323ccfd34bf5">WithVersion</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#a84d5a198ebf7ebdff6e8dc6c22fcb542">Version</a>)</td></tr>
 <tr class="memdesc:a2f8b9ef827c9fbe6fb0e323ccfd34bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a copy of the source artifact with a specified version.  <br /></td></tr>
-<tr class="memitem:ac9e7e90c4496ab296d313a72b452a710" id="r_ac9e7e90c4496ab296d313a72b452a710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9e7e90c4496ab296d313a72b452a710">WithPath</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;source, const <a class="el" href="namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a> path)</td></tr>
 <tr class="memitem:a1ef49e9d98975e5bc4e407328d3f175d" id="r_a1ef49e9d98975e5bc4e407328d3f175d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ef49e9d98975e5bc4e407328d3f175d">FromTomlWithDescription</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
 <tr class="memitem:a679aebea16d8b1acc4c2fbfb82e8331b" id="r_a679aebea16d8b1acc4c2fbfb82e8331b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a679aebea16d8b1acc4c2fbfb82e8331b">FromTomlWithDescriptionLong</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
+<tr class="memitem:aacfbac23c7b7b88e0aec70fee0e2b788" id="r_aacfbac23c7b7b88e0aec70fee0e2b788"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacfbac23c7b7b88e0aec70fee0e2b788">FromTomlWithEntry</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
+<tr class="memitem:a9e3e6a32f2bca69c469a2caa9b25691b" id="r_a9e3e6a32f2bca69c469a2caa9b25691b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e3e6a32f2bca69c469a2caa9b25691b">FromTomlWithMode</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
 <tr class="memitem:ac38b917d1238e96b55b2a6991f90a76c" id="r_ac38b917d1238e96b55b2a6991f90a76c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac38b917d1238e96b55b2a6991f90a76c">FromTomlWithName</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
-<tr class="memitem:aaf1ab0438ad3873bbc6cf4bcec687ffe" id="r_aaf1ab0438ad3873bbc6cf4bcec687ffe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf1ab0438ad3873bbc6cf4bcec687ffe">FromTomlWithPath</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
+<tr class="memitem:a2b4db3d3feea618073a92305b7824405" id="r_a2b4db3d3feea618073a92305b7824405"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b4db3d3feea618073a92305b7824405">FromTomlWithType</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
 <tr class="memitem:a6c41d745698471007a6378c214d55352" id="r_a6c41d745698471007a6378c214d55352"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c41d745698471007a6378c214d55352">FromTomlWithVersion</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
-<tr class="memitem:ac52937e509bd8136bf98966d11dfd89a" id="r_ac52937e509bd8136bf98966d11dfd89a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac52937e509bd8136bf98966d11dfd89a">FromTomlPluginHeader</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
+<tr class="memitem:aac1f8aef14328ffc5ef3c85d7143b618" id="r_aac1f8aef14328ffc5ef3c85d7143b618"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac1f8aef14328ffc5ef3c85d7143b618">FromTomlHeader</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl, <a class="el" href="#a64769fa64241f9b213dc1c37a9296f37">HeaderExtractors</a> exts)</td></tr>
+<tr class="memitem:a2195e5f0bef709db63d6662266e262a1" id="r_a2195e5f0bef709db63d6662266e262a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2195e5f0bef709db63d6662266e262a1">FromTomlHeader</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl, const std::string &amp;header, <a class="el" href="#a64769fa64241f9b213dc1c37a9296f37">HeaderExtractors</a> exts)</td></tr>
+<tr class="memitem:a3573d0c538fba21a17b7ee0ed040559d" id="r_a3573d0c538fba21a17b7ee0ed040559d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3573d0c538fba21a17b7ee0ed040559d">FromTomlHeaders</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a, toml::table &amp;tbl)</td></tr>
 <tr class="memitem:ac125922952a84805fea87fad30a0f9ae" id="r_ac125922952a84805fea87fad30a0f9ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac125922952a84805fea87fad30a0f9ae">FromToml</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;a)</td></tr>
+<tr class="memitem:ade2d6318fcb740f49055b09a8eecad5f" id="r_ade2d6318fcb740f49055b09a8eecad5f"><td class="memItemLeft" align="right" valign="top">toml::table&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade2d6318fcb740f49055b09a8eecad5f">IntoToml</a> (const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;source)</td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
 <a id="aebcd2773512b9bb0e48a4e896ff8ef0c" name="aebcd2773512b9bb0e48a4e896ff8ef0c"></a>
@@ -149,6 +181,34 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A box of artifact attributes. </p>
+
+</div>
+</div>
+<a id="a747b314fc33e7cc079de3f20a639ec95" name="a747b314fc33e7cc079de3f20a639ec95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a747b314fc33e7cc079de3f20a639ec95">&#9670;&#160;</a></span>HeaderExtractor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;<a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>(const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a>&amp;, toml::table&amp;)&gt; __plugin_root::artifact::HeaderExtractor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64769fa64241f9b213dc1c37a9296f37" name="a64769fa64241f9b213dc1c37a9296f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64769fa64241f9b213dc1c37a9296f37">&#9670;&#160;</a></span>HeaderExtractors</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="#a747b314fc33e7cc079de3f20a639ec95">HeaderExtractor</a>&gt; __plugin_root::artifact::HeaderExtractors</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -222,14 +282,71 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac52937e509bd8136bf98966d11dfd89a" name="ac52937e509bd8136bf98966d11dfd89a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac52937e509bd8136bf98966d11dfd89a">&#9670;&#160;</a></span>FromTomlPluginHeader()</h2>
+<a id="a2195e5f0bef709db63d6662266e262a1" name="a2195e5f0bef709db63d6662266e262a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2195e5f0bef709db63d6662266e262a1">&#9670;&#160;</a></span>FromTomlHeader() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::FromTomlPluginHeader </td>
+          <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::FromTomlHeader </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">toml::table &amp;</td>          <td class="paramname"><span class="paramname"><em>tbl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>header</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a64769fa64241f9b213dc1c37a9296f37">HeaderExtractors</a></td>          <td class="paramname"><span class="paramname"><em>exts</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac1f8aef14328ffc5ef3c85d7143b618" name="aac1f8aef14328ffc5ef3c85d7143b618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac1f8aef14328ffc5ef3c85d7143b618">&#9670;&#160;</a></span>FromTomlHeader() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::FromTomlHeader </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">toml::table &amp;</td>          <td class="paramname"><span class="paramname"><em>tbl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a64769fa64241f9b213dc1c37a9296f37">HeaderExtractors</a></td>          <td class="paramname"><span class="paramname"><em>exts</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3573d0c538fba21a17b7ee0ed040559d" name="a3573d0c538fba21a17b7ee0ed040559d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3573d0c538fba21a17b7ee0ed040559d">&#9670;&#160;</a></span>FromTomlHeaders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::FromTomlHeaders </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
@@ -285,6 +402,48 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aacfbac23c7b7b88e0aec70fee0e2b788" name="aacfbac23c7b7b88e0aec70fee0e2b788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacfbac23c7b7b88e0aec70fee0e2b788">&#9670;&#160;</a></span>FromTomlWithEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::FromTomlWithEntry </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">toml::table &amp;</td>          <td class="paramname"><span class="paramname"><em>tbl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e3e6a32f2bca69c469a2caa9b25691b" name="a9e3e6a32f2bca69c469a2caa9b25691b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e3e6a32f2bca69c469a2caa9b25691b">&#9670;&#160;</a></span>FromTomlWithMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::FromTomlWithMode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">toml::table &amp;</td>          <td class="paramname"><span class="paramname"><em>tbl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac38b917d1238e96b55b2a6991f90a76c" name="ac38b917d1238e96b55b2a6991f90a76c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac38b917d1238e96b55b2a6991f90a76c">&#9670;&#160;</a></span>FromTomlWithName()</h2>
 
@@ -306,14 +465,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aaf1ab0438ad3873bbc6cf4bcec687ffe" name="aaf1ab0438ad3873bbc6cf4bcec687ffe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf1ab0438ad3873bbc6cf4bcec687ffe">&#9670;&#160;</a></span>FromTomlWithPath()</h2>
+<a id="a2b4db3d3feea618073a92305b7824405" name="a2b4db3d3feea618073a92305b7824405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b4db3d3feea618073a92305b7824405">&#9670;&#160;</a></span>FromTomlWithType()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::FromTomlWithPath </td>
+          <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::FromTomlWithType </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
@@ -342,6 +501,179 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">toml::table &amp;</td>          <td class="paramname"><span class="paramname"><em>tbl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0673ca060bb40d516a64d837293ab242" name="a0673ca060bb40d516a64d837293ab242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0673ca060bb40d516a64d837293ab242">&#9670;&#160;</a></span>GetDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b">Desc</a> __plugin_root::artifact::GetDescription </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the description of the artifact. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>to inspect. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Artifact object description. </dd></dl>
+
+</div>
+</div>
+<a id="a1f9fdc10b94f7cfba60c069a3e98cc0e" name="a1f9fdc10b94f7cfba60c069a3e98cc0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f9fdc10b94f7cfba60c069a3e98cc0e">&#9670;&#160;</a></span>GetDescriptionLong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b">Desc</a> __plugin_root::artifact::GetDescriptionLong </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the long description of the artifact. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>to inspect. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Artifact object long description. </dd></dl>
+
+</div>
+</div>
+<a id="ad66f02f43972cd13dbeb5495d7e54546" name="ad66f02f43972cd13dbeb5495d7e54546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad66f02f43972cd13dbeb5495d7e54546">&#9670;&#160;</a></span>GetEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a> __plugin_root::artifact::GetEntry </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the module entry point of the artifact. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>to inspect. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Artifact module entry point. </dd></dl>
+
+</div>
+</div>
+<a id="ad407ff37eeda0d5ae06d9f6c76523f1e" name="ad407ff37eeda0d5ae06d9f6c76523f1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad407ff37eeda0d5ae06d9f6c76523f1e">&#9670;&#160;</a></span>GetMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespace____plugin__root.html#aaef0dcd42320592a525270c914424ebb">ObjectMode</a> __plugin_root::artifact::GetMode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the module builder mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>to inspect. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Artifact builder mode. </dd></dl>
+
+</div>
+</div>
+<a id="a42f3ed187bc36c488d26442ac599ede4" name="a42f3ed187bc36c488d26442ac599ede4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42f3ed187bc36c488d26442ac599ede4">&#9670;&#160;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a> __plugin_root::artifact::GetName </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the name of the artifact. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>to inspect. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Artifact object name. </dd></dl>
+
+</div>
+</div>
+<a id="a35459e9556121df17498297c32eb289e" name="a35459e9556121df17498297c32eb289e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35459e9556121df17498297c32eb289e">&#9670;&#160;</a></span>GetType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespace____plugin__root.html#a13d22b286eb7ccd25930bc3446682973">ObjectType</a> __plugin_root::artifact::GetType </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the module builder type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>to inspect. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Artifact builder type. </dd></dl>
+
+</div>
+</div>
+<a id="ade2d6318fcb740f49055b09a8eecad5f" name="ade2d6318fcb740f49055b09a8eecad5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade2d6318fcb740f49055b09a8eecad5f">&#9670;&#160;</a></span>IntoToml()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">toml::table __plugin_root::artifact::IntoToml </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -412,6 +744,110 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a804e59b9a48010d6eee91169e93fb6d4" name="a804e59b9a48010d6eee91169e93fb6d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a804e59b9a48010d6eee91169e93fb6d4">&#9670;&#160;</a></span>Repr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string __plugin_root::artifact::Repr </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a string representation of an <span class="tt">Artifact</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>artifact. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string representation of the object. </dd></dl>
+
+</div>
+</div>
+<a id="ac2f8af9fda1196484de617bef345962b" name="ac2f8af9fda1196484de617bef345962b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f8af9fda1196484de617bef345962b">&#9670;&#160;</a></span>ReprJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string __plugin_root::artifact::ReprJson </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a string representation of an <span class="tt">Artifact</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>artifact. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>JSON string representation of the </dd></dl>
+
+</div>
+</div>
+<a id="a3956850271ae7571629f9504327720b1" name="a3956850271ae7571629f9504327720b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3956850271ae7571629f9504327720b1">&#9670;&#160;</a></span>ReprToml()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string __plugin_root::artifact::ReprToml </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a string representation of an <span class="tt">Artifact</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>artifact. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TOML string representation of the </dd></dl>
+
+</div>
+</div>
+<a id="a5e2ea5d9f287e3b7252102e42c2c33e1" name="a5e2ea5d9f287e3b7252102e42c2c33e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e2ea5d9f287e3b7252102e42c2c33e1">&#9670;&#160;</a></span>ReprYaml()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string __plugin_root::artifact::ReprYaml </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a string representation of an <span class="tt">Artifact</span>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>artifact. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>YAML string representation of the </dd></dl>
 
 </div>
 </div>
@@ -486,12 +922,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::WithEntry </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a></td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a></td>          <td class="paramname"><span class="paramname"><em>entry</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -539,6 +975,37 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a692e0452e5c945b1ff20881cc334c172" name="a692e0452e5c945b1ff20881cc334c172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692e0452e5c945b1ff20881cc334c172">&#9670;&#160;</a></span>WithMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::WithMode </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace____plugin__root.html#aaef0dcd42320592a525270c914424ebb">ObjectMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a copy of the source artifact with a mode of how the artifact is supposed to be built for packaging. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>Artifact to copy from. </td></tr>
+    <tr><td class="paramname">mode</td><td>of how to build the artifact module. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new object. </dd></dl>
+
+</div>
+</div>
 <a id="ab800e1eba137ac33b011df7c620f0d16" name="ab800e1eba137ac33b011df7c620f0d16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab800e1eba137ac33b011df7c620f0d16">&#9670;&#160;</a></span>WithName()</h2>
 
@@ -570,29 +1037,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac9e7e90c4496ab296d313a72b452a710" name="ac9e7e90c4496ab296d313a72b452a710"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9e7e90c4496ab296d313a72b452a710">&#9670;&#160;</a></span>WithPath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::WithPath </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a></td>          <td class="paramname"><span class="paramname"><em>path</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6b3092723179c170f24ab67ee0966c3f" name="a6b3092723179c170f24ab67ee0966c3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b3092723179c170f24ab67ee0966c3f">&#9670;&#160;</a></span>WithState()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b3092723179c170f24ab67ee0966c3f">&#9670;&#160;</a></span>WithState() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -615,6 +1061,74 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">source</td><td>Artifact to copy from. </td></tr>
     <tr><td class="paramname">state</td><td>The state of the new artifact. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new object. </dd></dl>
+
+</div>
+</div>
+<a id="aad72370eaa4a00b7c064cad8a3879e96" name="aad72370eaa4a00b7c064cad8a3879e96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad72370eaa4a00b7c064cad8a3879e96">&#9670;&#160;</a></span>WithState() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::WithState </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace____plugin__root.html#a538aaf2e7b9278e0e7cda69be9549a08">StateErrMessage</a></td>          <td class="paramname"><span class="paramname"><em>detail</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a copy of the source artifact with a specified state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>Artifact to copy from. </td></tr>
+    <tr><td class="paramname">state</td><td>The state of the new artifact. </td></tr>
+    <tr><td class="paramname">detail</td><td>The message providing more context. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new object. </dd></dl>
+
+</div>
+</div>
+<a id="a7afaf5b94cf52f477d0ec17df37176a5" name="a7afaf5b94cf52f477d0ec17df37176a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7afaf5b94cf52f477d0ec17df37176a5">&#9670;&#160;</a></span>WithType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> __plugin_root::artifact::WithType </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace____plugin__root.html#a13d22b286eb7ccd25930bc3446682973">ObjectType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a copy of the source artifact with a specified module type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>Artifact to copy from. </td></tr>
+    <tr><td class="paramname">type</td><td>The module type to use. </td></tr>
   </table>
   </dd>
 </dl>

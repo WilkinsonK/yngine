@@ -1,21 +1,8 @@
 var searchData=
 [
-  ['path_0',['Path',['../namespace____plugin__root.html#aa005e96428daf47f07c7321131ec1857',1,'__plugin_root']]],
-  ['plugin_1',['Plugin',['../class____plugin__root_1_1plugin_1_1_plugin.html',1,'__plugin_root::plugin::Plugin'],['../class____plugin__root_1_1plugin_1_1_plugin.html#a19097c0ee9359d23035eab44de45c658',1,'__plugin_root::plugin::Plugin::Plugin()']]],
-  ['plugin_2ecpp_2',['plugin.cpp',['../plugin_8cpp.html',1,'']]],
-  ['plugin_2eh_3',['plugin.h',['../plugin_8h.html',1,'']]],
-  ['plugin_2ehpp_4',['plugin.hpp',['../plugin_8hpp.html',1,'']]],
-  ['plugin_5fc_5fapi_2ecpp_5',['plugin_c_api.cpp',['../plugin__c__api_8cpp.html',1,'']]],
-  ['plugin_5fc_5fapi_2eh_6',['plugin_c_api.h',['../plugin__c__api_8h.html',1,'']]],
-  ['plugin_5fcall_5fcommand_7',['plugin_call_command',['../plugin__module_8h.html#a662737215e1ac0ff92737f43e4f6fb17',1,'plugin_call_command:&#160;plugin_module.h'],['../plugin__c__api_8h.html#aafb5f0336134e7a994b412fc9cd34e31',1,'plugin_call_command(const Context *, const Name):&#160;plugin_c_api.cpp'],['../plugin__c__api_8cpp.html#a520b611c11af1239cfd44eeaa2f39c69',1,'plugin_call_command(const Context *ctx, const Name name):&#160;plugin_c_api.cpp']]],
-  ['plugin_5fget_5fdescription_8',['plugin_get_description',['../plugin__module_8h.html#a9c12a95ce37111bde6ac9b04312fc495',1,'plugin_get_description:&#160;plugin_module.h'],['../plugin__c__api_8h.html#abc17b7d2cf07d71dab600e9fe6dc8560',1,'plugin_get_description(const Context *):&#160;plugin_c_api.cpp'],['../plugin__c__api_8cpp.html#a4835c8c63281467b448dcc1796b623da',1,'plugin_get_description(const Context *ctx):&#160;plugin_c_api.cpp']]],
-  ['plugin_5fget_5fdescription_5flong_9',['plugin_get_description_long',['../plugin__module_8h.html#a4952675b62f1fd7333a45095a183535a',1,'plugin_get_description_long:&#160;plugin_module.h'],['../plugin__c__api_8h.html#a84ed7cade96b11c339eab33f8528f28c',1,'plugin_get_description_long(const Context *):&#160;plugin_c_api.cpp'],['../plugin__c__api_8cpp.html#a75c4643b1ee281c0511efe44baacbecc',1,'plugin_get_description_long(const Context *ctx):&#160;plugin_c_api.cpp']]],
-  ['plugin_5fget_5fname_10',['plugin_get_name',['../plugin__module_8h.html#a3653463f8565c777a58d6d7670a05ec9',1,'plugin_get_name:&#160;plugin_module.h'],['../plugin__c__api_8h.html#ab74f053af1be5bdcf559f44941f80436',1,'plugin_get_name(const Context *):&#160;plugin_c_api.cpp'],['../plugin__c__api_8cpp.html#ac00299d05b3737592d26659dcd8a43e2',1,'plugin_get_name(const Context *ctx):&#160;plugin_c_api.cpp']]],
-  ['plugin_5finternal_2ehpp_11',['plugin_internal.hpp',['../plugin__internal_8hpp.html',1,'']]],
-  ['plugin_5fmodule_12',['plugin_module',['../plugin__module_8h.html#a2fdde508ad95a9ef6355abe33f5d0602',1,'plugin_module.h']]],
-  ['plugin_5fmodule_2eh_13',['plugin_module.h',['../plugin__module_8h.html',1,'']]],
-  ['plugin_5fmodule_5fexport_14',['plugin_module_export',['../plugin__module_8h.html#a6ef131c12001190c8438bdb0c6583e0c',1,'plugin_module.h']]],
-  ['plugin_5fmodule_5fhead_15',['plugin_module_head',['../plugin__module_8h.html#a53c33d100a429a93bda9aead698d9cce',1,'plugin_module.h']]],
-  ['plugin_5fmodule_5ftail_16',['plugin_module_tail',['../plugin__module_8h.html#ac107fbe40b09adb72e3718f8ead1f19e',1,'plugin_module.h']]],
-  ['plugin_5fregister_5fcommand_17',['plugin_register_command',['../plugin__module_8h.html#af33dae6245181d4123adc741dcc506fc',1,'plugin_register_command:&#160;plugin_module.h'],['../plugin__c__api_8h.html#a4fe4e3e59c270d5a2ee0146583bab5fd',1,'plugin_register_command(const Context *, const Name, const Name):&#160;plugin_c_api.cpp'],['../plugin__c__api_8cpp.html#a50f01cf451df5a8a3aa21197a3c188a9',1,'plugin_register_command(const Context *ctx, const Name name, const Name impl_name):&#160;plugin_c_api.cpp']]]
+  ['name_0',['Name',['../namespace____plugin__root.html#a93482d22098267681084c32c0aced568',1,'__plugin_root::Name'],['../plugin__c__api_8h.html#ace12fb824e557a97606e33f86edd69d9',1,'Name:&#160;plugin_c_api.h']]],
+  ['name_1',['name',['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#a70b08c126a47b4a5220c603f52d1e4d7',1,'__plugin_root::artifact::ArtifactBody']]],
+  ['new_2',['New',['../structdefine_1_1_context.html#a07d8aa5d16565642b9adf92bba0c7521',1,'define::Context::New()'],['../namespace____plugin__root_1_1artifact.html#a2e5d1a4c2436d314f358cad04be4e1be',1,'__plugin_root::artifact::New(void)'],['../namespace____plugin__root_1_1artifact.html#a7819b04af6ccb787df95aeb2f8cb9693',1,'__plugin_root::artifact::New(const ObjectEntry)']]],
+  ['newcommand_3',['NewCommand',['../structdefine_1_1_context.html#a88c58dcfe6a7bf4876a6a01a4a6c76be',1,'define::Context']]],
+  ['none_4',['NONE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ac157bdf0b85a40d2619cbc8bc1ae5fe2',1,'plugin.h']]]
 ];

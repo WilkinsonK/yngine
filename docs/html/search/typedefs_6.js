@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['registry_0',['Registry',['../namespace____plugin__root_1_1command.html#ab0d3ca173fee6bbd104c61f4f17484b7',1,'__plugin_root::command']]]
+  ['name_0',['Name',['../namespace____plugin__root.html#a93482d22098267681084c32c0aced568',1,'__plugin_root::Name'],['../plugin__c__api_8h.html#ace12fb824e557a97606e33f86edd69d9',1,'Name:&#160;plugin_c_api.h']]]
 ];

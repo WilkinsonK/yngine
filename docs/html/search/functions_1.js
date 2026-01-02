@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['callcommand_0',['CallCommand',['../namespace____plugin__root_1_1dllutil.html#a5482982bdafad1b6c63486dc99467f59',1,'__plugin_root::dllutil::CallCommand(const Context &amp;, Name)'],['../namespace____plugin__root_1_1dllutil.html#a05da221bead76ad6f827191bec4b44e4',1,'__plugin_root::dllutil::CallCommand(Name)']]]
+  ['applyinspect_0',['ApplyInspect',['../structdefine_1_1_context.html#ae61760ba5c8df095b14b237942e9ef60',1,'define::Context']]],
+  ['applymutation_1',['ApplyMutation',['../structdefine_1_1_context.html#acff1d771f87146ba9b5df808ea0c9d4b',1,'define::Context']]],
+  ['applyoptcommon_2',['ApplyOptCommon',['../structdefine_1_1_context.html#a8c36eb36f9b15d80e159ae4c5179347e',1,'define::Context']]]
 ];

@@ -94,7 +94,9 @@ $(function(){initNavTree('namespace____plugin__root_1_1dllutil.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aef209d7e33ca554d0d530f0e58c805db" id="r_aef209d7e33ca554d0d530f0e58c805db"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef209d7e33ca554d0d530f0e58c805db">Artifact</a> = <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">artifact::Artifact</a></td></tr>
+<tr class="memitem:aebcd2773512b9bb0e48a4e896ff8ef0c" id="r_aebcd2773512b9bb0e48a4e896ff8ef0c"><td class="memItemLeft" align="right" valign="top">typedef std::unique_ptr&lt; ArtifactBody &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a></td></tr>
+<tr class="memdesc:aebcd2773512b9bb0e48a4e896ff8ef0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A box of artifact attributes.  <br /></td></tr>
+<tr class="memitem:a7b576eb95a1afd5bd120868c05a97da8" id="r_a7b576eb95a1afd5bd120868c05a97da8"><td class="memItemLeft" align="right" valign="top">typedef std::optional&lt; command::CommandImpl &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b576eb95a1afd5bd120868c05a97da8">CommandImplDefault</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -109,23 +111,45 @@ Functions</h2></td></tr>
 <tr class="memitem:a2179da178a45c6afe5495e299da36015" id="r_a2179da178a45c6afe5495e299da36015"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2179da178a45c6afe5495e299da36015">InstallCommand</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp;, <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>, <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>)</td></tr>
 <tr class="memdesc:a2179da178a45c6afe5495e299da36015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs a command from the DLL, making it available to the artifact.  <br /></td></tr>
 <tr class="memitem:a37e5401e1ead99cf7fb31632e9a28e43" id="r_a37e5401e1ead99cf7fb31632e9a28e43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ab285784acffbf36380c0428e903feb46">StateFn</a>&lt; <a class="el" href="struct____plugin__root_1_1_context.html">Context</a>, const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37e5401e1ead99cf7fb31632e9a28e43">InstallCommand</a> (<a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>)</td></tr>
+<tr class="memdesc:a37e5401e1ead99cf7fb31632e9a28e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a command installer.  <br /></td></tr>
+<tr class="memitem:a6f22fb602c09c3e1f1656937448ffb86" id="r_a6f22fb602c09c3e1f1656937448ffb86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ab285784acffbf36380c0428e903feb46">StateFn</a>&lt; <a class="el" href="struct____plugin__root_1_1_context.html">Context</a>, const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f22fb602c09c3e1f1656937448ffb86">InstallCommand</a> (<a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>, <a class="el" href="namespace____plugin__root_1_1command.html#a7b576eb95a1afd5bd120868c05a97da8">CommandImplDefault</a>)</td></tr>
+<tr class="memdesc:a6f22fb602c09c3e1f1656937448ffb86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a command installer.  <br /></td></tr>
 <tr class="memitem:a88cd3add560f943ec12c2b3e0783e1de" id="r_a88cd3add560f943ec12c2b3e0783e1de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88cd3add560f943ec12c2b3e0783e1de">InstallModule</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp;)</td></tr>
 <tr class="memdesc:a88cd3add560f943ec12c2b3e0783e1de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Installs the DLL module handle.  <br /></td></tr>
-<tr class="memitem:a0381a0947e7157e928e6f7d605dbaff8" id="r_a0381a0947e7157e928e6f7d605dbaff8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; void * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0381a0947e7157e928e6f7d605dbaff8">LoadHandleFromArtifact</a> (const <a class="el" href="#aef209d7e33ca554d0d530f0e58c805db">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>)</td></tr>
+<tr class="memitem:a0381a0947e7157e928e6f7d605dbaff8" id="r_a0381a0947e7157e928e6f7d605dbaff8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; void * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0381a0947e7157e928e6f7d605dbaff8">LoadHandleFromArtifact</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>)</td></tr>
 <tr class="memdesc:a0381a0947e7157e928e6f7d605dbaff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the DLL handle of some member of the artifact module.  <br /></td></tr>
-<tr class="memitem:a3085b0fdc7f72c579fa4e1efe48bf8f9" id="r_a3085b0fdc7f72c579fa4e1efe48bf8f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ab285784acffbf36380c0428e903feb46">StateFn</a>&lt; void *, const <a class="el" href="#aef209d7e33ca554d0d530f0e58c805db">Artifact</a> &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3085b0fdc7f72c579fa4e1efe48bf8f9">LoadHandleFromArtifact</a> (<a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>)</td></tr>
-<tr class="memitem:ae711851d171fb1ccae01fed5e5570919" id="r_ae711851d171fb1ccae01fed5e5570919"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; void * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae711851d171fb1ccae01fed5e5570919">LoadModuleFromArtifact</a> (const <a class="el" href="#aef209d7e33ca554d0d530f0e58c805db">Artifact</a> &amp;)</td></tr>
+<tr class="memitem:a3085b0fdc7f72c579fa4e1efe48bf8f9" id="r_a3085b0fdc7f72c579fa4e1efe48bf8f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ab285784acffbf36380c0428e903feb46">StateFn</a>&lt; void *, const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3085b0fdc7f72c579fa4e1efe48bf8f9">LoadHandleFromArtifact</a> (<a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>)</td></tr>
+<tr class="memitem:ae711851d171fb1ccae01fed5e5570919" id="r_ae711851d171fb1ccae01fed5e5570919"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; void * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae711851d171fb1ccae01fed5e5570919">LoadModuleFromArtifact</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;)</td></tr>
 <tr class="memdesc:ae711851d171fb1ccae01fed5e5570919"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the module belonging to an artifact.  <br /></td></tr>
+<tr class="memitem:a68a8a471a23448c3c693e53fadafb2ac" id="r_a68a8a471a23448c3c693e53fadafb2ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68a8a471a23448c3c693e53fadafb2ac">ReleaseModule</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp;)</td></tr>
+<tr class="memdesc:a68a8a471a23448c3c693e53fadafb2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release the DLL module handle and all related assets.  <br /></td></tr>
+<tr class="memitem:a5b913b0326691f901f92e0f84d0130c0" id="r_a5b913b0326691f901f92e0f84d0130c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b913b0326691f901f92e0f84d0130c0">InstallCommand</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp;ctx, <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a> name, <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a> impl_name, <a class="el" href="namespace____plugin__root_1_1command.html#a7b576eb95a1afd5bd120868c05a97da8">CommandImplDefault</a> impl_default)</td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
-<a id="aef209d7e33ca554d0d530f0e58c805db" name="aef209d7e33ca554d0d530f0e58c805db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef209d7e33ca554d0d530f0e58c805db">&#9670;&#160;</a></span>Artifact</h2>
+<a id="aebcd2773512b9bb0e48a4e896ff8ef0c" name="aebcd2773512b9bb0e48a4e896ff8ef0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebcd2773512b9bb0e48a4e896ff8ef0c">&#9670;&#160;</a></span>Artifact</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using __plugin_root::dllutil::Artifact = <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">artifact::Artifact</a></td>
+          <td class="memname">typedef std::unique_ptr&lt;ArtifactBody&gt; __plugin_root::artifact::Artifact</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A box of artifact attributes. </p>
+
+</div>
+</div>
+<a id="a7b576eb95a1afd5bd120868c05a97da8" name="a7b576eb95a1afd5bd120868c05a97da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b576eb95a1afd5bd120868c05a97da8">&#9670;&#160;</a></span>CommandImplDefault</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::optional&lt;command::CommandImpl&gt; __plugin_root::command::CommandImplDefault</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -230,7 +254,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a3c512b0f461ff53c26e823fa04c417c6" name="a3c512b0f461ff53c26e823fa04c417c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c512b0f461ff53c26e823fa04c417c6">&#9670;&#160;</a></span>InstallCommand() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c512b0f461ff53c26e823fa04c417c6">&#9670;&#160;</a></span>InstallCommand() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +275,7 @@ Functions</h2></td></tr>
 <p>Installs a command from the DLL, making it available to the artifact. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ctx</td><td>context of the artifact. from and to. </td></tr>
+    <tr><td class="paramname">ctx</td><td>context of the artifact. </td></tr>
     <tr><td class="paramname">name</td><td>of the command being installed. </td></tr>
   </table>
   </dd>
@@ -261,7 +285,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a2179da178a45c6afe5495e299da36015" name="a2179da178a45c6afe5495e299da36015"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2179da178a45c6afe5495e299da36015">&#9670;&#160;</a></span>InstallCommand() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2179da178a45c6afe5495e299da36015">&#9670;&#160;</a></span>InstallCommand() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,8 +321,39 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5b913b0326691f901f92e0f84d0130c0" name="a5b913b0326691f901f92e0f84d0130c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b913b0326691f901f92e0f84d0130c0">&#9670;&#160;</a></span>InstallCommand() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &gt; __plugin_root::dllutil::InstallCommand </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a></td>          <td class="paramname"><span class="paramname"><em>impl_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace____plugin__root_1_1command.html#a7b576eb95a1afd5bd120868c05a97da8">CommandImplDefault</a></td>          <td class="paramname"><span class="paramname"><em>impl_default</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a37e5401e1ead99cf7fb31632e9a28e43" name="a37e5401e1ead99cf7fb31632e9a28e43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37e5401e1ead99cf7fb31632e9a28e43">&#9670;&#160;</a></span>InstallCommand() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a37e5401e1ead99cf7fb31632e9a28e43">&#9670;&#160;</a></span>InstallCommand() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,6 +366,46 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructs a command installer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>of the command being installed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A function which installs a command with the designated name. </dd></dl>
+
+</div>
+</div>
+<a id="a6f22fb602c09c3e1f1656937448ffb86" name="a6f22fb602c09c3e1f1656937448ffb86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f22fb602c09c3e1f1656937448ffb86">&#9670;&#160;</a></span>InstallCommand() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace____plugin__root.html#ab285784acffbf36380c0428e903feb46">StateFn</a>&lt; <a class="el" href="struct____plugin__root_1_1_context.html">Context</a>, const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp; &gt; __plugin_root::dllutil::InstallCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace____plugin__root_1_1command.html#a7b576eb95a1afd5bd120868c05a97da8">CommandImplDefault</a></td>          <td class="paramname"><span class="paramname"><em>impl_default</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a command installer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>of the command being installed. </td></tr>
+    <tr><td class="paramname">impl_default</td><td>implementation used when command is not found. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A function which installs a command with the designated name. </dd></dl>
 
 </div>
 </div>
@@ -349,7 +444,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; void * &gt; __plugin_root::dllutil::LoadHandleFromArtifact </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#aef209d7e33ca554d0d530f0e58c805db">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -378,7 +473,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace____plugin__root.html#ab285784acffbf36380c0428e903feb46">StateFn</a>&lt; void *, const <a class="el" href="#aef209d7e33ca554d0d530f0e58c805db">Artifact</a> &amp; &gt; __plugin_root::dllutil::LoadHandleFromArtifact </td>
+          <td class="memname"><a class="el" href="namespace____plugin__root.html#ab285784acffbf36380c0428e903feb46">StateFn</a>&lt; void *, const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp; &gt; __plugin_root::dllutil::LoadHandleFromArtifact </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a></td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>
@@ -397,7 +492,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; void * &gt; __plugin_root::dllutil::LoadModuleFromArtifact </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#aef209d7e33ca554d0d530f0e58c805db">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -411,6 +506,32 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The artifact with a loaded module. </dd></dl>
+
+</div>
+</div>
+<a id="a68a8a471a23448c3c693e53fadafb2ac" name="a68a8a471a23448c3c693e53fadafb2ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68a8a471a23448c3c693e53fadafb2ac">&#9670;&#160;</a></span>ReleaseModule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &gt; __plugin_root::dllutil::ReleaseModule </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Release the DLL module handle and all related assets. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>context of the artifact. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The context passed. </dd></dl>
 
 </div>
 </div>

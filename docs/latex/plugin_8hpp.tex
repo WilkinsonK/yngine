@@ -8,77 +8,130 @@ Main plugin API declarations. Defines type aliases, traits and functions that ar
 {\ttfamily \#include $<$expected$>$}\newline
 {\ttfamily \#include $<$functional$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
 {\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
 {\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
 {\ttfamily \#include "{}plugin.\+h"{}}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct____plugin__root_1_1command_1_1_command}{\+\_\+\+\_\+plugin\+\_\+root\+::command\+::\+Command}}
-\item 
+struct \mbox{\hyperlink{struct____plugin__root_1_1_state_info}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Info}}
+\begin{DoxyCompactList}\small\item\em Provides information given the current state in detail. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{struct____plugin__root_1_1_context}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Context}}
 \item 
-struct \mbox{\hyperlink{struct____plugin__root_1_1artifact_1_1_artifact_body}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Artifact\+Body}}
+struct \mbox{\hyperlink{struct____plugin__root_1_1command_1_1_command}{\+\_\+\+\_\+plugin\+\_\+root\+::command\+::\+Command}}
 \item 
-class \mbox{\hyperlink{class____plugin__root_1_1plugin_1_1_has_commands}{\+\_\+\+\_\+plugin\+\_\+root\+::plugin\+::\+Has\+Commands}}
-\begin{DoxyCompactList}\small\item\em Can add/register commands to the global system. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{class____plugin__root_1_1plugin_1_1_can_install}{\+\_\+\+\_\+plugin\+\_\+root\+::plugin\+::\+Can\+Install}}
-\begin{DoxyCompactList}\small\item\em Can install as a plugin. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{class____plugin__root_1_1plugin_1_1_can_release}{\+\_\+\+\_\+plugin\+\_\+root\+::plugin\+::\+Can\+Release}}
-\begin{DoxyCompactList}\small\item\em Can release plugin assets. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{class____plugin__root_1_1plugin_1_1_plugin}{\+\_\+\+\_\+plugin\+\_\+root\+::plugin\+::\+Plugin}}
-\begin{DoxyCompactList}\small\item\em Entry point for an external system, code or behavior to interact with the host system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+struct \mbox{\hyperlink{struct____plugin__root_1_1artifact_1_1_artifact_body}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Artifact\+Body}}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespace____plugin__root}{\+\_\+\+\_\+plugin\+\_\+root}}
 \item 
-namespace \mbox{\hyperlink{namespace____plugin__root_1_1command}{\+\_\+\+\_\+plugin\+\_\+root\+::command}}
-\item 
 namespace \mbox{\hyperlink{namespace____plugin__root_1_1artifact}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact}}
 \item 
-namespace \mbox{\hyperlink{namespace____plugin__root_1_1plugin}{\+\_\+\+\_\+plugin\+\_\+root\+::plugin}}
-\end{DoxyCompactItemize}
+namespace \mbox{\hyperlink{namespace____plugin__root_1_1command}{\+\_\+\+\_\+plugin\+\_\+root\+::command}}
+\item 
+namespace \mbox{\hyperlink{namespace____plugin__root_1_1package}{\+\_\+\+\_\+plugin\+\_\+root\+::package}}
+\begin{DoxyCompactList}\small\item\em Logic and behavior dedicated to building a single plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct____plugin__root_1_1artifact_1_1_artifact_body}{Artifact\+Body}} $>$ \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Artifact}}
+\begin{DoxyCompactList}\small\item\em A box of artifact attributes. \end{DoxyCompactList}\item 
 typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_af477c76386a327c88de9bfdc569e359b}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Desc}}
 \begin{DoxyCompactList}\small\item\em The description of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
 typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Name}}
 \begin{DoxyCompactList}\small\item\em The name of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
 typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a5ce749b305b02e6ca53a05d733524345}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Entry}}
 \begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to the object entry point. \end{DoxyCompactList}\item 
-typedef int \mbox{\hyperlink{namespace____plugin__root_ace7d11467cf9033aaaaf889c9fe90904}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Mode}}
-\begin{DoxyCompactList}\small\item\em Mode of how to load the entry point. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_aaef0dcd42320592a525270c914424ebb}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Mode}}
+\begin{DoxyCompactList}\small\item\em Mode of how to build the entry point. \end{DoxyCompactList}\item 
 typedef void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace____plugin__root_a09d45b8a78573e3eb8d0ddd01343a12a}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Ref}}
 \begin{DoxyCompactList}\small\item\em A reference to the object loaded dynamically. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a13d22b286eb7ccd25930bc3446682973}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Type}}
+\begin{DoxyCompactList}\small\item\em Type of the entry point. \end{DoxyCompactList}\item 
 typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Path}}
 \begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to an arbitrary file or directory. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Message}}
+\begin{DoxyCompactList}\small\item\em A message providing more detail about the {\ttfamily \doxylink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} which occured. \end{DoxyCompactList}\item 
 typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a84d5a198ebf7ebdff6e8dc6c22fcb542}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Version}}
 \begin{DoxyCompactList}\small\item\em The version name of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
-typedef std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}, \mbox{\hyperlink{struct____plugin__root_1_1command_1_1_command}{Command}} $>$ \mbox{\hyperlink{namespace____plugin__root_1_1command_ab0d3ca173fee6bbd104c61f4f17484b7}{\+\_\+\+\_\+plugin\+\_\+root\+::command\+::\+Registry}}
-\begin{DoxyCompactList}\small\item\em A map of commands registered by the plugin and the managed system. \end{DoxyCompactList}\item 
-typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct____plugin__root_1_1artifact_1_1_artifact_body}{Artifact\+Body}} $>$ \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Artifact}}
-\begin{DoxyCompactList}\small\item\em A box of artifact attributes. \end{DoxyCompactList}\item 
+typedef enum \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Group \mbox{\hyperlink{namespace____plugin__root_aed145805402c1dfeff6e796b7969bf2e}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Group}}
+\begin{DoxyCompactList}\small\item\em The grouping some {\ttfamily \doxylink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} belongs to. \end{DoxyCompactList}\item 
+typedef struct \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Info \mbox{\hyperlink{namespace____plugin__root_a744f0104cd37f3c8d4442a5e3cf74105}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Info}}
+\begin{DoxyCompactList}\small\item\em Provides information given the current state in detail. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename R$>$ }\\using \mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State}} = std\+::expected$<$R, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}$>$
 \begin{DoxyCompactList}\small\item\em Alias for\+: \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename R, typename ... A$>$ }\\using \mbox{\hyperlink{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Fn}} = std\+::function$<$\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$R$>$(A...)$>$
+\item 
+typedef std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}, \mbox{\hyperlink{struct____plugin__root_1_1command_1_1_command}{Command}} $>$ \mbox{\hyperlink{namespace____plugin__root_1_1command_ab0d3ca173fee6bbd104c61f4f17484b7}{\+\_\+\+\_\+plugin\+\_\+root\+::command\+::\+Registry}}
+\begin{DoxyCompactList}\small\item\em A map of commands registered by the plugin and the managed system. \end{DoxyCompactList}\item 
+typedef std\+::optional$<$ command\+::\+Command\+Impl $>$ \mbox{\hyperlink{namespace____plugin__root_1_1command_a7b576eb95a1afd5bd120868c05a97da8}{\+\_\+\+\_\+plugin\+\_\+root\+::command\+::\+Command\+Impl\+Default}}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Group}} \{ \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa58a14c103edf9147448fb0403c5e50b3}{\+\_\+\+\_\+plugin\+\_\+root\+::\+OK}}
+, \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18}{\+\_\+\+\_\+plugin\+\_\+root\+::\+DYNAMIC}}
+, \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa51d41f4d841ff4b6cbf5b23f1becee9a}{\+\_\+\+\_\+plugin\+\_\+root\+::\+MANIFEST}}
+, \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa81b1efe22dac764a3ce5f08a5a9cc45f}{\+\_\+\+\_\+plugin\+\_\+root\+::\+USER}}
+ \}
+\begin{DoxyCompactList}\small\item\em The grouping some {\ttfamily \doxylink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} belongs to. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_ae87f7c54a99d047acf9e828b39747f61}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Install}} (const char \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Install the plugin module from the given artifact manifest. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_aaa55187fb313655b64c12fdd14ab7e04}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Install}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
 \begin{DoxyCompactList}\small\item\em Install the plugin module from the given artifact. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_abc1903f0c87d3323a6e6183020b50573}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Initialize}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
+\begin{DoxyCompactList}\small\item\em Initilizes the plugin module. This is effectively the \textquotesingle{}start-\/up\textquotesingle{} functionality. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_aee3919c9fa229b9e584aeae951867f44}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Release}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
 \begin{DoxyCompactList}\small\item\em Release and destroy plugin module assets. \end{DoxyCompactList}\item 
-const std\+::string \mbox{\hyperlink{namespace____plugin__root_a6fc3f9d65a2d10ac3668e834dd83ca71}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+{\footnotesize template$<$typename T, typename V$>$ }\\const T \mbox{\hyperlink{namespace____plugin__root_afaf3928a7b5a1b4ccd12e0ec76860fbf}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group}} (const V \&)
 \begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State} group the state belongs to. \end{DoxyCompactList}\item 
-const std\+::string \mbox{\hyperlink{namespace____plugin__root_ac39cad57c780ffb859ecdb286bdd9177}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Message}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+template$<$$>$ const std\+::string \mbox{\hyperlink{namespace____plugin__root_a7e0947d42efee02781eb538b9b3c9a61}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\item 
+template$<$$>$ const std\+::string \mbox{\hyperlink{namespace____plugin__root_ae875baa0bba5e8dbf2c45e3a25078a05}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group}} (const \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \&)
+\item 
+template$<$$>$ const \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \mbox{\hyperlink{namespace____plugin__root_a4aba2ef9ab0abcba4ae6e40918969343}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\item 
+const std\+::string \mbox{\hyperlink{namespace____plugin__root_a8dcab26fcc4bc1e1961c5b9714bf2ec9}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Message}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
 \begin{DoxyCompactList}\small\item\em Human-\/readable explanation of the error state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}} \mbox{\hyperlink{namespace____plugin__root_a3893f932b32a6acd983aee7a468e3c07}{\+\_\+\+\_\+plugin\+\_\+root\+::operator\&}} (\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}, \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}})
+\item 
 std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_a3c87979575ad101348ccaebdc3f7d377}{\+\_\+\+\_\+plugin\+\_\+root\+::operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
 \item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_a059adc1a2b09a8d53ed994fa6eb3c2fb}{\+\_\+\+\_\+plugin\+\_\+root\+::operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}})
+\item 
+bool \mbox{\hyperlink{namespace____plugin__root_a224ecf9fe7c4bea4229602c3a42b938b}{\+\_\+\+\_\+plugin\+\_\+root\+::operator==}} (\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}}, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}})
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_a7feeef79fbc8a0ff6c9059698e2b8803}{\+\_\+\+\_\+plugin\+\_\+root\+::operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}} \&)
+\item 
+const std\+::string \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a804e59b9a48010d6eee91169e93fb6d4}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Repr}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Return a string representation of an {\ttfamily Artifact}. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{namespace____plugin__root_1_1artifact_ac2f8af9fda1196484de617bef345962b}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Repr\+Json}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Return a string representation of an {\ttfamily Artifact}. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a3956850271ae7571629f9504327720b1}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Repr\+Toml}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Return a string representation of an {\ttfamily Artifact}. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a5e2ea5d9f287e3b7252102e42c2c33e1}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Repr\+Yaml}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Return a string representation of an {\ttfamily Artifact}. \end{DoxyCompactList}\item 
 std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_1_1artifact_ada4278eed051e4a687f1871f19b5111b}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&)
 \item 
+const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a42f3ed187bc36c488d26442ac599ede4}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Get\+Name}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Get the name of the artifact. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespace____plugin__root_af477c76386a327c88de9bfdc569e359b}{Desc}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a0673ca060bb40d516a64d837293ab242}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Get\+Description}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Get the description of the artifact. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespace____plugin__root_af477c76386a327c88de9bfdc569e359b}{Desc}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a1f9fdc10b94f7cfba60c069a3e98cc0e}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Get\+Description\+Long}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Get the long description of the artifact. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespace____plugin__root_a5ce749b305b02e6ca53a05d733524345}{Object\+Entry}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_ad66f02f43972cd13dbeb5495d7e54546}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Get\+Entry}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Get the module entry point of the artifact. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespace____plugin__root_aaef0dcd42320592a525270c914424ebb}{Object\+Mode}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_ad407ff37eeda0d5ae06d9f6c76523f1e}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Get\+Mode}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Get the module builder mode. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespace____plugin__root_a13d22b286eb7ccd25930bc3446682973}{Object\+Type}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a35459e9556121df17498297c32eb289e}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Get\+Type}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Get the module builder type. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a2e5d1a4c2436d314f358cad04be4e1be}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+New}} (void)
 \begin{DoxyCompactList}\small\item\em Create a new, empty plugin artifact. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a7819b04af6ccb787df95aeb2f8cb9693}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+New}} (const \mbox{\hyperlink{namespace____plugin__root_a5ce749b305b02e6ca53a05d733524345}{Object\+Entry}})
@@ -95,13 +148,34 @@ std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_1_1artifact_ada4278
 \begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified object path. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_ace5242dd64ca02d3965076d0f2dfb93f}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+Manifest}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path}})
 \begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a path to the file containing its manifest. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a692e0452e5c945b1ff20881cc334c172}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+Mode}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_aaef0dcd42320592a525270c914424ebb}{Object\+Mode}})
+\begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a mode of how the artifact is supposed to be built for packaging. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_ab800e1eba137ac33b011df7c620f0d16}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+Name}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}})
 \begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified name. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a6b3092723179c170f24ab67ee0966c3f}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+State}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}})
 \begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aad72370eaa4a00b7c064cad8a3879e96}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+State}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}, const \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}})
+\begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a7afaf5b94cf52f477d0ec17df37176a5}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+Type}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_a13d22b286eb7ccd25930bc3446682973}{Object\+Type}})
+\begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified module type. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \mbox{\hyperlink{namespace____plugin__root_1_1artifact_a2f8b9ef827c9fbe6fb0e323ccfd34bf5}{\+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+With\+Version}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_a84d5a198ebf7ebdff6e8dc6c22fcb542}{Version}})
 \begin{DoxyCompactList}\small\item\em Create a copy of the source artifact with a specified version. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_1_1command_a39d39f82f2a09dcee80391f306ed9029}{\+\_\+\+\_\+plugin\+\_\+root\+::command\+::\+Default\+Passthrough}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Does absolutely nothing. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct____plugin__root_1_1command_1_1_command}{Command}} \mbox{\hyperlink{namespace____plugin__root_1_1command_ac4e7129e6c44ba46372ff44e578ce1ac}{\+\_\+\+\_\+plugin\+\_\+root\+::command\+::\+Load\+From\+Artifact}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}, const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}})
+\item 
+\mbox{\hyperlink{struct____plugin__root_1_1command_1_1_command}{Command}} \mbox{\hyperlink{namespace____plugin__root_1_1command_a917b38057ce1a5887f8480ee09f59a79}{\+\_\+\+\_\+plugin\+\_\+root\+::command\+::\+Load\+From\+Artifact}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}, const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}, \mbox{\hyperlink{namespace____plugin__root_1_1command_a7b576eb95a1afd5bd120868c05a97da8}{Command\+Impl\+Default}})
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_1_1package_a11aaf75e942b69fa31bc9a478ac527e8}{\+\_\+\+\_\+plugin\+\_\+root\+::package\+::\+Build}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Build the module according to how its configuration dictates how it should be expected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::map$<$ \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}}, \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}} $>$ \mbox{\hyperlink{namespace____plugin__root_a1d1a2e7250e2c9e57a06b31866a85cfe}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Group\+Names}}
+\item 
+const std\+::map$<$ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}, \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}} $>$ \mbox{\hyperlink{namespace____plugin__root_a81386dd6210dc707c36fa3b508e075b9}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Messages}}
+\begin{DoxyCompactList}\small\item\em The system-\/defined error messages designated to each kind of {\ttfamily \doxylink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}} \mbox{\hyperlink{namespace____plugin__root_ac749617856800d684fc9edac4eb28e3e}{\+\_\+\+\_\+plugin\+\_\+root\+::operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}})
 \end{DoxyCompactItemize}
 
 

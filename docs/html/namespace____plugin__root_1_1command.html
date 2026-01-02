@@ -100,13 +100,17 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:ab0d3ca173fee6bbd104c61f4f17484b7" id="r_ab0d3ca173fee6bbd104c61f4f17484b7"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>, <a class="el" href="struct____plugin__root_1_1command_1_1_command.html">Command</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0d3ca173fee6bbd104c61f4f17484b7">Registry</a></td></tr>
 <tr class="memdesc:ab0d3ca173fee6bbd104c61f4f17484b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map of commands registered by the plugin and the managed system.  <br /></td></tr>
+<tr class="memitem:a7b576eb95a1afd5bd120868c05a97da8" id="r_a7b576eb95a1afd5bd120868c05a97da8"><td class="memItemLeft" align="right" valign="top">typedef std::optional&lt; command::CommandImpl &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b576eb95a1afd5bd120868c05a97da8">CommandImplDefault</a></td></tr>
 <tr class="memitem:af5c73ecf5b14c9372bc746365ec2ebae" id="r_af5c73ecf5b14c9372bc746365ec2ebae"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5c73ecf5b14c9372bc746365ec2ebae">Artifact</a> = <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">artifact::Artifact</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a39d39f82f2a09dcee80391f306ed9029" id="r_a39d39f82f2a09dcee80391f306ed9029"><td class="memItemLeft" align="right" valign="top"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39d39f82f2a09dcee80391f306ed9029">DefaultPassthrough</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> *)</td></tr>
+<tr class="memdesc:a39d39f82f2a09dcee80391f306ed9029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does absolutely nothing.  <br /></td></tr>
 <tr class="memitem:ac4e7129e6c44ba46372ff44e578ce1ac" id="r_ac4e7129e6c44ba46372ff44e578ce1ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct____plugin__root_1_1command_1_1_command.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4e7129e6c44ba46372ff44e578ce1ac">LoadFromArtifact</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">artifact::Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>, const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>)</td></tr>
-<tr class="memitem:a6d6fe1e5ed382cb3166ec28067d93c14" id="r_a6d6fe1e5ed382cb3166ec28067d93c14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; <a class="el" href="plugin_8h.html#ab6f5f76c65ecbadbb3398d097f4b52d4">CommandImpl</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d6fe1e5ed382cb3166ec28067d93c14">LoadCommandImplFromArtifact</a> (const <a class="el" href="#af5c73ecf5b14c9372bc746365ec2ebae">Artifact</a> &amp;source, const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a> <a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>)</td></tr>
-<tr class="memitem:a6247e6055e4164d55f61c79578b79c08" id="r_a6247e6055e4164d55f61c79578b79c08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; <a class="el" href="plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0">CommandScope</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6247e6055e4164d55f61c79578b79c08">LoadCommandScopeFromArtifact</a> (const <a class="el" href="#af5c73ecf5b14c9372bc746365ec2ebae">Artifact</a> &amp;source, const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a> <a class="el" href="plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb">name</a>)</td></tr>
+<tr class="memitem:a917b38057ce1a5887f8480ee09f59a79" id="r_a917b38057ce1a5887f8480ee09f59a79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct____plugin__root_1_1command_1_1_command.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a917b38057ce1a5887f8480ee09f59a79">LoadFromArtifact</a> (const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">artifact::Artifact</a> &amp;, const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>, const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a>, <a class="el" href="#a7b576eb95a1afd5bd120868c05a97da8">CommandImplDefault</a>)</td></tr>
+<tr class="memitem:a6d6fe1e5ed382cb3166ec28067d93c14" id="r_a6d6fe1e5ed382cb3166ec28067d93c14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; <a class="el" href="plugin_8h.html#ab6f5f76c65ecbadbb3398d097f4b52d4">CommandImpl</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d6fe1e5ed382cb3166ec28067d93c14">LoadCommandImplFromArtifact</a> (const <a class="el" href="#af5c73ecf5b14c9372bc746365ec2ebae">Artifact</a> &amp;source, const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a> name)</td></tr>
+<tr class="memitem:a6247e6055e4164d55f61c79578b79c08" id="r_a6247e6055e4164d55f61c79578b79c08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt; <a class="el" href="plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0">CommandScope</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6247e6055e4164d55f61c79578b79c08">LoadCommandScopeFromArtifact</a> (const <a class="el" href="#af5c73ecf5b14c9372bc746365ec2ebae">Artifact</a> &amp;source, const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a> name)</td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
 <a id="af5c73ecf5b14c9372bc746365ec2ebae" name="af5c73ecf5b14c9372bc746365ec2ebae"></a>
@@ -117,6 +121,20 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using __plugin_root::command::Artifact = <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">artifact::Artifact</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b576eb95a1afd5bd120868c05a97da8" name="a7b576eb95a1afd5bd120868c05a97da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b576eb95a1afd5bd120868c05a97da8">&#9670;&#160;</a></span>CommandImplDefault</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::optional&lt;command::CommandImpl&gt; __plugin_root::command::CommandImplDefault</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -140,6 +158,32 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a39d39f82f2a09dcee80391f306ed9029" name="a39d39f82f2a09dcee80391f306ed9029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d39f82f2a09dcee80391f306ed9029">&#9670;&#160;</a></span>DefaultPassthrough()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> __plugin_root::command::DefaultPassthrough </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> *</td>          <td class="paramname"><span class="paramname"><em>_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Does absolutely nothing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>context to pass to command. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Should always return 'NONE' state. </dd></dl>
+
+</div>
+</div>
 <a id="a6d6fe1e5ed382cb3166ec28067d93c14" name="a6d6fe1e5ed382cb3166ec28067d93c14"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d6fe1e5ed382cb3166ec28067d93c14">&#9670;&#160;</a></span>LoadCommandImplFromArtifact()</h2>
 
@@ -183,7 +227,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="ac4e7129e6c44ba46372ff44e578ce1ac" name="ac4e7129e6c44ba46372ff44e578ce1ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4e7129e6c44ba46372ff44e578ce1ac">&#9670;&#160;</a></span>LoadFromArtifact()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e7129e6c44ba46372ff44e578ce1ac">&#9670;&#160;</a></span>LoadFromArtifact() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,6 +246,37 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a></td>          <td class="paramname"><span class="paramname"><em>impl_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a917b38057ce1a5887f8480ee09f59a79" name="a917b38057ce1a5887f8480ee09f59a79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a917b38057ce1a5887f8480ee09f59a79">&#9670;&#160;</a></span>LoadFromArtifact() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct____plugin__root_1_1command_1_1_command.html">Command</a> __plugin_root::command::LoadFromArtifact </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace____plugin__root_1_1artifact.html#aebcd2773512b9bb0e48a4e896ff8ef0c">artifact::Artifact</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace____plugin__root.html#a93482d22098267681084c32c0aced568">Name</a></td>          <td class="paramname"><span class="paramname"><em>impl_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a7b576eb95a1afd5bd120868c05a97da8">CommandImplDefault</a></td>          <td class="paramname"><span class="paramname"><em>impl_default</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

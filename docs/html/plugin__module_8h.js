@@ -7,6 +7,7 @@ var plugin__module_8h =
     [ "command_ident", "plugin__module_8h.html#a70e822a5a49cd97e6e4cd3b9ad29ff8a", null ],
     [ "command_raw", "plugin__module_8h.html#a5249ad20dcc27d71fd9d3576952dcf54", null ],
     [ "command_sig", "plugin__module_8h.html#aa72c62d09a7e9078ff53a9a43ff2c409", null ],
+    [ "oninitialize", "plugin__module_8h.html#a89b3749eefaec213eea9c7b7ac05293e", null ],
     [ "oninstall", "plugin__module_8h.html#a7e201bd5013827180a56da3c3ca983e8", null ],
     [ "onrelease", "plugin__module_8h.html#abf8cc66d2ac563b3d419c2254b0a5d58", null ],
     [ "plugin_call_command", "plugin__module_8h.html#a662737215e1ac0ff92737f43e4f6fb17", null ],

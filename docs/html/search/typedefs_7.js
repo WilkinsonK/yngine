@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['state_0',['State',['../namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a',1,'__plugin_root']]],
-  ['stateerr_1',['StateErr',['../plugin_8h.html#a57a433fb947523a524b5b61941b70ff5',1,'plugin.h']]],
-  ['statefn_2',['StateFn',['../namespace____plugin__root.html#ab285784acffbf36380c0428e903feb46',1,'__plugin_root']]]
+  ['objectentry_0',['ObjectEntry',['../namespace____plugin__root.html#a5ce749b305b02e6ca53a05d733524345',1,'__plugin_root']]],
+  ['objectmode_1',['ObjectMode',['../namespace____plugin__root.html#aaef0dcd42320592a525270c914424ebb',1,'__plugin_root']]],
+  ['objectref_2',['ObjectRef',['../namespace____plugin__root.html#a09d45b8a78573e3eb8d0ddd01343a12a',1,'__plugin_root']]],
+  ['objecttype_3',['ObjectType',['../namespace____plugin__root.html#a13d22b286eb7ccd25930bc3446682973',1,'__plugin_root']]]
 ];

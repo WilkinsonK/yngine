@@ -47,12 +47,13 @@
 \DoxyCodeLine{00077\ \textcolor{preprocessor}{\ \ \ \ attribute\ const\ CommandImpl\ \ command\_ident(ident,\ Impl)\ \ =\ command\_ident(name);\ \(\backslash\)}}
 \DoxyCodeLine{00078\ \textcolor{preprocessor}{\ \ \ \ command\_decl(name)}}
 \DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ command(name,\ scope)\ command\_raw(name,\ name,\ scope)}}
-\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ oninstall(name)\ command\_raw(name,\ OnInstall,\ SCOPE\_GLOBAL)}}
-\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ onrelease(name)\ command\_raw(name,\ OnRelease,\ SCOPE\_GLOBAL)}}
-\DoxyCodeLine{00093\ }
-\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ plugin\_module(...)\ \(\backslash\)}}
-\DoxyCodeLine{00108\ \textcolor{preprocessor}{plugin\_module\_head\ \(\backslash\)}}
-\DoxyCodeLine{00109\ \textcolor{preprocessor}{\_\_VA\_ARGS\_\_\ \(\backslash\)}}
-\DoxyCodeLine{00110\ \textcolor{preprocessor}{plugin\_module\_tail}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ oninitialize(name)\ command\_raw(name,\ OnInitialize,\ SCOPE\_LOCAL)}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ oninstall(name)\ command\_raw(name,\ OnInstall,\ SCOPE\_LOCAL)}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ onrelease(name)\ command\_raw(name,\ OnRelease,\ SCOPE\_LOCAL)}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ plugin\_module(...)\ \(\backslash\)}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{plugin\_module\_head\ \(\backslash\)}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\_\_VA\_ARGS\_\_\ \(\backslash\)}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{plugin\_module\_tail}}
 
 \end{DoxyCode}

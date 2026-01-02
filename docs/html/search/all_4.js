@@ -1,12 +1,20 @@
 var searchData=
 [
-  ['fromfile_0',['FromFile',['../namespace____plugin__root_1_1artifact.html#a91bea2653e9f4b7574e03168ce7bdcab',1,'__plugin_root::artifact']]],
-  ['fromother_1',['FromOther',['../namespace____plugin__root_1_1artifact.html#acc6c6fb4c3a5eeb231667d1fafee388f',1,'__plugin_root::artifact']]],
-  ['fromtoml_2',['FromToml',['../namespace____plugin__root_1_1artifact.html#ac125922952a84805fea87fad30a0f9ae',1,'__plugin_root::artifact']]],
-  ['fromtomlpluginheader_3',['FromTomlPluginHeader',['../namespace____plugin__root_1_1artifact.html#ac52937e509bd8136bf98966d11dfd89a',1,'__plugin_root::artifact']]],
-  ['fromtomlwithdescription_4',['FromTomlWithDescription',['../namespace____plugin__root_1_1artifact.html#a1ef49e9d98975e5bc4e407328d3f175d',1,'__plugin_root::artifact']]],
-  ['fromtomlwithdescriptionlong_5',['FromTomlWithDescriptionLong',['../namespace____plugin__root_1_1artifact.html#a679aebea16d8b1acc4c2fbfb82e8331b',1,'__plugin_root::artifact']]],
-  ['fromtomlwithname_6',['FromTomlWithName',['../namespace____plugin__root_1_1artifact.html#ac38b917d1238e96b55b2a6991f90a76c',1,'__plugin_root::artifact']]],
-  ['fromtomlwithpath_7',['FromTomlWithPath',['../namespace____plugin__root_1_1artifact.html#aaf1ab0438ad3873bbc6cf4bcec687ffe',1,'__plugin_root::artifact']]],
-  ['fromtomlwithversion_8',['FromTomlWithVersion',['../namespace____plugin__root_1_1artifact.html#a6c41d745698471007a6378c214d55352',1,'__plugin_root::artifact']]]
+  ['defaultpassthrough_0',['DefaultPassthrough',['../namespace____plugin__root_1_1command.html#a39d39f82f2a09dcee80391f306ed9029',1,'__plugin_root::command']]],
+  ['define_1',['define',['../namespacedefine.html',1,'']]],
+  ['desc_2',['Desc',['../namespace____plugin__root.html#af477c76386a327c88de9bfdc569e359b',1,'__plugin_root::Desc'],['../plugin__c__api_8h.html#ad3530e084fb8e0c559fe27b1efc472a0',1,'Desc:&#160;plugin_c_api.h']]],
+  ['description_3',['description',['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#a9ad3373df1e8e64f4aad3a8831df95a3',1,'__plugin_root::artifact::ArtifactBody']]],
+  ['description_5flong_4',['description_long',['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#a235a98c009197f9823df5cff98dc6b98',1,'__plugin_root::artifact::ArtifactBody']]],
+  ['detail_5',['detail',['../struct____plugin__root_1_1_state_info.html#afd4e1cd223a046daa34632e807f1b7e5',1,'__plugin_root::StateInfo']]],
+  ['dll_5fmalformat_6',['DLL_MALFORMAT',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a1eda451e6af890743177dd1c50d193b1',1,'plugin.h']]],
+  ['dll_5fnocallback_7',['DLL_NOCALLBACK',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a9314dcb57cdb5e341beb809eb0dfeddc',1,'plugin.h']]],
+  ['dll_5fnodrop_8',['DLL_NODROP',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a610d5e4fb7b3a7bd8674713cd8b92d04',1,'plugin.h']]],
+  ['dll_5fnoinit_9',['DLL_NOINIT',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a5dc415aa05c6b554c15961429b0fd5e3',1,'plugin.h']]],
+  ['dll_5fnoinstall_10',['DLL_NOINSTALL',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ad43a10efcfb4462aead6359fb4dc12a3',1,'plugin.h']]],
+  ['dll_5fnomodule_11',['DLL_NOMODULE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac',1,'plugin.h']]],
+  ['dll_5fnoobject_12',['DLL_NOOBJECT',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0',1,'plugin.h']]],
+  ['dll_5fnorelease_13',['DLL_NORELEASE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c',1,'plugin.h']]],
+  ['dll_5fnoscope_14',['DLL_NOSCOPE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be',1,'plugin.h']]],
+  ['dllutil_2ecpp_15',['dllutil.cpp',['../dllutil_8cpp.html',1,'']]],
+  ['dynamic_16',['DYNAMIC',['../namespace____plugin__root.html#abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18',1,'__plugin_root']]]
 ];

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['name_0',['Name',['../namespace____plugin__root.html#a93482d22098267681084c32c0aced568',1,'__plugin_root::Name'],['../plugin__c__api_8h.html#ace12fb824e557a97606e33f86edd69d9',1,'Name:&#160;plugin_c_api.h']]],
-  ['name_1',['name',['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#a70b08c126a47b4a5220c603f52d1e4d7',1,'__plugin_root::artifact::ArtifactBody::name'],['../plugin_8cpp.html#a8f8f80d37794cde9472343e4487ba3eb',1,'name:&#160;plugin.cpp']]],
-  ['new_2',['New',['../namespace____plugin__root_1_1artifact.html#a2e5d1a4c2436d314f358cad04be4e1be',1,'__plugin_root::artifact::New(void)'],['../namespace____plugin__root_1_1artifact.html#a7819b04af6ccb787df95aeb2f8cb9693',1,'__plugin_root::artifact::New(const ObjectEntry)']]],
-  ['none_3',['NONE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ac157bdf0b85a40d2619cbc8bc1ae5fe2',1,'plugin.h']]]
+  ['loadcommandimplfromartifact_0',['LoadCommandImplFromArtifact',['../namespace____plugin__root_1_1command.html#a6d6fe1e5ed382cb3166ec28067d93c14',1,'__plugin_root::command']]],
+  ['loadcommandscopefromartifact_1',['LoadCommandScopeFromArtifact',['../namespace____plugin__root_1_1command.html#a6247e6055e4164d55f61c79578b79c08',1,'__plugin_root::command']]],
+  ['loadfromartifact_2',['LoadFromArtifact',['../namespace____plugin__root_1_1command.html#ac4e7129e6c44ba46372ff44e578ce1ac',1,'__plugin_root::command::LoadFromArtifact(const artifact::Artifact &amp;, const Name, const Name)'],['../namespace____plugin__root_1_1command.html#a917b38057ce1a5887f8480ee09f59a79',1,'__plugin_root::command::LoadFromArtifact(const artifact::Artifact &amp;, const Name, const Name, CommandImplDefault)']]],
+  ['loadhandlefromartifact_3',['LoadHandleFromArtifact',['../namespace____plugin__root_1_1dllutil.html#a0381a0947e7157e928e6f7d605dbaff8',1,'__plugin_root::dllutil::LoadHandleFromArtifact(const Artifact &amp;, const Name)'],['../namespace____plugin__root_1_1dllutil.html#a3085b0fdc7f72c579fa4e1efe48bf8f9',1,'__plugin_root::dllutil::LoadHandleFromArtifact(Name)']]],
+  ['loadmodulefromartifact_4',['LoadModuleFromArtifact',['../namespace____plugin__root_1_1dllutil.html#ae711851d171fb1ccae01fed5e5570919',1,'__plugin_root::dllutil']]]
 ];

@@ -1,0 +1,70 @@
+\doxysection{\+\_\+\+\_\+plugin\+\_\+root\+::package Namespace Reference}
+\hypertarget{namespace____plugin__root_1_1package}{}\label{namespace____plugin__root_1_1package}\index{\_\_plugin\_root::package@{\_\_plugin\_root::package}}
+
+
+Logic and behavior dedicated to building a single plugin.  
+
+
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}(const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&)$>$ \mbox{\hyperlink{namespace____plugin__root_1_1package_a23b0b5b41a890d49cede4506c5e180dc}{Build\+Mode\+Handler}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_1_1package_a11aaf75e942b69fa31bc9a478ac527e8}{Build}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Build the module according to how its configuration dictates how it should be expected. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_1_1package_a3147ee7cc4d0cf2163331fe85bb4d052}{Build\+With\+Make}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&source)
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_1_1package_a0867b6ea6669916657a81e99533e21ef}{Build}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&source, \mbox{\hyperlink{namespace____plugin__root_1_1package_a23b0b5b41a890d49cede4506c5e180dc}{Build\+Mode\+Handler}} handler)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Logic and behavior dedicated to building a single plugin. 
+
+\label{doc-typedef-members}
+\Hypertarget{namespace____plugin__root_1_1package_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespace____plugin__root_1_1package_a23b0b5b41a890d49cede4506c5e180dc}\index{\_\_plugin\_root::package@{\_\_plugin\_root::package}!BuildModeHandler@{BuildModeHandler}}
+\index{BuildModeHandler@{BuildModeHandler}!\_\_plugin\_root::package@{\_\_plugin\_root::package}}
+\doxysubsubsection{\texorpdfstring{BuildModeHandler}{BuildModeHandler}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_1_1package_a23b0b5b41a890d49cede4506c5e180dc} 
+typedef std\+::function$<$\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}(const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}}\&)$>$ \+\_\+\+\_\+plugin\+\_\+root\+::package\+::\+Build\+Mode\+Handler}
+
+
+
+\label{doc-func-members}
+\Hypertarget{namespace____plugin__root_1_1package_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace____plugin__root_1_1package_a11aaf75e942b69fa31bc9a478ac527e8}\index{\_\_plugin\_root::package@{\_\_plugin\_root::package}!Build@{Build}}
+\index{Build@{Build}!\_\_plugin\_root::package@{\_\_plugin\_root::package}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_1_1package_a11aaf75e942b69fa31bc9a478ac527e8} 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \+\_\+\+\_\+plugin\+\_\+root\+::package\+::\+Build (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&}]{source}{}\end{DoxyParamCaption})}
+
+
+
+Build the module according to how its configuration dictates how it should be expected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Artifact to reference from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of how the build went. 
+\end{DoxyReturn}
+\Hypertarget{namespace____plugin__root_1_1package_a0867b6ea6669916657a81e99533e21ef}\index{\_\_plugin\_root::package@{\_\_plugin\_root::package}!Build@{Build}}
+\index{Build@{Build}!\_\_plugin\_root::package@{\_\_plugin\_root::package}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_1_1package_a0867b6ea6669916657a81e99533e21ef} 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \+\_\+\+\_\+plugin\+\_\+root\+::package\+::\+Build (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&}]{source}{, }\item[{\mbox{\hyperlink{namespace____plugin__root_1_1package_a23b0b5b41a890d49cede4506c5e180dc}{Build\+Mode\+Handler}}}]{handler}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_1_1package_a3147ee7cc4d0cf2163331fe85bb4d052}\index{\_\_plugin\_root::package@{\_\_plugin\_root::package}!BuildWithMake@{BuildWithMake}}
+\index{BuildWithMake@{BuildWithMake}!\_\_plugin\_root::package@{\_\_plugin\_root::package}}
+\doxysubsubsection{\texorpdfstring{BuildWithMake()}{BuildWithMake()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_1_1package_a3147ee7cc4d0cf2163331fe85bb4d052} 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \+\_\+\+\_\+plugin\+\_\+root\+::package\+::\+Build\+With\+Make (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&}]{source}{}\end{DoxyParamCaption})}
+

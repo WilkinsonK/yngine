@@ -94,13 +94,16 @@ $(function(){initNavTree('namespace____plugin__root.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:command" id="r_command"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1command.html">command</a></td></tr>
 <tr class="memitem:artifact" id="r_artifact"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1artifact.html">artifact</a></td></tr>
-<tr class="memitem:plugin" id="r_plugin"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1plugin.html">plugin</a></td></tr>
+<tr class="memitem:command" id="r_command"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1command.html">command</a></td></tr>
+<tr class="memitem:package" id="r_package"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1package.html">package</a></td></tr>
+<tr class="memdesc:namespace____plugin__root_1_1package"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logic and behavior dedicated to building a single plugin. <br /></td></tr>
 <tr class="memitem:dllutil" id="r_dllutil"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace____plugin__root_1_1dllutil.html">dllutil</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:StateInfo" id="r_StateInfo"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct____plugin__root_1_1_state_info.html">StateInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides information given the current state in detail.  <a href="struct____plugin__root_1_1_state_info.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Context" id="r_Context"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct____plugin__root_1_1_context.html">Context</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -111,31 +114,81 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:a93482d22098267681084c32c0aced568"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of a plugin asset, module or artifact.  <br /></td></tr>
 <tr class="memitem:a5ce749b305b02e6ca53a05d733524345" id="r_a5ce749b305b02e6ca53a05d733524345"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ce749b305b02e6ca53a05d733524345">ObjectEntry</a></td></tr>
 <tr class="memdesc:a5ce749b305b02e6ca53a05d733524345"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#aa005e96428daf47f07c7321131ec1857" title="Path to an arbitrary file or directory.">Path</a> to the object entry point.  <br /></td></tr>
-<tr class="memitem:ace7d11467cf9033aaaaf889c9fe90904" id="r_ace7d11467cf9033aaaaf889c9fe90904"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace7d11467cf9033aaaaf889c9fe90904">ObjectMode</a></td></tr>
-<tr class="memdesc:ace7d11467cf9033aaaaf889c9fe90904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode of how to load the entry point.  <br /></td></tr>
+<tr class="memitem:aaef0dcd42320592a525270c914424ebb" id="r_aaef0dcd42320592a525270c914424ebb"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaef0dcd42320592a525270c914424ebb">ObjectMode</a></td></tr>
+<tr class="memdesc:aaef0dcd42320592a525270c914424ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode of how to build the entry point.  <br /></td></tr>
 <tr class="memitem:a09d45b8a78573e3eb8d0ddd01343a12a" id="r_a09d45b8a78573e3eb8d0ddd01343a12a"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09d45b8a78573e3eb8d0ddd01343a12a">ObjectRef</a></td></tr>
 <tr class="memdesc:a09d45b8a78573e3eb8d0ddd01343a12a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reference to the object loaded dynamically.  <br /></td></tr>
+<tr class="memitem:a13d22b286eb7ccd25930bc3446682973" id="r_a13d22b286eb7ccd25930bc3446682973"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13d22b286eb7ccd25930bc3446682973">ObjectType</a></td></tr>
+<tr class="memdesc:a13d22b286eb7ccd25930bc3446682973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the entry point.  <br /></td></tr>
 <tr class="memitem:aa005e96428daf47f07c7321131ec1857" id="r_aa005e96428daf47f07c7321131ec1857"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa005e96428daf47f07c7321131ec1857">Path</a></td></tr>
 <tr class="memdesc:aa005e96428daf47f07c7321131ec1857"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#aa005e96428daf47f07c7321131ec1857" title="Path to an arbitrary file or directory.">Path</a> to an arbitrary file or directory.  <br /></td></tr>
+<tr class="memitem:a538aaf2e7b9278e0e7cda69be9549a08" id="r_a538aaf2e7b9278e0e7cda69be9549a08"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a538aaf2e7b9278e0e7cda69be9549a08">StateErrMessage</a></td></tr>
+<tr class="memdesc:a538aaf2e7b9278e0e7cda69be9549a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">A message providing more detail about the <span class="tt"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03" title="Possible errors that can occur during the plugin lifecycle.">StateErr</a></span> which occured.  <br /></td></tr>
 <tr class="memitem:a84d5a198ebf7ebdff6e8dc6c22fcb542" id="r_a84d5a198ebf7ebdff6e8dc6c22fcb542"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84d5a198ebf7ebdff6e8dc6c22fcb542">Version</a></td></tr>
 <tr class="memdesc:a84d5a198ebf7ebdff6e8dc6c22fcb542"><td class="mdescLeft">&#160;</td><td class="mdescRight">The version name of a plugin asset, module or artifact.  <br /></td></tr>
+<tr class="memitem:aed145805402c1dfeff6e796b7969bf2e" id="r_aed145805402c1dfeff6e796b7969bf2e"><td class="memItemLeft" align="right" valign="top">typedef enum __plugin_root::StateErrGroup&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed145805402c1dfeff6e796b7969bf2e">StateErrGroup</a></td></tr>
+<tr class="memdesc:aed145805402c1dfeff6e796b7969bf2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The grouping some <span class="tt"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03" title="Possible errors that can occur during the plugin lifecycle.">StateErr</a></span> belongs to.  <br /></td></tr>
+<tr class="memitem:a744f0104cd37f3c8d4442a5e3cf74105" id="r_a744f0104cd37f3c8d4442a5e3cf74105"><td class="memItemLeft" align="right" valign="top">typedef struct __plugin_root::StateInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a744f0104cd37f3c8d4442a5e3cf74105">StateInfo</a></td></tr>
+<tr class="memdesc:a744f0104cd37f3c8d4442a5e3cf74105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides information given the current state in detail.  <br /></td></tr>
 <tr class="memitem:ae48a16d624b75092f0168a1ce094d71a" id="r_ae48a16d624b75092f0168a1ce094d71a"><td class="memTemplParams" colspan="2">template&lt;typename R&gt; </td></tr>
 <tr class="memitem:ae48a16d624b75092f0168a1ce094d71a template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae48a16d624b75092f0168a1ce094d71a">State</a> = std::expected&lt;R, <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>&gt;</td></tr>
 <tr class="memdesc:ae48a16d624b75092f0168a1ce094d71a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for:  <br /></td></tr>
 <tr class="memitem:ab285784acffbf36380c0428e903feb46" id="r_ab285784acffbf36380c0428e903feb46"><td class="memTemplParams" colspan="2">template&lt;typename R, typename ... A&gt; </td></tr>
 <tr class="memitem:ab285784acffbf36380c0428e903feb46 template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab285784acffbf36380c0428e903feb46">StateFn</a> = std::function&lt;<a class="el" href="#ae48a16d624b75092f0168a1ce094d71a">State</a>&lt;R&gt;(A...)&gt;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:abcb37daa5a5b1cf6fda142b30ede13df" id="r_abcb37daa5a5b1cf6fda142b30ede13df"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13df">StateErrGroup</a> { <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13dfa58a14c103edf9147448fb0403c5e50b3">OK</a>
+, <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18">DYNAMIC</a>
+, <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13dfa51d41f4d841ff4b6cbf5b23f1becee9a">MANIFEST</a>
+, <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13dfa81b1efe22dac764a3ce5f08a5a9cc45f">USER</a>
+ }</td></tr>
+<tr class="memdesc:abcb37daa5a5b1cf6fda142b30ede13df"><td class="mdescLeft">&#160;</td><td class="mdescRight">The grouping some <span class="tt"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03" title="Possible errors that can occur during the plugin lifecycle.">StateErr</a></span> belongs to.  <a href="#abcb37daa5a5b1cf6fda142b30ede13df">More...</a><br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ae87f7c54a99d047acf9e828b39747f61" id="r_ae87f7c54a99d047acf9e828b39747f61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct____plugin__root_1_1_context.html">Context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae87f7c54a99d047acf9e828b39747f61">Install</a> (const char *)</td></tr>
+<tr class="memdesc:ae87f7c54a99d047acf9e828b39747f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Install the plugin module from the given artifact manifest.  <br /></td></tr>
 <tr class="memitem:aaa55187fb313655b64c12fdd14ab7e04" id="r_aaa55187fb313655b64c12fdd14ab7e04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct____plugin__root_1_1_context.html">Context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa55187fb313655b64c12fdd14ab7e04">Install</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp;)</td></tr>
 <tr class="memdesc:aaa55187fb313655b64c12fdd14ab7e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Install the plugin module from the given artifact.  <br /></td></tr>
+<tr class="memitem:abc1903f0c87d3323a6e6183020b50573" id="r_abc1903f0c87d3323a6e6183020b50573"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct____plugin__root_1_1_context.html">Context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc1903f0c87d3323a6e6183020b50573">Initialize</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp;)</td></tr>
+<tr class="memdesc:abc1903f0c87d3323a6e6183020b50573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initilizes the plugin module. This is effectively the 'start-up' functionality.  <br /></td></tr>
 <tr class="memitem:aee3919c9fa229b9e584aeae951867f44" id="r_aee3919c9fa229b9e584aeae951867f44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct____plugin__root_1_1_context.html">Context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee3919c9fa229b9e584aeae951867f44">Release</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp;)</td></tr>
 <tr class="memdesc:aee3919c9fa229b9e584aeae951867f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release and destroy plugin module assets.  <br /></td></tr>
-<tr class="memitem:a6fc3f9d65a2d10ac3668e834dd83ca71" id="r_a6fc3f9d65a2d10ac3668e834dd83ca71"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fc3f9d65a2d10ac3668e834dd83ca71">StateGroup</a> (const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;)</td></tr>
-<tr class="memdesc:a6fc3f9d65a2d10ac3668e834dd83ca71"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#ae48a16d624b75092f0168a1ce094d71a" title="Alias for:">State</a> group the state belongs to.  <br /></td></tr>
-<tr class="memitem:ac39cad57c780ffb859ecdb286bdd9177" id="r_ac39cad57c780ffb859ecdb286bdd9177"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac39cad57c780ffb859ecdb286bdd9177">StateMessage</a> (const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;)</td></tr>
-<tr class="memdesc:ac39cad57c780ffb859ecdb286bdd9177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Human-readable explanation of the error state.  <br /></td></tr>
+<tr class="memitem:afaf3928a7b5a1b4ccd12e0ec76860fbf" id="r_afaf3928a7b5a1b4ccd12e0ec76860fbf"><td class="memTemplParams" colspan="2">template&lt;typename T, typename V&gt; </td></tr>
+<tr class="memitem:afaf3928a7b5a1b4ccd12e0ec76860fbf template"><td class="memItemLeft" align="right" valign="top">const T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaf3928a7b5a1b4ccd12e0ec76860fbf">StateGroup</a> (const V &amp;)</td></tr>
+<tr class="memdesc:afaf3928a7b5a1b4ccd12e0ec76860fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#ae48a16d624b75092f0168a1ce094d71a" title="Alias for:">State</a> group the state belongs to.  <br /></td></tr>
+<tr class="memitem:a7e0947d42efee02781eb538b9b3c9a61" id="r_a7e0947d42efee02781eb538b9b3c9a61"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a7e0947d42efee02781eb538b9b3c9a61 template"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e0947d42efee02781eb538b9b3c9a61">StateGroup</a> (const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;)</td></tr>
+<tr class="memitem:ae875baa0bba5e8dbf2c45e3a25078a05" id="r_ae875baa0bba5e8dbf2c45e3a25078a05"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ae875baa0bba5e8dbf2c45e3a25078a05 template"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae875baa0bba5e8dbf2c45e3a25078a05">StateGroup</a> (const <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13df">StateErrGroup</a> &amp;)</td></tr>
+<tr class="memitem:a4aba2ef9ab0abcba4ae6e40918969343" id="r_a4aba2ef9ab0abcba4ae6e40918969343"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a4aba2ef9ab0abcba4ae6e40918969343 template"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13df">StateErrGroup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4aba2ef9ab0abcba4ae6e40918969343">StateGroup</a> (const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;)</td></tr>
+<tr class="memitem:a8dcab26fcc4bc1e1961c5b9714bf2ec9" id="r_a8dcab26fcc4bc1e1961c5b9714bf2ec9"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dcab26fcc4bc1e1961c5b9714bf2ec9">StateMessage</a> (const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;)</td></tr>
+<tr class="memdesc:a8dcab26fcc4bc1e1961c5b9714bf2ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Human-readable explanation of the error state.  <br /></td></tr>
+<tr class="memitem:a3893f932b32a6acd983aee7a468e3c07" id="r_a3893f932b32a6acd983aee7a468e3c07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct____plugin__root_1_1_state_info.html">StateInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3893f932b32a6acd983aee7a468e3c07">operator&amp;</a> (<a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>, <a class="el" href="#a538aaf2e7b9278e0e7cda69be9549a08">StateErrMessage</a>)</td></tr>
 <tr class="memitem:a3c87979575ad101348ccaebdc3f7d377" id="r_a3c87979575ad101348ccaebdc3f7d377"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c87979575ad101348ccaebdc3f7d377">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;)</td></tr>
+<tr class="memitem:a059adc1a2b09a8d53ed994fa6eb3c2fb" id="r_a059adc1a2b09a8d53ed994fa6eb3c2fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a059adc1a2b09a8d53ed994fa6eb3c2fb">operator*</a> (<a class="el" href="struct____plugin__root_1_1_state_info.html">StateInfo</a>)</td></tr>
+<tr class="memitem:a224ecf9fe7c4bea4229602c3a42b938b" id="r_a224ecf9fe7c4bea4229602c3a42b938b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a224ecf9fe7c4bea4229602c3a42b938b">operator==</a> (<a class="el" href="struct____plugin__root_1_1_state_info.html">StateInfo</a>, <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>)</td></tr>
+<tr class="memitem:a7feeef79fbc8a0ff6c9059698e2b8803" id="r_a7feeef79fbc8a0ff6c9059698e2b8803"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7feeef79fbc8a0ff6c9059698e2b8803">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="struct____plugin__root_1_1_state_info.html">StateInfo</a> &amp;)</td></tr>
+<tr class="memitem:a4df0676633e8d6926ff4a018e8dd11cf" id="r_a4df0676633e8d6926ff4a018e8dd11cf"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a4df0676633e8d6926ff4a018e8dd11cf template"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4df0676633e8d6926ff4a018e8dd11cf">StateGroup</a> (const <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13df">StateErrGroup</a> &amp;group)</td></tr>
+<tr class="memitem:afc92e054bbbea75880c73cbd03f4f710" id="r_afc92e054bbbea75880c73cbd03f4f710"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:afc92e054bbbea75880c73cbd03f4f710 template"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc92e054bbbea75880c73cbd03f4f710">StateGroup</a> (const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;state)</td></tr>
+<tr class="memitem:ac6dca043cf8e55d4e6d646eed2f42d96" id="r_ac6dca043cf8e55d4e6d646eed2f42d96"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ac6dca043cf8e55d4e6d646eed2f42d96 template"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13df">StateErrGroup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6dca043cf8e55d4e6d646eed2f42d96">StateGroup</a> (const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;state)</td></tr>
+<tr class="memitem:aa2faaa181cdf3c957558d2073210b28a" id="r_aa2faaa181cdf3c957558d2073210b28a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2faaa181cdf3c957558d2073210b28a">CallCommand</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> *ctx, const char *name)</td></tr>
+<tr class="memitem:a38cd09328c14454373ef1ccb37f94477" id="r_a38cd09328c14454373ef1ccb37f94477"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38cd09328c14454373ef1ccb37f94477">GetName</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> *ctx)</td></tr>
+<tr class="memitem:acac768e7023703f771645e1a4b25af4f" id="r_acac768e7023703f771645e1a4b25af4f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acac768e7023703f771645e1a4b25af4f">GetDescription</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> *ctx)</td></tr>
+<tr class="memitem:aef62642a3c46e04e01866a33a59e7efc" id="r_aef62642a3c46e04e01866a33a59e7efc"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef62642a3c46e04e01866a33a59e7efc">GetDescriptionLong</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> *ctx)</td></tr>
+<tr class="memitem:a34ea00f0406d0d91f73685763ff06cbf" id="r_a34ea00f0406d0d91f73685763ff06cbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34ea00f0406d0d91f73685763ff06cbf">RegisterCommand</a> (const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> *ctx, const char *name, const char *impl_name)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a1d1a2e7250e2c9e57a06b31866a85cfe" id="r_a1d1a2e7250e2c9e57a06b31866a85cfe"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13df">StateErrGroup</a>, <a class="el" href="#a538aaf2e7b9278e0e7cda69be9549a08">StateErrMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d1a2e7250e2c9e57a06b31866a85cfe">StateErrGroupNames</a></td></tr>
+<tr class="memitem:a81386dd6210dc707c36fa3b508e075b9" id="r_a81386dd6210dc707c36fa3b508e075b9"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>, <a class="el" href="#a538aaf2e7b9278e0e7cda69be9549a08">StateErrMessage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81386dd6210dc707c36fa3b508e075b9">StateErrMessages</a></td></tr>
+<tr class="memdesc:a81386dd6210dc707c36fa3b508e075b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The system-defined error messages designated to each kind of <span class="tt"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03" title="Possible errors that can occur during the plugin lifecycle.">StateErr</a></span>.  <br /></td></tr>
+<tr class="memitem:ac749617856800d684fc9edac4eb28e3e" id="r_ac749617856800d684fc9edac4eb28e3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct____plugin__root_1_1_state_info.html">StateInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac749617856800d684fc9edac4eb28e3e">operator*</a> (<a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>)</td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
 <a id="af477c76386a327c88de9bfdc569e359b" name="af477c76386a327c88de9bfdc569e359b"></a>
@@ -186,19 +239,19 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ace7d11467cf9033aaaaf889c9fe90904" name="ace7d11467cf9033aaaaf889c9fe90904"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace7d11467cf9033aaaaf889c9fe90904">&#9670;&#160;</a></span>ObjectMode</h2>
+<a id="aaef0dcd42320592a525270c914424ebb" name="aaef0dcd42320592a525270c914424ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaef0dcd42320592a525270c914424ebb">&#9670;&#160;</a></span>ObjectMode</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef int __plugin_root::ObjectMode</td>
+          <td class="memname">typedef std::string __plugin_root::ObjectMode</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Mode of how to load the entry point. </p>
+<p>Mode of how to build the entry point. </p>
 
 </div>
 </div>
@@ -215,6 +268,22 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A reference to the object loaded dynamically. </p>
+
+</div>
+</div>
+<a id="a13d22b286eb7ccd25930bc3446682973" name="a13d22b286eb7ccd25930bc3446682973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13d22b286eb7ccd25930bc3446682973">&#9670;&#160;</a></span>ObjectType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::string __plugin_root::ObjectType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of the entry point. </p>
 
 </div>
 </div>
@@ -254,6 +323,38 @@ template&lt;typename R&gt; </div>
 
 </div>
 </div>
+<a id="aed145805402c1dfeff6e796b7969bf2e" name="aed145805402c1dfeff6e796b7969bf2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed145805402c1dfeff6e796b7969bf2e">&#9670;&#160;</a></span>StateErrGroup</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum __plugin_root::StateErrGroup __plugin_root::StateErrGroup</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The grouping some <span class="tt"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03" title="Possible errors that can occur during the plugin lifecycle.">StateErr</a></span> belongs to. </p>
+
+</div>
+</div>
+<a id="a538aaf2e7b9278e0e7cda69be9549a08" name="a538aaf2e7b9278e0e7cda69be9549a08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a538aaf2e7b9278e0e7cda69be9549a08">&#9670;&#160;</a></span>StateErrMessage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::string __plugin_root::StateErrMessage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A message providing more detail about the <span class="tt"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03" title="Possible errors that can occur during the plugin lifecycle.">StateErr</a></span> which occured. </p>
+
+</div>
+</div>
 <a id="ab285784acffbf36380c0428e903feb46" name="ab285784acffbf36380c0428e903feb46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab285784acffbf36380c0428e903feb46">&#9670;&#160;</a></span>StateFn</h2>
 
@@ -267,6 +368,22 @@ template&lt;typename R, typename ... A&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a744f0104cd37f3c8d4442a5e3cf74105" name="a744f0104cd37f3c8d4442a5e3cf74105"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744f0104cd37f3c8d4442a5e3cf74105">&#9670;&#160;</a></span>StateInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct __plugin_root::StateInfo __plugin_root::StateInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides information given the current state in detail. </p>
 
 </div>
 </div>
@@ -286,9 +403,156 @@ template&lt;typename R, typename ... A&gt; </div>
 
 </div>
 </div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="abcb37daa5a5b1cf6fda142b30ede13df" name="abcb37daa5a5b1cf6fda142b30ede13df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb37daa5a5b1cf6fda142b30ede13df">&#9670;&#160;</a></span>StateErrGroup</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum __plugin_root::StateErrGroup</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The grouping some <span class="tt"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03" title="Possible errors that can occur during the plugin lifecycle.">StateErr</a></span> belongs to. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abcb37daa5a5b1cf6fda142b30ede13dfa58a14c103edf9147448fb0403c5e50b3" name="abcb37daa5a5b1cf6fda142b30ede13dfa58a14c103edf9147448fb0403c5e50b3"></a>OK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18" name="abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18"></a>DYNAMIC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcb37daa5a5b1cf6fda142b30ede13dfa51d41f4d841ff4b6cbf5b23f1becee9a" name="abcb37daa5a5b1cf6fda142b30ede13dfa51d41f4d841ff4b6cbf5b23f1becee9a"></a>MANIFEST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abcb37daa5a5b1cf6fda142b30ede13dfa81b1efe22dac764a3ce5f08a5a9cc45f" name="abcb37daa5a5b1cf6fda142b30ede13dfa81b1efe22dac764a3ce5f08a5a9cc45f"></a>USER&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="aa2faaa181cdf3c957558d2073210b28a" name="aa2faaa181cdf3c957558d2073210b28a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2faaa181cdf3c957558d2073210b28a">&#9670;&#160;</a></span>CallCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> __plugin_root::CallCommand </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acac768e7023703f771645e1a4b25af4f" name="acac768e7023703f771645e1a4b25af4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac768e7023703f771645e1a4b25af4f">&#9670;&#160;</a></span>GetDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * __plugin_root::GetDescription </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef62642a3c46e04e01866a33a59e7efc" name="aef62642a3c46e04e01866a33a59e7efc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef62642a3c46e04e01866a33a59e7efc">&#9670;&#160;</a></span>GetDescriptionLong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * __plugin_root::GetDescriptionLong </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38cd09328c14454373ef1ccb37f94477" name="a38cd09328c14454373ef1ccb37f94477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38cd09328c14454373ef1ccb37f94477">&#9670;&#160;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * __plugin_root::GetName </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc1903f0c87d3323a6e6183020b50573" name="abc1903f0c87d3323a6e6183020b50573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1903f0c87d3323a6e6183020b50573">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct____plugin__root_1_1_context.html">Context</a> __plugin_root::Initialize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initilizes the plugin module. This is effectively the 'start-up' functionality. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>of the artifact owning the module. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>context passed to this function. </dd></dl>
+
+</div>
+</div>
+<a id="ae87f7c54a99d047acf9e828b39747f61" name="ae87f7c54a99d047acf9e828b39747f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae87f7c54a99d047acf9e828b39747f61">&#9670;&#160;</a></span>Install() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct____plugin__root_1_1_context.html">Context</a> __plugin_root::Install </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Install the plugin module from the given artifact manifest. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>of the artifact owning the module. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>context passed to this function. </dd></dl>
+
+</div>
+</div>
 <a id="aaa55187fb313655b64c12fdd14ab7e04" name="aaa55187fb313655b64c12fdd14ab7e04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa55187fb313655b64c12fdd14ab7e04">&#9670;&#160;</a></span>Install()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa55187fb313655b64c12fdd14ab7e04">&#9670;&#160;</a></span>Install() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,16 +569,54 @@ template&lt;typename R, typename ... A&gt; </div>
 <p>Install the plugin module from the given artifact. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">source</td><td>artifact to install from/into. </td></tr>
+    <tr><td class="paramname">ctx</td><td>of the artifact owning the module. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The artifact after installation. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>context passed to this function. </dd></dl>
+
+</div>
+</div>
+<a id="a3893f932b32a6acd983aee7a468e3c07" name="a3893f932b32a6acd983aee7a468e3c07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3893f932b32a6acd983aee7a468e3c07">&#9670;&#160;</a></span>operator&amp;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct____plugin__root_1_1_state_info.html">StateInfo</a> __plugin_root::operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a538aaf2e7b9278e0e7cda69be9549a08">StateErrMessage</a></td>          <td class="paramname"><span class="paramname"><em>detail</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a059adc1a2b09a8d53ed994fa6eb3c2fb" name="a059adc1a2b09a8d53ed994fa6eb3c2fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a059adc1a2b09a8d53ed994fa6eb3c2fb">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> __plugin_root::operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct____plugin__root_1_1_state_info.html">StateInfo</a></td>          <td class="paramname"><span class="paramname"><em>info</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <a id="a3c87979575ad101348ccaebdc3f7d377" name="a3c87979575ad101348ccaebdc3f7d377"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c87979575ad101348ccaebdc3f7d377">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c87979575ad101348ccaebdc3f7d377">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,6 +630,74 @@ template&lt;typename R, typename ... A&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7feeef79fbc8a0ff6c9059698e2b8803" name="a7feeef79fbc8a0ff6c9059698e2b8803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7feeef79fbc8a0ff6c9059698e2b8803">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; __plugin_root::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct____plugin__root_1_1_state_info.html">StateInfo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>info</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a224ecf9fe7c4bea4229602c3a42b938b" name="a224ecf9fe7c4bea4229602c3a42b938b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a224ecf9fe7c4bea4229602c3a42b938b">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool __plugin_root::operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct____plugin__root_1_1_state_info.html">StateInfo</a></td>          <td class="paramname"><span class="paramname"><em>info</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34ea00f0406d0d91f73685763ff06cbf" name="a34ea00f0406d0d91f73685763ff06cbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34ea00f0406d0d91f73685763ff06cbf">&#9670;&#160;</a></span>RegisterCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> __plugin_root::RegisterCommand </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct____plugin__root_1_1_context.html">Context</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>impl_name</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -352,24 +722,140 @@ template&lt;typename R, typename ... A&gt; </div>
 <p>Release and destroy plugin module assets. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">source</td><td>artifact owning the module. </td></tr>
+    <tr><td class="paramname">ctx</td><td>of the artifact owning the module. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The artifact after releasing assets. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>context passed to this function. </dd></dl>
 
 </div>
 </div>
-<a id="a6fc3f9d65a2d10ac3668e834dd83ca71" name="a6fc3f9d65a2d10ac3668e834dd83ca71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fc3f9d65a2d10ac3668e834dd83ca71">&#9670;&#160;</a></span>StateGroup()</h2>
+<a id="a4aba2ef9ab0abcba4ae6e40918969343" name="a4aba2ef9ab0abcba4ae6e40918969343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aba2ef9ab0abcba4ae6e40918969343">&#9670;&#160;</a></span>StateGroup() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13df">StateErrGroup</a> __plugin_root::StateGroup </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e0947d42efee02781eb538b9b3c9a61" name="a7e0947d42efee02781eb538b9b3c9a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0947d42efee02781eb538b9b3c9a61">&#9670;&#160;</a></span>StateGroup() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">const std::string __plugin_root::StateGroup </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6dca043cf8e55d4e6d646eed2f42d96" name="ac6dca043cf8e55d4e6d646eed2f42d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6dca043cf8e55d4e6d646eed2f42d96">&#9670;&#160;</a></span>StateGroup() <span class="overload">[3/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13df">StateErrGroup</a> __plugin_root::StateGroup </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc92e054bbbea75880c73cbd03f4f710" name="afc92e054bbbea75880c73cbd03f4f710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc92e054bbbea75880c73cbd03f4f710">&#9670;&#160;</a></span>StateGroup() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string __plugin_root::StateGroup </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae875baa0bba5e8dbf2c45e3a25078a05" name="ae875baa0bba5e8dbf2c45e3a25078a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae875baa0bba5e8dbf2c45e3a25078a05">&#9670;&#160;</a></span>StateGroup() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string __plugin_root::StateGroup </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13df">StateErrGroup</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>group</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4df0676633e8d6926ff4a018e8dd11cf" name="a4df0676633e8d6926ff4a018e8dd11cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4df0676633e8d6926ff4a018e8dd11cf">&#9670;&#160;</a></span>StateGroup() <span class="overload">[6/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string __plugin_root::StateGroup </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13df">StateErrGroup</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>group</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afaf3928a7b5a1b4ccd12e0ec76860fbf" name="afaf3928a7b5a1b4ccd12e0ec76860fbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf3928a7b5a1b4ccd12e0ec76860fbf">&#9670;&#160;</a></span>StateGroup() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename V&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const T __plugin_root::StateGroup </td>
+          <td>(</td>
+          <td class="paramtype">const V &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -386,14 +872,14 @@ template&lt;typename R, typename ... A&gt; </div>
 
 </div>
 </div>
-<a id="ac39cad57c780ffb859ecdb286bdd9177" name="ac39cad57c780ffb859ecdb286bdd9177"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac39cad57c780ffb859ecdb286bdd9177">&#9670;&#160;</a></span>StateMessage()</h2>
+<a id="a8dcab26fcc4bc1e1961c5b9714bf2ec9" name="a8dcab26fcc4bc1e1961c5b9714bf2ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dcab26fcc4bc1e1961c5b9714bf2ec9">&#9670;&#160;</a></span>StateMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string __plugin_root::StateMessage </td>
+          <td class="memname">const <a class="el" href="#a538aaf2e7b9278e0e7cda69be9549a08">StateErrMessage</a> __plugin_root::StateMessage </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
           <td></td>
@@ -409,6 +895,87 @@ template&lt;typename R, typename ... A&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Human-readable message. </dd></dl>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="ac749617856800d684fc9edac4eb28e3e" name="ac749617856800d684fc9edac4eb28e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac749617856800d684fc9edac4eb28e3e">&#9670;&#160;</a></span>operator*</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a> __plugin_root::operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d1a2e7250e2c9e57a06b31866a85cfe" name="a1d1a2e7250e2c9e57a06b31866a85cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d1a2e7250e2c9e57a06b31866a85cfe">&#9670;&#160;</a></span>StateErrGroupNames</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;<a class="el" href="#abcb37daa5a5b1cf6fda142b30ede13df">StateErrGroup</a>, <a class="el" href="#a538aaf2e7b9278e0e7cda69be9549a08">StateErrMessage</a>&gt; __plugin_root::StateErrGroupNames</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        { <a class="code hl_enumvalue" href="#abcb37daa5a5b1cf6fda142b30ede13dfa58a14c103edf9147448fb0403c5e50b3">OK</a>,       <span class="stringliteral">&quot;OK&quot;</span>  },</div>
+<div class="line">        { <a class="code hl_enumvalue" href="#abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18">DYNAMIC</a>,  <span class="stringliteral">&quot;DLL&quot;</span> },</div>
+<div class="line">        { MANIFEST, <span class="stringliteral">&quot;MAN&quot;</span> },</div>
+<div class="line">        { <a class="code hl_enumvalue" href="#abcb37daa5a5b1cf6fda142b30ede13dfa81b1efe22dac764a3ce5f08a5a9cc45f">USER</a>,     <span class="stringliteral">&quot;USR&quot;</span> }</div>
+<div class="line">    }</div>
+<div class="ttc" id="anamespace____plugin__root_html_abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18"><div class="ttname"><a href="#abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18">__plugin_root::DYNAMIC</a></div><div class="ttdeci">@ DYNAMIC</div><div class="ttdef"><b>Definition</b> plugin.hpp:52</div></div>
+<div class="ttc" id="anamespace____plugin__root_html_abcb37daa5a5b1cf6fda142b30ede13dfa58a14c103edf9147448fb0403c5e50b3"><div class="ttname"><a href="#abcb37daa5a5b1cf6fda142b30ede13dfa58a14c103edf9147448fb0403c5e50b3">__plugin_root::OK</a></div><div class="ttdeci">@ OK</div><div class="ttdef"><b>Definition</b> plugin.hpp:51</div></div>
+<div class="ttc" id="anamespace____plugin__root_html_abcb37daa5a5b1cf6fda142b30ede13dfa81b1efe22dac764a3ce5f08a5a9cc45f"><div class="ttname"><a href="#abcb37daa5a5b1cf6fda142b30ede13dfa81b1efe22dac764a3ce5f08a5a9cc45f">__plugin_root::USER</a></div><div class="ttdeci">@ USER</div><div class="ttdef"><b>Definition</b> plugin.hpp:54</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a81386dd6210dc707c36fa3b508e075b9" name="a81386dd6210dc707c36fa3b508e075b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81386dd6210dc707c36fa3b508e075b9">&#9670;&#160;</a></span>StateErrMessages</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;<a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03">StateErr</a>, <a class="el" href="#a538aaf2e7b9278e0e7cda69be9549a08">StateErrMessage</a>&gt; __plugin_root::StateErrMessages</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        { <a class="code hl_enumvalue" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a>,           <span class="stringliteral">&quot;no error&quot;</span>                       },</div>
+<div class="line">        { <a class="code hl_enumvalue" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a1eda451e6af890743177dd1c50d193b1">DLL_MALFORMAT</a>,  <span class="stringliteral">&quot;bad dll format&quot;</span>                 },</div>
+<div class="line">        { <a class="code hl_enumvalue" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a9314dcb57cdb5e341beb809eb0dfeddc">DLL_NOCALLBACK</a>, <span class="stringliteral">&quot;missing callback&quot;</span>               },</div>
+<div class="line">        { <a class="code hl_enumvalue" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ad43a10efcfb4462aead6359fb4dc12a3">DLL_NOINSTALL</a>,  <span class="stringliteral">&quot;artifact not installed&quot;</span>         },</div>
+<div class="line">        { <a class="code hl_enumvalue" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac">DLL_NOMODULE</a>,   <span class="stringliteral">&quot;missing module&quot;</span>                 },</div>
+<div class="line">        { <a class="code hl_enumvalue" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0">DLL_NOOBJECT</a>,   <span class="stringliteral">&quot;missing module object&quot;</span>          },</div>
+<div class="line">        { <a class="code hl_enumvalue" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c">DLL_NORELEASE</a>,  <span class="stringliteral">&quot;artifact not released&quot;</span>          },</div>
+<div class="line">        { <a class="code hl_enumvalue" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be">DLL_NOSCOPE</a>,    <span class="stringliteral">&quot;missing scope of module object&quot;</span> },</div>
+<div class="line">        { <a class="code hl_enumvalue" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aacb8a965f9ffbc983a406f8b306941e8">MAN_NOHEADER</a>,   <span class="stringliteral">&quot;missing manifest header&quot;</span>        },</div>
+<div class="line">        { <a class="code hl_enumvalue" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e">MAN_NOMAN</a>,      <span class="stringliteral">&quot;missing manifest file&quot;</span>          },</div>
+<div class="line">        { <a class="code hl_enumvalue" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5">MAN_MALPARSE</a>,   <span class="stringliteral">&quot;bad format in manifest&quot;</span>         },</div>
+<div class="line">    }</div>
+<div class="ttc" id="aplugin_8h_html_a1d65491ca14b98a2d74d54a94a494b03a1eda451e6af890743177dd1c50d193b1"><div class="ttname"><a href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a1eda451e6af890743177dd1c50d193b1">DLL_MALFORMAT</a></div><div class="ttdeci">@ DLL_MALFORMAT</div><div class="ttdoc">Object file is not in a format recognized by the host system.</div><div class="ttdef"><b>Definition</b> plugin.h:36</div></div>
+<div class="ttc" id="aplugin_8h_html_a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c"><div class="ttname"><a href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c">DLL_NORELEASE</a></div><div class="ttdeci">@ DLL_NORELEASE</div><div class="ttdoc">Plugin/artifact was not released.</div><div class="ttdef"><b>Definition</b> plugin.h:55</div></div>
+<div class="ttc" id="aplugin_8h_html_a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e"><div class="ttname"><a href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e">MAN_NOMAN</a></div><div class="ttdeci">@ MAN_NOMAN</div><div class="ttdoc">Missing manifest file.</div><div class="ttdef"><b>Definition</b> plugin.h:62</div></div>
+<div class="ttc" id="aplugin_8h_html_a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac"><div class="ttname"><a href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac">DLL_NOMODULE</a></div><div class="ttdeci">@ DLL_NOMODULE</div><div class="ttdoc">No module could be found on path or it is unavailable.</div><div class="ttdef"><b>Definition</b> plugin.h:50</div></div>
+<div class="ttc" id="aplugin_8h_html_a1d65491ca14b98a2d74d54a94a494b03a9314dcb57cdb5e341beb809eb0dfeddc"><div class="ttname"><a href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a9314dcb57cdb5e341beb809eb0dfeddc">DLL_NOCALLBACK</a></div><div class="ttdeci">@ DLL_NOCALLBACK</div><div class="ttdoc">Missing a callback/function from the object file.</div><div class="ttdef"><b>Definition</b> plugin.h:39</div></div>
+<div class="ttc" id="aplugin_8h_html_a1d65491ca14b98a2d74d54a94a494b03aacb8a965f9ffbc983a406f8b306941e8"><div class="ttname"><a href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aacb8a965f9ffbc983a406f8b306941e8">MAN_NOHEADER</a></div><div class="ttdeci">@ MAN_NOHEADER</div><div class="ttdoc">Missing manifest header.</div><div class="ttdef"><b>Definition</b> plugin.h:60</div></div>
+<div class="ttc" id="aplugin_8h_html_a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be"><div class="ttname"><a href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be">DLL_NOSCOPE</a></div><div class="ttdeci">@ DLL_NOSCOPE</div><div class="ttdoc">Missing scope attribute from the object file.</div><div class="ttdef"><b>Definition</b> plugin.h:58</div></div>
+<div class="ttc" id="aplugin_8h_html_a1d65491ca14b98a2d74d54a94a494b03ac157bdf0b85a40d2619cbc8bc1ae5fe2"><div class="ttname"><a href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdef"><b>Definition</b> plugin.h:33</div></div>
+<div class="ttc" id="aplugin_8h_html_a1d65491ca14b98a2d74d54a94a494b03ad43a10efcfb4462aead6359fb4dc12a3"><div class="ttname"><a href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ad43a10efcfb4462aead6359fb4dc12a3">DLL_NOINSTALL</a></div><div class="ttdeci">@ DLL_NOINSTALL</div><div class="ttdoc">Plugin/artifact was not installed.</div><div class="ttdef"><b>Definition</b> plugin.h:47</div></div>
+<div class="ttc" id="aplugin_8h_html_a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5"><div class="ttname"><a href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5">MAN_MALPARSE</a></div><div class="ttdeci">@ MAN_MALPARSE</div><div class="ttdoc">Issue occured when parsing a manifest.</div><div class="ttdef"><b>Definition</b> plugin.h:64</div></div>
+<div class="ttc" id="aplugin_8h_html_a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0"><div class="ttname"><a href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0">DLL_NOOBJECT</a></div><div class="ttdeci">@ DLL_NOOBJECT</div><div class="ttdoc">Missing an object/asset from the object file.</div><div class="ttdef"><b>Definition</b> plugin.h:53</div></div>
+</div><!-- fragment -->
+<p>The system-defined error messages designated to each kind of <span class="tt"><a class="el" href="plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03" title="Possible errors that can occur during the plugin lifecycle.">StateErr</a></span>. </p>
 
 </div>
 </div>

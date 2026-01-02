@@ -9,41 +9,43 @@ Defines utility macros for declaring some source as part of a plugin module.
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{plugin__module_8h_a53c33d100a429a93bda9aead698d9cce}{plugin\+\_\+module\+\_\+head}}
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a53c33d100a429a93bda9aead698d9cce}{plugin\+\_\+module\+\_\+head}}
 \begin{DoxyCompactList}\small\item\em The header/preamble required for declarations that must be available to the plugin ecosystem. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_ac107fbe40b09adb72e3718f8ead1f19e}{plugin\+\_\+module\+\_\+tail}}
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_ac107fbe40b09adb72e3718f8ead1f19e}{plugin\+\_\+module\+\_\+tail}}
 \begin{DoxyCompactList}\small\item\em The footer/closer required for declarations that must be available to the plugin ecosystem. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c}{plugin\+\_\+module\+\_\+export}}
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c}{plugin\+\_\+module\+\_\+export}}
 \begin{DoxyCompactList}\small\item\em Exports the object/callable/etc. without mangling the names, making it available at load time. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_a662737215e1ac0ff92737f43e4f6fb17}{plugin\+\_\+call\+\_\+command}}(cmd\+\_\+name)
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a662737215e1ac0ff92737f43e4f6fb17}{plugin\+\_\+call\+\_\+command}}(cmd\+\_\+name)
 \item 
-\#define \mbox{\hyperlink{plugin__module_8h_a9c12a95ce37111bde6ac9b04312fc495}{plugin\+\_\+get\+\_\+description}}()
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a9c12a95ce37111bde6ac9b04312fc495}{plugin\+\_\+get\+\_\+description}}()
 \item 
-\#define \mbox{\hyperlink{plugin__module_8h_a4952675b62f1fd7333a45095a183535a}{plugin\+\_\+get\+\_\+description\+\_\+long}}()
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a4952675b62f1fd7333a45095a183535a}{plugin\+\_\+get\+\_\+description\+\_\+long}}()
 \item 
-\#define \mbox{\hyperlink{plugin__module_8h_a3653463f8565c777a58d6d7670a05ec9}{plugin\+\_\+get\+\_\+name}}()
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a3653463f8565c777a58d6d7670a05ec9}{plugin\+\_\+get\+\_\+name}}()
 \item 
-\#define \mbox{\hyperlink{plugin__module_8h_af33dae6245181d4123adc741dcc506fc}{plugin\+\_\+register\+\_\+command}}(cmd\+\_\+name,  cmd\+\_\+impl\+\_\+name)
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_af33dae6245181d4123adc741dcc506fc}{plugin\+\_\+register\+\_\+command}}(cmd\+\_\+name,  cmd\+\_\+impl\+\_\+name)
 \item 
-\#define \mbox{\hyperlink{plugin__module_8h_aef93f1f36b5922e43607816a326a3d9f}{attribute}}~\mbox{\hyperlink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c}{plugin\+\_\+module\+\_\+export}}
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_aef93f1f36b5922e43607816a326a3d9f}{attribute}}~\mbox{\hyperlink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c}{plugin\+\_\+module\+\_\+export}}
 \begin{DoxyCompactList}\small\item\em Alias for {\ttfamily \doxylink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c}{plugin\+\_\+module\+\_\+export}} for convenience. Depending on the language of the module (c/c++), includes implicit extern calls to prevent name mangling when the attribute needs to be accessed. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_ac8600f22f8df458328e509a5e750864c}{command\+\_\+def}}~\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_ac8600f22f8df458328e509a5e750864c}{command\+\_\+def}}~\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}
 \begin{DoxyCompactList}\small\item\em Declares the initial definition of a command. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_a70e822a5a49cd97e6e4cd3b9ad29ff8a}{command\+\_\+ident}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}, ...)
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a70e822a5a49cd97e6e4cd3b9ad29ff8a}{command\+\_\+ident}}(name, ...)
 \begin{DoxyCompactList}\small\item\em Declares the identity of a command. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_aa72c62d09a7e9078ff53a9a43ff2c409}{command\+\_\+sig}}~(const Context \texorpdfstring{$\ast$}{*}ctx)
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_aa72c62d09a7e9078ff53a9a43ff2c409}{command\+\_\+sig}}~(const Context \texorpdfstring{$\ast$}{*}ctx)
 \begin{DoxyCompactList}\small\item\em Declares the command signagure used by all command declarations. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_a69c32bebb3fba95a7a284821a7a45ef8}{command\+\_\+decl}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}})
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a69c32bebb3fba95a7a284821a7a45ef8}{command\+\_\+decl}}(name)
 \begin{DoxyCompactList}\small\item\em Declares the signature of a command. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_a5249ad20dcc27d71fd9d3576952dcf54}{command\+\_\+raw}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}},  ident,  scope)
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a5249ad20dcc27d71fd9d3576952dcf54}{command\+\_\+raw}}(name,  ident,  scope)
 \begin{DoxyCompactList}\small\item\em Declares a raw command. A raw command is a series of artifacts which, when composed, define a {\ttfamily Command} within the plugin ecosystem. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_a8b273c9178ab7ca06572de9a3331d10e}{command}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}},  scope)
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a8b273c9178ab7ca06572de9a3331d10e}{command}}(name,  scope)
 \begin{DoxyCompactList}\small\item\em Declares a user-\/defined scoped command. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_a7e201bd5013827180a56da3c3ca983e8}{oninstall}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}})
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a89b3749eefaec213eea9c7b7ac05293e}{oninitialize}}(name)
+\item 
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a7e201bd5013827180a56da3c3ca983e8}{oninstall}}(name)
 \begin{DoxyCompactList}\small\item\em Declares the install callback. This callback will be loaded and used to install the plugin. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_abf8cc66d2ac563b3d419c2254b0a5d58}{onrelease}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}})
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_abf8cc66d2ac563b3d419c2254b0a5d58}{onrelease}}(name)
 \begin{DoxyCompactList}\small\item\em Declares the release callback. This callback will be loaded and used to destroy the plugin and release its assets (if necessary). \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{plugin__module_8h_a2fdde508ad95a9ef6355abe33f5d0602}{plugin\+\_\+module}}(...)
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin__module_8h_a2fdde508ad95a9ef6355abe33f5d0602}{plugin\+\_\+module}}(...)
 \begin{DoxyCompactList}\small\item\em Encloses the wrapped declarations as exportable items that are then made available to the plugin ecosystem as a result. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -59,7 +61,7 @@ Defines utility macros for declaring some source as part of a plugin module.
 \index{attribute@{attribute}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{attribute}{attribute}}
 {\footnotesize\ttfamily \label{plugin__module_8h_aef93f1f36b5922e43607816a326a3d9f} 
-\#define attribute~\mbox{\hyperlink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c}{plugin\+\_\+module\+\_\+export}}}
+\#\mbox{\hyperlink{namespacedefine}{define}} attribute~\mbox{\hyperlink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c}{plugin\+\_\+module\+\_\+export}}}
 
 
 
@@ -69,11 +71,11 @@ Alias for {\ttfamily \doxylink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e
 \index{command@{command}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{command}{command}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a8b273c9178ab7ca06572de9a3331d10e} 
-\#define command(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{, }\item[{}]{scope}{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} command(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{scope}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_a5249ad20dcc27d71fd9d3576952dcf54}{command\_raw}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}},\ \mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}},\ scope)}
+\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_a5249ad20dcc27d71fd9d3576952dcf54}{command\_raw}}(name,\ name,\ scope)}
 
 \end{DoxyCode}
 
@@ -91,11 +93,11 @@ Declares a user-\/defined scoped command.
 \index{command\_decl@{command\_decl}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{command\_decl}{command\_decl}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a69c32bebb3fba95a7a284821a7a45ef8} 
-\#define command\+\_\+decl(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} command\+\_\+decl(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c}{plugin\_module\_export}}\ \mbox{\hyperlink{plugin__module_8h_ac8600f22f8df458328e509a5e750864c}{command\_def}}\ \mbox{\hyperlink{plugin__module_8h_a70e822a5a49cd97e6e4cd3b9ad29ff8a}{command\_ident}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}})\ \mbox{\hyperlink{plugin__module_8h_aa72c62d09a7e9078ff53a9a43ff2c409}{command\_sig}}}
+\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c}{plugin\_module\_export}}\ \mbox{\hyperlink{plugin__module_8h_ac8600f22f8df458328e509a5e750864c}{command\_def}}\ \mbox{\hyperlink{plugin__module_8h_a70e822a5a49cd97e6e4cd3b9ad29ff8a}{command\_ident}}(name)\ \mbox{\hyperlink{plugin__module_8h_aa72c62d09a7e9078ff53a9a43ff2c409}{command\_sig}}}
 
 \end{DoxyCode}
 
@@ -111,7 +113,7 @@ Declares the signature of a command.
 \index{command\_def@{command\_def}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{command\_def}{command\_def}}
 {\footnotesize\ttfamily \label{plugin__module_8h_ac8600f22f8df458328e509a5e750864c} 
-\#define command\+\_\+def~\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}}
+\#\mbox{\hyperlink{namespacedefine}{define}} command\+\_\+def~\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}}
 
 
 
@@ -121,11 +123,11 @@ Declares the initial definition of a command.
 \index{command\_ident@{command\_ident}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{command\_ident}{command\_ident}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a70e822a5a49cd97e6e4cd3b9ad29ff8a} 
-\#define command\+\_\+ident(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} command\+\_\+ident(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}\#\#\_command\#\#\_\_VA\_OPT\_\_(\_\_VA\_ARGS\_\_)}
+\DoxyCodeLine{name\#\#\_command\#\#\_\_VA\_OPT\_\_(\_\_VA\_ARGS\_\_)}
 
 \end{DoxyCode}
 
@@ -141,14 +143,14 @@ Declares the identity of a command.
 \index{command\_raw@{command\_raw}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{command\_raw}{command\_raw}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a5249ad20dcc27d71fd9d3576952dcf54} 
-\#define command\+\_\+raw(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{, }\item[{}]{ident}{, }\item[{}]{scope}{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} command\+\_\+raw(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{ident}{, }\item[{}]{scope}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{plugin__module_8h_a69c32bebb3fba95a7a284821a7a45ef8}{command\_decl}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}});\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{plugin__module_8h_a69c32bebb3fba95a7a284821a7a45ef8}{command\_decl}}(name);\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{plugin__module_8h_aef93f1f36b5922e43607816a326a3d9f}{attribute}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0}{CommandScope}}\ \mbox{\hyperlink{plugin__module_8h_a70e822a5a49cd97e6e4cd3b9ad29ff8a}{command\_ident}}(ident,\ Scope)\ =\ scope;\ \(\backslash\)}
-\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{plugin__module_8h_aef93f1f36b5922e43607816a326a3d9f}{attribute}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_ab6f5f76c65ecbadbb3398d097f4b52d4}{CommandImpl}}\ \ \mbox{\hyperlink{plugin__module_8h_a70e822a5a49cd97e6e4cd3b9ad29ff8a}{command\_ident}}(ident,\ Impl)\ \ =\ \mbox{\hyperlink{plugin__module_8h_a70e822a5a49cd97e6e4cd3b9ad29ff8a}{command\_ident}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}});\ \(\backslash\)}
-\DoxyCodeLine{\ \ \ \ command\_decl(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}})}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{plugin__module_8h_aef93f1f36b5922e43607816a326a3d9f}{attribute}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{plugin_8h_ab6f5f76c65ecbadbb3398d097f4b52d4}{CommandImpl}}\ \ \mbox{\hyperlink{plugin__module_8h_a70e822a5a49cd97e6e4cd3b9ad29ff8a}{command\_ident}}(ident,\ Impl)\ \ =\ \mbox{\hyperlink{plugin__module_8h_a70e822a5a49cd97e6e4cd3b9ad29ff8a}{command\_ident}}(name);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ command\_decl(name)}
 
 \end{DoxyCode}
 
@@ -168,21 +170,32 @@ Declares a raw command. A raw command is a series of artifacts which, when compo
 \index{command\_sig@{command\_sig}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{command\_sig}{command\_sig}}
 {\footnotesize\ttfamily \label{plugin__module_8h_aa72c62d09a7e9078ff53a9a43ff2c409} 
-\#define command\+\_\+sig~(const Context \texorpdfstring{$\ast$}{*}ctx)}
+\#\mbox{\hyperlink{namespacedefine}{define}} command\+\_\+sig~(const Context \texorpdfstring{$\ast$}{*}ctx)}
 
 
 
 Declares the command signagure used by all command declarations. 
 
+\Hypertarget{plugin__module_8h_a89b3749eefaec213eea9c7b7ac05293e}\index{plugin\_module.h@{plugin\_module.h}!oninitialize@{oninitialize}}
+\index{oninitialize@{oninitialize}!plugin\_module.h@{plugin\_module.h}}
+\doxysubsubsection{\texorpdfstring{oninitialize}{oninitialize}}
+{\footnotesize\ttfamily \label{plugin__module_8h_a89b3749eefaec213eea9c7b7ac05293e} 
+\#\mbox{\hyperlink{namespacedefine}{define}} oninitialize(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_a5249ad20dcc27d71fd9d3576952dcf54}{command\_raw}}(name,\ OnInitialize,\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0af828bc82c537119c89b55d2db41ec75b}{SCOPE\_LOCAL}})}
+
+\end{DoxyCode}
 \Hypertarget{plugin__module_8h_a7e201bd5013827180a56da3c3ca983e8}\index{plugin\_module.h@{plugin\_module.h}!oninstall@{oninstall}}
 \index{oninstall@{oninstall}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{oninstall}{oninstall}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a7e201bd5013827180a56da3c3ca983e8} 
-\#define oninstall(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} oninstall(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_a5249ad20dcc27d71fd9d3576952dcf54}{command\_raw}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}},\ OnInstall,\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8}{SCOPE\_GLOBAL}})}
+\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_a5249ad20dcc27d71fd9d3576952dcf54}{command\_raw}}(name,\ OnInstall,\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0af828bc82c537119c89b55d2db41ec75b}{SCOPE\_LOCAL}})}
 
 \end{DoxyCode}
 
@@ -198,11 +211,11 @@ Declares the install callback. This callback will be loaded and used to install 
 \index{onrelease@{onrelease}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{onrelease}{onrelease}}
 {\footnotesize\ttfamily \label{plugin__module_8h_abf8cc66d2ac563b3d419c2254b0a5d58} 
-\#define onrelease(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} onrelease(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_a5249ad20dcc27d71fd9d3576952dcf54}{command\_raw}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}},\ OnRelease,\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8}{SCOPE\_GLOBAL}})}
+\DoxyCodeLine{\mbox{\hyperlink{plugin__module_8h_a5249ad20dcc27d71fd9d3576952dcf54}{command\_raw}}(name,\ OnRelease,\ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0af828bc82c537119c89b55d2db41ec75b}{SCOPE\_LOCAL}})}
 
 \end{DoxyCode}
 
@@ -218,7 +231,7 @@ Declares the release callback. This callback will be loaded and used to destroy 
 \index{plugin\_call\_command@{plugin\_call\_command}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{plugin\_call\_command}{plugin\_call\_command}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a662737215e1ac0ff92737f43e4f6fb17} 
-\#define plugin\+\_\+call\+\_\+command(\begin{DoxyParamCaption}\item[{}]{cmd\+\_\+name}{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} plugin\+\_\+call\+\_\+command(\begin{DoxyParamCaption}\item[{}]{cmd\+\_\+name}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
@@ -229,7 +242,7 @@ Declares the release callback. This callback will be loaded and used to destroy 
 \index{plugin\_get\_description@{plugin\_get\_description}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{plugin\_get\_description}{plugin\_get\_description}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a9c12a95ce37111bde6ac9b04312fc495} 
-\#define plugin\+\_\+get\+\_\+description(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} plugin\+\_\+get\+\_\+description(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
@@ -240,7 +253,7 @@ Declares the release callback. This callback will be loaded and used to destroy 
 \index{plugin\_get\_description\_long@{plugin\_get\_description\_long}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{plugin\_get\_description\_long}{plugin\_get\_description\_long}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a4952675b62f1fd7333a45095a183535a} 
-\#define plugin\+\_\+get\+\_\+description\+\_\+long(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} plugin\+\_\+get\+\_\+description\+\_\+long(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
@@ -251,7 +264,7 @@ Declares the release callback. This callback will be loaded and used to destroy 
 \index{plugin\_get\_name@{plugin\_get\_name}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{plugin\_get\_name}{plugin\_get\_name}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a3653463f8565c777a58d6d7670a05ec9} 
-\#define plugin\+\_\+get\+\_\+name(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} plugin\+\_\+get\+\_\+name(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
@@ -262,7 +275,7 @@ Declares the release callback. This callback will be loaded and used to destroy 
 \index{plugin\_module@{plugin\_module}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{plugin\_module}{plugin\_module}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a2fdde508ad95a9ef6355abe33f5d0602} 
-\#define plugin\+\_\+module(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} plugin\+\_\+module(\begin{DoxyParamCaption}\item[{}]{}...{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
@@ -290,7 +303,7 @@ Encloses the wrapped declarations as exportable items that are then made availab
 \index{plugin\_module\_export@{plugin\_module\_export}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{plugin\_module\_export}{plugin\_module\_export}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a6ef131c12001190c8438bdb0c6583e0c} 
-\#define plugin\+\_\+module\+\_\+export}
+\#\mbox{\hyperlink{namespacedefine}{define}} plugin\+\_\+module\+\_\+export}
 
 
 
@@ -300,7 +313,7 @@ Exports the object/callable/etc. without mangling the names, making it available
 \index{plugin\_module\_head@{plugin\_module\_head}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{plugin\_module\_head}{plugin\_module\_head}}
 {\footnotesize\ttfamily \label{plugin__module_8h_a53c33d100a429a93bda9aead698d9cce} 
-\#define plugin\+\_\+module\+\_\+head}
+\#\mbox{\hyperlink{namespacedefine}{define}} plugin\+\_\+module\+\_\+head}
 
 
 
@@ -310,7 +323,7 @@ The header/preamble required for declarations that must be available to the plug
 \index{plugin\_module\_tail@{plugin\_module\_tail}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{plugin\_module\_tail}{plugin\_module\_tail}}
 {\footnotesize\ttfamily \label{plugin__module_8h_ac107fbe40b09adb72e3718f8ead1f19e} 
-\#define plugin\+\_\+module\+\_\+tail}
+\#\mbox{\hyperlink{namespacedefine}{define}} plugin\+\_\+module\+\_\+tail}
 
 
 
@@ -320,7 +333,7 @@ The footer/closer required for declarations that must be available to the plugin
 \index{plugin\_register\_command@{plugin\_register\_command}!plugin\_module.h@{plugin\_module.h}}
 \doxysubsubsection{\texorpdfstring{plugin\_register\_command}{plugin\_register\_command}}
 {\footnotesize\ttfamily \label{plugin__module_8h_af33dae6245181d4123adc741dcc506fc} 
-\#define plugin\+\_\+register\+\_\+command(\begin{DoxyParamCaption}\item[{}]{cmd\+\_\+name}{, }\item[{}]{cmd\+\_\+impl\+\_\+name}{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} plugin\+\_\+register\+\_\+command(\begin{DoxyParamCaption}\item[{}]{cmd\+\_\+name}{, }\item[{}]{cmd\+\_\+impl\+\_\+name}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}

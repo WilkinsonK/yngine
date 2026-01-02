@@ -8,5 +8,6 @@ var searchData=
   ['dll_5fnomodule_5',['DLL_NOMODULE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac',1,'plugin.h']]],
   ['dll_5fnoobject_6',['DLL_NOOBJECT',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0',1,'plugin.h']]],
   ['dll_5fnorelease_7',['DLL_NORELEASE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c',1,'plugin.h']]],
-  ['dll_5fnoscope_8',['DLL_NOSCOPE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be',1,'plugin.h']]]
+  ['dll_5fnoscope_8',['DLL_NOSCOPE',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be',1,'plugin.h']]],
+  ['dynamic_9',['DYNAMIC',['../namespace____plugin__root.html#abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18',1,'__plugin_root']]]
 ];

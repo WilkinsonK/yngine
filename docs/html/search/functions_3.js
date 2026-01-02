@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getdescription_0',['GetDescription',['../plugin_8h.html#a66c0e49603caa33bb863d703911e78de',1,'GetDescription(const Context *):&#160;plugin.cpp'],['../plugin_8cpp.html#a95792be1683ff26b0a8ef0de53cd7e9f',1,'GetDescription(const Context *ctx):&#160;plugin.cpp']]],
-  ['getdescriptionlong_1',['GetDescriptionLong',['../plugin_8h.html#aa8aec95a44e91fefd7abe6d638d85d4e',1,'GetDescriptionLong(const Context *):&#160;plugin.cpp'],['../plugin_8cpp.html#a23a8b16392f21092bd752cad50ead113',1,'GetDescriptionLong(const Context *ctx):&#160;plugin.cpp']]],
-  ['getname_2',['GetName',['../plugin_8h.html#a8afb65e4e3737673e0f4abcd5c40c462',1,'GetName(const Context *):&#160;plugin.cpp'],['../plugin_8cpp.html#aa85b4f1c52cd0de020fcff00ab3afbfc',1,'GetName(const Context *ctx):&#160;plugin.cpp']]]
+  ['callcommand_0',['CallCommand',['../namespace____plugin__root_1_1dllutil.html#a5482982bdafad1b6c63486dc99467f59',1,'__plugin_root::dllutil::CallCommand(const Context &amp;, Name)'],['../namespace____plugin__root_1_1dllutil.html#a05da221bead76ad6f827191bec4b44e4',1,'__plugin_root::dllutil::CallCommand(Name)'],['../namespace____plugin__root.html#aa2faaa181cdf3c957558d2073210b28a',1,'__plugin_root::CallCommand()']]],
+  ['cmdbuild_1',['CmdBuild',['../yplugin_8cpp.html#a1bd16185f2da6c14fc25ce47761a2e1f',1,'yplugin.cpp']]],
+  ['cmdinspect_2',['CmdInspect',['../yplugin_8cpp.html#af73181321432100924d612b7027f803a',1,'yplugin.cpp']]]
 ];

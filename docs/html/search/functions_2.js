@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['fromfile_0',['FromFile',['../namespace____plugin__root_1_1artifact.html#a91bea2653e9f4b7574e03168ce7bdcab',1,'__plugin_root::artifact']]],
-  ['fromother_1',['FromOther',['../namespace____plugin__root_1_1artifact.html#acc6c6fb4c3a5eeb231667d1fafee388f',1,'__plugin_root::artifact']]],
-  ['fromtoml_2',['FromToml',['../namespace____plugin__root_1_1artifact.html#ac125922952a84805fea87fad30a0f9ae',1,'__plugin_root::artifact']]],
-  ['fromtomlpluginheader_3',['FromTomlPluginHeader',['../namespace____plugin__root_1_1artifact.html#ac52937e509bd8136bf98966d11dfd89a',1,'__plugin_root::artifact']]],
-  ['fromtomlwithdescription_4',['FromTomlWithDescription',['../namespace____plugin__root_1_1artifact.html#a1ef49e9d98975e5bc4e407328d3f175d',1,'__plugin_root::artifact']]],
-  ['fromtomlwithdescriptionlong_5',['FromTomlWithDescriptionLong',['../namespace____plugin__root_1_1artifact.html#a679aebea16d8b1acc4c2fbfb82e8331b',1,'__plugin_root::artifact']]],
-  ['fromtomlwithname_6',['FromTomlWithName',['../namespace____plugin__root_1_1artifact.html#ac38b917d1238e96b55b2a6991f90a76c',1,'__plugin_root::artifact']]],
-  ['fromtomlwithpath_7',['FromTomlWithPath',['../namespace____plugin__root_1_1artifact.html#aaf1ab0438ad3873bbc6cf4bcec687ffe',1,'__plugin_root::artifact']]],
-  ['fromtomlwithversion_8',['FromTomlWithVersion',['../namespace____plugin__root_1_1artifact.html#a6c41d745698471007a6378c214d55352',1,'__plugin_root::artifact']]]
+  ['build_0',['Build',['../classdefine_1_1_context_1_1_builder.html#af55e4daf2a6d96dedaddaa66f37ccf11',1,'define::Context::Builder::Build()'],['../namespace____plugin__root_1_1package.html#a11aaf75e942b69fa31bc9a478ac527e8',1,'__plugin_root::package::Build(const artifact::Artifact &amp;)'],['../namespace____plugin__root_1_1package.html#a0867b6ea6669916657a81e99533e21ef',1,'__plugin_root::package::Build(const artifact::Artifact &amp;source, BuildModeHandler handler)']]],
+  ['builder_1',['Builder',['../classdefine_1_1_context_1_1_builder.html#ab8fbd7149c69c1efe62e04a2ddd45578',1,'define::Context::Builder']]],
+  ['buildwithmake_2',['BuildWithMake',['../namespace____plugin__root_1_1package.html#a3147ee7cc4d0cf2163331fe85bb4d052',1,'__plugin_root::package']]]
 ];

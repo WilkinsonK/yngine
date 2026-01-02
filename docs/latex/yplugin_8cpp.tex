@@ -1,0 +1,138 @@
+\doxysection{plugin/yplugin.cpp File Reference}
+\hypertarget{yplugin_8cpp}{}\label{yplugin_8cpp}\index{plugin/yplugin.cpp@{plugin/yplugin.cpp}}
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include "{}plugin.\+hpp"{}}\newline
+{\ttfamily \#include $<$CLI/\+CLI.\+hpp$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structoptions_1_1_inspect}{options\+::\+Inspect}}
+\item 
+struct \mbox{\hyperlink{structoptions_1_1_common}{options\+::\+Common}}
+\item 
+struct \mbox{\hyperlink{structdefine_1_1_context}{define\+::\+Context}}
+\item 
+class \mbox{\hyperlink{classdefine_1_1_context_1_1_builder}{define\+::\+Context\+::\+Builder}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceoptions}{options}}
+\item 
+namespace \mbox{\hyperlink{namespace_c_l_i}{CLI}}
+\item 
+namespace \mbox{\hyperlink{namespace_c_l_i_1_1detail}{CLI\+::detail}}
+\item 
+namespace \mbox{\hyperlink{namespacedefine}{define}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{yplugin_8cpp_ab79acba4c730a40424a1b52d23876b04}{\+\_\+\+\_\+\+Context\+\_\+attrs}}
+\item 
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{yplugin_8cpp_a013f7cf837b7f2c512fb35b92fb73bfd}{\+\_\+\+\_\+\+Context\+Builder\+\_\+\+From\+Other\+Ptr\+Inits}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{namespaceoptions_a956aef1a2836774c806629db1c3df467}{options\+::\+Inspect\+Format}} \mbox{\hyperlink{namespaceoptions_a6e5c9c62f8fea30fab3836a9018832af}{options\+::\+Inspect\+Format}}
+\item 
+typedef std\+::optional$<$ std\+::function$<$ void(CLI\+::\+App \&)$>$ $>$ \mbox{\hyperlink{namespacedefine_a992aafa3d55fae8bd9069debcdf32279}{define\+::\+Cmd\+Mutation}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceoptions_a956aef1a2836774c806629db1c3df467}{options\+::\+Inspect\+Format}} \{ \newline
+\mbox{\hyperlink{namespaceoptions_a956aef1a2836774c806629db1c3df467a9ccffa77fcaa7cd9e605bab7a840450a}{options\+::\+UNKNOWN}} = -\/1
+, \mbox{\hyperlink{namespaceoptions_a956aef1a2836774c806629db1c3df467ac4681d229c34b29ba317494ed933c528}{options\+::\+JSON}}
+, \mbox{\hyperlink{namespaceoptions_a956aef1a2836774c806629db1c3df467ae41fc81c3a4cd41370600e4eeb38e6bd}{options\+::\+REPR}}
+, \mbox{\hyperlink{namespaceoptions_a956aef1a2836774c806629db1c3df467a920ec67515b297f72fadb11203a32055}{options\+::\+TOML}}
+, \newline
+\mbox{\hyperlink{namespaceoptions_a956aef1a2836774c806629db1c3df467a79afcca6ba566fedb6269de146bf5f40}{options\+::\+YAML}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceoptions_a956aef1a2836774c806629db1c3df467}{Inspect\+Format}} \mbox{\hyperlink{namespaceoptions_ad64337847c80bdf82f8f68df1997568b}{options\+::\+From\+Str}} (const std\+::string value)
+\item 
+const std\+::string \mbox{\hyperlink{namespaceoptions_a06ce438facf0deccf806ffc66270d6cb}{options\+::\+Into\+Str}} (const \mbox{\hyperlink{namespaceoptions_a956aef1a2836774c806629db1c3df467}{Inspect\+Format}} value)
+\item 
+std\+::istringstream \& \mbox{\hyperlink{namespace_c_l_i_a6321f20e79c9f9e41fcd762a141ed893}{CLI\+::operator$>$$>$}} (std\+::istringstream \&in, \mbox{\hyperlink{namespaceoptions_a956aef1a2836774c806629db1c3df467}{options\+::\+Inspect\+Format}} \&fmt)
+\item 
+std\+::stringstream \& \mbox{\hyperlink{namespace_c_l_i_af4e9c6e7e48643001e5331d23e396845}{CLI\+::operator$<$$<$}} (std\+::stringstream \&ss, \mbox{\hyperlink{namespaceoptions_a956aef1a2836774c806629db1c3df467}{options\+::\+Inspect\+Format}} \&fmt)
+\item 
+template$<$$>$ constexpr const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_c_l_i_1_1detail_a1af9da491e30f4d387f4d05ecb7ef806}{CLI\+::detail\+::type\+\_\+name$<$ options\+::\+Inspect\+Format $>$}} ()
+\item 
+auto \mbox{\hyperlink{yplugin_8cpp_a1bd16185f2da6c14fc25ce47761a2e1f}{Cmd\+Build}} (\mbox{\hyperlink{structdefine_1_1_context}{define\+::\+Context}} \&ctx)
+\item 
+auto \mbox{\hyperlink{yplugin_8cpp_af73181321432100924d612b7027f803a}{Cmd\+Inspect}} (\mbox{\hyperlink{structdefine_1_1_context}{define\+::\+Context}} \&ctx)
+\item 
+int \mbox{\hyperlink{yplugin_8cpp_a5e6e6a9d74b6c29f0fd4bcc6de4430d4}{main}} (int argv, const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argc)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::map$<$ std\+::string, \mbox{\hyperlink{namespaceoptions_a956aef1a2836774c806629db1c3df467}{Inspect\+Format}} $>$ \mbox{\hyperlink{namespaceoptions_ad61bc46ae3761169b6523ab32593006d}{options\+::format\+\_\+types}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{yplugin_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{yplugin_8cpp_ab79acba4c730a40424a1b52d23876b04}\index{yplugin.cpp@{yplugin.cpp}!\_\_Context\_attrs@{\_\_Context\_attrs}}
+\index{\_\_Context\_attrs@{\_\_Context\_attrs}!yplugin.cpp@{yplugin.cpp}}
+\doxysubsubsection{\texorpdfstring{\_\_Context\_attrs}{\_\_Context\_attrs}}
+{\footnotesize\ttfamily \label{yplugin_8cpp_ab79acba4c730a40424a1b52d23876b04} 
+\#\mbox{\hyperlink{namespacedefine}{define}} \+\_\+\+\_\+\+Context\+\_\+attrs}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structoptions_1_1_common}{options::Common}}\&\ common;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ std::string\ \ \ \ \ \ cmd\_name;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ std::string\ \ \ \ \ \ cmd\_desc;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ CmdMutation\ \ \ \ \ \ cmd\_mutation;}
+
+\end{DoxyCode}
+\Hypertarget{yplugin_8cpp_a013f7cf837b7f2c512fb35b92fb73bfd}\index{yplugin.cpp@{yplugin.cpp}!\_\_ContextBuilder\_FromOtherPtrInits@{\_\_ContextBuilder\_FromOtherPtrInits}}
+\index{\_\_ContextBuilder\_FromOtherPtrInits@{\_\_ContextBuilder\_FromOtherPtrInits}!yplugin.cpp@{yplugin.cpp}}
+\doxysubsubsection{\texorpdfstring{\_\_ContextBuilder\_FromOtherPtrInits}{\_\_ContextBuilder\_FromOtherPtrInits}}
+{\footnotesize\ttfamily \label{yplugin_8cpp_a013f7cf837b7f2c512fb35b92fb73bfd} 
+\#\mbox{\hyperlink{namespacedefine}{define}} \+\_\+\+\_\+\+Context\+Builder\+\_\+\+From\+Other\+Ptr\+Inits}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ common(other-\/>common),\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmd\_desc(other-\/>cmd\_desc),\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmd\_mutation(other-\/>cmd\_mutation),\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmd\_name(other-\/>cmd\_name)}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{yplugin_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{yplugin_8cpp_a1bd16185f2da6c14fc25ce47761a2e1f}\index{yplugin.cpp@{yplugin.cpp}!CmdBuild@{CmdBuild}}
+\index{CmdBuild@{CmdBuild}!yplugin.cpp@{yplugin.cpp}}
+\doxysubsubsection{\texorpdfstring{CmdBuild()}{CmdBuild()}}
+{\footnotesize\ttfamily \label{yplugin_8cpp_a1bd16185f2da6c14fc25ce47761a2e1f} 
+auto Cmd\+Build (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdefine_1_1_context}{define\+::\+Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{yplugin_8cpp_af73181321432100924d612b7027f803a}\index{yplugin.cpp@{yplugin.cpp}!CmdInspect@{CmdInspect}}
+\index{CmdInspect@{CmdInspect}!yplugin.cpp@{yplugin.cpp}}
+\doxysubsubsection{\texorpdfstring{CmdInspect()}{CmdInspect()}}
+{\footnotesize\ttfamily \label{yplugin_8cpp_af73181321432100924d612b7027f803a} 
+auto Cmd\+Inspect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdefine_1_1_context}{define\+::\+Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{yplugin_8cpp_a5e6e6a9d74b6c29f0fd4bcc6de4430d4}\index{yplugin.cpp@{yplugin.cpp}!main@{main}}
+\index{main@{main}!yplugin.cpp@{yplugin.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{yplugin_8cpp_a5e6e6a9d74b6c29f0fd4bcc6de4430d4} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argv}{, }\item[{const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argc}{}\end{DoxyParamCaption})}
+

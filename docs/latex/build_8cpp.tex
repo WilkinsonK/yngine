@@ -1,0 +1,25 @@
+\doxysection{plugin/src/build.cpp File Reference}
+\hypertarget{build_8cpp}{}\label{build_8cpp}\index{plugin/src/build.cpp@{plugin/src/build.cpp}}
+{\ttfamily \#include "{}plugin.\+hpp"{}}\newline
+{\ttfamily \#include "{}plugin\+\_\+internal.\+hpp"{}}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace____plugin__root}{\+\_\+\+\_\+plugin\+\_\+root}}
+\item 
+namespace \mbox{\hyperlink{namespace____plugin__root_1_1package}{\+\_\+\+\_\+plugin\+\_\+root\+::package}}
+\begin{DoxyCompactList}\small\item\em Logic and behavior dedicated to building a single plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}(const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&)$>$ \mbox{\hyperlink{namespace____plugin__root_1_1package_a23b0b5b41a890d49cede4506c5e180dc}{\+\_\+\+\_\+plugin\+\_\+root\+::package\+::\+Build\+Mode\+Handler}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_1_1package_a3147ee7cc4d0cf2163331fe85bb4d052}{\+\_\+\+\_\+plugin\+\_\+root\+::package\+::\+Build\+With\+Make}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&source)
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_1_1package_a0867b6ea6669916657a81e99533e21ef}{\+\_\+\+\_\+plugin\+\_\+root\+::package\+::\+Build}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&source, \mbox{\hyperlink{namespace____plugin__root_1_1package_a23b0b5b41a890d49cede4506c5e180dc}{Build\+Mode\+Handler}} handler)
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_1_1package_a11aaf75e942b69fa31bc9a478ac527e8}{\+\_\+\+\_\+plugin\+\_\+root\+::package\+::\+Build}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Build the module according to how its configuration dictates how it should be expected. \end{DoxyCompactList}\end{DoxyCompactItemize}

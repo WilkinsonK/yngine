@@ -3,7 +3,9 @@
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_aef209d7e33ca554d0d530f0e58c805db}{Artifact}} = \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}}
+typedef std\+::unique\+\_\+ptr$<$ Artifact\+Body $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}}
+\begin{DoxyCompactList}\small\item\em A box of artifact attributes. \end{DoxyCompactList}\item 
+typedef std\+::optional$<$ command\+::\+Command\+Impl $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_a7b576eb95a1afd5bd120868c05a97da8}{Command\+Impl\+Default}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -21,25 +23,41 @@ using \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_aef209d7e33ca554d0d5
 \mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_a2179da178a45c6afe5495e299da36015}{Install\+Command}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&, \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}, \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}})
 \begin{DoxyCompactList}\small\item\em Installs a command from the DLL, making it available to the artifact. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}{State\+Fn}}$<$ \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}}, const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \& $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_a37e5401e1ead99cf7fb31632e9a28e43}{Install\+Command}} (\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructs a command installer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}{State\+Fn}}$<$ \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}}, const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \& $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_a6f22fb602c09c3e1f1656937448ffb86}{Install\+Command}} (\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}, \mbox{\hyperlink{namespace____plugin__root_1_1command_a7b576eb95a1afd5bd120868c05a97da8}{Command\+Impl\+Default}})
+\begin{DoxyCompactList}\small\item\em Constructs a command installer. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_a88cd3add560f943ec12c2b3e0783e1de}{Install\+Module}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
 \begin{DoxyCompactList}\small\item\em Installs the DLL module handle. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ void \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_a0381a0947e7157e928e6f7d605dbaff8}{Load\+Handle\+From\+Artifact}} (const \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_aef209d7e33ca554d0d530f0e58c805db}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}})
+\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ void \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_a0381a0947e7157e928e6f7d605dbaff8}{Load\+Handle\+From\+Artifact}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&, const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}})
 \begin{DoxyCompactList}\small\item\em Loads the DLL handle of some member of the artifact module. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}{State\+Fn}}$<$ void \texorpdfstring{$\ast$}{*}, const \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_aef209d7e33ca554d0d530f0e58c805db}{Artifact}} \& $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_a3085b0fdc7f72c579fa4e1efe48bf8f9}{Load\+Handle\+From\+Artifact}} (\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}})
+\mbox{\hyperlink{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}{State\+Fn}}$<$ void \texorpdfstring{$\ast$}{*}, const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \& $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_a3085b0fdc7f72c579fa4e1efe48bf8f9}{Load\+Handle\+From\+Artifact}} (\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}})
 \item 
-\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ void \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_ae711851d171fb1ccae01fed5e5570919}{Load\+Module\+From\+Artifact}} (const \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_aef209d7e33ca554d0d530f0e58c805db}{Artifact}} \&)
-\begin{DoxyCompactList}\small\item\em Load the module belonging to an artifact. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ void \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_ae711851d171fb1ccae01fed5e5570919}{Load\+Module\+From\+Artifact}} (const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&)
+\begin{DoxyCompactList}\small\item\em Load the module belonging to an artifact. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_a68a8a471a23448c3c693e53fadafb2ac}{Release\+Module}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
+\begin{DoxyCompactList}\small\item\em Release the DLL module handle and all related assets. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} $>$ \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_a5b913b0326691f901f92e0f84d0130c0}{Install\+Command}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&ctx, \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}} name, \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}} impl\+\_\+name, \mbox{\hyperlink{namespace____plugin__root_1_1command_a7b576eb95a1afd5bd120868c05a97da8}{Command\+Impl\+Default}} impl\+\_\+default)
+\end{DoxyCompactItemize}
 
 
 \label{doc-typedef-members}
 \Hypertarget{namespace____plugin__root_1_1dllutil_doc-typedef-members}
 \doxysubsection{Typedef Documentation}
-\Hypertarget{namespace____plugin__root_1_1dllutil_aef209d7e33ca554d0d530f0e58c805db}\index{\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}!Artifact@{Artifact}}
+\Hypertarget{namespace____plugin__root_1_1dllutil_aebcd2773512b9bb0e48a4e896ff8ef0c}\index{\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}!Artifact@{Artifact}}
 \index{Artifact@{Artifact}!\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}}
 \doxysubsubsection{\texorpdfstring{Artifact}{Artifact}}
-{\footnotesize\ttfamily \label{namespace____plugin__root_1_1dllutil_aef209d7e33ca554d0d530f0e58c805db} 
-using \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Artifact = \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{artifact\+::\+Artifact}}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_1_1dllutil_aebcd2773512b9bb0e48a4e896ff8ef0c} 
+typedef std\+::unique\+\_\+ptr$<$Artifact\+Body$>$ \+\_\+\+\_\+plugin\+\_\+root\+::artifact\+::\+Artifact}
+
+
+
+A box of artifact attributes. 
+
+\Hypertarget{namespace____plugin__root_1_1dllutil_a7b576eb95a1afd5bd120868c05a97da8}\index{\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}!CommandImplDefault@{CommandImplDefault}}
+\index{CommandImplDefault@{CommandImplDefault}!\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}}
+\doxysubsubsection{\texorpdfstring{CommandImplDefault}{CommandImplDefault}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_1_1dllutil_a7b576eb95a1afd5bd120868c05a97da8} 
+typedef std\+::optional$<$command\+::\+Command\+Impl$>$ \+\_\+\+\_\+plugin\+\_\+root\+::command\+::\+Command\+Impl\+Default}
 
 
 
@@ -100,7 +118,7 @@ The context passed.
 \end{DoxyReturn}
 \Hypertarget{namespace____plugin__root_1_1dllutil_a3c512b0f461ff53c26e823fa04c417c6}\index{\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}!InstallCommand@{InstallCommand}}
 \index{InstallCommand@{InstallCommand}!\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}}
-\doxysubsubsection{\texorpdfstring{InstallCommand()}{InstallCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\doxysubsubsection{\texorpdfstring{InstallCommand()}{InstallCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
 {\footnotesize\ttfamily \label{namespace____plugin__root_1_1dllutil_a3c512b0f461ff53c26e823fa04c417c6} 
 \mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} $>$ \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Install\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&}]{ctx}{, }\item[{\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}}]{name}{}\end{DoxyParamCaption})}
 
@@ -110,7 +128,7 @@ Installs a command from the DLL, making it available to the artifact.
 
 
 \begin{DoxyParams}{Parameters}
-{\em ctx} & context of the artifact. from and to. \\
+{\em ctx} & context of the artifact. \\
 \hline
 {\em name} & of the command being installed. \\
 \hline
@@ -120,7 +138,7 @@ The context passed.
 \end{DoxyReturn}
 \Hypertarget{namespace____plugin__root_1_1dllutil_a2179da178a45c6afe5495e299da36015}\index{\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}!InstallCommand@{InstallCommand}}
 \index{InstallCommand@{InstallCommand}!\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}}
-\doxysubsubsection{\texorpdfstring{InstallCommand()}{InstallCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\doxysubsubsection{\texorpdfstring{InstallCommand()}{InstallCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
 {\footnotesize\ttfamily \label{namespace____plugin__root_1_1dllutil_a2179da178a45c6afe5495e299da36015} 
 \mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} $>$ \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Install\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&}]{ctx}{, }\item[{\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}}]{name}{, }\item[{\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}}]{impl\+\_\+name}{}\end{DoxyParamCaption})}
 
@@ -140,12 +158,50 @@ Installs a command from the DLL, making it available to the artifact.
 \begin{DoxyReturn}{Returns}
 The context passed. 
 \end{DoxyReturn}
+\Hypertarget{namespace____plugin__root_1_1dllutil_a5b913b0326691f901f92e0f84d0130c0}\index{\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}!InstallCommand@{InstallCommand}}
+\index{InstallCommand@{InstallCommand}!\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}}
+\doxysubsubsection{\texorpdfstring{InstallCommand()}{InstallCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_1_1dllutil_a5b913b0326691f901f92e0f84d0130c0} 
+\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} $>$ \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Install\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&}]{ctx}{, }\item[{\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}}]{name}{, }\item[{\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}}]{impl\+\_\+name}{, }\item[{\mbox{\hyperlink{namespace____plugin__root_1_1command_a7b576eb95a1afd5bd120868c05a97da8}{Command\+Impl\+Default}}}]{impl\+\_\+default}{}\end{DoxyParamCaption})}
+
 \Hypertarget{namespace____plugin__root_1_1dllutil_a37e5401e1ead99cf7fb31632e9a28e43}\index{\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}!InstallCommand@{InstallCommand}}
 \index{InstallCommand@{InstallCommand}!\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}}
-\doxysubsubsection{\texorpdfstring{InstallCommand()}{InstallCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+\doxysubsubsection{\texorpdfstring{InstallCommand()}{InstallCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
 {\footnotesize\ttfamily \label{namespace____plugin__root_1_1dllutil_a37e5401e1ead99cf7fb31632e9a28e43} 
 \mbox{\hyperlink{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}{State\+Fn}}$<$ \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}}, const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \& $>$ \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Install\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}}]{name}{}\end{DoxyParamCaption})}
 
+
+
+Constructs a command installer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & of the command being installed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A function which installs a command with the designated name. 
+\end{DoxyReturn}
+\Hypertarget{namespace____plugin__root_1_1dllutil_a6f22fb602c09c3e1f1656937448ffb86}\index{\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}!InstallCommand@{InstallCommand}}
+\index{InstallCommand@{InstallCommand}!\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}}
+\doxysubsubsection{\texorpdfstring{InstallCommand()}{InstallCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_1_1dllutil_a6f22fb602c09c3e1f1656937448ffb86} 
+\mbox{\hyperlink{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}{State\+Fn}}$<$ \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}}, const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \& $>$ \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Install\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}}]{name}{, }\item[{\mbox{\hyperlink{namespace____plugin__root_1_1command_a7b576eb95a1afd5bd120868c05a97da8}{Command\+Impl\+Default}}}]{impl\+\_\+default}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a command installer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & of the command being installed. \\
+\hline
+{\em impl\+\_\+default} & implementation used when command is not found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A function which installs a command with the designated name. 
+\end{DoxyReturn}
 \Hypertarget{namespace____plugin__root_1_1dllutil_a88cd3add560f943ec12c2b3e0783e1de}\index{\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}!InstallModule@{InstallModule}}
 \index{InstallModule@{InstallModule}!\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}}
 \doxysubsubsection{\texorpdfstring{InstallModule()}{InstallModule()}}
@@ -168,7 +224,7 @@ The context passed.
 \index{LoadHandleFromArtifact@{LoadHandleFromArtifact}!\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}}
 \doxysubsubsection{\texorpdfstring{LoadHandleFromArtifact()}{LoadHandleFromArtifact()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{namespace____plugin__root_1_1dllutil_a0381a0947e7157e928e6f7d605dbaff8} 
-\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ void \texorpdfstring{$\ast$}{*} $>$ \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Load\+Handle\+From\+Artifact (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_aef209d7e33ca554d0d530f0e58c805db}{Artifact}} \&}]{source}{, }\item[{const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}}]{name}{}\end{DoxyParamCaption})}
+\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ void \texorpdfstring{$\ast$}{*} $>$ \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Load\+Handle\+From\+Artifact (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&}]{source}{, }\item[{const \mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}}]{name}{}\end{DoxyParamCaption})}
 
 
 
@@ -188,13 +244,13 @@ Ambiguous pointer to the handle.
 \index{LoadHandleFromArtifact@{LoadHandleFromArtifact}!\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}}
 \doxysubsubsection{\texorpdfstring{LoadHandleFromArtifact()}{LoadHandleFromArtifact()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \label{namespace____plugin__root_1_1dllutil_a3085b0fdc7f72c579fa4e1efe48bf8f9} 
-\mbox{\hyperlink{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}{State\+Fn}}$<$ void \texorpdfstring{$\ast$}{*}, const \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_aef209d7e33ca554d0d530f0e58c805db}{Artifact}} \& $>$ \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Load\+Handle\+From\+Artifact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}}]{name}{}\end{DoxyParamCaption})}
+\mbox{\hyperlink{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}{State\+Fn}}$<$ void \texorpdfstring{$\ast$}{*}, const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \& $>$ \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Load\+Handle\+From\+Artifact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace____plugin__root_a93482d22098267681084c32c0aced568}{Name}}}]{name}{}\end{DoxyParamCaption})}
 
 \Hypertarget{namespace____plugin__root_1_1dllutil_ae711851d171fb1ccae01fed5e5570919}\index{\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}!LoadModuleFromArtifact@{LoadModuleFromArtifact}}
 \index{LoadModuleFromArtifact@{LoadModuleFromArtifact}!\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}}
 \doxysubsubsection{\texorpdfstring{LoadModuleFromArtifact()}{LoadModuleFromArtifact()}}
 {\footnotesize\ttfamily \label{namespace____plugin__root_1_1dllutil_ae711851d171fb1ccae01fed5e5570919} 
-\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ void \texorpdfstring{$\ast$}{*} $>$ \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Load\+Module\+From\+Artifact (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace____plugin__root_1_1dllutil_aef209d7e33ca554d0d530f0e58c805db}{Artifact}} \&}]{source}{}\end{DoxyParamCaption})}
+\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ void \texorpdfstring{$\ast$}{*} $>$ \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Load\+Module\+From\+Artifact (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace____plugin__root_1_1artifact_aebcd2773512b9bb0e48a4e896ff8ef0c}{Artifact}} \&}]{source}{}\end{DoxyParamCaption})}
 
 
 
@@ -207,4 +263,22 @@ Load the module belonging to an artifact.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 The artifact with a loaded module. 
+\end{DoxyReturn}
+\Hypertarget{namespace____plugin__root_1_1dllutil_a68a8a471a23448c3c693e53fadafb2ac}\index{\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}!ReleaseModule@{ReleaseModule}}
+\index{ReleaseModule@{ReleaseModule}!\_\_plugin\_root::dllutil@{\_\_plugin\_root::dllutil}}
+\doxysubsubsection{\texorpdfstring{ReleaseModule()}{ReleaseModule()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_1_1dllutil_a68a8a471a23448c3c693e53fadafb2ac} 
+\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$ \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} $>$ \+\_\+\+\_\+plugin\+\_\+root\+::dllutil\+::\+Release\+Module (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Release the DLL module handle and all related assets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & context of the artifact. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The context passed. 
 \end{DoxyReturn}

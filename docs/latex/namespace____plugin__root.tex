@@ -3,17 +3,19 @@
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-namespace \mbox{\hyperlink{namespace____plugin__root_1_1command}{command}}
-\item 
 namespace \mbox{\hyperlink{namespace____plugin__root_1_1artifact}{artifact}}
 \item 
-namespace \mbox{\hyperlink{namespace____plugin__root_1_1plugin}{plugin}}
+namespace \mbox{\hyperlink{namespace____plugin__root_1_1command}{command}}
 \item 
+namespace \mbox{\hyperlink{namespace____plugin__root_1_1package}{package}}
+\begin{DoxyCompactList}\small\item\em Logic and behavior dedicated to building a single plugin. \end{DoxyCompactList}\item 
 namespace \mbox{\hyperlink{namespace____plugin__root_1_1dllutil}{dllutil}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+struct \mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}}
+\begin{DoxyCompactList}\small\item\em Provides information given the current state in detail. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
@@ -25,30 +27,90 @@ typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a93482d22098267
 \begin{DoxyCompactList}\small\item\em The name of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
 typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a5ce749b305b02e6ca53a05d733524345}{Object\+Entry}}
 \begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to the object entry point. \end{DoxyCompactList}\item 
-typedef int \mbox{\hyperlink{namespace____plugin__root_ace7d11467cf9033aaaaf889c9fe90904}{Object\+Mode}}
-\begin{DoxyCompactList}\small\item\em Mode of how to load the entry point. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_aaef0dcd42320592a525270c914424ebb}{Object\+Mode}}
+\begin{DoxyCompactList}\small\item\em Mode of how to build the entry point. \end{DoxyCompactList}\item 
 typedef void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace____plugin__root_a09d45b8a78573e3eb8d0ddd01343a12a}{Object\+Ref}}
 \begin{DoxyCompactList}\small\item\em A reference to the object loaded dynamically. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a13d22b286eb7ccd25930bc3446682973}{Object\+Type}}
+\begin{DoxyCompactList}\small\item\em Type of the entry point. \end{DoxyCompactList}\item 
 typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path}}
 \begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to an arbitrary file or directory. \end{DoxyCompactList}\item 
+typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}}
+\begin{DoxyCompactList}\small\item\em A message providing more detail about the {\ttfamily \doxylink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} which occured. \end{DoxyCompactList}\item 
 typedef std\+::string \mbox{\hyperlink{namespace____plugin__root_a84d5a198ebf7ebdff6e8dc6c22fcb542}{Version}}
 \begin{DoxyCompactList}\small\item\em The version name of a plugin asset, module or artifact. \end{DoxyCompactList}\item 
+typedef enum \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Group \mbox{\hyperlink{namespace____plugin__root_aed145805402c1dfeff6e796b7969bf2e}{State\+Err\+Group}}
+\begin{DoxyCompactList}\small\item\em The grouping some {\ttfamily \doxylink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} belongs to. \end{DoxyCompactList}\item 
+typedef struct \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Info \mbox{\hyperlink{namespace____plugin__root_a744f0104cd37f3c8d4442a5e3cf74105}{State\+Info}}
+\begin{DoxyCompactList}\small\item\em Provides information given the current state in detail. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename R$>$ }\\using \mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}} = std\+::expected$<$R, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}$>$
 \begin{DoxyCompactList}\small\item\em Alias for\+: \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename R, typename ... A$>$ }\\using \mbox{\hyperlink{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}{State\+Fn}} = std\+::function$<$\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$R$>$(A...)$>$
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \{ \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa58a14c103edf9147448fb0403c5e50b3}{OK}}
+, \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18}{DYNAMIC}}
+, \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa51d41f4d841ff4b6cbf5b23f1becee9a}{MANIFEST}}
+, \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa81b1efe22dac764a3ce5f08a5a9cc45f}{USER}}
+ \}
+\begin{DoxyCompactList}\small\item\em The grouping some {\ttfamily \doxylink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} belongs to. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_ae87f7c54a99d047acf9e828b39747f61}{Install}} (const char \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Install the plugin module from the given artifact manifest. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_aaa55187fb313655b64c12fdd14ab7e04}{Install}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
 \begin{DoxyCompactList}\small\item\em Install the plugin module from the given artifact. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_abc1903f0c87d3323a6e6183020b50573}{Initialize}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
+\begin{DoxyCompactList}\small\item\em Initilizes the plugin module. This is effectively the \textquotesingle{}start-\/up\textquotesingle{} functionality. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_aee3919c9fa229b9e584aeae951867f44}{Release}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
 \begin{DoxyCompactList}\small\item\em Release and destroy plugin module assets. \end{DoxyCompactList}\item 
-const std\+::string \mbox{\hyperlink{namespace____plugin__root_a6fc3f9d65a2d10ac3668e834dd83ca71}{State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+{\footnotesize template$<$typename T, typename V$>$ }\\const T \mbox{\hyperlink{namespace____plugin__root_afaf3928a7b5a1b4ccd12e0ec76860fbf}{State\+Group}} (const V \&)
 \begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State} group the state belongs to. \end{DoxyCompactList}\item 
-const std\+::string \mbox{\hyperlink{namespace____plugin__root_ac39cad57c780ffb859ecdb286bdd9177}{State\+Message}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+template$<$$>$ const std\+::string \mbox{\hyperlink{namespace____plugin__root_a7e0947d42efee02781eb538b9b3c9a61}{State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\item 
+template$<$$>$ const std\+::string \mbox{\hyperlink{namespace____plugin__root_ae875baa0bba5e8dbf2c45e3a25078a05}{State\+Group}} (const \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \&)
+\item 
+template$<$$>$ const \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \mbox{\hyperlink{namespace____plugin__root_a4aba2ef9ab0abcba4ae6e40918969343}{State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\item 
+const std\+::string \mbox{\hyperlink{namespace____plugin__root_a8dcab26fcc4bc1e1961c5b9714bf2ec9}{State\+Message}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
 \begin{DoxyCompactList}\small\item\em Human-\/readable explanation of the error state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}} \mbox{\hyperlink{namespace____plugin__root_a3893f932b32a6acd983aee7a468e3c07}{operator\&}} (\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}, \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}})
+\item 
 std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_a3c87979575ad101348ccaebdc3f7d377}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_a059adc1a2b09a8d53ed994fa6eb3c2fb}{operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}})
+\item 
+bool \mbox{\hyperlink{namespace____plugin__root_a224ecf9fe7c4bea4229602c3a42b938b}{operator==}} (\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}}, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}})
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_a7feeef79fbc8a0ff6c9059698e2b8803}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}} \&)
+\item 
+template$<$$>$ const std\+::string \mbox{\hyperlink{namespace____plugin__root_a4df0676633e8d6926ff4a018e8dd11cf}{State\+Group}} (const \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \&group)
+\item 
+template$<$$>$ const std\+::string \mbox{\hyperlink{namespace____plugin__root_afc92e054bbbea75880c73cbd03f4f710}{State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&state)
+\item 
+template$<$$>$ const \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \mbox{\hyperlink{namespace____plugin__root_ac6dca043cf8e55d4e6d646eed2f42d96}{State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&state)
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_aa2faaa181cdf3c957558d2073210b28a}{Call\+Command}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}ctx, const char \texorpdfstring{$\ast$}{*}name)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace____plugin__root_a38cd09328c14454373ef1ccb37f94477}{Get\+Name}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}ctx)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace____plugin__root_acac768e7023703f771645e1a4b25af4f}{Get\+Description}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}ctx)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace____plugin__root_aef62642a3c46e04e01866a33a59e7efc}{Get\+Description\+Long}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}ctx)
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_a34ea00f0406d0d91f73685763ff06cbf}{Register\+Command}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}ctx, const char \texorpdfstring{$\ast$}{*}name, const char \texorpdfstring{$\ast$}{*}impl\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::map$<$ \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}}, \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}} $>$ \mbox{\hyperlink{namespace____plugin__root_a1d1a2e7250e2c9e57a06b31866a85cfe}{State\+Err\+Group\+Names}}
+\item 
+const std\+::map$<$ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}, \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}} $>$ \mbox{\hyperlink{namespace____plugin__root_a81386dd6210dc707c36fa3b508e075b9}{State\+Err\+Messages}}
+\begin{DoxyCompactList}\small\item\em The system-\/defined error messages designated to each kind of {\ttfamily \doxylink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}} \mbox{\hyperlink{namespace____plugin__root_ac749617856800d684fc9edac4eb28e3e}{operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}})
 \end{DoxyCompactItemize}
 
 
@@ -85,15 +147,15 @@ typedef std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Entry}
 
 \doxylink{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}{Path} to the object entry point. 
 
-\Hypertarget{namespace____plugin__root_ace7d11467cf9033aaaaf889c9fe90904}\index{\_\_plugin\_root@{\_\_plugin\_root}!ObjectMode@{ObjectMode}}
+\Hypertarget{namespace____plugin__root_aaef0dcd42320592a525270c914424ebb}\index{\_\_plugin\_root@{\_\_plugin\_root}!ObjectMode@{ObjectMode}}
 \index{ObjectMode@{ObjectMode}!\_\_plugin\_root@{\_\_plugin\_root}}
 \doxysubsubsection{\texorpdfstring{ObjectMode}{ObjectMode}}
-{\footnotesize\ttfamily \label{namespace____plugin__root_ace7d11467cf9033aaaaf889c9fe90904} 
-typedef int \+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Mode}
+{\footnotesize\ttfamily \label{namespace____plugin__root_aaef0dcd42320592a525270c914424ebb} 
+typedef std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Mode}
 
 
 
-Mode of how to load the entry point. 
+Mode of how to build the entry point. 
 
 \Hypertarget{namespace____plugin__root_a09d45b8a78573e3eb8d0ddd01343a12a}\index{\_\_plugin\_root@{\_\_plugin\_root}!ObjectRef@{ObjectRef}}
 \index{ObjectRef@{ObjectRef}!\_\_plugin\_root@{\_\_plugin\_root}}
@@ -104,6 +166,16 @@ typedef void\texorpdfstring{$\ast$}{*} \+\_\+\+\_\+plugin\+\_\+root\+::\+Object\
 
 
 A reference to the object loaded dynamically. 
+
+\Hypertarget{namespace____plugin__root_a13d22b286eb7ccd25930bc3446682973}\index{\_\_plugin\_root@{\_\_plugin\_root}!ObjectType@{ObjectType}}
+\index{ObjectType@{ObjectType}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{ObjectType}{ObjectType}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a13d22b286eb7ccd25930bc3446682973} 
+typedef std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+Object\+Type}
+
+
+
+Type of the entry point. 
 
 \Hypertarget{namespace____plugin__root_aa005e96428daf47f07c7321131ec1857}\index{\_\_plugin\_root@{\_\_plugin\_root}!Path@{Path}}
 \index{Path@{Path}!\_\_plugin\_root@{\_\_plugin\_root}}
@@ -133,12 +205,42 @@ Alias for\+:
 \end{DoxyCode}
 
 
-Used in callback communication between plugins and the manager. \Hypertarget{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateFn@{StateFn}}
+Used in callback communication between plugins and the manager. \Hypertarget{namespace____plugin__root_aed145805402c1dfeff6e796b7969bf2e}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateErrGroup@{StateErrGroup}}
+\index{StateErrGroup@{StateErrGroup}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateErrGroup}{StateErrGroup}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_aed145805402c1dfeff6e796b7969bf2e} 
+typedef enum \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Group \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Group}
+
+
+
+The grouping some {\ttfamily \doxylink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} belongs to. 
+
+\Hypertarget{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateErrMessage@{StateErrMessage}}
+\index{StateErrMessage@{StateErrMessage}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateErrMessage}{StateErrMessage}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08} 
+typedef std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Message}
+
+
+
+A message providing more detail about the {\ttfamily \doxylink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} which occured. 
+
+\Hypertarget{namespace____plugin__root_ab285784acffbf36380c0428e903feb46}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateFn@{StateFn}}
 \index{StateFn@{StateFn}!\_\_plugin\_root@{\_\_plugin\_root}}
 \doxysubsubsection{\texorpdfstring{StateFn}{StateFn}}
 {\footnotesize\ttfamily \label{namespace____plugin__root_ab285784acffbf36380c0428e903feb46} 
 template$<$typename R, typename ... A$>$ \\
 using \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Fn = std\+::function$<$\mbox{\hyperlink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State}}$<$R$>$(A...)$>$}
+
+\Hypertarget{namespace____plugin__root_a744f0104cd37f3c8d4442a5e3cf74105}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateInfo@{StateInfo}}
+\index{StateInfo@{StateInfo}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateInfo}{StateInfo}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a744f0104cd37f3c8d4442a5e3cf74105} 
+typedef struct \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Info \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Info}
+
+
+
+Provides information given the current state in detail. 
 
 \Hypertarget{namespace____plugin__root_a84d5a198ebf7ebdff6e8dc6c22fcb542}\index{\_\_plugin\_root@{\_\_plugin\_root}!Version@{Version}}
 \index{Version@{Version}!\_\_plugin\_root@{\_\_plugin\_root}}
@@ -152,12 +254,105 @@ The version name of a plugin asset, module or artifact.
 
 
 
+\label{doc-enum-members}
+\Hypertarget{namespace____plugin__root_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateErrGroup@{StateErrGroup}}
+\index{StateErrGroup@{StateErrGroup}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateErrGroup}{StateErrGroup}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df} 
+enum \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Group}
+
+
+
+The grouping some {\ttfamily \doxylink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} belongs to. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OK@{OK}!\_\_plugin\_root@{\_\_plugin\_root}}\index{\_\_plugin\_root@{\_\_plugin\_root}!OK@{OK}}}\Hypertarget{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa58a14c103edf9147448fb0403c5e50b3}\label{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa58a14c103edf9147448fb0403c5e50b3} 
+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DYNAMIC@{DYNAMIC}!\_\_plugin\_root@{\_\_plugin\_root}}\index{\_\_plugin\_root@{\_\_plugin\_root}!DYNAMIC@{DYNAMIC}}}\Hypertarget{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18}\label{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18} 
+DYNAMIC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MANIFEST@{MANIFEST}!\_\_plugin\_root@{\_\_plugin\_root}}\index{\_\_plugin\_root@{\_\_plugin\_root}!MANIFEST@{MANIFEST}}}\Hypertarget{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa51d41f4d841ff4b6cbf5b23f1becee9a}\label{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa51d41f4d841ff4b6cbf5b23f1becee9a} 
+MANIFEST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{USER@{USER}!\_\_plugin\_root@{\_\_plugin\_root}}\index{\_\_plugin\_root@{\_\_plugin\_root}!USER@{USER}}}\Hypertarget{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa81b1efe22dac764a3ce5f08a5a9cc45f}\label{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa81b1efe22dac764a3ce5f08a5a9cc45f} 
+USER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
 \label{doc-func-members}
 \Hypertarget{namespace____plugin__root_doc-func-members}
 \doxysubsection{Function Documentation}
+\Hypertarget{namespace____plugin__root_aa2faaa181cdf3c957558d2073210b28a}\index{\_\_plugin\_root@{\_\_plugin\_root}!CallCommand@{CallCommand}}
+\index{CallCommand@{CallCommand}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{CallCommand()}{CallCommand()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_aa2faaa181cdf3c957558d2073210b28a} 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \+\_\+\+\_\+plugin\+\_\+root\+::\+Call\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_acac768e7023703f771645e1a4b25af4f}\index{\_\_plugin\_root@{\_\_plugin\_root}!GetDescription@{GetDescription}}
+\index{GetDescription@{GetDescription}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_acac768e7023703f771645e1a4b25af4f} 
+const char \texorpdfstring{$\ast$}{*} \+\_\+\+\_\+plugin\+\_\+root\+::\+Get\+Description (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_aef62642a3c46e04e01866a33a59e7efc}\index{\_\_plugin\_root@{\_\_plugin\_root}!GetDescriptionLong@{GetDescriptionLong}}
+\index{GetDescriptionLong@{GetDescriptionLong}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{GetDescriptionLong()}{GetDescriptionLong()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_aef62642a3c46e04e01866a33a59e7efc} 
+const char \texorpdfstring{$\ast$}{*} \+\_\+\+\_\+plugin\+\_\+root\+::\+Get\+Description\+Long (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_a38cd09328c14454373ef1ccb37f94477}\index{\_\_plugin\_root@{\_\_plugin\_root}!GetName@{GetName}}
+\index{GetName@{GetName}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a38cd09328c14454373ef1ccb37f94477} 
+const char \texorpdfstring{$\ast$}{*} \+\_\+\+\_\+plugin\+\_\+root\+::\+Get\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_abc1903f0c87d3323a6e6183020b50573}\index{\_\_plugin\_root@{\_\_plugin\_root}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_abc1903f0c87d3323a6e6183020b50573} 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \+\_\+\+\_\+plugin\+\_\+root\+::\+Initialize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
+
+
+
+Initilizes the plugin module. This is effectively the \textquotesingle{}start-\/up\textquotesingle{} functionality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & of the artifact owning the module. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+context passed to this function. 
+\end{DoxyReturn}
+\Hypertarget{namespace____plugin__root_ae87f7c54a99d047acf9e828b39747f61}\index{\_\_plugin\_root@{\_\_plugin\_root}!Install@{Install}}
+\index{Install@{Install}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{Install()}{Install()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_ae87f7c54a99d047acf9e828b39747f61} 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \+\_\+\+\_\+plugin\+\_\+root\+::\+Install (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Install the plugin module from the given artifact manifest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & of the artifact owning the module. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+context passed to this function. 
+\end{DoxyReturn}
 \Hypertarget{namespace____plugin__root_aaa55187fb313655b64c12fdd14ab7e04}\index{\_\_plugin\_root@{\_\_plugin\_root}!Install@{Install}}
 \index{Install@{Install}!\_\_plugin\_root@{\_\_plugin\_root}}
-\doxysubsubsection{\texorpdfstring{Install()}{Install()}}
+\doxysubsubsection{\texorpdfstring{Install()}{Install()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \label{namespace____plugin__root_aaa55187fb313655b64c12fdd14ab7e04} 
 \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \+\_\+\+\_\+plugin\+\_\+root\+::\+Install (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&}]{ctx}{}\end{DoxyParamCaption})}
 
@@ -167,17 +362,47 @@ Install the plugin module from the given artifact.
 
 
 \begin{DoxyParams}{Parameters}
-{\em source} & artifact to install from/into. \\
+{\em ctx} & of the artifact owning the module. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The artifact after installation. 
+context passed to this function. 
 \end{DoxyReturn}
+\Hypertarget{namespace____plugin__root_a3893f932b32a6acd983aee7a468e3c07}\index{\_\_plugin\_root@{\_\_plugin\_root}!operator\&@{operator\&}}
+\index{operator\&@{operator\&}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{operator\&()}{operator\&()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a3893f932b32a6acd983aee7a468e3c07} 
+\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}} \+\_\+\+\_\+plugin\+\_\+root\+::operator\& (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}}]{state}{, }\item[{\mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}}}]{detail}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_a059adc1a2b09a8d53ed994fa6eb3c2fb}\index{\_\_plugin\_root@{\_\_plugin\_root}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a059adc1a2b09a8d53ed994fa6eb3c2fb} 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \+\_\+\+\_\+plugin\+\_\+root\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}}}]{info}{}\end{DoxyParamCaption})}
+
 \Hypertarget{namespace____plugin__root_a3c87979575ad101348ccaebdc3f7d377}\index{\_\_plugin\_root@{\_\_plugin\_root}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!\_\_plugin\_root@{\_\_plugin\_root}}
-\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{namespace____plugin__root_a3c87979575ad101348ccaebdc3f7d377} 
 std\+::ostream \& \+\_\+\+\_\+plugin\+\_\+root\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_a7feeef79fbc8a0ff6c9059698e2b8803}\index{\_\_plugin\_root@{\_\_plugin\_root}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a7feeef79fbc8a0ff6c9059698e2b8803} 
+std\+::ostream \& \+\_\+\+\_\+plugin\+\_\+root\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}} \&}]{info}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_a224ecf9fe7c4bea4229602c3a42b938b}\index{\_\_plugin\_root@{\_\_plugin\_root}!operator==@{operator==}}
+\index{operator==@{operator==}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a224ecf9fe7c4bea4229602c3a42b938b} 
+bool \+\_\+\+\_\+plugin\+\_\+root\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}}}]{info}{, }\item[{\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_a34ea00f0406d0d91f73685763ff06cbf}\index{\_\_plugin\_root@{\_\_plugin\_root}!RegisterCommand@{RegisterCommand}}
+\index{RegisterCommand@{RegisterCommand}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{RegisterCommand()}{RegisterCommand()}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a34ea00f0406d0d91f73685763ff06cbf} 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \+\_\+\+\_\+plugin\+\_\+root\+::\+Register\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{impl\+\_\+name}{}\end{DoxyParamCaption})}
 
 \Hypertarget{namespace____plugin__root_aee3919c9fa229b9e584aeae951867f44}\index{\_\_plugin\_root@{\_\_plugin\_root}!Release@{Release}}
 \index{Release@{Release}!\_\_plugin\_root@{\_\_plugin\_root}}
@@ -191,17 +416,60 @@ Release and destroy plugin module assets.
 
 
 \begin{DoxyParams}{Parameters}
-{\em source} & artifact owning the module. \\
+{\em ctx} & of the artifact owning the module. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The artifact after releasing assets. 
+context passed to this function. 
 \end{DoxyReturn}
-\Hypertarget{namespace____plugin__root_a6fc3f9d65a2d10ac3668e834dd83ca71}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateGroup@{StateGroup}}
+\Hypertarget{namespace____plugin__root_a4aba2ef9ab0abcba4ae6e40918969343}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateGroup@{StateGroup}}
 \index{StateGroup@{StateGroup}!\_\_plugin\_root@{\_\_plugin\_root}}
-\doxysubsubsection{\texorpdfstring{StateGroup()}{StateGroup()}}
-{\footnotesize\ttfamily \label{namespace____plugin__root_a6fc3f9d65a2d10ac3668e834dd83ca71} 
+\doxysubsubsection{\texorpdfstring{StateGroup()}{StateGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a4aba2ef9ab0abcba4ae6e40918969343} 
+template$<$$>$ \\
+const \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_a7e0947d42efee02781eb538b9b3c9a61}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateGroup@{StateGroup}}
+\index{StateGroup@{StateGroup}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateGroup()}{StateGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a7e0947d42efee02781eb538b9b3c9a61} 
+template$<$$>$ \\
 const std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_ac6dca043cf8e55d4e6d646eed2f42d96}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateGroup@{StateGroup}}
+\index{StateGroup@{StateGroup}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateGroup()}{StateGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_ac6dca043cf8e55d4e6d646eed2f42d96} 
+template$<$$>$ \\
+const \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_afc92e054bbbea75880c73cbd03f4f710}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateGroup@{StateGroup}}
+\index{StateGroup@{StateGroup}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateGroup()}{StateGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_afc92e054bbbea75880c73cbd03f4f710} 
+template$<$$>$ \\
+const std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_ae875baa0bba5e8dbf2c45e3a25078a05}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateGroup@{StateGroup}}
+\index{StateGroup@{StateGroup}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateGroup()}{StateGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_ae875baa0bba5e8dbf2c45e3a25078a05} 
+template$<$$>$ \\
+const std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \&}]{group}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_a4df0676633e8d6926ff4a018e8dd11cf}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateGroup@{StateGroup}}
+\index{StateGroup@{StateGroup}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateGroup()}{StateGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a4df0676633e8d6926ff4a018e8dd11cf} 
+template$<$$>$ \\
+const std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \&}]{group}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_afaf3928a7b5a1b4ccd12e0ec76860fbf}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateGroup@{StateGroup}}
+\index{StateGroup@{StateGroup}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateGroup()}{StateGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_afaf3928a7b5a1b4ccd12e0ec76860fbf} 
+template$<$typename T, typename V$>$ \\
+const T \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group (\begin{DoxyParamCaption}\item[{const V \&}]{}{}\end{DoxyParamCaption})}
 
 
 
@@ -215,11 +483,11 @@ const std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group (\begin{DoxyP
 \begin{DoxyReturn}{Returns}
 \doxylink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State} group name. 
 \end{DoxyReturn}
-\Hypertarget{namespace____plugin__root_ac39cad57c780ffb859ecdb286bdd9177}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateMessage@{StateMessage}}
+\Hypertarget{namespace____plugin__root_a8dcab26fcc4bc1e1961c5b9714bf2ec9}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateMessage@{StateMessage}}
 \index{StateMessage@{StateMessage}!\_\_plugin\_root@{\_\_plugin\_root}}
 \doxysubsubsection{\texorpdfstring{StateMessage()}{StateMessage()}}
-{\footnotesize\ttfamily \label{namespace____plugin__root_ac39cad57c780ffb859ecdb286bdd9177} 
-const std\+::string \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a8dcab26fcc4bc1e1961c5b9714bf2ec9} 
+const \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}} \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&}]{state}{}\end{DoxyParamCaption})}
 
 
 
@@ -233,3 +501,57 @@ Human-\/readable explanation of the error state.
 \begin{DoxyReturn}{Returns}
 Human-\/readable message. 
 \end{DoxyReturn}
+
+
+\label{doc-var-members}
+\Hypertarget{namespace____plugin__root_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace____plugin__root_ac749617856800d684fc9edac4eb28e3e}\index{\_\_plugin\_root@{\_\_plugin\_root}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}}{operator*}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_ac749617856800d684fc9edac4eb28e3e} 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \+\_\+\+\_\+plugin\+\_\+root\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}}]{state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespace____plugin__root_a1d1a2e7250e2c9e57a06b31866a85cfe}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateErrGroupNames@{StateErrGroupNames}}
+\index{StateErrGroupNames@{StateErrGroupNames}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateErrGroupNames}{StateErrGroupNames}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a1d1a2e7250e2c9e57a06b31866a85cfe} 
+const std\+::map$<$\mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}}, \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}}$>$ \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Group\+Names}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa58a14c103edf9147448fb0403c5e50b3}{OK}},\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}OK"{}}\ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa5121edca8d41f228686043516ee07b18}{DYNAMIC}},\ \ \textcolor{stringliteral}{"{}DLL"{}}\ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ MANIFEST,\ \textcolor{stringliteral}{"{}MAN"{}}\ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13dfa81b1efe22dac764a3ce5f08a5a9cc45f}{USER}},\ \ \ \ \ \textcolor{stringliteral}{"{}USR"{}}\ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace____plugin__root_a81386dd6210dc707c36fa3b508e075b9}\index{\_\_plugin\_root@{\_\_plugin\_root}!StateErrMessages@{StateErrMessages}}
+\index{StateErrMessages@{StateErrMessages}!\_\_plugin\_root@{\_\_plugin\_root}}
+\doxysubsubsection{\texorpdfstring{StateErrMessages}{StateErrMessages}}
+{\footnotesize\ttfamily \label{namespace____plugin__root_a81386dd6210dc707c36fa3b508e075b9} 
+const std\+::map$<$\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}, \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}}$>$ \+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Err\+Messages}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}},\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}no\ error"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a1eda451e6af890743177dd1c50d193b1}{DLL\_MALFORMAT}},\ \ \textcolor{stringliteral}{"{}bad\ dll\ format"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a9314dcb57cdb5e341beb809eb0dfeddc}{DLL\_NOCALLBACK}},\ \textcolor{stringliteral}{"{}missing\ callback"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad43a10efcfb4462aead6359fb4dc12a3}{DLL\_NOINSTALL}},\ \ \textcolor{stringliteral}{"{}artifact\ not\ installed"{}}\ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a80a5e38efd5bba6f08081f1a3c9d4dac}{DLL\_NOMODULE}},\ \ \ \textcolor{stringliteral}{"{}missing\ module"{}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ae1e17e8a57877acab86ae7dc450950c0}{DLL\_NOOBJECT}},\ \ \ \textcolor{stringliteral}{"{}missing\ module\ object"{}}\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a616f3e261158d1f59ced1e644a47a67c}{DLL\_NORELEASE}},\ \ \textcolor{stringliteral}{"{}artifact\ not\ released"{}}\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aaee988ac26d5ef01c5676bb2a650c6be}{DLL\_NOSCOPE}},\ \ \ \ \textcolor{stringliteral}{"{}missing\ scope\ of\ module\ object"{}}\ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aacb8a965f9ffbc983a406f8b306941e8}{MAN\_NOHEADER}},\ \ \ \textcolor{stringliteral}{"{}missing\ manifest\ header"{}}\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03a6aaf599a495dfed753830cd5ac67827e}{MAN\_NOMAN}},\ \ \ \ \ \ \textcolor{stringliteral}{"{}missing\ manifest\ file"{}}\ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5}{MAN\_MALPARSE}},\ \ \ \textcolor{stringliteral}{"{}bad\ format\ in\ manifest"{}}\ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The system-\/defined error messages designated to each kind of {\ttfamily \doxylink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}. 
+

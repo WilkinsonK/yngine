@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['version_0',['Version',['../namespace____plugin__root.html#a84d5a198ebf7ebdff6e8dc6c22fcb542',1,'__plugin_root']]]
+  ['path_0',['Path',['../namespace____plugin__root.html#aa005e96428daf47f07c7321131ec1857',1,'__plugin_root']]]
 ];

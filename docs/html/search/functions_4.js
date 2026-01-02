@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['handleerr_0',['HandleErr',['../namespace____plugin__root_1_1dllutil.html#a78525d3a2c69450a2f86d0d1e314bcb8',1,'__plugin_root::dllutil::HandleErr(const Context &amp;, StateErr)'],['../namespace____plugin__root_1_1dllutil.html#a810da2f0cb6e0fa66a8f3922c942fce1',1,'__plugin_root::dllutil::HandleErr(const Context &amp;)']]]
+  ['defaultpassthrough_0',['DefaultPassthrough',['../namespace____plugin__root_1_1command.html#a39d39f82f2a09dcee80391f306ed9029',1,'__plugin_root::command']]]
 ];

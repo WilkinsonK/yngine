@@ -1,11 +1,20 @@
 var searchData=
 [
-  ['withdescription_0',['WithDescription',['../namespace____plugin__root_1_1artifact.html#a26f036c1eec46c5955b28a5806338d9f',1,'__plugin_root::artifact']]],
-  ['withdescriptionlong_1',['WithDescriptionLong',['../namespace____plugin__root_1_1artifact.html#a48bda01db8fab68c573c3287056217f3',1,'__plugin_root::artifact']]],
-  ['withentry_2',['WithEntry',['../namespace____plugin__root_1_1artifact.html#af4fd4b431dfd701f030d40e7ec269262',1,'__plugin_root::artifact']]],
-  ['withmanifest_3',['WithManifest',['../namespace____plugin__root_1_1artifact.html#ace5242dd64ca02d3965076d0f2dfb93f',1,'__plugin_root::artifact']]],
-  ['withname_4',['WithName',['../namespace____plugin__root_1_1artifact.html#ab800e1eba137ac33b011df7c620f0d16',1,'__plugin_root::artifact']]],
-  ['withpath_5',['WithPath',['../namespace____plugin__root_1_1artifact.html#ac9e7e90c4496ab296d313a72b452a710',1,'__plugin_root::artifact']]],
-  ['withstate_6',['WithState',['../namespace____plugin__root_1_1artifact.html#a6b3092723179c170f24ab67ee0966c3f',1,'__plugin_root::artifact']]],
-  ['withversion_7',['WithVersion',['../namespace____plugin__root_1_1artifact.html#a2f8b9ef827c9fbe6fb0e323ccfd34bf5',1,'__plugin_root::artifact']]]
+  ['scope_0',['scope',['../struct____plugin__root_1_1command_1_1_command.html#ab6ce2de24956ef93c07e220158837b49',1,'__plugin_root::command::Command']]],
+  ['scope_5fglobal_1',['SCOPE_GLOBAL',['../plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0ae8e9210011c34fb548688d6cd9426cd8',1,'plugin.h']]],
+  ['scope_5flocal_2',['SCOPE_LOCAL',['../plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0af828bc82c537119c89b55d2db41ec75b',1,'plugin.h']]],
+  ['scope_5fshared_3',['SCOPE_SHARED',['../plugin_8h.html#a11a6da27f6d3b8c5ba55f9809b61cdd0ab25e409b4a6d6966a90985a502ff5168',1,'plugin.h']]],
+  ['setstate_4',['SetState',['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#accc9b6874e6a39730d25d1387a9f5e60',1,'__plugin_root::artifact::ArtifactBody']]],
+  ['state_5',['State',['../namespace____plugin__root.html#ae48a16d624b75092f0168a1ce094d71a',1,'__plugin_root']]],
+  ['state_6',['state',['../struct____plugin__root_1_1command_1_1_command.html#a0d2062869e755d5b7c032e33633f8603',1,'__plugin_root::command::Command::state'],['../struct____plugin__root_1_1artifact_1_1_artifact_body.html#afa7996deb7acd9ab8edaaab7b8488ea0',1,'__plugin_root::artifact::ArtifactBody::state']]],
+  ['stateerr_7',['StateErr',['../plugin_8h.html#a1d65491ca14b98a2d74d54a94a494b03',1,'StateErr:&#160;plugin.h'],['../plugin_8h.html#a57a433fb947523a524b5b61941b70ff5',1,'StateErr:&#160;plugin.h']]],
+  ['stateerrgroup_8',['StateErrGroup',['../namespace____plugin__root.html#abcb37daa5a5b1cf6fda142b30ede13df',1,'__plugin_root::StateErrGroup'],['../namespace____plugin__root.html#aed145805402c1dfeff6e796b7969bf2e',1,'__plugin_root::StateErrGroup']]],
+  ['stateerrgroupnames_9',['StateErrGroupNames',['../namespace____plugin__root.html#a1d1a2e7250e2c9e57a06b31866a85cfe',1,'__plugin_root']]],
+  ['stateerrgrouporder_10',['StateErrGroupOrder',['../plugin_8h.html#a5fed3cf02be896a54c23eb81e200de9d',1,'plugin.h']]],
+  ['stateerrmessage_11',['StateErrMessage',['../namespace____plugin__root.html#a538aaf2e7b9278e0e7cda69be9549a08',1,'__plugin_root']]],
+  ['stateerrmessages_12',['StateErrMessages',['../namespace____plugin__root.html#a81386dd6210dc707c36fa3b508e075b9',1,'__plugin_root']]],
+  ['statefn_13',['StateFn',['../namespace____plugin__root.html#ab285784acffbf36380c0428e903feb46',1,'__plugin_root']]],
+  ['stategroup_14',['StateGroup',['../namespace____plugin__root.html#afaf3928a7b5a1b4ccd12e0ec76860fbf',1,'__plugin_root::StateGroup(const V &amp;)'],['../namespace____plugin__root.html#a7e0947d42efee02781eb538b9b3c9a61',1,'__plugin_root::StateGroup(const StateErr &amp;)'],['../namespace____plugin__root.html#ae875baa0bba5e8dbf2c45e3a25078a05',1,'__plugin_root::StateGroup(const StateErrGroup &amp;)'],['../namespace____plugin__root.html#a4aba2ef9ab0abcba4ae6e40918969343',1,'__plugin_root::StateGroup(const StateErr &amp;)'],['../namespace____plugin__root.html#a4df0676633e8d6926ff4a018e8dd11cf',1,'__plugin_root::StateGroup(const StateErrGroup &amp;group)'],['../namespace____plugin__root.html#afc92e054bbbea75880c73cbd03f4f710',1,'__plugin_root::StateGroup(const StateErr &amp;state)'],['../namespace____plugin__root.html#ac6dca043cf8e55d4e6d646eed2f42d96',1,'__plugin_root::StateGroup(const StateErr &amp;state)']]],
+  ['stateinfo_15',['StateInfo',['../struct____plugin__root_1_1_state_info.html',1,'__plugin_root::StateInfo'],['../struct____plugin__root_1_1_state_info.html#af30411a7e36170f54ca98a36a171cdc2',1,'__plugin_root::StateInfo::StateInfo(void)'],['../struct____plugin__root_1_1_state_info.html#a928cba52494a1f310deeab27ec027bc9',1,'__plugin_root::StateInfo::StateInfo(const StateErr &amp;)'],['../struct____plugin__root_1_1_state_info.html#a122e38d7ef681451c637909a6b9edb9e',1,'__plugin_root::StateInfo::StateInfo(const StateErr &amp;, const StateErrMessage &amp;)'],['../namespace____plugin__root.html#a744f0104cd37f3c8d4442a5e3cf74105',1,'__plugin_root::StateInfo']]],
+  ['statemessage_16',['StateMessage',['../namespace____plugin__root.html#a8dcab26fcc4bc1e1961c5b9714bf2ec9',1,'__plugin_root']]]
 ];

@@ -11,138 +11,48 @@
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespace____plugin__root}{\+\_\+\+\_\+plugin\+\_\+root}}
-\item 
-namespace \mbox{\hyperlink{namespace____plugin__root_1_1plugin}{\+\_\+\+\_\+plugin\+\_\+root\+::plugin}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_a3c87979575ad101348ccaebdc3f7d377}{\+\_\+\+\_\+plugin\+\_\+root\+::operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
-\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_ae87f7c54a99d047acf9e828b39747f61}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Install}} (const char \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Install the plugin module from the given artifact manifest. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_aaa55187fb313655b64c12fdd14ab7e04}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Install}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
 \begin{DoxyCompactList}\small\item\em Install the plugin module from the given artifact. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_abc1903f0c87d3323a6e6183020b50573}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Initialize}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
+\begin{DoxyCompactList}\small\item\em Initilizes the plugin module. This is effectively the \textquotesingle{}start-\/up\textquotesingle{} functionality. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \mbox{\hyperlink{namespace____plugin__root_aee3919c9fa229b9e584aeae951867f44}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Release}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \&)
 \begin{DoxyCompactList}\small\item\em Release and destroy plugin module assets. \end{DoxyCompactList}\item 
-const std\+::string \mbox{\hyperlink{namespace____plugin__root_a6fc3f9d65a2d10ac3668e834dd83ca71}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
-\begin{DoxyCompactList}\small\item\em \doxylink{namespace____plugin__root_ae48a16d624b75092f0168a1ce094d71a}{State} group the state belongs to. \end{DoxyCompactList}\item 
-const std\+::string \mbox{\hyperlink{namespace____plugin__root_ac39cad57c780ffb859ecdb286bdd9177}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Message}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
-\begin{DoxyCompactList}\small\item\em Human-\/readable explanation of the error state. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{plugin_8cpp_a2e357b71aaaed76de2b226296a22dcdf}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head}} (\mbox{\hyperlink{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561}{\+\_\+\+\_\+plugin\+\_\+root}}) \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} Call\+Command(const Context \texorpdfstring{$\ast$}{*}ctx
+template$<$$>$ const std\+::string \mbox{\hyperlink{namespace____plugin__root_a4df0676633e8d6926ff4a018e8dd11cf}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group}} (const \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \&group)
 \item 
-const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin_8cpp_aa85b4f1c52cd0de020fcff00ab3afbfc}{Get\+Name}} (const Context \texorpdfstring{$\ast$}{*}ctx)
-\begin{DoxyCompactList}\small\item\em Gets the name of the artifact currently contained in the context. \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin_8cpp_a95792be1683ff26b0a8ef0de53cd7e9f}{Get\+Description}} (const Context \texorpdfstring{$\ast$}{*}ctx)
-\begin{DoxyCompactList}\small\item\em Gets the description of the artifact currently contatained in the context. \end{DoxyCompactList}\item 
-const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin_8cpp_a23a8b16392f21092bd752cad50ead113}{Get\+Description\+Long}} (const Context \texorpdfstring{$\ast$}{*}ctx)
-\begin{DoxyCompactList}\small\item\em Gets the long description of the artifact currently contatained in the context. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{plugin_8cpp_a0a99c5fa97e87fb3e9b74513645f02bc}{Register\+Command}} (const Context \texorpdfstring{$\ast$}{*}ctx, const char \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}, const char \texorpdfstring{$\ast$}{*}impl\+\_\+name)
-\begin{DoxyCompactList}\small\item\em Adds a command to the artifact registry; making it callable from the plugin ecosystem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+template$<$$>$ const std\+::string \mbox{\hyperlink{namespace____plugin__root_afc92e054bbbea75880c73cbd03f4f710}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&state)
+\item 
+template$<$$>$ const \mbox{\hyperlink{namespace____plugin__root_abcb37daa5a5b1cf6fda142b30ede13df}{State\+Err\+Group}} \mbox{\hyperlink{namespace____plugin__root_ac6dca043cf8e55d4e6d646eed2f42d96}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Group}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&state)
+\item 
+const std\+::string \mbox{\hyperlink{namespace____plugin__root_a8dcab26fcc4bc1e1961c5b9714bf2ec9}{\+\_\+\+\_\+plugin\+\_\+root\+::\+State\+Message}} (const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\begin{DoxyCompactList}\small\item\em Human-\/readable explanation of the error state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}} \mbox{\hyperlink{namespace____plugin__root_a3893f932b32a6acd983aee7a468e3c07}{\+\_\+\+\_\+plugin\+\_\+root\+::operator\&}} (\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}}, \mbox{\hyperlink{namespace____plugin__root_a538aaf2e7b9278e0e7cda69be9549a08}{State\+Err\+Message}})
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_a3c87979575ad101348ccaebdc3f7d377}{\+\_\+\+\_\+plugin\+\_\+root\+::operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \&)
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_a059adc1a2b09a8d53ed994fa6eb3c2fb}{\+\_\+\+\_\+plugin\+\_\+root\+::operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}})
+\item 
+bool \mbox{\hyperlink{namespace____plugin__root_a224ecf9fe7c4bea4229602c3a42b938b}{\+\_\+\+\_\+plugin\+\_\+root\+::operator==}} (\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}}, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}})
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace____plugin__root_a7feeef79fbc8a0ff6c9059698e2b8803}{\+\_\+\+\_\+plugin\+\_\+root\+::operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}} \&)
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_aa2faaa181cdf3c957558d2073210b28a}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Call\+Command}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}ctx, const char \texorpdfstring{$\ast$}{*}name)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace____plugin__root_a38cd09328c14454373ef1ccb37f94477}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Get\+Name}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}ctx)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace____plugin__root_acac768e7023703f771645e1a4b25af4f}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Get\+Description}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}ctx)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace____plugin__root_aef62642a3c46e04e01866a33a59e7efc}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Get\+Description\+Long}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}ctx)
+\item 
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{namespace____plugin__root_a34ea00f0406d0d91f73685763ff06cbf}{\+\_\+\+\_\+plugin\+\_\+root\+::\+Register\+Command}} (const \mbox{\hyperlink{struct____plugin__root_1_1_context}{Context}} \texorpdfstring{$\ast$}{*}ctx, const char \texorpdfstring{$\ast$}{*}name, const char \texorpdfstring{$\ast$}{*}impl\+\_\+name)
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}
+\mbox{\hyperlink{struct____plugin__root_1_1_state_info}{State\+Info}} \mbox{\hyperlink{namespace____plugin__root_ac749617856800d684fc9edac4eb28e3e}{\+\_\+\+\_\+plugin\+\_\+root\+::operator\texorpdfstring{$\ast$}{*}}} (\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}})
 \end{DoxyCompactItemize}
-
-
-\label{doc-func-members}
-\Hypertarget{plugin_8cpp_doc-func-members}
-\doxysubsection{Function Documentation}
-\Hypertarget{plugin_8cpp_a2e357b71aaaed76de2b226296a22dcdf}\index{plugin.cpp@{plugin.cpp}!\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}}
-\index{\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}!plugin.cpp@{plugin.cpp}}
-\doxysubsubsection{\texorpdfstring{\_\_ns\_cplusplus\_head()}{\_\_ns\_cplusplus\_head()}}
-{\footnotesize\ttfamily \label{plugin_8cpp_a2e357b71aaaed76de2b226296a22dcdf} 
-\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561}{\+\_\+\+\_\+plugin\+\_\+root}}}]{}{}\end{DoxyParamCaption}) const}
-
-\Hypertarget{plugin_8cpp_a95792be1683ff26b0a8ef0de53cd7e9f}\index{plugin.cpp@{plugin.cpp}!GetDescription@{GetDescription}}
-\index{GetDescription@{GetDescription}!plugin.cpp@{plugin.cpp}}
-\doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
-{\footnotesize\ttfamily \label{plugin_8cpp_a95792be1683ff26b0a8ef0de53cd7e9f} 
-const char \texorpdfstring{$\ast$}{*} Get\+Description (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
-
-
-
-Gets the description of the artifact currently contatained in the context. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em ctx} & as the current context. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The description of the artifact. 
-\end{DoxyReturn}
-\Hypertarget{plugin_8cpp_a23a8b16392f21092bd752cad50ead113}\index{plugin.cpp@{plugin.cpp}!GetDescriptionLong@{GetDescriptionLong}}
-\index{GetDescriptionLong@{GetDescriptionLong}!plugin.cpp@{plugin.cpp}}
-\doxysubsubsection{\texorpdfstring{GetDescriptionLong()}{GetDescriptionLong()}}
-{\footnotesize\ttfamily \label{plugin_8cpp_a23a8b16392f21092bd752cad50ead113} 
-const char \texorpdfstring{$\ast$}{*} Get\+Description\+Long (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
-
-
-
-Gets the long description of the artifact currently contatained in the context. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em ctx} & as the current context. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The long description of the artifact. 
-\end{DoxyReturn}
-\Hypertarget{plugin_8cpp_aa85b4f1c52cd0de020fcff00ab3afbfc}\index{plugin.cpp@{plugin.cpp}!GetName@{GetName}}
-\index{GetName@{GetName}!plugin.cpp@{plugin.cpp}}
-\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
-{\footnotesize\ttfamily \label{plugin_8cpp_aa85b4f1c52cd0de020fcff00ab3afbfc} 
-const char \texorpdfstring{$\ast$}{*} Get\+Name (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
-
-
-
-Gets the name of the artifact currently contained in the context. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em ctx} & as the current context. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The name of the artifact. 
-\end{DoxyReturn}
-\Hypertarget{plugin_8cpp_a0a99c5fa97e87fb3e9b74513645f02bc}\index{plugin.cpp@{plugin.cpp}!RegisterCommand@{RegisterCommand}}
-\index{RegisterCommand@{RegisterCommand}!plugin.cpp@{plugin.cpp}}
-\doxysubsubsection{\texorpdfstring{RegisterCommand()}{RegisterCommand()}}
-{\footnotesize\ttfamily \label{plugin_8cpp_a0a99c5fa97e87fb3e9b74513645f02bc} 
-\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} Register\+Command (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{impl\+\_\+name}{}\end{DoxyParamCaption})}
-
-
-
-Adds a command to the artifact registry; making it callable from the plugin ecosystem. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em ctx} & as the current plugin context. \\
-\hline
-{\em name} & as the identifier used in the registry. \\
-\hline
-{\em impl\+\_\+name} & as the identifier used to locate the implementation. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The state of whether registration was successful. 
-\end{DoxyReturn}
-
-
-\label{doc-var-members}
-\Hypertarget{plugin_8cpp_doc-var-members}
-\doxysubsection{Variable Documentation}
-\Hypertarget{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}\index{plugin.cpp@{plugin.cpp}!name@{name}}
-\index{name@{name}!plugin.cpp@{plugin.cpp}}
-\doxysubsubsection{\texorpdfstring{name}{name}}
-{\footnotesize\ttfamily \label{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb} 
-const char\texorpdfstring{$\ast$}{*} name}
-
-{\bfseries Initial value\+:}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\{}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dllutil::CallCommand(*ctx,\ \mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}).error\_or(\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}})}
-
-\end{DoxyCode}

@@ -8,13 +8,13 @@ Common types and declarations shared between the core declarations and module de
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561}{\+\_\+\+\_\+plugin\+\_\+root}}~plugin
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561}{\+\_\+\+\_\+plugin\+\_\+root}}~plugin
 \item 
-\#define \mbox{\hyperlink{plugin_8h_a5a938a183e335a3268a89bd288570960}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head}}(\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}})
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin_8h_a5a938a183e335a3268a89bd288570960}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head}}(name)
 \item 
-\#define \mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}}
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}}
 \item 
-\#define \mbox{\hyperlink{plugin_8h_a20be4df58074471edff95560c865f046}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+prop}}(ns,  \mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}})
+\#\mbox{\hyperlink{namespacedefine}{define}} \mbox{\hyperlink{plugin_8h_a20be4df58074471edff95560c865f046}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+prop}}(ns,  name)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -46,6 +46,7 @@ enum \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} 
 , \newline
 \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03ad4bfa8b130d0fd08f7bd59056da426b5}{MAN\+\_\+\+MALPARSE}}
 , \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03aba0727e5ae54804a3f4d03951ad27acb}{MAN\+\_\+\+NOPLUGIN}}
+, \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03af809276ec808f2896ba319ff12918b7a}{MAN\+\_\+\+NOMODULE}}
  \}
 \begin{DoxyCompactList}\small\item\em Possible errors that can occur during the plugin lifecycle. \end{DoxyCompactList}\item 
 enum \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0}{Command\+Scope}} \{ \mbox{\hyperlink{plugin_8h_a11a6da27f6d3b8c5ba55f9809b61cdd0af828bc82c537119c89b55d2db41ec75b}{SCOPE\+\_\+\+LOCAL}}
@@ -70,6 +71,11 @@ const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{plugin_8h_aa8aec95a44e91f
 \begin{DoxyCompactList}\small\item\em Gets the long description of the artifact currently contatained in the context. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} \mbox{\hyperlink{plugin_8h_a1213640a384fba7c3f1ba89b76759a59}{Register\+Command}} (const Context \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*})
 \begin{DoxyCompactList}\small\item\em Adds a command to the artifact registry; making it callable from the plugin ecosystem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{plugin_8h_a5fed3cf02be896a54c23eb81e200de9d}{State\+Err\+Group\+Order}} = 0x1000
+\begin{DoxyCompactList}\small\item\em Degree of separation between different state groups. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -84,30 +90,30 @@ Common types and declarations shared between the core declarations and module de
 \index{\_\_ns\_cplusplus\_head@{\_\_ns\_cplusplus\_head}!plugin.h@{plugin.h}}
 \doxysubsubsection{\texorpdfstring{\_\_ns\_cplusplus\_head}{\_\_ns\_cplusplus\_head}}
 {\footnotesize\ttfamily \label{plugin_8h_a5a938a183e335a3268a89bd288570960} 
-\#define \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+head(\begin{DoxyParamCaption}\item[{}]{name}{}\end{DoxyParamCaption})}
 
 \Hypertarget{plugin_8h_a20be4df58074471edff95560c865f046}\index{plugin.h@{plugin.h}!\_\_ns\_cplusplus\_prop@{\_\_ns\_cplusplus\_prop}}
 \index{\_\_ns\_cplusplus\_prop@{\_\_ns\_cplusplus\_prop}!plugin.h@{plugin.h}}
 \doxysubsubsection{\texorpdfstring{\_\_ns\_cplusplus\_prop}{\_\_ns\_cplusplus\_prop}}
 {\footnotesize\ttfamily \label{plugin_8h_a20be4df58074471edff95560c865f046} 
-\#define \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+prop(\begin{DoxyParamCaption}\item[{}]{ns}{, }\item[{}]{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}{}\end{DoxyParamCaption})}
+\#\mbox{\hyperlink{namespacedefine}{define}} \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+prop(\begin{DoxyParamCaption}\item[{}]{ns}{, }\item[{}]{name}{}\end{DoxyParamCaption})}
 
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{plugin_8cpp_a8f8f80d37794cde9472343e4487ba3eb}{name}}}
+\DoxyCodeLine{name}
 
 \end{DoxyCode}
 \Hypertarget{plugin_8h_ae4504e280eff861b9a5e3339505761ea}\index{plugin.h@{plugin.h}!\_\_ns\_cplusplus\_tail@{\_\_ns\_cplusplus\_tail}}
 \index{\_\_ns\_cplusplus\_tail@{\_\_ns\_cplusplus\_tail}!plugin.h@{plugin.h}}
 \doxysubsubsection{\texorpdfstring{\_\_ns\_cplusplus\_tail}{\_\_ns\_cplusplus\_tail}}
 {\footnotesize\ttfamily \label{plugin_8h_ae4504e280eff861b9a5e3339505761ea} 
-\#define \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}
+\#\mbox{\hyperlink{namespacedefine}{define}} \+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}
 
 \Hypertarget{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561}\index{plugin.h@{plugin.h}!\_\_plugin\_root@{\_\_plugin\_root}}
 \index{\_\_plugin\_root@{\_\_plugin\_root}!plugin.h@{plugin.h}}
 \doxysubsubsection{\texorpdfstring{\_\_plugin\_root}{\_\_plugin\_root}}
 {\footnotesize\ttfamily \label{plugin_8h_aaec31b2595a7ff80fd910acf5a5fd561} 
-\#define \+\_\+\+\_\+plugin\+\_\+root~plugin}
+\#\mbox{\hyperlink{namespacedefine}{define}} \+\_\+\+\_\+plugin\+\_\+root~plugin}
 
 
 
@@ -240,6 +246,10 @@ MAN\+\_\+\+MALPARSE&Issue occured when parsing a manifest. \\
 MAN\+\_\+\+NOPLUGIN&The \textquotesingle{}plugin\textquotesingle{} header was missing. \\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAN\_NOMODULE@{MAN\_NOMODULE}!plugin.h@{plugin.h}}\index{plugin.h@{plugin.h}!MAN\_NOMODULE@{MAN\_NOMODULE}}}\Hypertarget{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03af809276ec808f2896ba319ff12918b7a}\label{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03af809276ec808f2896ba319ff12918b7a} 
+MAN\+\_\+\+NOMODULE&The \textquotesingle{}module\textquotesingle{} header was missing. \\
+\hline
+
 \end{DoxyEnumFields}
 
 
@@ -292,7 +302,7 @@ The callable and attributes dictating its behavior.
 \index{GetDescription@{GetDescription}!plugin.h@{plugin.h}}
 \doxysubsubsection{\texorpdfstring{GetDescription()}{GetDescription()}}
 {\footnotesize\ttfamily \label{plugin_8h_a66c0e49603caa33bb863d703911e78de} 
-const char \texorpdfstring{$\ast$}{*} Get\+Description (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+const char \texorpdfstring{$\ast$}{*} Get\+Description (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
 
 
 
@@ -310,7 +320,7 @@ The description of the artifact.
 \index{GetDescriptionLong@{GetDescriptionLong}!plugin.h@{plugin.h}}
 \doxysubsubsection{\texorpdfstring{GetDescriptionLong()}{GetDescriptionLong()}}
 {\footnotesize\ttfamily \label{plugin_8h_aa8aec95a44e91fefd7abe6d638d85d4e} 
-const char \texorpdfstring{$\ast$}{*} Get\+Description\+Long (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+const char \texorpdfstring{$\ast$}{*} Get\+Description\+Long (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
 
 
 
@@ -328,7 +338,7 @@ The long description of the artifact.
 \index{GetName@{GetName}!plugin.h@{plugin.h}}
 \doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
 {\footnotesize\ttfamily \label{plugin_8h_a8afb65e4e3737673e0f4abcd5c40c462} 
-\mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} const char \texorpdfstring{$\ast$}{*}const char \texorpdfstring{$\ast$}{*} Get\+Name (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{}\end{DoxyParamCaption})}
+\mbox{\hyperlink{plugin_8h_ae4504e280eff861b9a5e3339505761ea}{\+\_\+\+\_\+ns\+\_\+cplusplus\+\_\+tail}} const char \texorpdfstring{$\ast$}{*}const char \texorpdfstring{$\ast$}{*} Get\+Name (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
 
 
 
@@ -346,7 +356,7 @@ The name of the artifact.
 \index{RegisterCommand@{RegisterCommand}!plugin.h@{plugin.h}}
 \doxysubsubsection{\texorpdfstring{RegisterCommand()}{RegisterCommand()}}
 {\footnotesize\ttfamily \label{plugin_8h_a1213640a384fba7c3f1ba89b76759a59} 
-\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} Register\+Command (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{ctx}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{impl\+\_\+name}{}\end{DoxyParamCaption})}
+\mbox{\hyperlink{plugin_8h_a1d65491ca14b98a2d74d54a94a494b03}{State\+Err}} Register\+Command (\begin{DoxyParamCaption}\item[{const Context \texorpdfstring{$\ast$}{*}}]{}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
 
 
 
@@ -364,3 +374,18 @@ Adds a command to the artifact registry; making it callable from the plugin ecos
 \begin{DoxyReturn}{Returns}
 The state of whether registration was successful. 
 \end{DoxyReturn}
+
+
+\label{doc-var-members}
+\Hypertarget{plugin_8h_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{plugin_8h_a5fed3cf02be896a54c23eb81e200de9d}\index{plugin.h@{plugin.h}!StateErrGroupOrder@{StateErrGroupOrder}}
+\index{StateErrGroupOrder@{StateErrGroupOrder}!plugin.h@{plugin.h}}
+\doxysubsubsection{\texorpdfstring{StateErrGroupOrder}{StateErrGroupOrder}}
+{\footnotesize\ttfamily \label{plugin_8h_a5fed3cf02be896a54c23eb81e200de9d} 
+const int State\+Err\+Group\+Order = 0x1000}
+
+
+
+Degree of separation between different state groups. 
+
