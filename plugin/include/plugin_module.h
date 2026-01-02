@@ -2,11 +2,7 @@
 /// @brief Defines utility macros for declaring some source
 /// as part of a plugin module.
 
-#ifdef __cplusplus
 #include "plugin.h"
-#else
-#include "plugin_c_api.h"
-#endif
 
 #ifdef __cplusplus
 /// @brief The header/preamble required for declarations

@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+#define PLUGIN_PLUGIN_C_API
 #include "plugin_module.h"
 
 plugin_module(

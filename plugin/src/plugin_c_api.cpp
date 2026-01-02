@@ -1,4 +1,5 @@
-#include "plugin_c_api.h"
+#define PLUGIN_PLUGIN_C_API
+#include "plugin.h"
 
 extern "C" {
     StateErr plugin_call_command(const Context *ctx, const Name name) {

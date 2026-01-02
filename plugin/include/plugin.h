@@ -10,11 +10,9 @@
 #ifdef __cplusplus
 #define __ns_cplusplus_head(name) namespace name {
 #define __ns_cplusplus_tail }
-#define __ns_cplusplus_prop(ns, name) ns::name
 #else
-#define __ns_cplusplus_head(name)
+#define __ns_cplusplus_head(...)
 #define __ns_cplusplus_tail
-#define __ns_cplusplus_prop(ns, name) name
 #endif
 
 __ns_cplusplus_head(__plugin_root)
@@ -125,5 +123,25 @@ const char *GetDescriptionLong(const Context *);
 /// successful.
 StateErr RegisterCommand(const Context *, const char *, const char *);
 __ns_cplusplus_tail
+
+// Definitions of the C API.
+#ifdef PLUGIN_PLUGIN_C_API
+#ifdef __cplusplus
+extern "C" {
+using plugin::StateErr;
+using plugin::Context;
+#endif
+typedef char *Desc;
+typedef char *Name;
+
+StateErr plugin_call_command(const Context *, const Name);
+const char *plugin_get_description(const Context *);
+const char *plugin_get_description_long(const Context *);
+const char *plugin_get_name(const Context *);
+StateErr plugin_register_command(const Context*, const Name, const Name);
+#ifdef __cplusplus
+}
+#endif
+#endif // #ifdef PLUGIN_PLUGIN_C_API
 
 #endif // #ifndef PLUGIN_PLUGIN_H
