@@ -63,13 +63,19 @@ __ns_cplusplus_head(__plugin_root)
         /// @brief The 'plugin' header was missing.
         MAN_NOPLUGIN,
         /// @brief The 'module' header was missing.
-        MAN_NOMODULE
+        MAN_NOMODULE,
+        /// @brief The mode for building the plugin is not
+        /// known or supported.
+        BLD_MODEUNK,
+        /// @brief Something went wrong trying to package
+        /// a plugin.
+        BLD_MALPKG,
     } StateErr;
 __ns_cplusplus_tail
 
 __ns_cplusplus_head(__plugin_root::artifact)
     /// @brief Wraps all assets related to a single plugin.
-    typedef struct ArtifactBody ArtifactBody;
+    typedef struct Body Body;
 __ns_cplusplus_tail
 
 __ns_cplusplus_head(__plugin_root::command)

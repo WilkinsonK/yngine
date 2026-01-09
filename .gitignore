@@ -8,3 +8,4 @@ targets/
 compile_commands.json
 *.dylib
 *.o
+*.yplugin

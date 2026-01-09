@@ -6,12 +6,15 @@
 #pragma once
 
 #include <expected>
+#include <filesystem>
 #include <functional>
 #include <iostream>
 #include <map>
 #include <memory>
 #include <optional>
+#include <string>
 #include <unordered_map>
+#include <vector>
 
 #include "plugin.h"
 
@@ -19,7 +22,13 @@
 // a first-class type.
 namespace __plugin_root::artifact {
     /// @brief A box of artifact attributes.
-    typedef std::unique_ptr<ArtifactBody> Artifact;
+    typedef std::unique_ptr<Body> Artifact;
+}
+
+namespace __plugin_root::package {
+    typedef struct Body Body;
+    typedef struct Entry Entry;
+    typedef std::unique_ptr<Body> Package;
 }
 
 namespace __plugin_root {
@@ -31,12 +40,8 @@ namespace __plugin_root {
     typedef std::string Name;
     /// @brief Path to the object entry point.
     typedef std::string ObjectEntry;
-    /// @brief Mode of how to build the entry point.
-    typedef std::string ObjectMode;
     /// @brief A reference to the object loaded dynamically.
     typedef void *ObjectRef;
-    /// @brief Type of the entry point.
-    typedef std::string ObjectType;
     /// @brief Path to an arbitrary file or directory.
     typedef std::string Path;
     /// @brief A message providing more detail about the
@@ -46,11 +51,44 @@ namespace __plugin_root {
     /// artifact.
     typedef std::string Version;
 
+    /// @brief Mode of how to build the entry point.
+    typedef enum BuildMode {
+        BM_NONE,
+        BM_CMAKE,
+        BM_CUSTOM,
+        BM_MAKE,
+        BM_XMAKE
+    } BuildMode;
+
+    const std::map<std::string, BuildMode> BuildModes = {
+        { "none",   BuildMode::BM_NONE   },
+        { "cmake",  BuildMode::BM_CMAKE  },
+        { "custom", BuildMode::BM_CUSTOM },
+        { "make",   BuildMode::BM_MAKE   },
+        { "xmake",  BuildMode::BM_XMAKE  }
+    };
+
+    /// @brief Type of the entry point.
+    typedef enum BuildType {
+        BT_NONE,
+        BT_DYNAMIC,
+        BT_NODE,
+        BT_PY3
+    } BuildType;
+
+    const std::map<std::string, BuildType> BuildTypes = {
+        { "none",    BuildType::BT_NONE    },
+        { "dynamic", BuildType::BT_DYNAMIC },
+        { "node",    BuildType::BT_NODE    },
+        { "py3",     BuildType::BT_PY3     }
+    };
+
     /// @brief The grouping some `StateErr` belongs to.
     typedef enum StateErrGroup {
         OK,
         DYNAMIC,
         MANIFEST,
+        BUILD,
         USER, // Namespace indicates all user-defined errors.
     } StateErrGroup;
 
@@ -58,6 +96,7 @@ namespace __plugin_root {
         { OK,       "OK"  },
         { DYNAMIC,  "DLL" },
         { MANIFEST, "MAN" },
+        { BUILD,    "BLD" },
         { USER,     "USR" }
     };
 
@@ -75,6 +114,8 @@ namespace __plugin_root {
         { MAN_NOHEADER,   "missing manifest header"        },
         { MAN_NOMAN,      "missing manifest file"          },
         { MAN_MALPARSE,   "bad format in manifest"         },
+        { BLD_MODEUNK,    "unknown build mode"             },
+        { BLD_MALPKG,     "could not build plugin package" },
     };
 
     /// @brief Provides information given the current state
@@ -92,6 +133,9 @@ namespace __plugin_root {
 
     struct Context {
         artifact::Artifact artifact;
+        package::Package   package;
+
+        static Context FromManifest(const std::filesystem::path);
     };
 
     /// @brief  Install the plugin module from the given
@@ -158,10 +202,10 @@ namespace __plugin_root {
 
 namespace __plugin_root::command {
     struct Command {
-        Name            impl_name;
-        CommandImpl     impl;
-        CommandScope    scope;
-        StateInfo       state;
+        Name         impl_name;
+        CommandImpl  impl;
+        CommandScope scope;
+        StateInfo    state;
     };
 
     /// @brief A map of commands registered by the plugin
@@ -170,151 +214,156 @@ namespace __plugin_root::command {
 }
 
 namespace __plugin_root::artifact {
-    struct ArtifactBody {
+    struct Body {
         command::Registry commands;
         Desc            description;
         Desc            description_long;
         Path            manifest;
         Name            name;
         ObjectEntry     obj_entry;
-        ObjectMode      obj_mode;
+        BuildMode       obj_mode;
         ObjectRef       obj_ref;
-        ObjectType      obj_type;
+        BuildType       obj_type;
         StateInfo       state;
         Version         version;
 
         bool IsInstalled(void);
         void SetState(const StateInfo);
+
+        /// @brief Get the name of the artifact.
+        /// @return Artifact object name.
+        const Name GetName(void);
+        /// @brief Get the description of the artifact.
+        /// @return Artifact object description.
+        const Desc GetDescription(void);
+        /// @brief Get the long description of the artifact.
+        /// @return Artifact object long description.
+        const Desc GetDescriptionLong(void);
+        /// @brief Get the module entry point of the artifact.
+        /// @return Artifact module entry point.
+        const ObjectEntry GetEntry(void);
+        /// @brief Get the module builder mode.
+        /// @return Artifact builder mode.
+        const BuildMode GetMode(void);
+        /// @brief Get the module builder type.
+        /// @return Artifact builder type.
+        const BuildType GetType(void);
+
+        /// @brief Return a string representation of an
+        /// `Artifact`.
+        /// @return string representation of the object.
+        const std::string Repr(void);
+        /// @brief Return a string representation of an
+        /// `Artifact`.
+        /// @return JSON string representation of the
+        const std::string ReprJson(void);
+        /// @brief Return a string representation of an
+        /// `Artifact`.
+        /// @return TOML string representation of the
+        const std::string ReprToml(void);
+        /// @brief Return a string representation of an
+        /// `Artifact`.
+        /// @return YAML string representation of the
+        const std::string ReprYaml(void);
+
+        struct Builder {
+            Artifact inner;
+
+            Builder(void);
+            Builder(std::filesystem::path);
+            Builder(const Artifact&);
+            Artifact Build(void);
+
+            /// @brief Create a copy of the source artifact with a
+            /// brief description of the plugin.
+            /// @param desc Description value.
+            /// @return A new object.
+            Builder& WithDescription(const Desc);
+            /// @brief Create a copy of the source artifact with a
+            /// detailed description of the plugin.
+            /// @param desc Description value.
+            /// @return A new object.
+            Builder& WithDescriptionLong(const Desc);
+            /// @brief Create a copy of the source artifact with a
+            /// specified object path.
+            /// @param path Name of the file path where the
+            /// artifact should be loaded from.
+            /// @return A new object.
+            Builder& WithEntry(const ObjectEntry);
+            /// @brief Create a copy of the source artifact with a
+            /// path to the file containing its manifest.
+            /// @param path to the artifact manifest.
+            /// @return A new object.
+            Builder& WithManifest(const Path);
+            /// @brief Create a copy of the source artifact with a
+            /// specified build mode.
+            /// @param mode artifact is to be built with.
+            /// @return A new object.
+            Builder& WithMode(const std::string);
+            /// @brief Create a copy of the source artifact with a
+            /// specified build mode.
+            /// @param mode artifact is to be built with.
+            /// @return A new object.
+            Builder& WithMode(const BuildMode);
+            /// @brief Create a copy of the source artifact with a
+            /// specified name.
+            /// @param name Name to set on the artifact.
+            /// @return A new object.
+            Builder& WithName(const Name);
+            /// @brief Create a copy of the source artifact with a
+            /// specified state.
+            /// @param source Artifact to copy from.
+            /// @param state The state of the new artifact.
+            /// @return A new object.
+            Builder& WithState(const StateErr);
+            /// @brief Create a copy of the source artifact with a
+            /// specified state.
+            /// @param source Artifact to copy from.
+            /// @param state The state of the new artifact.
+            /// @param detail The message providing more context.
+            /// @return A new object.
+            Builder& WithState(const StateErr, const StateErrMessage);
+            /// @brief Create a copy of the source artifact with a
+            /// specified module type.
+            /// @param source Artifact to copy from.
+            /// @param type The module type to use.
+            /// @return A new object.
+            Builder& WithType(const BuildType);
+            /// @brief Create a copy of the source artifact with a
+            /// specified version.
+            /// @param source Artifact to copy from.
+            /// @param version The version of the new artifact.
+            /// @return A new object.
+            Builder& WithVersion(const Version);
+        };
     };
 
-    /// @brief Return a string representation of an
-    /// `Artifact`.
-    /// @param source artifact.
-    /// @return string representation of the object.
-    const std::string Repr(const Artifact&);
-    /// @brief Return a string representation of an
-    /// `Artifact`.
-    /// @param source artifact.
-    /// @return JSON string representation of the
-    const std::string ReprJson(const Artifact&);
-    /// @brief Return a string representation of an
-    /// `Artifact`.
-    /// @param source artifact.
-    /// @return TOML string representation of the
-    const std::string ReprToml(const Artifact&);
-    /// @brief Return a string representation of an
-    /// `Artifact`.
-    /// @param source artifact.
-    /// @return YAML string representation of the
-    const std::string ReprYaml(const Artifact&);
-    std::ostream& operator<<(std::ostream&, const Artifact&);
+    using Builder = Body::Builder;
 
-    /// @brief Get the name of the artifact.
-    /// @param source to inspect.
-    /// @return Artifact object name.
-    const Name GetName(const Artifact&);
-    /// @brief Get the description of the artifact.
-    /// @param source to inspect.
-    /// @return Artifact object description.
-    const Desc GetDescription(const Artifact&);
-    /// @brief Get the long description of the artifact.
-    /// @param source to inspect.
-    /// @return Artifact object long description.
-    const Desc GetDescriptionLong(const Artifact&);
-    /// @brief Get the module entry point of the artifact.
-    /// @param source to inspect.
-    /// @return Artifact module entry point.
-    const ObjectEntry GetEntry(const Artifact&);
-    /// @brief Get the module builder mode.
-    /// @param source to inspect.
-    /// @return Artifact builder mode.
-    const ObjectMode GetMode(const Artifact&);
-    /// @brief Get the module builder type.
-    /// @param source to inspect.
-    /// @return Artifact builder type.
-    const ObjectType GetType(const Artifact&);
+    std::ostream& operator<<(std::ostream&, const Artifact&);
+    std::ostream& operator<<(std::ostream&, const Body&);
 
     /// @brief  Create a new, empty plugin artifact.
     /// @return A new artifact.
     Artifact New(void);
     /// @brief Create a new plugin artifact from an object
-    ///        path.
+    /// path.
     /// @param  path path to object path.
     /// @return A new object.
     Artifact New(const ObjectEntry);
     /// @brief Create a new plugin artifact from a
-    ///        manifest file.
+    /// manifest file.
     /// @param  path the manifest file path.
     /// @return A new artifact object.
-    Artifact FromFile(const char *);
+    Artifact FromManifest(const std::filesystem::path);
     /// @brief Create a copy of one artifact from another.
     /// @param  source Source artifact.
     /// @return A new object.
     Artifact FromOther(const Artifact&);
-
-    /// @brief Create a copy of the source artifact with a
-    /// brief description of the plugin.
-    /// @param source Artifact to copy from.
-    /// @param desc Description value.
+    /// @brief Create a copy of one artifact from another.
+    /// @param  source Source artifact.
     /// @return A new object.
-    Artifact WithDescription(const Artifact&, const Desc);
-    /// @brief Create a copy of the source artifact with a
-    /// detailed description of the plugin.
-    /// @param source Artifact to copy from.
-    /// @param desc Description value.
-    /// @return A new object.
-    Artifact WithDescriptionLong(const Artifact&, const Desc);
-    /// @brief Create a copy of the source artifact with a
-    /// specified object path.
-    /// @param source Artifact to copy from.
-    /// @param path Name of the file path where the
-    /// artifact should be loaded from.
-    /// @return A new object.
-    Artifact WithEntry(const Artifact&, const ObjectEntry);
-    /// @brief Create a copy of the source artifact with a
-    /// path to the file containing its manifest.
-    /// @param source Artifact to copy from.
-    /// @param path to the artifact manifest.
-    /// @return A new object.
-    Artifact WithManifest(const Artifact&, const Path);
-    /// @brief Create a copy of the source artifact with a
-    /// mode of how the artifact is supposed to be built for
-    /// packaging.
-    /// @param source Artifact to copy from.
-    /// @param mode of how to build the artifact module.
-    /// @return A new object.
-    Artifact WithMode(const Artifact&, const ObjectMode);
-    /// @brief Create a copy of the source artifact with a
-    /// specified name.
-    /// @param source Artifact to copy from.
-    /// @param name Name to set on the artifact.
-    /// @return A new object.
-    Artifact WithName(const Artifact&, const Name);
-    /// @brief Create a copy of the source artifact with a
-    /// specified state.
-    /// @param source Artifact to copy from.
-    /// @param state The state of the new artifact.
-    /// @return A new object.
-    Artifact WithState(const Artifact&, const StateErr);
-    /// @brief Create a copy of the source artifact with a
-    /// specified state.
-    /// @param source Artifact to copy from.
-    /// @param state The state of the new artifact.
-    /// @param detail The message providing more context.
-    /// @return A new object.
-    Artifact WithState(const Artifact&, const StateErr, const StateErrMessage);
-    /// @brief Create a copy of the source artifact with a
-    /// specified module type.
-    /// @param source Artifact to copy from.
-    /// @param type The module type to use.
-    /// @return A new object.
-    Artifact WithType(const Artifact&, const ObjectType);
-    /// @brief Create a copy of the source artifact with a
-    /// specified version.
-    /// @param source Artifact to copy from.
-    /// @param version The version of the new artifact.
-    /// @return A new object.
-    Artifact WithVersion(const Artifact&, const Version);
+    Artifact FromOther(const Body&);
 }
 
 namespace __plugin_root::command {
@@ -330,9 +379,58 @@ namespace __plugin_root::command {
 /// @brief Logic and behavior dedicated to building a single
 /// plugin.
 namespace __plugin_root::package {
+    struct Body {
+        std::vector<Entry>                   included_files;
+        std::string                          manifest;
+        std::string                          name;
+        std::optional<std::filesystem::path> output_dir;
+        std::optional<std::filesystem::path> source_dir;
+        std::string                          version;
+
+        static Package New(void);
+        static Package FromManifest(std::filesystem::path);
+
+        std::filesystem::path GetManifest(void);
+        std::filesystem::path GetOutputDir(void);
+        std::filesystem::path GetOutputName(void);
+        std::filesystem::path GetSourceDir(void);
+
+        struct Builder {
+            Package inner;
+
+            Builder(void);
+            Builder(std::filesystem::path);
+            Package Build(void);
+            Builder& AddInclude(Entry);
+            Builder& WithManifestName(std::string);
+            Builder& WithName(std::string);
+            Builder& WithOutputDir(std::filesystem::path);
+            Builder& WithSourceDir(std::filesystem::path);
+            Builder& WithVersion(std::string);
+        };
+    };
+
+    using Builder = Body::Builder;
+
+    struct Entry {
+        /// @brief Alias name used when the file is written
+        /// to package archive.
+        Name alias;
+        /// @brief Source path of the file to archive from.
+        Path source;
+    };
+
     /// @brief Build the module according to how its
     /// configuration dictates how it should be expected.
     /// @param source Artifact to reference from.
     /// @return The result of how the build went.
-    StateErr Build(const artifact::Artifact&);
+    StateInfo Build(const Context&);
+    /// @brief Create a plugin package from an artifact.
+    /// @param source Artifact to reference from.
+    /// @return The result of how packaging went.
+    StateInfo Pack(const Context&);
+    StateInfo Unpack(const Context&);
+
+    Package New(void);
+    Package FromManifest(std::filesystem::path);
 }

@@ -9,7 +9,7 @@
 
 namespace __plugin_root {
     Context Install(const char *path) {
-        return Install({ artifact::FromFile(path) });
+        return Install({ artifact::FromManifest(path) });
     }
 
     Context Install(const Context& ctx) {
@@ -33,6 +33,13 @@ namespace __plugin_root {
             .or_else(dllutil::HandleErr(ctx))
             .and_then(dllutil::ReleaseModule)
             .value();
+    }
+
+    Context Context::FromManifest(std::filesystem::path path) {
+        return {
+            artifact::FromManifest(path),
+            package::FromManifest(path)
+        };
     }
 
     StateInfo::StateInfo(void) {

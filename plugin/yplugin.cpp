@@ -5,216 +5,117 @@
 #include <optional>
 #include <sstream>
 
+#include "CLI/CLI.hpp"
+
 #include "plugin.hpp"
 
-// Must be included before CLI11.hpp
-namespace options {
-    typedef enum InspectFormat {
-        UNKNOWN = -1,
-        JSON,
-        REPR,
-        TOML,
-        YAML
-    } InspectFormat;
+typedef enum Format {
+    F_UNKNOWN = -1,
+    F_JSON,
+    F_REPR,
+    F_TOML,
+    F_YAML
+} Format;
 
-    const std::map<std::string, InspectFormat> format_types {
-        {"json", InspectFormat::JSON},
-        {"repr", InspectFormat::REPR},
-        {"toml", InspectFormat::TOML},
-        {"yaml", InspectFormat::YAML},
-    };
+const std::map<std::string, Format> format_types {
+    {"json", Format::F_JSON},
+    {"repr", Format::F_REPR},
+    {"toml", Format::F_TOML},
+    {"yaml", Format::F_YAML},
+};
 
-    InspectFormat FromStr(const std::string value) {
-        if (!format_types.contains(value)) return InspectFormat::UNKNOWN;
-        return format_types.at(value);
-    }
+struct Options {
+    Format      format;
+    std::string manifest_name;
+    std::string pkgdir;
+    std::string pkgout;
+};
 
-    const std::string IntoStr(const InspectFormat value) {
-        switch (value) {
-            case JSON: return "json";
-            case REPR: return "repr";
-            case TOML: return "toml";
-            case YAML: return "yaml";
-            default: return "unknown";
-        }
-    }
-
-    struct Inspect {
-        InspectFormat format;
-    };
-
-    struct Common {
-        std::string manifest;
-        Inspect     on_inspect;
-    };
+CLI::App *subcommand(CLI::App *root, const std::string& name, const std::string desc) {
+    return root->add_subcommand(name, desc);
 }
 
-namespace CLI {
-    std::istringstream& operator>>(std::istringstream &in, options::InspectFormat& fmt) {
-        std::string temp;
-        in >> temp;
-        fmt = options::FromStr(temp);
-        return in;
-    }
-
-    std::stringstream& operator<<(std::stringstream& ss, options::InspectFormat& fmt) {
-        ss << options::IntoStr(fmt);
-        return ss;
-    }
+void add_format_option(CLI::App *app, Options *opts) {
+    app ->add_option("-f,--format", opts->format, "format output")
+        ->default_val(Format::F_JSON)
+        ->transform(CLI::CheckedTransformer(format_types));
 }
 
-#include <CLI/CLI.hpp>
-
-namespace CLI::detail {
-    template<>
-    constexpr const char *type_name<options::InspectFormat>() {
-        return "FORMAT";
-    }
+void add_manifest_option(CLI::App *app, Options *opts) {
+    app ->add_option("-M,--manifest", opts->manifest_name, "manifest file")
+        ->default_val("plugin.toml");
 }
 
-namespace define {
-    typedef std::optional<std::function<void(CLI::App&)>> CmdMutation;
+void add_pkgdir_option(CLI::App *app, Options *opts) {
+    app->add_option("-D,--pkg-dir", opts->pkgdir, "package directory path");
+}
 
-    struct Context {
-        #define __Context_attrs \
-            options::Common& common; \
-            std::string      cmd_name; \
-            std::string      cmd_desc; \
-            CmdMutation      cmd_mutation;
-        __Context_attrs
+void add_pkgout_option(CLI::App *app, Options *opts) {
+    app->add_option("-O,--pkg-out", opts->pkgout, "package build output directory");
+}
 
-        static Context New(options::Common& opt) {
-            return Builder(opt).Build();
-        }
+auto cmd_callback_build(Options *opts) {
+    return [opts](){
+        auto pkg = plugin::package::Builder()
+            .WithManifestName(opts->manifest_name)
+            .WithOutputDir(opts->pkgout)
+            .WithSourceDir(opts->pkgdir)
+            .Build();
+        auto ctx = plugin::Context::FromManifest(pkg->GetManifest());
 
-        CLI::App& NewCommand(CLI::App& parent) {
-            CLI::App *app = parent.add_subcommand(cmd_name, cmd_desc);
-            ApplyOptCommon(*app);
-            ApplyMutation(*app);
-            return *app;
-        }
+        auto state = plugin::package::Build(ctx);
+        if (state != plugin::NONE) goto handle_err;
+        plugin::package::Pack(ctx);
+        if (state != plugin::NONE) goto handle_err;
 
-        Context& ApplyInspect(CLI::App& cmd) {
-            cmd.add_option("-f,--format", common.on_inspect.format, "format output")->default_str("toml");
-            return *this;
-        }
-
-        Context& ApplyOptCommon(CLI::App& cmd) {
-            cmd.add_option(
-                "-M,--manifest",
-                common.manifest,
-                "Manifest file"
-            )->default_val("plugin.toml");
-            return *this;
-        }
-
-        Context& ApplyMutation(CLI::App& cmd) {
-            if (cmd_mutation.has_value()) cmd_mutation.value()(cmd);
-            return *this;
-        }
-
-        class Builder {
-            #define __ContextBuilder_FromOtherPtrInits \
-                common(other->common), \
-                cmd_desc(other->cmd_desc), \
-                cmd_mutation(other->cmd_mutation), \
-                cmd_name(other->cmd_name)
-            public:
-            Builder(Context *other) : __ContextBuilder_FromOtherPtrInits {}
-            Builder(Builder *other) : __ContextBuilder_FromOtherPtrInits {}
-            Builder(options::Common& opt) : common(opt) {}
-
-            Context Build(void) {
-                Context ctx = {
-                    .common       = common,
-                    .cmd_desc     = cmd_desc,
-                    .cmd_mutation = cmd_mutation,
-                    .cmd_name     = cmd_name
-                };
-                return ctx;
-            }
-
-            Builder& WithCmdName(const char *value) {
-                this->cmd_name = value;
-                return *this;
-            }
-
-            Builder& WithCmdDesc(const char *value) {
-                this->cmd_desc = value;
-                return *this;
-            }
-
-            Builder& WithCmdMut(const CmdMutation fn) {
-                this->cmd_mutation = fn;
-                return *this;
-            }
-
-            private:
-            __Context_attrs
-
-        };
+        return;
+        handle_err:
+        std::cerr << "error: " << state.message << " '" << state.detail << "'" << std::endl;
+        std::exit(1);
     };
 }
 
-auto CmdBuild(define::Context& ctx) {
-    return [&ctx](){
-        auto artifact = plugin::artifact::FromFile(ctx.common.manifest.c_str());
-        auto state = plugin::package::Build(artifact);
-        if (state != plugin::NONE) {
-            std::cerr << "error: " << state << std::endl;
-            std::exit(1);
-        }
-    };
-}
-
-auto CmdInspect(define::Context& ctx) {
-    return [ctx](){
-        auto pctx = plugin::Install(ctx.common.manifest.c_str());
+auto cmd_callback_inspect(Options *opts) {
+    return [opts](){
+        auto ctx = plugin::Install(opts->manifest_name.c_str());
 
         std::string out;
-        switch (ctx.common.on_inspect.format) {
-            case options::JSON:
-                out = plugin::artifact::ReprJson(pctx.artifact);
+        switch (opts->format) {
+            case F_JSON:
+                out = ctx.artifact->ReprJson();
                 break;
-            case options::TOML:
-                out = plugin::artifact::ReprToml(pctx.artifact);
+            case F_TOML:
+                out = ctx.artifact->ReprToml();
                 break;
-            case options::REPR:
-                out = plugin::artifact::Repr(pctx.artifact);
+            case F_REPR:
+                out = ctx.artifact->Repr();
                 break;
-            case options::YAML:
-                out = plugin::artifact::ReprYaml(pctx.artifact);
+            case F_YAML:
+                out = ctx.artifact->ReprYaml();
                 break;
             default:
                 return;
         }
         std::cout << out << std::endl;
 
-        if (pctx.artifact->IsInstalled()) plugin::Release(pctx);
+        if (ctx.artifact->IsInstalled()) plugin::Release(ctx);
     };
 }
 
 int main(int argv, const char **argc) {
     CLI::App app("developer tool for yengine plugins", "yplugin");
-    options::Common opt = {};
+    Options opts;
 
-    auto app_ctx = define::Context::New(opt);
-    define::Context::Builder(&app_ctx)
-        .WithCmdName("build")
-        .WithCmdDesc("build a yengine plugin")
-        .Build()
-        .NewCommand(app)
-        .callback(CmdBuild(app_ctx));
-    auto inspect = define::Context::Builder(&app_ctx)
-        .WithCmdName("inspect")
-        .WithCmdDesc("inspect a yengine plugin")
-        .Build()
-        .NewCommand(app)
-        .callback(CmdInspect(app_ctx));
-    inspect
-        ->add_option("-f,--format", opt.on_inspect.format, "format output")
-        ->default_val(options::InspectFormat::JSON)
-        ->transform(CLI::CheckedTransformer(options::format_types));
+    auto cmd_build = subcommand(&app, "build", "build a plugin");
+    add_manifest_option(cmd_build, &opts);
+    add_pkgdir_option(cmd_build, &opts);
+    add_pkgout_option(cmd_build, &opts);
+    cmd_build->callback(cmd_callback_build(&opts));
+
+    auto cmd_inspect = subcommand(&app, "inspect", "inspect a plugin");
+    add_manifest_option(cmd_inspect, &opts);
+    add_format_option(cmd_inspect, &opts);
+    cmd_inspect->callback(cmd_callback_inspect(&opts));
 
     CLI11_PARSE(app, argv, argc)
     return 0;

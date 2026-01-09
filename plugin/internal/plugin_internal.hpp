@@ -4,6 +4,9 @@
 /// available to the CXX interface.
 
 #pragma once
+#include <filesystem>
+#include <map>
+#include <vector>
 
 #include <toml++/toml.hpp>
 
@@ -76,4 +79,42 @@ namespace __plugin_root::dllutil {
     /// @param ctx context of the artifact.
     /// @return The context passed.
     State<Context> ReleaseModule(const Context&);
+}
+
+namespace __plugin_root::manifest {
+    typedef struct Manifest Manifest;
+    typedef struct Module Module;
+    typedef struct Plugin Plugin;
+
+    typedef std::filesystem::path File;
+    typedef std::vector<File>     Paths;
+
+    struct Module {
+        File      entry;
+        Paths     include;
+        BuildMode mode;
+        BuildType type;
+
+        static Module New(void);
+        static Module New(const toml::table&);
+    };
+
+    struct Plugin {
+        std::string description;
+        std::string description_long;
+        std::string name;
+        std::string version;
+
+        static Plugin New(void);
+        static Plugin New(const toml::table&);
+    };
+
+    struct Manifest {
+        Plugin plugin;
+        Module module;
+
+        static Manifest New(void);
+        static Manifest New(const toml::table&);
+        static Manifest Load(const std::filesystem::path);
+    };
 }
